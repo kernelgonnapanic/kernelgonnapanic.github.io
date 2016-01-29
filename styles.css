@@ -1,0 +1,20 @@
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center img {
+  width: 400px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.middle {
+  text-align: center;
+}
+
+.name {
+  font: 1.5em bold;
+}
