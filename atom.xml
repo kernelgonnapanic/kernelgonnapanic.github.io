@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Bookie &amp; Cookie</title>
+  <title>kernelgonnapanic.pl</title>
   
   <link href="/atom.xml" rel="self"/>
   
@@ -275,9 +275,9 @@
     </summary>
     
     
-      <category term="O szczęściu" scheme="https://kernelgonnapanic.github.io/tags/O-szczesciu/"/>
-    
       <category term="Rozwój" scheme="https://kernelgonnapanic.github.io/tags/Rozwoj/"/>
+    
+      <category term="O szczęściu" scheme="https://kernelgonnapanic.github.io/tags/O-szczesciu/"/>
     
       <category term="Studia" scheme="https://kernelgonnapanic.github.io/tags/Studia/"/>
     
