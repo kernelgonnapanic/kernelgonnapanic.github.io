@@ -3,7 +3,7 @@ title: Jak nie dać się zwariować postanowieniom noworocznym?
 tags:
   - Rozwój
   - Sukces
-thumbnailImagePosition: top
+thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial
 thumbnailImage: stars5_small.jpg
@@ -26,7 +26,7 @@ Jasne sprecyzowanie celu, nie pozostawiające miejsca na różne interpretacje, 
 
 Mierzalność to bardzo ważna cecha dobrego celu. Schudnę 5 kg, nauczę się 30 słówek tygodniowo... im więcej liczb tym lepiej. Pomogą nam jednoznacznie stwierdzić czy cel został osiągnięty czy nie. A co jeśli nie tak łatwo wtłoczyć nasz cel w świat matematyki? Warto zmienić optykę patrzenia na problem. Zamiast powiedzieć "będę więcej czasu spędzać z rodziną" za cel ustawić sobie "spędzanie 30 minut wieczorem na rozmowie z mamą".  
 
-{% image center fig-100 clear top_small.png  %}
+{% image center fig-100 clear top_small.jpg  %}
 
 ### Ambitny (ambitious)
 

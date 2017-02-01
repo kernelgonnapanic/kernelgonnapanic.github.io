@@ -6,10 +6,9 @@ tags:
   - Rozwój
   - Sukces
   - Rozwojowy Poniedziałek
-thumbnailImagePosition: top
-thumbnailImage: softwa_thumb.png
 coverMeta: out
 coverSize: partial
+thumbnailImage: softwarecraftsman.JPG
 coverImage: softwarecraftsman.JPG
 date: 2016-10-02 12:44:24
 ---

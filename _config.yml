@@ -1,3 +1,4 @@
+
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
@@ -75,3 +76,8 @@ deploy:
   type: git
   repo: git@github.com:kernelgonnapanic/kernelgonnapanic.github.io.git
   branch: master
+
+feed:
+    type: atom
+    path: atom.xml
+    limit: 20
