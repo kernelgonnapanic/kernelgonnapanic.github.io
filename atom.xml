@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Bookie &amp; Cookie</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://kernelgonnapanic.github.io/"/>
+  <updated>2017-01-26T20:12:49.464Z</updated>
+  <id>https://kernelgonnapanic.github.io/</id>
+  
+  <author>
+    <name>Anna Konopka</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo - nowy rok, nowy blog!</title>
+    <link href="https://kernelgonnapanic.github.io/2017/01/26/HexoNowyRokNowyBlog/"/>
+    <id>https://kernelgonnapanic.github.io/2017/01/26/HexoNowyRokNowyBlog/</id>
+    <published>2017-01-26T18:46:42.000Z</published>
+    <updated>2017-01-26T20:12:49.464Z</updated>
+    
+    <content type="html"><![CDATA[<p>Dawno się nie słyszeliśmy, prawda? W międzyczasie przez bloga przeszła burza, a jej rezultatem jest to, co właśnie widzicie. I nie jest to tylko nowy szablon. Przez ostatnie kilka miesięcy budowałam tego bloga od zera na nowej platformie. Dlatego też, <strong>na dobry nowy początek</strong>, nie może zabraknąć wpisu na temat narzędzi, które na to pozwalają.</p>
+<a id="more"></a>
+<p>Utrzymywanie bloga na bloggerze przysprawiało mi problemów od samego początku. Edytowanie postów, przeróbki w html’u czy też edytowanie szablonu było strasznie męczące. Z tego powodu właśnie wyruszyłam w poszukiwaniu czegoś, co będzie bliższe mojemu sercu technologicznie (JavaScript &#10084;    ), a z drugiej strony proste w obsłudze. Myślałam o narzędziu, które jest przyjazne developerom, a niekoniecznie nietechnicznym użytkownikom.</p>
+<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><p>W tychże poszukiwaniach natrafiłam na platformę Hexo. Jest to narzędzie do blogowania, które jest lekkim node’owym skryptem. Instalujemy je za pomocą npm’a i w kilka sekund mamy bloga:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">hexo init blog</div><div class="line"><span class="built_in">cd</span> blog</div><div class="line">npm install</div><div class="line">hexo server</div></pre></td></tr></table></figure></p>
+<p>Proste, prawda?</p>
+<p>Jeśli chodzi o posty, to do ich tworzenia używamy Markdowna (kolejny miód na moje serce). Pracuje mi się z nim dużo wygodniej niż z bloggerowym wydaniem XHTMLa (sic!).<br>Hexo oferuje również duuuuużo różnorodnych pluginów. Nie miałam jeszcze okazji się nimi bawić, ale już widzę kilka, które może się przydadzą.</p>
+<p>Świetne jest również to, że z pomocą jednej komendy mogę zdeployować bloga. Kilka akapitów niżej znajdziecie szczegóły.</p>
+<h1 id="Tranquilpeak"><a href="#Tranquilpeak" class="headerlink" title="Tranquilpeak"></a>Tranquilpeak</h1><p>Jednak, przyznajmy szczerze, fajna platforma to nie wszystko. Zależało mi na przyjemnym, estetycznym szablonie, który będzie stworzony przy użyciu narzędzi, które znam i lubię. W ten sposób zdecydowałam się na tranquilpeak. Jest to (przynajmniej dla mnie) naprawdę zgrabny i minimalistyczny szablon. Można go dowolnie dostosowywać, ma bardzo bogaty interfejs ustawień i obfitą dokumentację.</p>
+<p>Ja zdecydowałam się dodatkowo wprowadzić do niego kilka poprawek, by odpowiadał moim potrzebom i lepiej wyglądał na ekranach o dużej rozdzielczości. Z racji, że jest to normalny frontendowy projekt zmiany te poszły szybko i byłam bardzo zadowolona z wyboru, który dokonałam.</p>
+<p>Żródła możecie oczywiście znaleźć na <a href="https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak" target="_blank" rel="external">githubie</a>.</p>
+<h1 id="Github-pages"><a href="#Github-pages" class="headerlink" title="Github pages"></a>Github pages</h1><p>Ok, wszystko pięknie, ale na pewno pojawia się Wam w głowach pytanie: gdzie hostuję swojego bloga? No i okazuje się, że tu też zwróciłam się w stronę rozwiązań, które już znałam. Jako, że są to same statyczne strony, hostuję je na <a href="https://pages.github.com/" target="_blank" rel="external">Github Pages</a>.</p>
+<p>Czyni to dodatkowo łatwym jeden z pluginów do hexo. Hexo dysponuje różnymi rodzajami deployerów. Z racji, że hostuje bloga na Githubie używam <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">hexo-deployer-git</a>, ale możesz również deployować na heroku, ftp, czy używając własnej shellowej komendy, specyficznej dla wybranego przez Ciebie rodzaju hostingu.</p>
+<p>Jestem bardzo ciekawa jak w dalszej perspektywie będzie się sprawował stack, który wybrałam. Na razie jestem całkiem z niego zadowolona.</p>
+<p>A Wy? Jak Wam podoba się nowa odsłona bloga? Napiszcie koniecznie w komentarzach.</p>
+<p>Ania</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Dawno się nie słyszeliśmy, prawda? W międzyczasie przez bloga przeszła burza, a jej rezultatem jest to, co właśnie widzicie. I nie jest to tylko nowy szablon. Przez ostatnie kilka miesięcy budowałam tego bloga od zera na nowej platformie. Dlatego też, &lt;strong&gt;na dobry nowy początek&lt;/strong&gt;, nie może zabraknąć wpisu na temat narzędzi, które na to pozwalają.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.github.io/tags/Programowanie/"/>
+    
+      <category term="Blogowanie" scheme="https://kernelgonnapanic.github.io/tags/Blogowanie/"/>
+    
+      <category term="Hexo" scheme="https://kernelgonnapanic.github.io/tags/Hexo/"/>
+    
+      <category term="Github" scheme="https://kernelgonnapanic.github.io/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Software Craftsman. Profesjonalizm, czysty kod i techniczna perfekcja.</title>
+    <link href="https://kernelgonnapanic.github.io/2016/10/02/software-craftsman/"/>
+    <id>https://kernelgonnapanic.github.io/2016/10/02/software-craftsman/</id>
+    <published>2016-10-02T10:44:24.000Z</published>
+    <updated>2017-01-26T19:07:28.827Z</updated>
+    
+    <content type="html"><![CDATA[<p>Wrzesień minął tak szybko! Nie wiem jak Was, ale mnie nadejście jesieni bardzo motywuje. Kojarzy mi się z rozpoczęciem szkoły, czuję, że jest to czas nowych porządków. Jesienną słotę można fajnie wykorzystać np. siadając z herbatą, kocem i książką. Dlatego też podrzucam Wam dziś kolejną recenzję. Pora powiedzieć kilka słów na temat książki Sandro Mancuso “Software Craftsman. Profesjonalizm, czysty kod i techniczna precyzja”.<br><a id="more"></a></p>
+<h2 id="Software-Craftsmanship"><a href="#Software-Craftsmanship" class="headerlink" title="Software Craftsmanship"></a>Software Craftsmanship</h2><p>Dla osób, którym nigdy nie obiło się o uszy pojęcie “programisty rzemieślnika” lub “software craftsmanship”, dedykuje kilka słów wstępu.</p>
+<p>Rzemieślnicze podejście do programowania urodziło się w miarę równolegle do ruchu Agile. Zauważono wtedy potrzebę zmiany sposobu myślenia o tworzeniu software’u. Programistom przestało wystarczać tworzenie oprogramowania, ktore działa. Ważne zaczęło być również to jakiej jest jakości. Czy jest testowalne? Czy jest utrzymywalne? Czy kod jest zrozumiały dla innych?</p>
+<p>W ten sposób powstało community skupiające ludzi, którzy nie tylko reagują na zmiany (w ramach koncepcji Agile), ale też chcą stale dodawać wartość do projektu. Swoje założenia spisali jako Manifest Software Craftsmanship.</p>
+<p>Sandro Mancuso wyjaśnia w swojej książce w detalach, kim jest programista rzemieślnik. Opowiada również o swoich początkach w tej dziedzinie i o tym, jak wiele się od tego czasu nauczył.</p>
+<h2 id="Never-stop-learning"><a href="#Never-stop-learning" class="headerlink" title="Never stop learning"></a>Never stop learning</h2><p>W koncept “programisty-rzemieślnika” zdecydowanie wpisuje się idea nieustannego uczenia się. Autor podkreśla, że KAŻDY jest odpowiedzialny za SWOJĄ karierę i rozwój. To nasza broszka, by być stale na czasie jeżeli chodzi o nowe technologie. Nie powinniśmy się zdawać na pracodawcę w kwestii np. szkoleń.</p>
+<p>Dodatkowo - jako na bardzo rozwijające - wskazuje na własne projekty, programistyczne kata, pet projects czyli to wszystko, co powiększa nasze prywatne konto na githubie ;) Nie dość, że będzie się czym pochwalić kolejnemu pracodawcy to zyskujemy jeszcze doświadczenie, testując różne technologie w warunkach bojowych.</p>
+<p>Sandro Mancuso radzi czytać - blogi, książki techniczne, w tym w szczególności, książki przełomowe. Dotyczą one zazwyczaj nie technologii, ponieważ te szybko stają się nieaktualne. Książki, które każdy programista powinnien przeczytać to te odnoszące się do rzemiosła, czyli mówiące o praktykach programistycznych oraz zasadach rządzących się światem IT.</p>
+<div class="figure center fig-100" style="width:;"><img class="fig-img" src="todo.png" alt=""></div><div style="clear:both;"></div>
+<h2 id="Jak-przekonac-kierownika"><a href="#Jak-przekonac-kierownika" class="headerlink" title="Jak przekonać kierownika?"></a>Jak przekonać kierownika?</h2><p>Wielu z nas, developerów, poszukuje argumentów, które przekonają managerów np. do koniecznej refaktoryzacji, potrzeby stosowania TDD czy poświęcenia czasu na programowanie w parach. Te nasze poszukiwania autor podsumowuje:</p>
+<blockquote><p>Odpowiedź jest prosta - nie przekonuj. Łatwiej uzyskasz przebaczenie niż pozwolenie. Po prostu rób swoje. Dlaczego kierownik miałby się interesować praktykami technicznymi? On chce tylko, żeby projekt był ukończony w terminie, budżet nie został przekroczony, nie było błędów i interesariusze oraz klienci byli zadowoleni.</p>
+<footer><strong>Sandro Mancuso</strong><cite>Software Craftsman</cite></footer></blockquote>
+<p>W sumie, czemu nie?</p>
+<h2 id="Rekrutacja-w-IT"><a href="#Rekrutacja-w-IT" class="headerlink" title="Rekrutacja w IT"></a>Rekrutacja w IT</h2><p>Świetnie, że autor poświęcił aż 3 rozdziały na ten temat. Mimo że podejście do rekrutacji w IT cały czas zmienia się na lepsze, to wciąż można spotkać rekrutujących, którzy przepytują kandydatów na okoliczność nazw konkretnych metod w danej bibliotece i innych informacji natury encyklopedycznej.</p>
+<p>Mancuso w swojej książce określa to jako jeden z antywzorców rozmowy kwalifikacyjnej, wraz z np. pisaniem kodu na papierze (sic!), blokowaniem internetu czy zadawaniem pytań na które nie zna się odpowiedzi. W zamian podsuwa swoje sugestie na przeprowadzenie rekrutacji. Mnie najbardziej spodobała się koncepcja programowania w parach rekrutujący-kandydat. Pozwala ono na sprawdzenie delikwenta “w warunkach bojowych”. Książkę zdecydowanie warto przeczytać chociażby dla tego tematu.</p>
+<h2 id="Projektowi-sceptycy"><a href="#Projektowi-sceptycy" class="headerlink" title="Projektowi sceptycy"></a>Projektowi sceptycy</h2><p>Punktem, który najbardziej zapadł mi w pamięć po przeczytaniu tej książki był rozdział mówiący o typach sceptyków, których możemy spotkać w projekcie. I tak, możemy przeczytać o sposobach na radzenie sobie z np. sceptykami irracjonalnymi, wypalonymi czy niedoinformowanymi. Uprzedzam! Dużo fajnych wskazówek odnośnie codziennej pracy w projekcie/grupie.</p>
+<p>Gorąco polecam tę książkę wszystkim programistom! Może nie jest to pozycja obowiązkowa, ale jestem zadowolona, że poświęciłam jej swój czas. Pozwala na spojrzenie na swoją pracę z trochę innej perspektywy, dostrzeżenie błędów, przemyślenie kilku rzeczy.</p>
+<p>A jakie książki według Was każdy programista musi znać?</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Wrzesień minął tak szybko! Nie wiem jak Was, ale mnie nadejście jesieni bardzo motywuje. Kojarzy mi się z rozpoczęciem szkoły, czuję, że jest to czas nowych porządków. Jesienną słotę można fajnie wykorzystać np. siadając z herbatą, kocem i książką. Dlatego też podrzucam Wam dziś kolejną recenzję. Pora powiedzieć kilka słów na temat książki Sandro Mancuso “Software Craftsman. Profesjonalizm, czysty kod i techniczna precyzja”.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.github.io/tags/Programowanie/"/>
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.github.io/tags/Rozwoj/"/>
+    
+      <category term="Sukces" scheme="https://kernelgonnapanic.github.io/tags/Sukces/"/>
+    
+      <category term="IT" scheme="https://kernelgonnapanic.github.io/tags/IT/"/>
+    
+      <category term="Rozwojowy Poniedziałek" scheme="https://kernelgonnapanic.github.io/tags/Rozwojowy-Poniedzialek/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pamiętnik programistki</title>
+    <link href="https://kernelgonnapanic.github.io/2016/09/05/Pamitnik-programistki-1/"/>
+    <id>https://kernelgonnapanic.github.io/2016/09/05/Pamitnik-programistki-1/</id>
+    <published>2016-09-05T03:30:00.000Z</published>
+    <updated>2016-10-18T20:07:46.373Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hej wszystkim!<br>Ostatnio stwierdziłam, że fajnie byłoby, gdybym miała na blogu taką przestrzeń, w której mogłabym podzielić się z Wami tym, co u mnie słychać, czym się ostatnio interesuję i co tam sobie kodzę. W ten sposób zrodziła się koncepcja “Pamiętnika programistki”. I właśnie dziś zapraszam Was na pierwszy post tej nowej serii.<br><a id="more"></a></p>
+<p>Wrzucałam już fotkę na Instagrama, ale dla tych, którzy nie widzieli, w ubiegły poniedziałek wybrałam się na wrocławski Meet.js.  </p>
+<p><blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BJs7Vqoga64/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Meet.js + tworzymy aplikacje reaktywna #front end #meetatmonterail #meetjswroclaw #jakAniaSpedzaWieczor</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">Zdjęcie zamieszczone przez użytkownika Ania Konopka (@bookieandcookie) <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-29T18:03:53+00:00">29 Sie, 2016 o 11:03 PDT</time></p></div></blockquote></p>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<p>Wybaczcie, że zdjęcie nie jest najwyższych lotów, ale temat był wciągający i nie było czasu na fotki. Zaczęliśmy od prezentacji Damiana, z którym na żywo tworzyliśmy prosty system reaktywny. Tych, którzy nie spotkali się jeszcze z pojęciem reaktywności, proszę o jeszcze chwilę cierpliwości - planuję napisać kilka słów o tym już niedługo.  </p>
+<p>Była też okazja, żeby dowiedzieć się trochę o pracy zdalnej. Jakie są plusy i minusy, jakie są mity i o czym należy pamiętać, zanim zdecydujemy się na taki rodzaj współpracy. Dla mnie najbardziej kuszącym elementem takiej pracy jest możliwość swobodnego podróżowania. Co nie jest dziwne, biorąc pod uwagę moją niemożliwość usiedzenia na jednym miejscu przez dłuższy czas. Muszę powiedzieć, że zaczęłam rozważać taką opcję ;)  </p>
+<p>Ciekawie zapowiada się też <a href="https://www.meetup.com/Functional-Programming-Wroclaw/events/233267498/" target="_blank" rel="external">meet-up dotyczący programowania funkcyjnego</a> - już dzisiaj (5 września). Ja niestety nie mogą się wybrać, lecz zapraszam gorąco wszystkich zainteresowanych tematem. A na tapecie - Elm i Elixir.  </p>
+<p>Jeżeli chodzi o to, co sobie ostatnio koduje, to w tym tygodniu powstała przykładowa mini-appka w konfiguracji angular + redux + ng-redux + reselect. Kod możecie oczywiście podejrzeć <a href="https://github.com/kernelgonnapanic/angular-redux-example" target="_blank" rel="external">tutaj</a>.  </p>
+<p>W kwestiach związanych z programowaniem, w najbliższym czasie planuję zająć się kilkoma tematami. Po pierwsze, na pewno coś z klimatów serwerowych, dodatkowo może w końcu React, może również mobx.  </p>
+<p>Chciałabym także kontynuować naukę w ramach <a href="https://www.freecodecamp.com/" target="_blank" rel="external">FreeCodeCamp</a>. Aktualnie podążam ścieżką dla początkujących Backend Developerów. W najbliższym czasie czeka na mnie MongoDB, a później projekty, których już się nie mogę doczekać. Planuję również napisać dla Was recenzję tego kursu, jak tylko go skończę ;)  </p>
+<p>Z klimatów nie programistycznych, wraz z Wrocławskim oddziałem Geek Girls Carrots planujemy dla Was w najbliższym czasie niezłą imprezę. Nie będę na razie zdradzać szczegółów, ale polecam śledzić na bieżąco grupę na fb - <a href="https://www.facebook.com/groups/wroclovegeekgirlscarrots/?fref=ts" target="_blank" rel="external">WrocLOVE Geek Girls Carrots</a>.  </p>
+<p>To tyle na dziś. Miłego poniedziałku!<br>Ania</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Hej wszystkim!&lt;br&gt;Ostatnio stwierdziłam, że fajnie byłoby, gdybym miała na blogu taką przestrzeń, w której mogłabym podzielić się z Wami tym, co u mnie słychać, czym się ostatnio interesuję i co tam sobie kodzę. W ten sposób zrodziła się koncepcja “Pamiętnika programistki”. I właśnie dziś zapraszam Was na pierwszy post tej nowej serii.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.github.io/tags/Programowanie/"/>
+    
+      <category term="Nowe" scheme="https://kernelgonnapanic.github.io/tags/Nowe/"/>
+    
+      <category term="ZPamiętnikaProgramistki" scheme="https://kernelgonnapanic.github.io/tags/ZPamietnikaProgramistki/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Exercism.io - rozwiń skrzydła jako programista</title>
+    <link href="https://kernelgonnapanic.github.io/2016/08/16/Exercismio/"/>
+    <id>https://kernelgonnapanic.github.io/2016/08/16/Exercismio/</id>
+    <published>2016-08-16T06:41:00.000Z</published>
+    <updated>2016-10-18T19:40:32.324Z</updated>
+    
+    <content type="html"><![CDATA[<p>Jestem wielką orędowniczką idei programowania jako hobby czy zawodu dla każdego. Dla chłopaków, dziewczyn, dla młodszych i tych trochę starszych. Od kiedy jesteśmy w stanie znaleźć w internecie mnóstwo tutoriali i kursów dla początkujących, każdy może rozpocząć swoją przygodę z kodowaniem. Znam przykłady wielu ludzi, którzy tak właśnie zaczynali, a teraz podążają programistyczną ścieżką kariery.<br><a id="more"></a></p>
+<p>Jednak wiele razy słyszałam od nich, że wśród internetowych zasobów jest pewna nisza. Mamy codecademy, Khan Academy, code school i wiele innych kursów dla początkujących, dla osób, dla których będzie to pierwsze spotkanie z programowaniem (o kursach dla początkujących piszę w <a href="http://bookieandcookie.blogspot.com/2015/09/5-najlepszych-platform-do-nauki-programowania.html" target="_blank" rel="external">tym poście</a>). Jednak po skończeniu jednego, dwóch czy nawet kilku z nich wchodzimy w fazę stagnacji. Każdy kolejny kurs na tym poziomie nie wnosi praktycznie nic nowego, a gdy siadamy przez pustym edytorem czujemy pustkę w głowie i mamy wrażenie, jakbyśmy się niczego nie nauczyli. Jeśli kiedyś czuliście coś podobnego, chyba mam dla was rozwiązanie!  </p>
+<h2 id="Exercism-io"><a href="#Exercism-io" class="headerlink" title="Exercism.io"></a>Exercism.io</h2><p>Dziś, chcę Wam przedstawić platformę, która pozwoli Wam nabrać samodzielności w pisaniu kodu. Kursy dla początkujących bardzo często omijają ten ważny punkt programu w nauce programowania. Prowadzenie za rączkę przez każde zadanie, choć bardzo pomocne na początku drogi, staje się uciążliwe na dalszym etapie nauki. Co więcej, odbiera nam szansę na spróbowanie własnych sił i zmierzenie się z prawdziwym problemem. I tu do akcji wkracza exercism.io.  </p>
+<p>Exercism.io to platforma, która pozwala Tobie rozwijać swoje umiejętności programistyczne. Do wyboru masz wiele języków, od tych najpopularniejszych jak JavaScript, Python czy Java, po coś bardziej egzotycznym jak Haskell, OCaml, F# czy Rust.  </p>
+<h2 id="Jak-to-dziala"><a href="#Jak-to-dziala" class="headerlink" title="Jak to działa?"></a>Jak to działa?</h2><p>Po wyborze języka, który chcesz szlifować pora na dokonanie podstawowego set-up’u, który pozwoli Ci na ściąganie zadań. Do wyboru masz w zależności od języka programowania od 10 do nawet 100 problemów czekających na rozwiązanie. Zacząć można od prostego “Hello, World!”, następnie poprzez klasyczne “Beer song” przejść do całkiem skomplikowanych problemów.  </p>
+<p>Przystępując do danego ćwiczenia masz do dyspozycji opis w postaci README, lecz co ciekawsze, dysponujesz również zestawem testów do zadania. Twoim pierwszym krokiem, powinno być zawsze odpalenie ich i zobaczenie, jakie są wymagania dla danego zadania i które testy świecą się na czerwono.  </p>
+<p>Każde udane, ale i również niekompletne rozwiązanie możesz wgrać na platformę. Tam masz szansę otrzymać code review od innych członków community, dostać podpowiedź, jeśli chodzi o rozwiązanie czy podejrzeć i skomentować rozwiązania innych. Masz również możliwość wgrywać kolejne twoje podejścia do problemu i w ramach iteracji polepszać jakoś kodu czy zastosować się do uwag, które inni zostawili przy twoim poprzednim rozwiązaniu.  </p>
+<h2 id="Co-daje-mi-exercism-io"><a href="#Co-daje-mi-exercism-io" class="headerlink" title="Co daje mi exercism.io?"></a>Co daje mi exercism.io?</h2><p>Idea tej platformy bardzo przypadła mi do gustu. Exercism uczy się samodzielności, cechy, która jest bardzo ważna dla programisty, a która niestety często jest pomijana w trakcie nauki. Dodatkowo sposób, w jaki stworzone są zadania zachęca i uczy TDD, czyli programowania sterowanego testami. Pozwolenie innym ludziom na oglądanie twoich rozwiązań i komentowanie ich wymaga sporo odwagi, której tak często brakuje początkującym, a którą mogą nabyć w trakcie nauki.  </p>
+<p>Niestety platforma jest jeszcze bardzo świeża i community nie jest duże, ale swoim udziałem możemy pomóc jej rosnąć. Dodatkowo, jest to projekt tworzony w czasie wolnym, więc możemy także wesprzeć go finansowo na <a href="https://www.patreon.com/exercism" target="_blank" rel="external">Patreon’ie.</a> Jako, że to platforma open-source możesz również zostać kontrybutorem :)  </p>
+<p>Nie ma więc na co czekać! Pora rozwinąć swoje umiejętności na <a href="http://www.exercism.io" target="_blank" rel="external">exercism.io</a>.  </p>
+<p>Dajcie znać jakie są wasze wrażenia po rozwiązaniu pierwszych zadań ;)  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Jestem wielką orędowniczką idei programowania jako hobby czy zawodu dla każdego. Dla chłopaków, dziewczyn, dla młodszych i tych trochę starszych. Od kiedy jesteśmy w stanie znaleźć w internecie mnóstwo tutoriali i kursów dla początkujących, każdy może rozpocząć swoją przygodę z kodowaniem. Znam przykłady wielu ludzi, którzy tak właśnie zaczynali, a teraz podążają programistyczną ścieżką kariery.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.github.io/tags/Programowanie/"/>
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.github.io/tags/Rozwoj/"/>
+    
+      <category term="Web" scheme="https://kernelgonnapanic.github.io/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Akcja Subskrypcja</title>
+    <link href="https://kernelgonnapanic.github.io/2016/08/11/Akcja-Subskrypcja/"/>
+    <id>https://kernelgonnapanic.github.io/2016/08/11/Akcja-Subskrypcja/</id>
+    <published>2016-08-11T07:10:00.000Z</published>
+    <updated>2016-10-18T19:47:32.990Z</updated>
+    
+    <content type="html"><![CDATA[<p>W Internecie dzieją się miliony rzeczy na raz. Powstają nowe interesujące profile. Kanały, które można subskrybować. Blogi, które należy czytać. Lubię, gdy inni polecają mi miejsca w sieci, które ich inspirują, motywują lub z których czerpią wiedzę. Często sama podłapuje temat, a lista moich subskrypcji rośnie ;)<br><a id="more"></a></p>
+<p>Dlatego też chcę się podzielić z wami moją listą internetową listą “must see”, a raczej “must subscribe” :)  </p>
+<p>Zacznę od profilu, który na polskiej scenie youtube’owej jest już dobrze znany. Mowa o <strong>Krzysztofie Gonciarzu</strong>, który dzięki swojej obecnej serii vlogów bardzo zyskał na popularności.  </p>
+<div class="separator" style="clear: both; text-align: center;"><iframe allowfullscreen class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/NIqFlGzdzfg/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/NIqFlGzdzfg?feature=player_embedded" width="320"></iframe></div>
+
+<p>Krzysiek zaczynał swoją internetową karierę jako dziennikarz TV Gry. Obecnie mieszka w Japonii, prowadzi tam Tofu Media, firmę zajmującą się produkcją filmów. Do tego aktywnie prowadzi 2 kanały na yt oraz publikuje daily vloga.  </p>
+<p>Myślę, że ludzie mają różne powody, dla których oglądają vlogi Gonciarza. Ja akurat bardzo lubię podziwiać jego zamiłowanie do pracy. Jest świetnym przykładem na to, że najważniejsze w dążeniu do celu jest nieodpuszczanie sobie oraz konsekwentna, codzienna praca. Podoba mi się również, że Krzysiek ufa sobie i swojej intuicji. Wydaje się, że wie, co dla niego najlepsze i tego się trzyma, np. angażując się tylko w projekty, które “czuje”. Z tego powodu jest również, z tego co mi wiadomo, pierwszym polskim twórcą youtube’owym, który uzyskał tak duże wsparcie pieniężne od swojej publiczności (patrz - jego zbiórka na patronite).<br>Nie bez znaczenia jest również atmosfera Japonii i możliwość zasmakowania trochę innego klimatu, niż ten za moim oknem. Motywacja w kontekście ćwiczeń i dbania o siebie - również gwarantowana.  </p>
+<p>Drugim twórcą youtube’owym, o którym chcę Wam dzisiaj napisać jest Thomas Frank z <strong>CollegeInfoGeek</strong>.  </p>
+<div class="separator" style="clear: both; text-align: center;"><iframe allowfullscreen class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/5Ws2WfeD6d8/0.jpg" frameborder="0" height="266" src="https://www.youtube.com/embed/5Ws2WfeD6d8?feature=player_embedded" width="320"></iframe></div>
+
+<p>Thomas Frank celuje swój kanał głównie do studentów, ale według mnie każdy znajdzie tam coś dla siebie. Oprócz porad o tym, jak zdać celująco egzaminy, możemy posłuchać o sposobach walki z prokrastynacją, pomysłach na utrzymanie motywacji na wysokim poziomie i wszystkim, co jest związane z rozwojem osobistym.  </p>
+<p>Dodatkowo, prowadzi on bloga na ten sam temat i nagrywa podcasty, które można znaleźć <a href="http://collegeinfogeek.com/" target="_blank" rel="external">tutaj</a>. Co więcej, zdążył już napisać książkę na temat studiowania, którą udostępnia za darmo w formie e-book’a.  </p>
+<p>Lubię oglądać publikowane przez niego filmy, bo uważam, że są dobrze przygotowane i zrealizowane. Lubię też jego luźny styl i sposób, w jaki nawiązuje kontakt z oglądającym. Do jego filmów często wracam, by nabrać trochę motywacji. Muszę się też przyznać, że korzystając z okazji, odświeżyłam sobie kilka z nich w trakcie pisania tego posta :)  </p>
+<p>W przypadku jego nagrań, zawsze spodziewam się konkretów. Podsuwa interesujące książki, umiejętnie wyciągając z nich esencję. Na jego rekomendacje w tym zakresie zawsze można liczyć. Jego rad na temat wczesnego wstawania, walki z prokrastynacją czy bycia produktywnym na pewno nie można nazwać laniem wody, a kilka z tych metod z powodzeniem wykorzystuje sama ;)  </p>
+<p>A Wy macie takie kanały na yt, których nie wyobrażacie sobie odsubskrybować? Coś co was motywuje lub sprawia, że jesteście lepsi w jakimś sensie? A może coś, co jest po prostu dobrą rozrywką?  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;W Internecie dzieją się miliony rzeczy na raz. Powstają nowe interesujące profile. Kanały, które można subskrybować. Blogi, które należy czytać. Lubię, gdy inni polecają mi miejsca w sieci, które ich inspirują, motywują lub z których czerpią wiedzę. Często sama podłapuje temat, a lista moich subskrypcji rośnie ;)&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.github.io/tags/Rozwoj/"/>
+    
+      <category term="Sukces" scheme="https://kernelgonnapanic.github.io/tags/Sukces/"/>
+    
+      <category term="AkcjaSubskrypcja" scheme="https://kernelgonnapanic.github.io/tags/AkcjaSubskrypcja/"/>
+    
+      <category term="Internet" scheme="https://kernelgonnapanic.github.io/tags/Internet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Rozwojowy poniedziałek</title>
+    <link href="https://kernelgonnapanic.github.io/2016/05/03/Rozwojowy-poniedzialek5/"/>
+    <id>https://kernelgonnapanic.github.io/2016/05/03/Rozwojowy-poniedzialek5/</id>
+    <published>2016-05-03T20:04:00.000Z</published>
+    <updated>2016-10-18T20:28:50.609Z</updated>
+    
+    <content type="html"><![CDATA[<p>Dziś porządka dawka tego co uwielbiam. W ramach <strong>Rozwojowego poniedziałku #5</strong> zapraszam na apetyczny mix programowania i rozwoju osobistego. Opowiem dziś kilka słów o “Today I learned” -<br>projekcie, który bardzo przypadł mi do gustu. Już tłumaczę o co chodzi ;)<br><a id="more"></a></p>
+<h2 id="Github-od-JavaScriptu-do-przepisow-kulinarnych"><a href="#Github-od-JavaScriptu-do-przepisow-kulinarnych" class="headerlink" title="Github - od JavaScriptu do przepisów kulinarnych"></a>Github - od JavaScriptu do przepisów kulinarnych</h2><p>Github już dawno przestał być tylko bazą kodu. Oprócz repozytoriów z czymś wartościowym, możemy tu znaleźć <a href="https://github.com/matslina/awib" target="_blank" rel="external">programy napisane w Brainfuck’u</a>, <a href="https://github.com/adambom/dictionary" target="_blank" rel="external">słowniki</a>, <a href="https://github.com/bundestag/gesetze" target="_blank" rel="external">prawo niemieckie</a> czy współtworzony przez społeczność przepis na <a href="https://github.com/sinker/tacofancy" target="_blank" rel="external">taco</a>.  </p>
+<p>Jednego razu, przeglądając czeluścia Githuba, trafiłam na projekt, który naprawdę przykuł moją uwagę. A było to właśnie <a href="https://github.com/thoughtbot/til" target="_blank" rel="external"><strong>“Today I learned”</strong></a>.  </p>
+<h2 id="“Today-I-learned”"><a href="#“Today-I-learned”" class="headerlink" title="“Today I learned”"></a>“Today I learned”</h2><p>Na pierwszy rzut oka - normalne repozytorium. Chociaż… no nie do końca. Zamiast plików z kodem, krótkie zapiski odnoszące się do tego, czego się dzisiaj nauczyliśmy. Koncepcja jest prosta - każdego dnia tworzymy krótką notatkę z fragmentem kodu i umieszczamy ją w odpowiadającej jej tematycznie kategorii. I tak w przykładowym repozytorium mamy notatki dotyczące HTML, JavaScriptu, testowania, vim’a, haskella czy security.</p>
+<h2 id="Ale-po-co"><a href="#Ale-po-co" class="headerlink" title="Ale po co?"></a>Ale po co?</h2><p>Żeby docenić swoją podróż. Żeby mieć namacalny dowód tego, że z dnia na dzień uczymy się czegoś nowego. Żeby dzielić się swoją wiedzą z innymi.<br>Uważam, że każdy ma wartościowe przemyślenia, którymi warto się podzielić. Nie ważne, czy jest na początku swojej przygody z programowaniem, czy jest wymiataczem z 15-letnim doświadczeniem. Poza tym, fajnie jest wracać do tego typu notatek i widzieć, że coś co sprawiło nam w pewnym momencie problem, teraz jest błahostką.  </p>
+<p>Jeśli jesteście ciekawi jak będzie wyglądała moja najbliższa programistyczna podróż - sprawdzajcie sami <a href="https://github.com/kernelgonnapanic/todayIlearned" target="_blank" rel="external">TUTAJ</a> :)  </p>
+<p>*wcale nie uważam programów w Brainfack’u lub przepisu na taco za niewartościowe ;)  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Dziś porządka dawka tego co uwielbiam. W ramach &lt;strong&gt;Rozwojowego poniedziałku #5&lt;/strong&gt; zapraszam na apetyczny mix programowania i rozwoju osobistego. Opowiem dziś kilka słów o “Today I learned” -&lt;br&gt;projekcie, który bardzo przypadł mi do gustu. Już tłumaczę o co chodzi ;)&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.github.io/tags/RozwojowyPoniedzialek/"/>
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.github.io/tags/Rozwoj/"/>
+    
+      <category term="Sukces" scheme="https://kernelgonnapanic.github.io/tags/Sukces/"/>
+    
+      <category term="IT" scheme="https://kernelgonnapanic.github.io/tags/IT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Trzy litery i kropka - czy studia mają sens?</title>
+    <link href="https://kernelgonnapanic.github.io/2016/02/06/Trzy-litery-i-kropka/"/>
+    <id>https://kernelgonnapanic.github.io/2016/02/06/Trzy-litery-i-kropka/</id>
+    <published>2016-02-06T18:12:00.000Z</published>
+    <updated>2016-10-18T20:34:47.406Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Inż.</strong> - trzy magiczne literki i kropka. Gdy stawiałeś swoje pierwsze kroki na uczelni, cztery lata temu, były one odległym i upragnionym celem. Miały sprawić, że narody przed Tobą klękną, a pracodawcy będą ustawiać się do Ciebie w kolejce. Wyszarpane, opłacone potem i krwią, wreszcie przywędrowały i dumnie zasiadły przed twoim nazwiskiem. Tylko jedna rzecz zaczęła Cię nurtować: “Czemu nic się nie zmieniło?”.<br><a id="more"></a>  </p>
+<p>Budzisz się z kacem po “opijaniu inżyniera”. Jest godzina 13:00. Wzdychasz. Robisz sobie kanapkę. Włączasz telewizor. W końcu Ci się należy, tyle uczyłeś się do tego egzaminu. Przełączasz kanał. I jeszcze raz. Zerkasz na zegarek, już 18:00. W międzyczasie obejrzałeś na facebook’u posty wszystkich kolegów, którzy też cieszą się z tytułu. Sprawdziłeś Instagrama, 9gag’a, Kwejka. Cztery razy. Czekasz. Na ofertę pracy. Na poniedziałek. Na lepszy dzień.  </p>
+<h2 id="Czekanie-na-…"><a href="#Czekanie-na-…" class="headerlink" title="Czekanie na …"></a>Czekanie na …</h2><p>Chcę Ci powiedzieć, że można tak czekać w nieskończoność. Liczyć na to, że “trzy literki i kropka” przed nazwiskiem w magiczny sposób zmienią twoją przyszłość. Nie uczyć się na własną rękę wierząc w to, że będąc markowym produktem politechniki będziesz atrakcyjny na rynku pracy.  </p>
+<p>Jednak takie podejście szybko może przynieść rozczarowanie. W szczególności, gdy po wyjściu z sali egzaminacyjnej, z piękną piąteczką na dyplomie, rozejrzysz się dookoła i stwierdzisz, że nic się nie zmieniło. Nic a nic. Lub na rozmowie kwalifikacyjnej zapytają się Ciebie o to, co zrobiłeś przez te 4 lata. A ty nie będziesz w stanie wymyślić nic sensownego.  </p>
+<div class="figure center fig-100" style="width:;"><img class="fig-img" src="clock.jpg" alt=""></div><div style="clear:both;"></div>
+<h2 id="Czy-studia-maja-sens"><a href="#Czy-studia-maja-sens" class="headerlink" title="Czy studia mają sens?"></a>Czy studia mają sens?</h2><p>Studia przede wszystkim dają Ci czas. Czas na naukę, staż, praktyki, podjęcie pierwszej pracy “na próbę”. Nikt Cię wtedy nie goni, nie wymaga, byś zarabiał na rodzinę. Możesz eksperymentować, być odważnym, stawiać sobie wyzwania. Spróbować wielu rzeczy i wielu rzeczy się nauczyć.  </p>
+<p>Jest to też świetny czas na spełnianie marzeń, podróżowanie, odkrywanie świata. Studencki portfel jest cienki, ale mam nadzieję, że już zdążyłeś się przekonać, że nie potrzeba dużej ilości pieniędzy, by zwiedzać świat. To czas na nabieranie doświadczenia, poznawanie ludzi, działalność społeczną.  </p>
+<h2 id="Dobrze-wykorzystaj-ten-czas"><a href="#Dobrze-wykorzystaj-ten-czas" class="headerlink" title="Dobrze wykorzystaj ten czas."></a>Dobrze wykorzystaj ten czas.</h2><p>Gdy dobrze wykorzystasz ten czas, na pytanie: “co zrobiłeś w czasie studiów?” będziesz miał szansę pochwalić się stażem, który robiłeś za granicą, opowiedzieć o tym, co jadłeś na przedmieściach Sajgonu czy zaprezentować grę, którą stworzyłeś z kolegami.  </p>
+<p>Nie pozwólcie, by studia były dla Was czasem czekania - aż profesor Was czegoś nauczy, aż będziecie wystarczająco poważni/dojrzali/starzy, by mieć pracę czy odnieść sukces. To wy sterujecie swoim losem i to od Was zależy na co poświęcacie swój czas.  </p>
+<p><strong>Ania</strong>  </p>
+<p>A jakie jest wasze podejście do studiowania? Warto?</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;Inż.&lt;/strong&gt; - trzy magiczne literki i kropka. Gdy stawiałeś swoje pierwsze kroki na uczelni, cztery lata temu, były one odległym i upragnionym celem. Miały sprawić, że narody przed Tobą klękną, a pracodawcy będą ustawiać się do Ciebie w kolejce. Wyszarpane, opłacone potem i krwią, wreszcie przywędrowały i dumnie zasiadły przed twoim nazwiskiem. Tylko jedna rzecz zaczęła Cię nurtować: “Czemu nic się nie zmieniło?”.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="O szczęściu" scheme="https://kernelgonnapanic.github.io/tags/O-szczesciu/"/>
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.github.io/tags/Rozwoj/"/>
+    
+      <category term="Studia" scheme="https://kernelgonnapanic.github.io/tags/Studia/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jak nie dać się zwariować postanowieniom noworocznym?</title>
+    <link href="https://kernelgonnapanic.github.io/2016/01/03/Postanowienia-noworoczne/"/>
+    <id>https://kernelgonnapanic.github.io/2016/01/03/Postanowienia-noworoczne/</id>
+    <published>2016-01-03T12:58:00.000Z</published>
+    <updated>2017-01-26T18:44:50.382Z</updated>
+    
+    <content type="html"><![CDATA[<p>Nie da rady wejść w Nowy Rok, omijając sezon na postanowienia noworoczne. Dla niektórych osób są one bezsensowne, bo uważają oni, że cyferki w kalendarzu nic nie zmieniają. Inni śmieją się z tabunów odwiedzających siłownie w styczniu. Dla mnie z kolei każdy moment jest dobry na zmiany, wyjście ze strefy komfortu, zrobienie czegoś fajnego, kreatywnego i rozwijającego czy zaprzestanie czegoś, co nas niszczy.<br><a id="more"></a></p>
+<p>Jednak do okołosylwestrowych planów należy podejść, będąc odpowiednio przygotowanym. Spojrzeć na nie rozsądnym okiem, zdecydować co jest osiągalne, a co nie. Bardzo pomocne jest w tym momencie przeanalizowanie ich w kontekście kryteriów <strong>S.M.A.R.T.  </strong>  </p>
+<p><strong>S.M.A.R.T</strong> to technika formułowania planów w taki sposób, by zdecydowanie zwiększyć szansę na ich zrealizowanie. Podsuwa nam 5 cech, którymi charakteryzuje się dobry cel. Powinien on być:  </p>
+<h3 id="Konkretny-specific"><a href="#Konkretny-specific" class="headerlink" title="Konkretny (specific)"></a>Konkretny (specific)</h3><p>Jasne sprecyzowanie celu, nie pozostawiające miejsca na różne interpretacje, jest kluczem do sukcesu. Dodatkowo ważne jest by cel dotyczył pewniej wąskiej dziedziny życia. Nie stawiajmy sobie za cel “Zmienię swoje życie”, bo takie hasło dotyczy wszystkiego, a zarazem niczego :)  </p>
+<h3 id="Mierzalny-measurable"><a href="#Mierzalny-measurable" class="headerlink" title="Mierzalny (measurable)"></a>Mierzalny (measurable)</h3><p>Mierzalność to bardzo ważna cecha dobrego celu. Schudnę 5 kg, nauczę się 30 słówek tygodniowo… im więcej liczb tym lepiej. Pomogą nam jednoznacznie stwierdzić czy cel został osiągnięty czy nie. A co jeśli nie tak łatwo wtłoczyć nasz cel w świat matematyki? Warto zmienić optykę patrzenia na problem. Zamiast powiedzieć “będę więcej czasu spędzać z rodziną” za cel ustawić sobie “spędzanie 30 minut wieczorem na rozmowie z mamą”.  </p>
+<div class="figure center fig-100" style="width:;"><img class="fig-img" src="top_small.jpg" alt=""></div><div style="clear:both;"></div>
+<h3 id="Ambitny-ambitious"><a href="#Ambitny-ambitious" class="headerlink" title="Ambitny (ambitious)"></a>Ambitny (ambitious)</h3><p>Stawianie sobie ambitnych celów rozwija. Daje kopniaka z motywacji. Gdy poprzeczka nie jest ustawiona odpowiednio wysoko, nie jesteśmy wystarczająco zmotywowani do trwania w naszym postanowieniu. Cele typu “codziennie wstanę 10 minut wcześniej” nie są czymś, o co się chce człowiekowi walczyć.  </p>
+<h3 id="Realistyczny-realistic"><a href="#Realistyczny-realistic" class="headerlink" title="Realistyczny (realistic)"></a>Realistyczny (realistic)</h3><p>Oooo… to chyba najczęściej łamana zasada odnośnie stawiania sobie celów. Dużo ludzi chce schudnąć 20 kg w 2 tygodnie, rzucić dziś palenie czy nauczyć się płynnie mówić w danym języku w miesiąc. A… i najlepiej wszystko to zrobić naraz. Ale czy to jest w ogóle możliwe? Ambitne cele są super pod warunkiem, że mamy uczucie, że jesteśmy w stanie je zrealizować. W innym wypadku tylko zniechęcają.  </p>
+<h3 id="Okreslony-w-czasie-time-bound"><a href="#Okreslony-w-czasie-time-bound" class="headerlink" title="Określony w czasie (time-bound)"></a>Określony w czasie (time-bound)</h3><p>Zdecydowanie konieczne jest określenie ram czasowych przeznaczonych na realizację naszego celu. W kontekście postanowień noworocznych jako nasz <em>deadline</em> automatycznie narzuca się kolejny sylwester. Jednak czasem warto sobie postawić mniejsze, krótkoterminowe cele, które można zweryfikować szybciej niż po upływie całego roku.  </p>
+<p>Z okazji Nowego Roku życzę Wam wszystkim, by wasze cele były SMART :) By prowadziły Was do miejsc, w których jeszcze nie byliście i odkrywały przed Wami inspirujący, kreatywny i otwarty świat. By pozwalały Wam stać się lepszymi ludźmi. Pamiętajcie ‘only sky’s the limit’ :)  </p>
+<p>Ania  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Nie da rady wejść w Nowy Rok, omijając sezon na postanowienia noworoczne. Dla niektórych osób są one bezsensowne, bo uważają oni, że cyferki w kalendarzu nic nie zmieniają. Inni śmieją się z tabunów odwiedzających siłownie w styczniu. Dla mnie z kolei każdy moment jest dobry na zmiany, wyjście ze strefy komfortu, zrobienie czegoś fajnego, kreatywnego i rozwijającego czy zaprzestanie czegoś, co nas niszczy.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.github.io/tags/Rozwoj/"/>
+    
+      <category term="Sukces" scheme="https://kernelgonnapanic.github.io/tags/Sukces/"/>
+    
+  </entry>
+  
+</feed>
