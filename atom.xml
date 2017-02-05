@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://kernelgonnapanic.github.io/"/>
-  <updated>2017-02-05T17:46:56.525Z</updated>
-  <id>https://kernelgonnapanic.github.io/</id>
+  <link href="https://kernelgonnapanic.pl/"/>
+  <updated>2017-02-05T18:09:34.296Z</updated>
+  <id>https://kernelgonnapanic.pl/</id>
   
   <author>
     <name>Anna Konopka</name>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>Hexo - nowy rok, nowy blog!</title>
-    <link href="https://kernelgonnapanic.github.io/2017/01/26/HexoNowyRokNowyBlog/"/>
-    <id>https://kernelgonnapanic.github.io/2017/01/26/HexoNowyRokNowyBlog/</id>
+    <link href="https://kernelgonnapanic.pl/2017/01/26/HexoNowyRokNowyBlog/"/>
+    <id>https://kernelgonnapanic.pl/2017/01/26/HexoNowyRokNowyBlog/</id>
     <published>2017-01-26T18:46:42.000Z</published>
-    <updated>2017-02-05T17:46:56.525Z</updated>
+    <updated>2017-02-05T18:09:34.296Z</updated>
     
     <content type="html"><![CDATA[<p>Dawno się nie słyszeliśmy, prawda? W międzyczasie przez bloga przeszła burza, a jej rezultatem jest to, co właśnie widzicie. I nie jest to tylko nowy szablon. Przez ostatnie kilka miesięcy budowałam tego bloga od zera na nowej platformie. Dlatego też, <strong>na dobry nowy początek</strong>, nie może zabraknąć wpisu na temat narzędzi, które na to pozwalają.</p>
 <a id="more"></a>
@@ -46,20 +46,20 @@
     </summary>
     
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.github.io/tags/Programowanie/"/>
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
-      <category term="Blogowanie" scheme="https://kernelgonnapanic.github.io/tags/Blogowanie/"/>
+      <category term="Blogowanie" scheme="https://kernelgonnapanic.pl/tags/Blogowanie/"/>
     
-      <category term="Hexo" scheme="https://kernelgonnapanic.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://kernelgonnapanic.pl/tags/Hexo/"/>
     
-      <category term="Github" scheme="https://kernelgonnapanic.github.io/tags/Github/"/>
+      <category term="Github" scheme="https://kernelgonnapanic.pl/tags/Github/"/>
     
   </entry>
   
   <entry>
     <title>Software Craftsman. Profesjonalizm, czysty kod i techniczna perfekcja.</title>
-    <link href="https://kernelgonnapanic.github.io/2016/10/02/software-craftsman/"/>
-    <id>https://kernelgonnapanic.github.io/2016/10/02/software-craftsman/</id>
+    <link href="https://kernelgonnapanic.pl/2016/10/02/software-craftsman/"/>
+    <id>https://kernelgonnapanic.pl/2016/10/02/software-craftsman/</id>
     <published>2016-10-02T10:44:24.000Z</published>
     <updated>2017-01-26T19:07:28.827Z</updated>
     
@@ -90,22 +90,22 @@
     </summary>
     
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.github.io/tags/Programowanie/"/>
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
-      <category term="Rozwój" scheme="https://kernelgonnapanic.github.io/tags/Rozwoj/"/>
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Sukces" scheme="https://kernelgonnapanic.github.io/tags/Sukces/"/>
+      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
-      <category term="IT" scheme="https://kernelgonnapanic.github.io/tags/IT/"/>
+      <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
     
-      <category term="Rozwojowy Poniedziałek" scheme="https://kernelgonnapanic.github.io/tags/Rozwojowy-Poniedzialek/"/>
+      <category term="Rozwojowy Poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-Poniedzialek/"/>
     
   </entry>
   
   <entry>
     <title>Pamiętnik programistki</title>
-    <link href="https://kernelgonnapanic.github.io/2016/09/05/Pamitnik-programistki-1/"/>
-    <id>https://kernelgonnapanic.github.io/2016/09/05/Pamitnik-programistki-1/</id>
+    <link href="https://kernelgonnapanic.pl/2016/09/05/Pamitnik-programistki-1/"/>
+    <id>https://kernelgonnapanic.pl/2016/09/05/Pamitnik-programistki-1/</id>
     <published>2016-09-05T03:30:00.000Z</published>
     <updated>2016-10-18T20:07:46.373Z</updated>
     
@@ -131,18 +131,18 @@
     </summary>
     
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.github.io/tags/Programowanie/"/>
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
-      <category term="Nowe" scheme="https://kernelgonnapanic.github.io/tags/Nowe/"/>
+      <category term="Nowe" scheme="https://kernelgonnapanic.pl/tags/Nowe/"/>
     
-      <category term="ZPamiętnikaProgramistki" scheme="https://kernelgonnapanic.github.io/tags/ZPamietnikaProgramistki/"/>
+      <category term="ZPamiętnikaProgramistki" scheme="https://kernelgonnapanic.pl/tags/ZPamietnikaProgramistki/"/>
     
   </entry>
   
   <entry>
     <title>Exercism.io - rozwiń skrzydła jako programista</title>
-    <link href="https://kernelgonnapanic.github.io/2016/08/16/Exercismio/"/>
-    <id>https://kernelgonnapanic.github.io/2016/08/16/Exercismio/</id>
+    <link href="https://kernelgonnapanic.pl/2016/08/16/Exercismio/"/>
+    <id>https://kernelgonnapanic.pl/2016/08/16/Exercismio/</id>
     <published>2016-08-16T06:41:00.000Z</published>
     <updated>2016-10-18T19:40:32.324Z</updated>
     
@@ -166,18 +166,18 @@
     </summary>
     
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.github.io/tags/Programowanie/"/>
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
-      <category term="Rozwój" scheme="https://kernelgonnapanic.github.io/tags/Rozwoj/"/>
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Web" scheme="https://kernelgonnapanic.github.io/tags/Web/"/>
+      <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
     
   </entry>
   
   <entry>
     <title>Akcja Subskrypcja</title>
-    <link href="https://kernelgonnapanic.github.io/2016/08/11/Akcja-Subskrypcja/"/>
-    <id>https://kernelgonnapanic.github.io/2016/08/11/Akcja-Subskrypcja/</id>
+    <link href="https://kernelgonnapanic.pl/2016/08/11/Akcja-Subskrypcja/"/>
+    <id>https://kernelgonnapanic.pl/2016/08/11/Akcja-Subskrypcja/</id>
     <published>2016-08-11T07:10:00.000Z</published>
     <updated>2016-10-18T19:47:32.990Z</updated>
     
@@ -205,20 +205,20 @@
     </summary>
     
     
-      <category term="Rozwój" scheme="https://kernelgonnapanic.github.io/tags/Rozwoj/"/>
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Sukces" scheme="https://kernelgonnapanic.github.io/tags/Sukces/"/>
+      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
-      <category term="AkcjaSubskrypcja" scheme="https://kernelgonnapanic.github.io/tags/AkcjaSubskrypcja/"/>
+      <category term="AkcjaSubskrypcja" scheme="https://kernelgonnapanic.pl/tags/AkcjaSubskrypcja/"/>
     
-      <category term="Internet" scheme="https://kernelgonnapanic.github.io/tags/Internet/"/>
+      <category term="Internet" scheme="https://kernelgonnapanic.pl/tags/Internet/"/>
     
   </entry>
   
   <entry>
     <title>Rozwojowy poniedziałek</title>
-    <link href="https://kernelgonnapanic.github.io/2016/05/03/Rozwojowy-poniedzialek5/"/>
-    <id>https://kernelgonnapanic.github.io/2016/05/03/Rozwojowy-poniedzialek5/</id>
+    <link href="https://kernelgonnapanic.pl/2016/05/03/Rozwojowy-poniedzialek5/"/>
+    <id>https://kernelgonnapanic.pl/2016/05/03/Rozwojowy-poniedzialek5/</id>
     <published>2016-05-03T20:04:00.000Z</published>
     <updated>2016-10-18T20:28:50.609Z</updated>
     
@@ -238,20 +238,20 @@
     </summary>
     
     
-      <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.github.io/tags/RozwojowyPoniedzialek/"/>
+      <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.pl/tags/RozwojowyPoniedzialek/"/>
     
-      <category term="Rozwój" scheme="https://kernelgonnapanic.github.io/tags/Rozwoj/"/>
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Sukces" scheme="https://kernelgonnapanic.github.io/tags/Sukces/"/>
+      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
-      <category term="IT" scheme="https://kernelgonnapanic.github.io/tags/IT/"/>
+      <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
     
   </entry>
   
   <entry>
     <title>Trzy litery i kropka - czy studia mają sens?</title>
-    <link href="https://kernelgonnapanic.github.io/2016/02/06/Trzy-litery-i-kropka/"/>
-    <id>https://kernelgonnapanic.github.io/2016/02/06/Trzy-litery-i-kropka/</id>
+    <link href="https://kernelgonnapanic.pl/2016/02/06/Trzy-litery-i-kropka/"/>
+    <id>https://kernelgonnapanic.pl/2016/02/06/Trzy-litery-i-kropka/</id>
     <published>2016-02-06T18:12:00.000Z</published>
     <updated>2016-10-18T20:34:47.406Z</updated>
     
@@ -275,18 +275,18 @@
     </summary>
     
     
-      <category term="O szczęściu" scheme="https://kernelgonnapanic.github.io/tags/O-szczesciu/"/>
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Rozwój" scheme="https://kernelgonnapanic.github.io/tags/Rozwoj/"/>
+      <category term="O szczęściu" scheme="https://kernelgonnapanic.pl/tags/O-szczesciu/"/>
     
-      <category term="Studia" scheme="https://kernelgonnapanic.github.io/tags/Studia/"/>
+      <category term="Studia" scheme="https://kernelgonnapanic.pl/tags/Studia/"/>
     
   </entry>
   
   <entry>
     <title>Jak nie dać się zwariować postanowieniom noworocznym?</title>
-    <link href="https://kernelgonnapanic.github.io/2016/01/03/Postanowienia-noworoczne/"/>
-    <id>https://kernelgonnapanic.github.io/2016/01/03/Postanowienia-noworoczne/</id>
+    <link href="https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/"/>
+    <id>https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/</id>
     <published>2016-01-03T12:58:00.000Z</published>
     <updated>2017-01-26T18:44:50.382Z</updated>
     
@@ -310,9 +310,9 @@
     </summary>
     
     
-      <category term="Rozwój" scheme="https://kernelgonnapanic.github.io/tags/Rozwoj/"/>
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Sukces" scheme="https://kernelgonnapanic.github.io/tags/Sukces/"/>
+      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
   </entry>
   
