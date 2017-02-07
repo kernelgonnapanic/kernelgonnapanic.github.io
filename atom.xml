@@ -90,13 +90,13 @@
     </summary>
     
     
-      <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
-    
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
       <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
+    
+      <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
     
       <category term="Rozwojowy Poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-Poniedzialek/"/>
     
@@ -168,9 +168,9 @@
     
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
-    
       <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
+    
+      <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
     
   </entry>
   
@@ -179,7 +179,7 @@
     <link href="https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/"/>
     <id>https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/</id>
     <published>2016-08-11T07:10:00.000Z</published>
-    <updated>2017-02-07T18:58:14.036Z</updated>
+    <updated>2017-02-07T19:04:43.901Z</updated>
     
     <content type="html"><![CDATA[<p>Kolejny <strong>Rozwojowy Poniedziałek</strong> przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili <strong>nawyki mistrzów</strong>.<br><a id="more"></a></p>
 <h3 id="Mistrzowie-wstaja-wczesnie"><a href="#Mistrzowie-wstaja-wczesnie" class="headerlink" title="Mistrzowie wstają wcześnie."></a>Mistrzowie wstają wcześnie.</h3><p>Wstawanie 2 czy 3 godziny przed wyjściem z domu rano może wydawać się przerażające. Często jednak nie zdajemy sobie sprawy ile możliwości nam oferuje. Mamy czas, by przy kubku świeżo zaparzonej kawy przemyśleć, co czeka nas w nadchodzącym dniu. Znajdzie się też na pewno pół godziny na trening. Możemy wybrać się na jesienny spacer i posłuchać muzyki czy podcastu. Obejrzeć motywujący wykładu czy poczytać książkę. Tak! Naprawdę da radę to zrobić rano! A co więcej, przy okazji ćwiczymy naszą silną wolę.</p>
@@ -271,13 +271,13 @@
     </summary>
     
     
-      <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
-    
       <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.pl/tags/RozwojowyPoniedzialek/"/>
     
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
+    
+      <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
     
   </entry>
   
@@ -385,11 +385,55 @@
   </entry>
   
   <entry>
+    <title>Smashing magazine</title>
+    <link href="https://kernelgonnapanic.pl/2015/07/26/SmashingMagazine/"/>
+    <id>https://kernelgonnapanic.pl/2015/07/26/SmashingMagazine/</id>
+    <published>2015-07-26T20:24:00.000Z</published>
+    <updated>2017-02-07T19:07:54.331Z</updated>
+    
+    <content type="html"><![CDATA[<p>Wszyscy zainteresowani technologiami webowymi i tworzeniem stron internetowych z pewnością słyszeli o <a href="http://www.smashingmagazine.com/" target="_blank" rel="external">The Smashing Magazine</a>. Tym, którzy jeszcze go nie odkryli, szczerze polecam pobuszowanie w czeluściach jego artykułów czy polubienie na fb, bo warto :) Mimo że idea tego portalu bardzo mi się podoba, jakoś rzadko tam zaglądam. Dlatego, gdy w bibliotece natrafiłam na ich książkę, bardzo się ucieszyłam i postanowiłam nadrobić zaległości.<br><a id="more"></a></p>
+<p><strong>The Smashing Magazine</strong> publikuje w sieci artykuły dotyczące tworzenia stron internetowych - projektowania grafiki, programowania czy zagadnień związanych z user experience itd. Najlepsze, czy też najbardziej godne uwagi teksty, publikuje w formie książek i e-booków. Powstaje w ten sposób publikacja, która jest połączeniem różnych artykułów, oscylujących wokół jednego tematu, lecz napisanych przez innych autorów. Pomysł równie ciekawy, co ambitny.</p>
+<p>Książka, którą aktualnie trzymam w ręce, została wydana w 2011 roku, więc jak na publikację dotyczącą technologii, a zwłaszcza Internetu, może być już uważana za dinozaura. :) Niestety czuje się to również w trakcie czytania - niektóre z wymienianych technologii są już dawno uważane za przestarzałe. Jednak tak długo jak się dało, autorzy starali się odchodzić od szczegółów na rzecz ogólnych i uniwersalnych zasad, które można wykorzystywać przez lata.</p>
+<p>Każdy z 10 rozdziałów <strong>“The Smashing Book #2”</strong> niesie ze sobą inny temat. Mnie najbardziej przypadł do gustu tekst o <strong>projektowaniu grafiki doskonałej</strong>. Wiele z przedstawionych zasad mogę wykorzystać, a czasem nawet już nieświadomie używałam, w codziennej pracy nad blogiem czy zdjęciami. W tym rozdziale można również przeczytać kilka słów o tym, jak budować napięcie za pomocą grafiki czy jak przy pomocy pustki i kontrastu sprawić, że witryna jest jeszcze ciekawsza.</p>
+<p>Wcale nie gorsze były artykuły, które opisywały backstage tworzenia stron internetowych. Jednym z nich był tekst o <strong>szkicach i prototypach</strong>. Zawierał on wiele odkrywczych, przynajmniej dla mnie, wskazówek na temat procesu projektowania. Etapu, który często jest pomijany lub traktowany po macoszemu :)</p>
+<div class="figure center fig-100" style="width:;"><img class="fig-img" src="stosik.JPG" alt=""></div><div style="clear:both;"></div>
+<p>Genialny jest również tekst na temat <strong>grywalizacji</strong>. Wcześniej raczej o niej nie słyszałam, a po przeczytaniu tego artykułu w mojej głowie pojawiło się wiele pytań i chęć jeszcze lepszego poznania tego tematu. Na pewno możecie się spodziewać, że temat gamifikacji na blogu jeszcze powróci :)</p>
+<p>Natomiast jednym tekstem bardzo się rozczarowałam. Artykuł o e-commerce okazał się przepełnionym procentami i liczbami porównaniem wielu sklepów internetowych. Nic szczególnego nie wnosił, a nudny był jak flaki z olejem. Jeżeli zdecydujecie się na przeczytanie tej książki, ten rozdział możecie z czystym sercem ominąć. Nic nie stracicie. :) Ja do końca miałam nadzieję, że czegoś pożytecznego się dowiem. Nadzieja umiera ostatnia ;)</p>
+<p>Podsumowując, książki z serii The Smashing Book to lektura obowiązkowa dla każdego twórcy stron internetowych - począwszy od grafika czy projektanta user experience na programistach kończąc. Zdecydowanie polecam zapoznanie się z którymś z nowszych wydań. Gdyby jednak w wasze ręce trafiła przypadkiem “starsza” książka - z niej też możecie wyciągnąć wiele dobrego :)</p>
+<p>Dla wszystkich zainteresowanych tematem, mam bardzo dobre wieści. Aktualnie czeka na mnie na poczcie świeżutka, pachnąca nowością - The Smashing Book #5. Już się nie mogę doczekać jej zawartości :)</p>
+<p>Jeśli macie jakieś pomysły na najbliższe technologiczne recenzje i nie tylko - piszcie śmiało!  </p>
+<p>Ania</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Wszyscy zainteresowani technologiami webowymi i tworzeniem stron internetowych z pewnością słyszeli o &lt;a href=&quot;http://www.smashingmagazine.com/&quot;&gt;The Smashing Magazine&lt;/a&gt;. Tym, którzy jeszcze go nie odkryli, szczerze polecam pobuszowanie w czeluściach jego artykułów czy polubienie na fb, bo warto :) Mimo że idea tego portalu bardzo mi się podoba, jakoś rzadko tam zaglądam. Dlatego, gdy w bibliotece natrafiłam na ich książkę, bardzo się ucieszyłam i postanowiłam nadrobić zaległości.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+      <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
+    
+      <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
+    
+      <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
+    
+      <category term="UX" scheme="https://kernelgonnapanic.pl/tags/UX/"/>
+    
+      <category term="Grafika" scheme="https://kernelgonnapanic.pl/tags/Grafika/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Biznes do góry nogami wywrócony - Richard Branson</title>
     <link href="https://kernelgonnapanic.pl/2015/07/16/BiznesDoGoryNogami/"/>
     <id>https://kernelgonnapanic.pl/2015/07/16/BiznesDoGoryNogami/</id>
     <published>2015-07-16T18:26:00.000Z</published>
-    <updated>2017-02-07T18:46:27.930Z</updated>
+    <updated>2017-02-07T19:05:14.718Z</updated>
     
     <content type="html"><![CDATA[<p>Podsumowanie <strong>Bookathonu</strong> już za mną, ale ostatnie bookathonowe dziecko jeszcze czeka na recenzję :) Chodzi mi o książkę, którą wybrał dla mnie mój brat, czyli o <strong>“Biznes do góry nogami wywrócony” Richarda Bransona</strong>.<br><a id="more"></a></p>
 <p>Zacznę od tego, że bardzo się ucieszyłam, gdy okazało się, że to właśnie tę książkę będę czytać w ramach wyzwania. Znając mojego brata, mógł mi wybrać coś masakrycznego i patrzeć jak się z tym męczę :) Richarda Bransona kojarzyłam już wcześniej jako założyciela grupy Virgin i świetnego przedsiębiorcę. Od dawna miałam ochotę, by poczytać o jego podejściu do pieniędzy i przemyśleniach na temat biznesu.</p>
