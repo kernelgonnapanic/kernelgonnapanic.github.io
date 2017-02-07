@@ -90,13 +90,13 @@
     </summary>
     
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
-    
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
       <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
       <category term="Rozwojowy Poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-Poniedzialek/"/>
     
@@ -166,11 +166,11 @@
     </summary>
     
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
-    
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
       <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
   </entry>
   
@@ -275,9 +275,9 @@
     </summary>
     
     
-      <category term="O szczęściu" scheme="https://kernelgonnapanic.pl/tags/O-szczesciu/"/>
-    
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+      <category term="O szczęściu" scheme="https://kernelgonnapanic.pl/tags/O-szczesciu/"/>
     
       <category term="Studia" scheme="https://kernelgonnapanic.pl/tags/Studia/"/>
     
@@ -313,6 +313,41 @@
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>5 najlepszych platform do nauki programowania</title>
+    <link href="https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/"/>
+    <id>https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/</id>
+    <published>2015-09-11T07:00:00.000Z</published>
+    <updated>2017-02-07T18:28:57.314Z</updated>
+    
+    <content type="html"><![CDATA[<p>Od jakiego tematu można by zacząć cykl dotyczący programowania? No właśnie od tego! Dziś chciałabym się z Wami podzielić platformami, dzięki którym można zarazić się “koderskim” bakcylem i wiele się nauczyć. Zaczęłam z nich korzystać, gdy byłam totalnie zielona w tym temacie, no i co tu dużo mówić - “wpadłam po uszy” :)<br><a id="more"></a></p>
+<h2 id="Codecademy"><a href="#Codecademy" class="headerlink" title="Codecademy"></a><a href="https://www.codecademy.com/" target="_blank" rel="external">Codecademy</a></h2><p>Dla tych, którzy lubią, gdy się wszystko świeci, miga, kręci, obraca i zmienia kolory Codecademy stworzyło ciekawe projekty, np. “Zbuduj własną galaktykę”. Tym z Was, którym wystarczy fachowa wiedza, wykładana od podstaw, co więcej, podana w bardzo przystępny i interaktywny sposób, polecam rozpoczęcie jednego z dostępnych kursów. Pakiet jest wyraźnie nakierowany w stronę web developmentu. Mamy do wyboru: <strong>Html + CSS</strong>, <strong>Javascript</strong>, <strong>jQuery</strong>, <strong>PHP</strong>, <strong>Pythona</strong> oraz <strong>Ruby</strong> :)</p>
+<p>Od czasu, gdy ostatni raz korzystałam z tej platformy, twórcy dodali wiele ciekawych ścieżek np. dotyczące <strong>Ruby on Rails</strong> czy ostatnio modnego <strong>AngularJs</strong>. Dostęp do wszystkich treści jest darmowy. Szczerze polecam :)</p>
+<h2 id="Code-school"><a href="#Code-school" class="headerlink" title="Code school"></a><a href="https://www.codeschool.com/" target="_blank" rel="external">Code school</a></h2><p>Code School oferuje nam już bazę konkretnej, użytecznej wiedzy. Kiedy jakiś temat Cię zainteresował tam będziesz mógł się w tej dziedzinie wyspecjalizować. Ale niestety nie jest aż tak kolorowo. Za część z kursów (szczególnie za te bardziej zaawansowane) trzeba zapłacić. Ja miałam to szczęście, że trafiłam na darmowy 30-dniowy okres próbny :) Nakodziłam się po wsze czasy :) Code school to miejsce, gdzie można wybierać sobie ścieżki rozwoju. Zawierają one różne kursy, które są skupione wokół jednego tematu. I tak, mamy ścieżki popularne, takie jak: <strong>Ruby</strong>, <strong>Html z CSS</strong> oraz niezrównana ścieżka <strong>Javascriptu</strong> (jeden z najlepszych kursów ever), ale też niespotykane np. <strong>iOS</strong> czy <strong>Git</strong>.  </p>
+<h2 id="Coursera"><a href="#Coursera" class="headerlink" title="Coursera"></a><a href="https://www.coursera.org/" target="_blank" rel="external">Coursera</a></h2><p>Na Coursera znajdziesz dosłownie wszystko. Wiele mówi to, że w aktualne ofercie są 104 kursy dotyczące technologii komputerowych - znajdzie się tu coś dla początkujących, jak i zaawansowanych. Od nauki pętli i funkcji do kwestii zabezpieczeń, projektowania grafiki, User Experience czy zagadnień dotyczących baz danych czy programowania urządzeń mobilnych. Minusem platformy jest to, że nie wszystkie kursy są równie ciekawe i dobrze przygotowane. Niestety zdarzają się nudne niewypały. Wiele kursów na Coursera jest darmowych. Nowością są specjalizacje - grupy kursów mające odzwierciedlać prawdziwe studia. Jednak w chwili obecnej są one płatne.  </p>
+<h2 id="Khan-Academy"><a href="#Khan-Academy" class="headerlink" title="Khan Academy"></a><a href="https://pl.khanacademy.org/" target="_blank" rel="external">Khan Academy</a></h2><p>Ojojoj… Khan Academy rozrósł się od czasu, kiedy ostatnio z niego korzystałam. Oprócz matematyki możemy się tu nauczyć programowania, nauk ścisłych, ekonomii czy innych kierunków humanistycznych. Każdy nowo stworzony użytkownik musi wybrać sobie małe kolorowe zwierzątko, które rośnie wraz z Twoją wiedzą. Khan Academy proponuje Ci np. godzinę kodowania, gdy akurat tyle masz czasu wolnego lub stałą naukę w Twoim własnym tempie. Zadania i wyzwania są zabawne i ciekawe, a prosty, potoczny język ułatwia naukę. W trakcie kodowania oglądamy również filmy, które…. taaaa dam.. są w języku polskim :) Co prawda nie wszystkie, ale akurat ten na którego trafiłam był :) Na Khan Academy nauczycie się nie tylko programować. Może zapałacie nawet miłością do rachunku różniczkowego… Kto wie? :)</p>
+<h2 id="Edx"><a href="#Edx" class="headerlink" title="Edx"></a><a href="https://www.edx.org/" target="_blank" rel="external">Edx</a></h2><p>Edx’a dażę szczególną sympatią, bo to właśnie tu zaczęła się moja przygoda z programowaniem. Pomysł przeniesienia kursów ze sławnych uczelni do internetu jest IMHO genialny :) Człowiek ma ogromną motywację do nauki wiedząc, że uczy się tego samego co studenci Harvardu czy MIT :) Szczególnie polecam dwa kursy: <a href="https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-5" target="_blank" rel="external"><strong>Podstawy programowania w Pythonie</strong></a>, który wspominam jako wymagający, ale też dający dużo wiedzy kurs oraz <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x" target="_blank" rel="external"><strong>Wstęp do programowania</strong></a>, który jest świetny dla totalnych początkujących, którym wszystkie te trudne zwroty i dziwne języki programowania nic nie mówią :) Oba kursy są oczywiście dostępne za darmo.</p>
+<p>Platformy do nauki programowania wiele mi dały, szczególnie na samym początku mojej drogi. Zaszczepiły mi wirusa kodowania, którego nie tak łatwo się pozbyć. Uważajcie, bo Wam może się przytrafić to samo :)  </p>
+<p>Ania  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Od jakiego tematu można by zacząć cykl dotyczący programowania? No właśnie od tego! Dziś chciałabym się z Wami podzielić platformami, dzięki którym można zarazić się “koderskim” bakcylem i wiele się nauczyć. Zaczęłam z nich korzystać, gdy byłam totalnie zielona w tym temacie, no i co tu dużo mówić - “wpadłam po uszy” :)&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
+    
+      <category term="Podstawy programowania" scheme="https://kernelgonnapanic.pl/tags/Podstawy-programowania/"/>
+    
+      <category term="Darmowe kursy" scheme="https://kernelgonnapanic.pl/tags/Darmowe-kursy/"/>
     
   </entry>
   
