@@ -20,7 +20,7 @@ Dawno się nie słyszeliśmy, prawda? W międzyczasie przez bloga przeszła burz
 Utrzymywanie bloga na bloggerze przysprawiało mi problemów od samego początku. Edytowanie postów, przeróbki w html'u czy też edytowanie szablonu było strasznie męczące. Z tego powodu właśnie wyruszyłam w poszukiwaniu czegoś, co będzie bliższe mojemu sercu technologicznie (JavaScript &#10084;	), a z drugiej strony proste w obsłudze. Myślałam o narzędziu, które jest przyjazne developerom, a niekoniecznie nietechnicznym użytkownikom.
 
 # Hexo
-W tychże poszukiwaniach natrafiłam na platformę Hexo. Jest to narzędzie do blogowania, które jest lekkim node'owym skryptem. Instalujemy je za pomocą npm'a i w kilka sekund mamy bloga:
+W tychże poszukiwaniach natrafiłam na platformę Hexo. Jest to narzędzie do blogowania, które jest po prostu node'owym skryptem. Instalujemy je za pomocą npm'a i w kilka sekund mamy bloga:
 ```bash
 npm install hexo-cli -g
 hexo init blog
@@ -31,9 +31,9 @@ hexo server
 Proste, prawda?
 
 Jeśli chodzi o posty, to do ich tworzenia używamy Markdowna (kolejny miód na moje serce). Pracuje mi się z nim dużo wygodniej niż z bloggerowym wydaniem XHTMLa (sic!).
-Hexo oferuje również duuuuużo różnorodnych pluginów. Nie miałam jeszcze okazji się nimi bawić, ale już widzę kilka, które może się przydadzą.
+Hexo oferuje również duuuuużo różnorodnych pluginów. Nie miałam jeszcze okazji się nimi bawić, ale już widzę kilka, które może się przydadzą. Dodatkowo, dla mnie zdecydowanym plusem jest to, że cały czas poruszam się w obrębie narzędzi, które są mi znane. Jak pewnego dnia okaże się, że nikt jeszcze nie stworzył potrzebnego mi pluginu, zawsze mogę go napisać sama.
 
-Świetne jest również to, że z pomocą jednej komendy mogę zdeployować bloga. Kilka akapitów niżej znajdziecie szczegóły.
+Publikowanie posta z Hexo sprowadza się do użycia kilku komend, no i oczywiście dostarczenia treści ;)
 
 # Tranquilpeak
 Jednak, przyznajmy szczerze, fajna platforma to nie wszystko. Zależało mi na przyjemnym, estetycznym szablonie, który będzie stworzony przy użyciu narzędzi, które znam i lubię. W ten sposób zdecydowałam się na tranquilpeak. Jest to (przynajmniej dla mnie) naprawdę zgrabny i minimalistyczny szablon. Można go dowolnie dostosowywać, ma bardzo bogaty interfejs ustawień i obfitą dokumentację.

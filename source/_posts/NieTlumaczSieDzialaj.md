@@ -1,18 +1,19 @@
 ---
-title: Rozwojowy poniedziałek #6
+title: 'Nie tłumacz się, działaj!'
 tags:
-  - BrianTracy
   - Recenzje
   - RozwojowyPoniedziałek
-	- Rozwój
-	- Samodyscyplina
-	- Sukces
-thumbnailImage: pamprogrm.JPG
+  - Rozwój
+  - Samodyscyplina
+  - Sukces
+  - Nawyki
 coverMeta: out
 coverSize: partial
-coverImage: pamprogrm.JPG
+coverImage: tytulowe.JPG
 date: 2016-08-08 08:00:00
 ---
+
+
 Dziś wracam do Was z recenzją książki Briana Tracy'ego "Nie tłumacz się, działaj! Odkryj moc samodyscypliny". Pewnie dla tej części z Was, którzy kiedykolwiek zabłądzili w księgarni lub bibliotece do działu z książkami dotyczącymi rozwoju osobistego, nazwisko autora nie jest obce. Mając na uwadze jednak tych, którzy jeszcze o nim nie słyszeli, naskrobię kilka dodatkowych słów.
 <!--more-->
 
@@ -27,7 +28,7 @@ Książka wpadła mi w oko już dawno, niestety dopiero kilka tygodni temu wpad�
 "Nie tłumacz się, działaj!" podzielona jest na 3 główne części, odnoszące się do dziedzin życia, w których samodyscyplina może być użyteczna. Tak więc, możemy przeczytać o dyscyplinowaniu siebie w zakresie sukcesu osobistego, finansów i sprzedaży oraz dobrego życia. Teoretycznie, powinniśmy zobaczyć wachlarz różnych spojrzeń na samodyscyplinę. Dodatkowo, każdy z podrozdziałów zakończony jest pytaniami,a właściwie małymi ćwiczeniami, których wykonanie powinno nam pomóc odnieść treści zawarte w danym rozdziale do własnego życia.  
 I tak, jak pytania uznałam za całkiem użyteczne i sądzę, że pochylenie się nad nimi może wnieść sporo do naszego życia, tak w treści samej książki nie znalazłam dużo pożywienia dla umysłu. Mimo fajnie podzielonego na rozdziały tematu, duża część zawartości to zwykłe lanie wody i przepisywanie w kółko jednej czy dwóch myśli. Szczerze, spodziewałam się czegoś więcej po tym autorze. Dodatkowo książka nakierowana jest wyraźnie do ludzi na etacie i do tego, głównie do sprzedawców.  
 
-<div class="separator" style="clear: both; text-align: center;">[![](https://1.bp.blogspot.com/-uro3MBhzcYk/V6XdyMOCsFI/AAAAAAAAAuA/Pth_boou50kLGTjdON9WOPCX_AWP1QTyQCEw/s640/drugie.JPG)](https://1.bp.blogspot.com/-uro3MBhzcYk/V6XdyMOCsFI/AAAAAAAAAuA/Pth_boou50kLGTjdON9WOPCX_AWP1QTyQCEw/s1600/drugie.JPG)</div>
+{% image center fig-100 clear drugie.JPG  %}
 
 Na blisko 250 stronach książki znalazłam zaledwie kilka myśli czy sposobów, które uznałam za warte uwagi i wystarczająco szczegółowe, by wcielić je w życie. Nimi właśnie, chcę się z Wami podzielić.  
 
@@ -46,3 +47,5 @@ To, czy jesteś szczęśliwy w życiu zależy głównie od Ciebie. Oczywiście n
 **"Nie tłumacz się, działaj!"** podsunęło mi kilka ważnych myśli. Lecz raczej nie polecałabym czytania tej książki "od deski do deski". Więc gdyby kiedyś wpadła Ci do ręki, poświęć kilka chwil, by ją przejrzeć, ale raczej nie wrzucaj do koszyka. Dla mnie była przede wszystkim sposobem na przekierowanie uwagi na rzeczy dla mnie ważne i w efekcie również na napisanie tego posta.  
 
 A teraz czas na to, żebyście wy podzieli się sposobami na to, by zmotywować się do spełniania swoich marzeń. Co robicie, gdy wasz "bucket list" zajmuje już kilka stron, a "to do" lista rośnie odwrotnie proporcjonalnie do motywacji?  
+
+Ania
