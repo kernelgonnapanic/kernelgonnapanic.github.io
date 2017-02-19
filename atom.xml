@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2017-02-05T18:09:34.296Z</updated>
+  <updated>2017-02-19T15:20:59.668Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -14,6 +14,74 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Frontend - a co powiecie na mikroserwisy?</title>
+    <link href="https://kernelgonnapanic.pl/2017/02/12/Frontend-mikroserwisy/"/>
+    <id>https://kernelgonnapanic.pl/2017/02/12/Frontend-mikroserwisy/</id>
+    <published>2017-02-12T11:06:00.000Z</published>
+    <updated>2017-02-19T15:20:59.668Z</updated>
+    
+    <content type="html"><![CDATA[<p>A dziś kilka słów o temacie, który chodzi za mną już od dłuższego czasu, a dokładnie od momentu, gdy przeczytałam <strong>“Budowanie mikrousług” Newmana</strong>. Naszą dzisiejszą podróż z mikroserwisami w frontendzie zaczniemy od …<br><a id="more"></a></p>
+<h3 id="Historii-pewnego-start-upu"><a href="#Historii-pewnego-start-upu" class="headerlink" title="Historii pewnego start-upu"></a>Historii pewnego start-upu</h3><p>Załóżmy, że mamy start-up, mamy aplikację, mamy zespół developerski. Zespół pracuje nad aplikacją, dowozi sprinty, aplikacja sobie rośnie. Dodatkowo okazuje się, że produkt, który tworzymy, podoba się użytkownikom. Pojawiają się nowe feature’y, pojawiają się też nowi ludzie w zespole.</p>
+<p>Aplikacja rośnie jeszcze bardziej, aż do momentu gdy tworzy ją kilkudziesięciu developerów. No i zaczyna się problem.</p>
+<p>Niepostrzeżenie pojawiają się kłopoty. Managerowie muszą uporać się z zarządzaniem taką ilością osób, z ustalaniem priorytetów, z koordynowaniem zmian wprowadzanych przez nie. Z każdym releasem jesteśmy zobowiązani przeprowadzać testy regresyjne dla całego systemu, bo nigdy nie możemy być pewni czy nasz kod, nie będzie miał dziwnych side-effectów w zupełnie innej części aplikacji. Jesteśmy zablokowani w kwestii technologii, bo cały nasz ogromny codebase z niej korzysta. Developerzy blokują się nawzajem, ich zmiany stale na siebie nachodzą, bo konteksty w aplikacji nie są dobrze oddzielone. Zaczynamy być coraz wolniejsi…</p>
+<h3 id="A-moze-tak-skala-micro"><a href="#A-moze-tak-skala-micro" class="headerlink" title="A może tak skala micro?"></a>A może tak skala micro?</h3><p>Może jednak jest już jakieś rozwiązanie na te problemy, co? Okazuje się, że nie tak odlegli nam (mam nadzieję) backendowcy już sobie takowe rozwiązanie obmyślili. Odpowiedzią na te zagwozdki mają być <strong>MIKROSERWISY</strong>.</p>
+<p>Co to takiego?</p>
+<p>W tej koncepcji, zamiast tworzyć jeden, wielki, skomplikowany system, który jest w stanie obsłużyć wszystkie nasze wymagania biznesowe tworzymy szereg małych serwisów, które robią dobrze jedną rzecz, komunikują się i współpracują, by te wymagania spełnić.</p>
+<p>Za każdą z takich małych aplikacji stoi zespół, który opiekuje się nią w całym cyklu software developmentu, czyli od powstania wymagań (np. historyjek użytkownika) aż do wdrożenia jej na produkcję. Ma on dużą swobodę w wyborze technologii, pod warunkiem, że dostarcza interfejs w postaci, której oczekują od niego inne systemy.</p>
+<p>Mała aplikacyjka jest niezależna w kontekście technologii, w kontekście releasów, opiekuje się powierzonym jej ograniczonym kontekstem (w myśl domain driven design). A programiści mogą w efektywny sposób dostarczać część systemu, za którą są odpowiedzialni.</p>
+<h3 id="A-jak-to-wyglada-w-rzeczywistosci"><a href="#A-jak-to-wyglada-w-rzeczywistosci" class="headerlink" title="A jak to wygląda w rzeczywistości?"></a>A jak to wygląda w rzeczywistości?</h3><p>W realu wiele systemów skierowała się w tę stronę. Oczywiście nie jest to silver bullet, który sam z siebie naprawia wszystkie problemy pierwszego świata. Jednak w połączeniu ze zwinną organizacją zespołów, sensownie ustawionymi procesami w organizacji i odpowiednią infrastrukturą potrafi wiele zdziałać.</p>
+<h3 id="Ale-co-z-frontem"><a href="#Ale-co-z-frontem" class="headerlink" title="Ale co z frontem?"></a>Ale co z frontem?</h3><p>No właśnie. I tu jest pewien problem. Cała ta mikroserwisowa burza ominęła aplikacje frontendowe. I myślę, że w dużej mierze spowodowane jest to specyfiką środowiska, jakim jest przeglądarka. Ale przyjrzymy się temu zjawisku bliżej.</p>
+<p>Jest wiele pomysłów na to, jak wdrożyć idee, które stoją za koncepcją mikroserwisów w świat frontendu. Żaden z nich nie przyjął się jednak na tyle, by móc stwierdzić, że jest to “way-to-go”.</p>
+<p>Dziś chciałabym przyjrzeć się dwóm z tych pomysłów, resztę zostawimy sobie na następny raz ;)</p>
+<h3 id="Kilka-aplikacji"><a href="#Kilka-aplikacji" class="headerlink" title="Kilka aplikacji"></a>Kilka aplikacji</h3><p>Zacznijmy od idei, który na pierwszy rzut oka wydaje się całkiem sensowna. Skoro nasza aplikacja jest już bardzo duża, może podzielmy ją na kilka mniejszych?</p>
+<p>W ten sposób uzyskamy kilka niezależnych aplikacji SPA, które z punktu widzenia użytkownika tworzą jednak jeden produkt.</p>
+<p>Z plusów, które posiada takie rozwiązanie możemy wymienić:</p>
+<ul>
+<li>zespoły pracujące nad poszczególnymi aplikacjami mogą releasować swój kod niezależnie,</li>
+<li>są również niezależne pod kątem technologii (innym pytaniem jest to czy zawsze powinny z tego korzystać),</li>
+<li>uzyskujemy oddzielenie kontekstów, ale nie zawsze tak drobnoziarniste, jakbyśmy tego oczekiwali.</li>
+</ul>
+<p>Jednak są też minusy takiego rozwiązania:</p>
+<ul>
+<li>performance,</li>
+<li>potencjalne ryzyko duplikacji kodu,</li>
+<li>techniczne problemy z komunikacją między aplikacjami (najczęściej poprzez url),</li>
+<li>trudności w komunikacji między zespołami mogą powodować, że z punktu widzenia użytkownika końcowego produkt okazuje się niespójny.</li>
+</ul>
+<h3 id="Pakiety-NPM"><a href="#Pakiety-NPM" class="headerlink" title="Pakiety NPM"></a>Pakiety NPM</h3><p>Do problemu można też podejść od innej strony. Zamiast dzielić produkt na kilka aplikacji, możemy wyodrębnić z naszej bazy kodu te części, które zarządzają konkretnymi funkcjonalnościami i używać ich jako biblioteki. W ten sposób nasza aplikacja ma wiele wersjonowanych zależności, które są publikowane np. w ramach naszego prywatnego NPMa.</p>
+<p>Jakie są plusy takiego rozwiązania?</p>
+<ul>
+<li>zdecydowanie uzyskujemy separację kontekstów (każdy moduł jest testowalny niezależnie, określa pewien interfejs, za pomocą którego współpracuje z innymi częściami systemu),</li>
+<li>takie moduły mogą być tworzone przez niezależne zespoły.</li>
+</ul>
+<p>A jakie wady?</p>
+<ul>
+<li>zazwyczaj konieczność utrzymywania wielu wersji modułu na raz (nie wszyscy klienci zaczynają od razu używać nowej wersji biblioteki),</li>
+<li>konieczne jest prowadzenie prawdziwego, porządnego sem-ver’a, by dobrze komunikować klientom zaistnienie zmian, które zmieniają dotychczasowy kontrakt,</li>
+<li>mamy nadal do czynienia z główną aplikacją, która tylko korzysta z pomocniczych bibliotek,</li>
+<li>biblioteki takie są zależnościami build-time, tzn. że aby funkcjonalność zaimplementowana w ramach takiej biblioteki została doręczona do użytkownika, musimy zazwyczaj wypuścić nową wersję naszej biblioteki, a następnie wyreleasować aplikację, która z niej korzysta. Ten dodatkowy krok powoduje, że zespół stojący za rozwojem danej biblioteki nie jest do końca niezależny oraz znacząco wydłuża czas oczekiwania na pewne funkcjonalności (w szczególności, gdy proces releasowania aplikacji jest bardzo wolny i kosztowny).</li>
+</ul>
+<p>Wystarczy już na dziś tych rozważań. W kolejnej części zmierzymy się z dalszymi pomysłami na implementację mikroserwisów we frontendowym świecie. Porozmawiamy m.in o web componentach, iframe’ach i layout service’ach takich jak Taylor.</p>
+<p>Podzielcie się koniecznie waszą opinią i doświadczeniami z korzystania z takich rozwiązań. Jestem bardzo ciekawa!</p>
+<p>Ania</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;A dziś kilka słów o temacie, który chodzi za mną już od dłuższego czasu, a dokładnie od momentu, gdy przeczytałam &lt;strong&gt;“Budowanie mikrousług” Newmana&lt;/strong&gt;. Naszą dzisiejszą podróż z mikroserwisami w frontendzie zaczniemy od …&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
+      <category term="Microservices" scheme="https://kernelgonnapanic.pl/tags/Microservices/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo - nowy rok, nowy blog!</title>
@@ -90,9 +158,9 @@
     </summary>
     
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
-    
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
@@ -166,9 +234,9 @@
     </summary>
     
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
-    
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
       <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
     
@@ -416,9 +484,9 @@
     </summary>
     
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
-    
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
       <category term="Podstawy programowania" scheme="https://kernelgonnapanic.pl/tags/Podstawy-programowania/"/>
     
