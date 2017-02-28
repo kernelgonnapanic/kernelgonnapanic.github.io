@@ -1,6 +1,6 @@
 ---
 title: Hexo - nowy rok, nowy blog!
-thumbnailImagePosition: top
+thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial
 date: 2017-01-26 19:46:42
