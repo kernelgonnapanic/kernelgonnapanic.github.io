@@ -56,7 +56,7 @@
     <link href="https://kernelgonnapanic.pl/2017/02/12/Frontend-mikroserwisy/"/>
     <id>https://kernelgonnapanic.pl/2017/02/12/Frontend-mikroserwisy/</id>
     <published>2017-02-12T11:06:00.000Z</published>
-    <updated>2017-03-07T22:02:49.000Z</updated>
+    <updated>2017-03-07T22:12:36.000Z</updated>
     
     <content type="html"><![CDATA[<p>A dziś kilka słów o temacie, który chodzi za mną już od dłuższego czasu, a dokładnie od momentu, gdy przeczytałam <strong>“Budowanie mikrousług” Newmana</strong>. Naszą dzisiejszą podróż z mikroserwisami w frontendzie zaczniemy od …<br><a id="more"></a></p>
 <h3 id="Historii-pewnego-start-upu"><a href="#Historii-pewnego-start-upu" class="headerlink" title="Historii pewnego start-upu"></a>Historii pewnego start-upu</h3><p>Załóżmy, że mamy start-up, mamy aplikację, mamy zespół developerski. Zespół pracuje nad aplikacją, dowozi sprinty, aplikacja sobie rośnie. Dodatkowo okazuje się, że produkt, który tworzymy, podoba się użytkownikom. Pojawiają się nowe feature’y, pojawiają się też nowi ludzie w zespole.</p>
