@@ -4,7 +4,7 @@ tags:
   - Programowanie
   - Frontend
   - Microservices
-thumbnailImagePosition: top
+thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial
 thumbnailImage: microservices.jpg

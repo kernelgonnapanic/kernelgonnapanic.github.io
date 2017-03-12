@@ -1,6 +1,6 @@
 ---
 title: Daj się poznać 2017 - czas start!
-thumbnailImagePosition: top
+thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial
 coverImage: dsp.jpg

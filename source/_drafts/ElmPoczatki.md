@@ -1,12 +1,23 @@
 ---
-title: ElmPoczatki
+title: Elm - początki.
 thumbnailImagePosition: top
 coverMeta: out
 coverSize: partial
+thumbnailImage: forest.jpg
+coverImage: forest.jpg
+date: 2017-03-08 22:39:00
 tags:
+	- Elm
+	- Podstawy
+	- Daj się poznać 2017
+	- Frontend
 ---
 
-elm tutorial
+Był czas na pogaduszki na temat projektu, a teraz pora na otwarcie edytora i zmierzenie się z konkretnymi problemami. Do dzieła!
+
+Zdecydowałam się zacząć od oficjalnego tutoriala Elma dostępnego [tutaj](https://www.elm-tutorial.org/en/).
+
+Od pierwszej chwili czuję, że środowisko developerskie 
 
 czuje, że środowisko jakieś takie inne - został mi zaproponowany upgrade plan, jakieś moduły potrzebne...
 
