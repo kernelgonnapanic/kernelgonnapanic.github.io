@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="kernelgonnapanic.pl">
-    <title>Timer start! Daj się poznać 2017 - kernelgonnapanic.pl</title>
+    <title>To żyje! Elm w akcji. - kernelgonnapanic.pl</title>
     <meta name="author" content="Anna Konopka">
     
         <meta name="keywords" content="frontend,javascript,kernelgonnapanic,">
@@ -17,13 +17,16 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta property="og:type" content="blog">
-<meta property="og:title" content="Timer start! Daj się poznać 2017">
-<meta property="og:url" content="https://kernelgonnapanic.pl/2017/03/01/daj-sie-poznac-start/index.html">
+    <meta name="description" content="Kolejny odcinek zmagań z Elmem przed nami. Dziś timer ożyje. Będziemy mieć okazję zobaczyć jak wygląda architektura aplikacji w Elmie i czemu może się Wam wydawać znajoma.">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="To żyje! Elm w akcji.">
+<meta property="og:url" content="https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/index.html">
 <meta property="og:site_name" content="kernelgonnapanic.pl">
-<meta property="og:updated_time" content="2017-03-01T20:38:32.370Z">
+<meta property="og:description" content="Kolejny odcinek zmagań z Elmem przed nami. Dziś timer ożyje. Będziemy mieć okazję zobaczyć jak wygląda architektura aplikacji w Elmie i czemu może się Wam wydawać znajoma.">
+<meta property="og:updated_time" content="2017-03-18T14:31:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Timer start! Daj się poznać 2017">
+<meta name="twitter:title" content="To żyje! Elm w akcji.">
+<meta name="twitter:description" content="Kolejny odcinek zmagań z Elmem przed nami. Dziś timer ożyje. Będziemy mieć okazję zobaczyć jak wygląda architektura aplikacji w Elmie i czemu może się Wam wydawać znajoma.">
 <meta name="twitter:creator" content="@konopka_ania">
     
         <link rel="publisher" href="https://plus.google.com/116973627351289720000"/>
@@ -32,20 +35,17 @@
         
     
     
-        <meta property="og:image" content="https://kernelgonnapanic.pl/2017/03/01/daj-sie-poznac-start/dsp.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="https://kernelgonnapanic.pl/2017/03/01/daj-sie-poznac-start/dsp.jpg" />
+        <meta property="og:image" content="https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/nasa.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/nasa.jpg" />
     
     
-        <meta property="og:image" content="https://kernelgonnapanic.pl/2017/03/01/daj-sie-poznac-start/dsp.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="https://kernelgonnapanic.pl/2017/03/01/daj-sie-poznac-start/dsp.jpg" />
+        <meta property="og:image" content="https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/nasa.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/nasa.jpg" />
     
     
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/font-awesome.css">
-    <link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
-    <link rel="stylesheet" href="/assets/css/jquery.fancybox-thumbs.css">
-    <link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+    <link rel="stylesheet" href="/assets/css/style-yngeycxakrgo40hkeqgaqaymmxllkp7zsgjhqgvpx8javltscwkykaa8taha.min.css">
     <!--STYLES END-->
     
     <script type="text/javascript">
@@ -232,7 +232,7 @@
         <div class="post-header-cover
                     text-left
                     post-header-cover--partial"
-             style="background-image:url('/2017/03/01/daj-sie-poznac-start/dsp.jpg');"
+             style="background-image:url('/2017/03/18/to-zyje-elm-w-akcji/nasa.jpg');"
              data-behavior="4">
             
         </div>
@@ -248,13 +248,13 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            Timer start! Daj się poznać 2017
+            To żyje! Elm w akcji.
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" datetime="2017-03-01T20:52:45+01:00">
+    <time itemprop="datePublished" datetime="2017-03-18T15:23:00+01:00">
 	
-		    01.03.2017
+		    18.03.2017
     	
     </time>
     
@@ -264,7 +264,35 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            
+            <p>Kolejny odcinek zmagań z Elmem przed nami. Dziś timer ożyje. Będziemy mieć okazję zobaczyć jak wygląda architektura aplikacji w Elmie i czemu może się Wam wydawać znajoma.<a id="more"></a> Let’s start!</p>
+<p>W poprzednim wpisie pokazałam jak, za pomocą Elma, możemy wyrenderować kilka divów. Ale od kilku DOM elementów do pełnej aplikacji jeszcze daleko. Dziś nadamy timerowi trochę ram i obsłużymy pierwsze kliknięcia. Na razie nie poświęcałam zbędnego czasu na stylowanie, więc wybaczcie wizualne koszmarki. Na rozprawienie się z nimi też przyjdzie pora.</p>
+<p>Swoje poszukiwania na temat “Jak wygląda aplikacja w Elmie?” zaczęłam od tutoriala. Lecz nie jest on zbyt obszerny i szybko przestał mi wystarczać. Dużo więcej zrozumiałam przeglądając kod przykładowej appki - <a href="https://github.com/sporto/elm-tutorial-app" target="_blank" rel="external">tutaj</a>. Nie wiem jak inni, ale ja na przykładach uczę się najwięcej.</p>
+<p>Chcąc, by aplikacja ożyła dodałam do niej możliwość ustawienia liczby minut, od której mamy odliczać. Na razie użyłam do tego stringów, ale z pewnością szybko się to zmieni.</p>
+<p>Jeśli chodzi o podstawowe części składowe architektury elmowej aplikacji to mamy tutaj:</p>
+<ul>
+<li>model: jest to stan naszej aplikacji. Dodatkowo obok niego definiujemy również funkcję init, która zwraca stan, od którego aplikacja zacznie swoje działanie</li>
+</ul>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">type</span> <span class="keyword">alias</span> <span class="type">Model</span> =</div><div class="line">    <span class="type">String</span></div><div class="line"></div><div class="line"><span class="title">init</span> : ( <span class="type">Model</span>, <span class="type">Cmd</span> <span class="type">Msg</span> )</div><div class="line"><span class="title">init</span> =</div><div class="line">    ( <span class="string">"10:00"</span>, <span class="type">Cmd</span>.none )</div></pre></td></tr></table></figure>
+<ul>
+<li>messages: wiadomości sygnalizują zdarzenia, które mają miejsce w naszej aplikacji</li>
+</ul>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">type</span> <span class="type">Msg</span></div><div class="line">  = <span class="type">SetTimer</span> <span class="type">String</span></div></pre></td></tr></table></figure>
+<ul>
+<li>view: widok renderujemy na podstawie stanu naszej aplikacji (w tym przypadku przekazuje stan do komponentu <code>timer</code>)</li>
+</ul>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="title">view</span> : <span class="type">Model</span> -&gt; <span class="type">Html</span> <span class="type">Msg</span></div><div class="line"><span class="title">view</span> model =</div><div class="line">    timer model</div></pre></td></tr></table></figure>
+<ul>
+<li>update: mamy również funkcję, która jest wywoływana przez program, przy każdym pojawieniu się wiadomości. Modyfikuje ona stan aplikacji i może zwracać commandy (o nich kiedy indziej)</li>
+</ul>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="title">update</span> : <span class="type">Msg</span> -&gt; <span class="type">Model</span> -&gt; ( <span class="type">Model</span>, <span class="type">Cmd</span> <span class="type">Msg</span> )</div><div class="line"><span class="title">update</span> msg model =</div><div class="line">    <span class="keyword">case</span> msg <span class="keyword">of</span></div><div class="line">        <span class="type">Messages</span>.<span class="type">SetTimer</span> number -&gt;</div><div class="line">            ( number, <span class="type">Cmd</span>.none )</div></pre></td></tr></table></figure>
+<ul>
+<li>subskrypcje: za ich pomocą nasłuchujemy na zewnętrze wejście (np. ruchy myszką), na razie z nich nie korzystałam</li>
+</ul>
+<p>Potrzebujemy również <code>program</code>, który zbiera wszystkie te elementy i sprawia, że nasza aplikacja ożywa.</p>
+<p>Pełne źródła można oczywiście znaleźć na <a href="https://github.com/kernelgonnapanic/timer" target="_blank" rel="external">githubie</a>.</p>
+<p>Dla Was pozostawiam zagadkę. Co przypomina Wam taka struktura aplikacji? Podobieństwo do dużo bardziej popularnej obecnie technologii jest uderzające. Dajcie znać w komentarzu co myślicie.</p>
+<p>Ania</p>
+
             
         </div>
     </div>
@@ -273,7 +301,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGI</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/Daj-sie-poznac-2017/">Daj się poznać 2017</a> <a class="tag tag--primary tag--small t-link" href="/tags/Timer/">Timer</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/Daj-sie-poznac-2017/">Daj się poznać 2017</a> <a class="tag tag--primary tag--small t-link" href="/tags/Elm/">Elm</a> <a class="tag tag--primary tag--small t-link" href="/tags/Frontend/">Frontend</a> <a class="tag tag--primary tag--small t-link" href="/tags/Podstawy/">Podstawy</a>
 
             </div>
         
@@ -290,7 +318,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/12/Frontend-mikroserwisy/" data-tooltip="Frontend - a co powiecie na mikroserwisy?">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/08/elm-poczatki/" data-tooltip="Elm - początki.">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NASTĘPNY</span>
                     <i class="fa fa-angle-right"></i>
@@ -305,17 +333,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2017/03/01/daj-sie-poznac-start/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kernelgonnapanic.pl/2017/03/01/daj-sie-poznac-start/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kernelgonnapanic.pl/2017/03/01/daj-sie-poznac-start/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -371,7 +399,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/12/Frontend-mikroserwisy/" data-tooltip="Frontend - a co powiecie na mikroserwisy?">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/08/elm-poczatki/" data-tooltip="Elm - początki.">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NASTĘPNY</span>
                     <i class="fa fa-angle-right"></i>
@@ -386,17 +414,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2017/03/01/daj-sie-poznac-start/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kernelgonnapanic.pl/2017/03/01/daj-sie-poznac-start/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kernelgonnapanic.pl/2017/03/01/daj-sie-poznac-start/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -422,17 +450,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="4">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2017/03/01/daj-sie-poznac-start/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/">
                 <i class="fa fa-google-plus"></i><span>Udostępnij na Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kernelgonnapanic.pl/2017/03/01/daj-sie-poznac-start/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/">
                 <i class="fa fa-facebook-official"></i><span>Udostępnij na Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://kernelgonnapanic.pl/2017/03/01/daj-sie-poznac-start/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/">
                 <i class="fa fa-twitter"></i><span>Udostępnij na Twitter</span>
             </a>
         </li>
@@ -756,7 +784,7 @@
                 data-message-zero="Jeszcze nie napisałam posta, którego szukasz."
                 data-message-one="Jesteś szczęściarzem! Znaleziono jednego posta."
                 data-message-other="Znaleziono {n} postów :)">
-                Znaleziono 18 postów :)
+                Znaleziono 20 postów :)
             </p>
         </div>
     </div>
@@ -764,18 +792,15 @@
         
 <div id="cover" style="background-image:url('/assets/images/sky.jpg');"></div>
         <!--SCRIPTS-->
-<script src="/assets/js/jquery.js"></script>
-<script src="/assets/js/jquery.fancybox.js"></script>
-<script src="/assets/js/jquery.fancybox-thumbs.js"></script>
-<script src="/assets/js/tranquilpeak.js"></script>
+<script src="/assets/js/script-hoht7zcs5s8ldmdw2yhvkaupol9hbpcbisciwnlhvpqs40v7mphkmrg0p4mq.min.js"></script>
 <!--SCRIPTS END-->
 
     
         <script>
              var disqus_config = function () {
-                 this.page.url = 'https://kernelgonnapanic.pl/2017/03/01/daj-sie-poznac-start/';
+                 this.page.url = 'https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/';
                  
-                    this.page.identifier = '2017/03/01/daj-sie-poznac-start/';
+                    this.page.identifier = '2017/03/18/to-zyje-elm-w-akcji/';
                  
              };
             (function() {

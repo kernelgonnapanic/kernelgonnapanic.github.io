@@ -24,7 +24,7 @@
 <meta property="og:site_name" content="kernelgonnapanic.pl">
 <meta property="og:description" content="Był czas na pogaduszki na temat projektu, a teraz pora na otwarcie edytora i zmierzenie się z konkretnymi problemami. Do dzieła!">
 <meta property="og:image" content="https://kernelgonnapanic.pl/zrzut.jpg">
-<meta property="og:updated_time" content="2017-03-12T18:13:15.164Z">
+<meta property="og:updated_time" content="2017-03-18T13:05:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Elm - początki.">
 <meta name="twitter:description" content="Był czas na pogaduszki na temat projektu, a teraz pora na otwarcie edytora i zmierzenie się z konkretnymi problemami. Do dzieła!">
@@ -47,10 +47,7 @@
     
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/font-awesome.css">
-    <link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
-    <link rel="stylesheet" href="/assets/css/jquery.fancybox-thumbs.css">
-    <link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+    <link rel="stylesheet" href="/assets/css/style-yngeycxakrgo40hkeqgaqaymmxllkp7zsgjhqgvpx8javltscwkykaa8taha.min.css">
     <!--STYLES END-->
     
     <script type="text/javascript">
@@ -276,7 +273,7 @@
 <h2 id="Pierwszy-komponent"><a href="#Pierwszy-komponent" class="headerlink" title="Pierwszy komponent"></a>Pierwszy komponent</h2><p>No cóż, poniższy kod nie powala złożonością, ale od tego zaczęłam.<br><figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">module</span> Hello <span class="keyword">exposing</span> (..)</div><div class="line"></div><div class="line"><span class="keyword">import</span> Html <span class="keyword">exposing</span> (text)</div><div class="line"></div><div class="line"><span class="title">main</span> =</div><div class="line">    text <span class="string">"Hello world!"</span></div></pre></td></tr></table></figure></p>
 <p>Pytanie, które pojawia się teraz to: jak skompilować ten kod i wywołać w przeglądarce? Zaczęłam od rozwiązania wbudowanego w elm’a, która pozwala działać na szybko i nie musieć stawiać całego build systemu. Jest to <code>elm reactor</code>, który jest serwerem, który potrafi w locie kompilować kod napisany w Elmie. W ten sposób zobaczyłam swój upragniony “Hello world” w oknie przeglądarki. Let’s go on!</p>
 <h2 id="Dodajmy-style"><a href="#Dodajmy-style" class="headerlink" title="Dodajmy style"></a>Dodajmy style</h2><p>Mój “Hello world!” jest piękny i jest oczywiście dowodem mojej dominacji nad maszyną, ale nie chcemy z pewnością na tym poprzestać. Dołóżmy do tego więcej elementów i pobawmy się trochę stylami.</p>
-<p>Po kilkunastu minutach mamy już kilka divów.<br><figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">module</span> Hello <span class="keyword">exposing</span> (..)</div><div class="line"></div><div class="line"><span class="keyword">import</span> Html <span class="keyword">exposing</span> (text, div, node)</div><div class="line"><span class="keyword">import</span> Html.Attributes <span class="keyword">exposing</span> (class, rel, href)</div><div class="line"></div><div class="line"><span class="title">css</span> path =</div><div class="line">  node <span class="string">"link"</span> [ rel <span class="string">"stylesheet"</span>, href path ] []</div><div class="line"></div><div class="line"><span class="title">main</span> = </div><div class="line">    div [] [</div><div class="line">        css <span class="string">"styles.css"</span>,</div><div class="line">        div [class <span class="string">"hello"</span>] [</div><div class="line">            div [] [text <span class="string">"My timer"</span>],</div><div class="line">            div [] [text <span class="string">"25:00"</span>],</div><div class="line">            div [class <span class="string">"button"</span>] [text <span class="string">"Start!"</span>]</div><div class="line">        ]</div><div class="line">    ]</div></pre></td></tr></table></figure></p>
+<p>Po kilkunastu minutach mamy już kilka divów.<br><figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">module</span> Hello <span class="keyword">exposing</span> (..)</div><div class="line"></div><div class="line"><span class="keyword">import</span> Html <span class="keyword">exposing</span> (text, div, node)</div><div class="line"><span class="keyword">import</span> Html.Attributes <span class="keyword">exposing</span> (class, rel, href)</div><div class="line"></div><div class="line"><span class="title">css</span> path =</div><div class="line">  node <span class="string">"link"</span> [ rel <span class="string">"stylesheet"</span>, href path ] []</div><div class="line"></div><div class="line"><span class="title">main</span> =</div><div class="line">    div [] [</div><div class="line">        css <span class="string">"styles.css"</span>,</div><div class="line">        div [class <span class="string">"hello"</span>] [</div><div class="line">            div [] [text <span class="string">"My timer"</span>],</div><div class="line">            div [] [text <span class="string">"25:00"</span>],</div><div class="line">            div [class <span class="string">"button"</span>] [text <span class="string">"Start!"</span>]</div><div class="line">        ]</div><div class="line">    ]</div></pre></td></tr></table></figure></p>
 <p>Żeby dodać style, nadal uruchamiając kod poprzez reactor’a musiałam się uciec do pewnej sztuczki, która jest widoczna powyżej i ręcznie wstawić link ze stylami.</p>
 <p>Jak widać mamy już kilka divów wraz z atrybutami i zawartością. Na razie ominęłam temat sygnatur funkcji, zabiorę się do tego przy okazji. Następnym razem spróbujemy trochę ożywić naszą aplikację, by nie poprzestawać na renderowaniu smutnego htmla. Więc szykujcie się na wpis o architekturze aplikacji w Elmie.</p>
 <p>Do usłyszenia!<br>Ania</p>
@@ -299,7 +296,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/18/to-zyje-elm-w-akcji/"  data-tooltip="To żyje! Elm w akcji.">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">POPRZEDNI</span>
@@ -380,7 +377,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/18/to-zyje-elm-w-akcji/"  data-tooltip="To żyje! Elm w akcji.">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">POPRZEDNI</span>
@@ -773,7 +770,7 @@
                 data-message-zero="Jeszcze nie napisałam posta, którego szukasz."
                 data-message-one="Jesteś szczęściarzem! Znaleziono jednego posta."
                 data-message-other="Znaleziono {n} postów :)">
-                Znaleziono 19 postów :)
+                Znaleziono 20 postów :)
             </p>
         </div>
     </div>
@@ -781,10 +778,7 @@
         
 <div id="cover" style="background-image:url('/assets/images/sky.jpg');"></div>
         <!--SCRIPTS-->
-<script src="/assets/js/jquery.js"></script>
-<script src="/assets/js/jquery.fancybox.js"></script>
-<script src="/assets/js/jquery.fancybox-thumbs.js"></script>
-<script src="/assets/js/tranquilpeak.js"></script>
+<script src="/assets/js/script-hoht7zcs5s8ldmdw2yhvkaupol9hbpcbisciwnlhvpqs40v7mphkmrg0p4mq.min.js"></script>
 <!--SCRIPTS END-->
 
     

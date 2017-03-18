@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2017-03-12T18:13:15.164Z</updated>
+  <updated>2017-03-18T14:31:55.000Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -16,11 +16,65 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>To żyje! Elm w akcji.</title>
+    <link href="https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/"/>
+    <id>https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/</id>
+    <published>2017-03-18T14:23:00.000Z</published>
+    <updated>2017-03-18T14:31:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Kolejny odcinek zmagań z Elmem przed nami. Dziś timer ożyje. Będziemy mieć okazję zobaczyć jak wygląda architektura aplikacji w Elmie i czemu może się Wam wydawać znajoma.<a id="more"></a> Let’s start!</p>
+<p>W poprzednim wpisie pokazałam jak, za pomocą Elma, możemy wyrenderować kilka divów. Ale od kilku DOM elementów do pełnej aplikacji jeszcze daleko. Dziś nadamy timerowi trochę ram i obsłużymy pierwsze kliknięcia. Na razie nie poświęcałam zbędnego czasu na stylowanie, więc wybaczcie wizualne koszmarki. Na rozprawienie się z nimi też przyjdzie pora.</p>
+<p>Swoje poszukiwania na temat “Jak wygląda aplikacja w Elmie?” zaczęłam od tutoriala. Lecz nie jest on zbyt obszerny i szybko przestał mi wystarczać. Dużo więcej zrozumiałam przeglądając kod przykładowej appki - <a href="https://github.com/sporto/elm-tutorial-app" target="_blank" rel="external">tutaj</a>. Nie wiem jak inni, ale ja na przykładach uczę się najwięcej.</p>
+<p>Chcąc, by aplikacja ożyła dodałam do niej możliwość ustawienia liczby minut, od której mamy odliczać. Na razie użyłam do tego stringów, ale z pewnością szybko się to zmieni.</p>
+<p>Jeśli chodzi o podstawowe części składowe architektury elmowej aplikacji to mamy tutaj:</p>
+<ul>
+<li>model: jest to stan naszej aplikacji. Dodatkowo obok niego definiujemy również funkcję init, która zwraca stan, od którego aplikacja zacznie swoje działanie</li>
+</ul>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">type</span> <span class="keyword">alias</span> <span class="type">Model</span> =</div><div class="line">    <span class="type">String</span></div><div class="line"></div><div class="line"><span class="title">init</span> : ( <span class="type">Model</span>, <span class="type">Cmd</span> <span class="type">Msg</span> )</div><div class="line"><span class="title">init</span> =</div><div class="line">    ( <span class="string">"10:00"</span>, <span class="type">Cmd</span>.none )</div></pre></td></tr></table></figure>
+<ul>
+<li>messages: wiadomości sygnalizują zdarzenia, które mają miejsce w naszej aplikacji</li>
+</ul>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">type</span> <span class="type">Msg</span></div><div class="line">  = <span class="type">SetTimer</span> <span class="type">String</span></div></pre></td></tr></table></figure>
+<ul>
+<li>view: widok renderujemy na podstawie stanu naszej aplikacji (w tym przypadku przekazuje stan do komponentu <code>timer</code>)</li>
+</ul>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="title">view</span> : <span class="type">Model</span> -&gt; <span class="type">Html</span> <span class="type">Msg</span></div><div class="line"><span class="title">view</span> model =</div><div class="line">    timer model</div></pre></td></tr></table></figure>
+<ul>
+<li>update: mamy również funkcję, która jest wywoływana przez program, przy każdym pojawieniu się wiadomości. Modyfikuje ona stan aplikacji i może zwracać commandy (o nich kiedy indziej)</li>
+</ul>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="title">update</span> : <span class="type">Msg</span> -&gt; <span class="type">Model</span> -&gt; ( <span class="type">Model</span>, <span class="type">Cmd</span> <span class="type">Msg</span> )</div><div class="line"><span class="title">update</span> msg model =</div><div class="line">    <span class="keyword">case</span> msg <span class="keyword">of</span></div><div class="line">        <span class="type">Messages</span>.<span class="type">SetTimer</span> number -&gt;</div><div class="line">            ( number, <span class="type">Cmd</span>.none )</div></pre></td></tr></table></figure>
+<ul>
+<li>subskrypcje: za ich pomocą nasłuchujemy na zewnętrze wejście (np. ruchy myszką), na razie z nich nie korzystałam</li>
+</ul>
+<p>Potrzebujemy również <code>program</code>, który zbiera wszystkie te elementy i sprawia, że nasza aplikacja ożywa.</p>
+<p>Pełne źródła można oczywiście znaleźć na <a href="https://github.com/kernelgonnapanic/timer" target="_blank" rel="external">githubie</a>.</p>
+<p>Dla Was pozostawiam zagadkę. Co przypomina Wam taka struktura aplikacji? Podobieństwo do dużo bardziej popularnej obecnie technologii jest uderzające. Dajcie znać w komentarzu co myślicie.</p>
+<p>Ania</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Kolejny odcinek zmagań z Elmem przed nami. Dziś timer ożyje. Będziemy mieć okazję zobaczyć jak wygląda architektura aplikacji w Elmie i czemu może się Wam wydawać znajoma.
+    
+    </summary>
+    
+    
+      <category term="Elm" scheme="https://kernelgonnapanic.pl/tags/Elm/"/>
+    
+      <category term="Podstawy" scheme="https://kernelgonnapanic.pl/tags/Podstawy/"/>
+    
+      <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Elm - początki.</title>
     <link href="https://kernelgonnapanic.pl/2017/03/08/elm-poczatki/"/>
     <id>https://kernelgonnapanic.pl/2017/03/08/elm-poczatki/</id>
     <published>2017-03-08T21:39:00.000Z</published>
-    <updated>2017-03-12T18:13:15.164Z</updated>
+    <updated>2017-03-18T13:05:46.000Z</updated>
     
     <content type="html"><![CDATA[<p>Był czas na pogaduszki na temat projektu, a teraz pora na otwarcie edytora i zmierzenie się z konkretnymi problemami. Do dzieła!<br><a id="more"></a></p>
 <p>Zdecydowałam się zacząć od oficjalnego tutoriala Elma dostępnego <a href="https://www.elm-tutorial.org/en/" target="_blank" rel="external">tutaj</a>. Lecz również uciekać od niego, gdy poczuję, że chcę sobie sama poeksperymentować.</p>
@@ -29,7 +83,7 @@
 <h2 id="Pierwszy-komponent"><a href="#Pierwszy-komponent" class="headerlink" title="Pierwszy komponent"></a>Pierwszy komponent</h2><p>No cóż, poniższy kod nie powala złożonością, ale od tego zaczęłam.<br><figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">module</span> Hello <span class="keyword">exposing</span> (..)</div><div class="line"></div><div class="line"><span class="keyword">import</span> Html <span class="keyword">exposing</span> (text)</div><div class="line"></div><div class="line"><span class="title">main</span> =</div><div class="line">    text <span class="string">"Hello world!"</span></div></pre></td></tr></table></figure></p>
 <p>Pytanie, które pojawia się teraz to: jak skompilować ten kod i wywołać w przeglądarce? Zaczęłam od rozwiązania wbudowanego w elm’a, która pozwala działać na szybko i nie musieć stawiać całego build systemu. Jest to <code>elm reactor</code>, który jest serwerem, który potrafi w locie kompilować kod napisany w Elmie. W ten sposób zobaczyłam swój upragniony “Hello world” w oknie przeglądarki. Let’s go on!</p>
 <h2 id="Dodajmy-style"><a href="#Dodajmy-style" class="headerlink" title="Dodajmy style"></a>Dodajmy style</h2><p>Mój “Hello world!” jest piękny i jest oczywiście dowodem mojej dominacji nad maszyną, ale nie chcemy z pewnością na tym poprzestać. Dołóżmy do tego więcej elementów i pobawmy się trochę stylami.</p>
-<p>Po kilkunastu minutach mamy już kilka divów.<br><figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">module</span> Hello <span class="keyword">exposing</span> (..)</div><div class="line"></div><div class="line"><span class="keyword">import</span> Html <span class="keyword">exposing</span> (text, div, node)</div><div class="line"><span class="keyword">import</span> Html.Attributes <span class="keyword">exposing</span> (class, rel, href)</div><div class="line"></div><div class="line"><span class="title">css</span> path =</div><div class="line">  node <span class="string">"link"</span> [ rel <span class="string">"stylesheet"</span>, href path ] []</div><div class="line"></div><div class="line"><span class="title">main</span> = </div><div class="line">    div [] [</div><div class="line">        css <span class="string">"styles.css"</span>,</div><div class="line">        div [class <span class="string">"hello"</span>] [</div><div class="line">            div [] [text <span class="string">"My timer"</span>],</div><div class="line">            div [] [text <span class="string">"25:00"</span>],</div><div class="line">            div [class <span class="string">"button"</span>] [text <span class="string">"Start!"</span>]</div><div class="line">        ]</div><div class="line">    ]</div></pre></td></tr></table></figure></p>
+<p>Po kilkunastu minutach mamy już kilka divów.<br><figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">module</span> Hello <span class="keyword">exposing</span> (..)</div><div class="line"></div><div class="line"><span class="keyword">import</span> Html <span class="keyword">exposing</span> (text, div, node)</div><div class="line"><span class="keyword">import</span> Html.Attributes <span class="keyword">exposing</span> (class, rel, href)</div><div class="line"></div><div class="line"><span class="title">css</span> path =</div><div class="line">  node <span class="string">"link"</span> [ rel <span class="string">"stylesheet"</span>, href path ] []</div><div class="line"></div><div class="line"><span class="title">main</span> =</div><div class="line">    div [] [</div><div class="line">        css <span class="string">"styles.css"</span>,</div><div class="line">        div [class <span class="string">"hello"</span>] [</div><div class="line">            div [] [text <span class="string">"My timer"</span>],</div><div class="line">            div [] [text <span class="string">"25:00"</span>],</div><div class="line">            div [class <span class="string">"button"</span>] [text <span class="string">"Start!"</span>]</div><div class="line">        ]</div><div class="line">    ]</div></pre></td></tr></table></figure></p>
 <p>Żeby dodać style, nadal uruchamiając kod poprzez reactor’a musiałam się uciec do pewnej sztuczki, która jest widoczna powyżej i ręcznie wstawić link ze stylami.</p>
 <p>Jak widać mamy już kilka divów wraz z atrybutami i zawartością. Na razie ominęłam temat sygnatur funkcji, zabiorę się do tego przy okazji. Następnym razem spróbujemy trochę ożywić naszą aplikację, by nie poprzestawać na renderowaniu smutnego htmla. Więc szykujcie się na wpis o architekturze aplikacji w Elmie.</p>
 <p>Do usłyszenia!<br>Ania</p>
@@ -43,13 +97,13 @@
     </summary>
     
     
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
-      <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
-    
       <category term="Elm" scheme="https://kernelgonnapanic.pl/tags/Elm/"/>
     
       <category term="Podstawy" scheme="https://kernelgonnapanic.pl/tags/Podstawy/"/>
+    
+      <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
   </entry>
   
@@ -58,7 +112,7 @@
     <link href="https://kernelgonnapanic.pl/2017/03/07/daj-sie-poznac-start/"/>
     <id>https://kernelgonnapanic.pl/2017/03/07/daj-sie-poznac-start/</id>
     <published>2017-03-07T19:52:45.000Z</published>
-    <updated>2017-03-08T22:30:55.517Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>Minął już prawie tydzień od startu <strong>Daj się poznać</strong>, a ja jeszcze nie napisałam słowa o projekcie, który w nadchodzących tygodniach chiałabym realizować. Pora więc nadrobić opóźnienie i przedstawić Wam moje plany na najbliższy czas.<br><a id="more"></a></p>
 <p>A więc… w ramach Daj się poznać 2017 planuje stworzyć <strong>pomodoro/work timer w Elmie</strong>.</p>
@@ -77,15 +131,15 @@
     </summary>
     
     
+      <category term="Elm" scheme="https://kernelgonnapanic.pl/tags/Elm/"/>
+    
+      <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
+    
       <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
     
       <category term="Timer" scheme="https://kernelgonnapanic.pl/tags/Timer/"/>
-    
-      <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
-    
-      <category term="Elm" scheme="https://kernelgonnapanic.pl/tags/Elm/"/>
     
   </entry>
   
@@ -94,7 +148,7 @@
     <link href="https://kernelgonnapanic.pl/2017/02/12/Frontend-mikroserwisy/"/>
     <id>https://kernelgonnapanic.pl/2017/02/12/Frontend-mikroserwisy/</id>
     <published>2017-02-12T11:06:00.000Z</published>
-    <updated>2017-03-08T22:31:15.189Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>A dziś kilka słów o temacie, który chodzi za mną już od dłuższego czasu, a dokładnie od momentu, gdy przeczytałam <strong>“Budowanie mikrousług” Newmana</strong>. Naszą dzisiejszą podróż z mikroserwisami w frontendzie zaczniemy od …<br><a id="more"></a></p>
 <h3 id="Historii-pewnego-start-upu"><a href="#Historii-pewnego-start-upu" class="headerlink" title="Historii pewnego start-upu"></a>Historii pewnego start-upu</h3><p>Załóżmy, że mamy start-up, mamy aplikację, mamy zespół developerski. Zespół pracuje nad aplikacją, dowozi sprinty, aplikacja sobie rośnie. Dodatkowo okazuje się, że produkt, który tworzymy, podoba się użytkownikom. Pojawiają się nowe feature’y, pojawiają się też nowi ludzie w zespole.</p>
@@ -149,9 +203,9 @@
     </summary>
     
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
-    
       <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
       <category term="Microservices" scheme="https://kernelgonnapanic.pl/tags/Microservices/"/>
     
@@ -162,7 +216,7 @@
     <link href="https://kernelgonnapanic.pl/2017/01/26/HexoNowyRokNowyBlog/"/>
     <id>https://kernelgonnapanic.pl/2017/01/26/HexoNowyRokNowyBlog/</id>
     <published>2017-01-26T18:46:42.000Z</published>
-    <updated>2017-02-19T15:24:13.623Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>Dawno się nie słyszeliśmy, prawda? W międzyczasie przez bloga przeszła burza, a jej rezultatem jest to, co właśnie widzicie. I nie jest to tylko nowy szablon. Przez ostatnie kilka miesięcy budowałam tego bloga od zera na nowej platformie. Dlatego też, <strong>na dobry nowy początek</strong>, nie może zabraknąć wpisu na temat narzędzi, które na to pozwalają.</p>
 <a id="more"></a>
@@ -203,7 +257,7 @@
     <link href="https://kernelgonnapanic.pl/2016/10/02/software-craftsman/"/>
     <id>https://kernelgonnapanic.pl/2016/10/02/software-craftsman/</id>
     <published>2016-10-02T10:44:24.000Z</published>
-    <updated>2017-01-26T19:07:28.827Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>Wrzesień minął tak szybko! Nie wiem jak Was, ale mnie nadejście jesieni bardzo motywuje. Kojarzy mi się z rozpoczęciem szkoły, czuję, że jest to czas nowych porządków. Jesienną słotę można fajnie wykorzystać np. siadając z herbatą, kocem i książką. Dlatego też podrzucam Wam dziś kolejną recenzję. Pora powiedzieć kilka słów na temat książki Sandro Mancuso “Software Craftsman. Profesjonalizm, czysty kod i techniczna precyzja”.<br><a id="more"></a></p>
 <h2 id="Software-Craftsmanship"><a href="#Software-Craftsmanship" class="headerlink" title="Software Craftsmanship"></a>Software Craftsmanship</h2><p>Dla osób, którym nigdy nie obiło się o uszy pojęcie “programisty rzemieślnika” lub “software craftsmanship”, dedykuje kilka słów wstępu.</p>
@@ -232,9 +286,9 @@
     </summary>
     
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
-    
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
@@ -249,7 +303,7 @@
     <link href="https://kernelgonnapanic.pl/2016/09/05/Pamitnik-programistki-1/"/>
     <id>https://kernelgonnapanic.pl/2016/09/05/Pamitnik-programistki-1/</id>
     <published>2016-09-05T03:30:00.000Z</published>
-    <updated>2016-10-18T20:07:46.373Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>Hej wszystkim!<br>Ostatnio stwierdziłam, że fajnie byłoby, gdybym miała na blogu taką przestrzeń, w której mogłabym podzielić się z Wami tym, co u mnie słychać, czym się ostatnio interesuję i co tam sobie kodzę. W ten sposób zrodziła się koncepcja “Pamiętnika programistki”. I właśnie dziś zapraszam Was na pierwszy post tej nowej serii.<br><a id="more"></a></p>
 <p>Wrzucałam już fotkę na Instagrama, ale dla tych, którzy nie widzieli, w ubiegły poniedziałek wybrałam się na wrocławski Meet.js.  </p>
@@ -286,7 +340,7 @@
     <link href="https://kernelgonnapanic.pl/2016/08/16/Exercismio/"/>
     <id>https://kernelgonnapanic.pl/2016/08/16/Exercismio/</id>
     <published>2016-08-16T06:41:00.000Z</published>
-    <updated>2016-10-18T19:40:32.324Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>Jestem wielką orędowniczką idei programowania jako hobby czy zawodu dla każdego. Dla chłopaków, dziewczyn, dla młodszych i tych trochę starszych. Od kiedy jesteśmy w stanie znaleźć w internecie mnóstwo tutoriali i kursów dla początkujących, każdy może rozpocząć swoją przygodę z kodowaniem. Znam przykłady wielu ludzi, którzy tak właśnie zaczynali, a teraz podążają programistyczną ścieżką kariery.<br><a id="more"></a></p>
 <p>Jednak wiele razy słyszałam od nich, że wśród internetowych zasobów jest pewna nisza. Mamy codecademy, Khan Academy, code school i wiele innych kursów dla początkujących, dla osób, dla których będzie to pierwsze spotkanie z programowaniem (o kursach dla początkujących piszę w <a href="http://bookieandcookie.blogspot.com/2015/09/5-najlepszych-platform-do-nauki-programowania.html" target="_blank" rel="external">tym poście</a>). Jednak po skończeniu jednego, dwóch czy nawet kilku z nich wchodzimy w fazę stagnacji. Każdy kolejny kurs na tym poziomie nie wnosi praktycznie nic nowego, a gdy siadamy przez pustym edytorem czujemy pustkę w głowie i mamy wrażenie, jakbyśmy się niczego nie nauczyli. Jeśli kiedyś czuliście coś podobnego, chyba mam dla was rozwiązanie!  </p>
@@ -308,11 +362,44 @@
     </summary>
     
     
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
       <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
+    
+      <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nawyki mistrzów</title>
+    <link href="https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/"/>
+    <id>https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/</id>
+    <published>2016-08-11T07:10:00.000Z</published>
+    <updated>2017-03-16T18:30:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Kolejny <strong>Rozwojowy Poniedziałek</strong> przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili <strong>nawyki mistrzów</strong>.<br><a id="more"></a></p>
+<h3 id="Mistrzowie-wstaja-wczesnie"><a href="#Mistrzowie-wstaja-wczesnie" class="headerlink" title="Mistrzowie wstają wcześnie."></a>Mistrzowie wstają wcześnie.</h3><p>Wstawanie 2 czy 3 godziny przed wyjściem z domu rano może wydawać się przerażające. Często jednak nie zdajemy sobie sprawy ile możliwości nam oferuje. Mamy czas, by przy kubku świeżo zaparzonej kawy przemyśleć, co czeka nas w nadchodzącym dniu. Znajdzie się też na pewno pół godziny na trening. Możemy wybrać się na jesienny spacer i posłuchać muzyki czy podcastu. Obejrzeć motywujący wykładu czy poczytać książkę. Tak! Naprawdę da radę to zrobić rano! A co więcej, przy okazji ćwiczymy naszą silną wolę.</p>
+<h3 id="Mistrzowie-cwicza-kilka-razy-w-tygodniu"><a href="#Mistrzowie-cwicza-kilka-razy-w-tygodniu" class="headerlink" title="Mistrzowie ćwiczą kilka razy w tygodniu."></a>Mistrzowie ćwiczą kilka razy w tygodniu.</h3><p>Sport to szkoła osiągania sukcesów. Gdy wylewamy siódme poty na siłowni lub pokonujemy nasty kilometr w terenie ćwiczymy naszą wytrwałość, determinację w osiąganiu celów i silną wolę. Podczas ćwiczeń wentylujemy nasz mózg, ryzykując zalewem dobrych pomysłów i wyzwalamy produkcję endorfin, które sprawiają, że nic już nam nie jest straszne.</p>
+<p>Ruszenie się z kanapy po ciężkim dniu pracy jest trudne. Przyznaję. Jednak mistrzowie mają na to sposoby ;) Dobrym pomysłem jest wybranie się na siłownię rano lub od razu po pracy, szkole, uczelni.</p>
+<h3 id="Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…"><a href="#Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…" class="headerlink" title="Mistrzowie planują zadania na dany dzień, tydzień, rok…"></a>Mistrzowie planują zadania na dany dzień, tydzień, rok…</h3><p>Bez planu zginiemy. Zatoniemy w natłoku obowiązków, zaległych terminów, wizyt u dentysty i telefonów z okazji urodzin. Mistrzowie wiedzą, że lista zadań na dany dzień to obowiązek! Jednak, by rozwijać się w pożądanym kierunku w perspektywie długoterminowej potrzebujemy też listy celów na najbliższy miesiąc czy rok. Zerkanie co jakiś czas na spis naszych priorytetów i dążeń pozwala nam upewnić się czy jesteśmy na dobrej drodze.</p>
+<h3 id="Mistrzowie-rozwijaja-swoja-siec-kontaktow"><a href="#Mistrzowie-rozwijaja-swoja-siec-kontaktow" class="headerlink" title="Mistrzowie rozwijają swoją sieć kontaktów."></a>Mistrzowie rozwijają swoją sieć kontaktów.</h3><p>My, zwykli zjadacze chleba, często nie doceniamy wagi i siły networkingu. Nie mamy na to czasu, nie lubimy rozmawiać z obcymi ludźmi. Ale przecież… Poznawanie nowych ludzi jest fajne! I inspirujące! I wnosi bardzo dużo do naszego życia :) Szczególnie, gdy poznajemy ludzi spoza naszej branży. W ten sposób poszerzamy nasze horyzonty i często jesteśmy zmuszeni do wyjścia ze strefy komfortu. A każde wyjście z naszej bezpiecznej skorupki jest wejściem do świata “where the magic happens”.</p>
+<p>Czy Was również jesień tak motywuje?</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Kolejny &lt;strong&gt;Rozwojowy Poniedziałek&lt;/strong&gt; przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili &lt;strong&gt;nawyki mistrzów&lt;/strong&gt;.&lt;br&gt;
+    
+    </summary>
+    
     
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
+      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
+    
+      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
+    
+      <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
     
   </entry>
   
@@ -321,7 +408,7 @@
     <link href="https://kernelgonnapanic.pl/2016/08/11/Akcja-Subskrypcja/"/>
     <id>https://kernelgonnapanic.pl/2016/08/11/Akcja-Subskrypcja/</id>
     <published>2016-08-11T07:10:00.000Z</published>
-    <updated>2016-10-18T19:47:32.990Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>W Internecie dzieją się miliony rzeczy na raz. Powstają nowe interesujące profile. Kanały, które można subskrybować. Blogi, które należy czytać. Lubię, gdy inni polecają mi miejsca w sieci, które ich inspirują, motywują lub z których czerpią wiedzę. Często sama podłapuje temat, a lista moich subskrypcji rośnie ;)<br><a id="more"></a></p>
 <p>Dlatego też chcę się podzielić z wami moją listą internetową listą “must see”, a raczej “must subscribe” :)  </p>
@@ -358,44 +445,11 @@
   </entry>
   
   <entry>
-    <title>Nawyki mistrzów</title>
-    <link href="https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/"/>
-    <id>https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/</id>
-    <published>2016-08-11T07:10:00.000Z</published>
-    <updated>2017-02-07T19:04:43.901Z</updated>
-    
-    <content type="html"><![CDATA[<p>Kolejny <strong>Rozwojowy Poniedziałek</strong> przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili <strong>nawyki mistrzów</strong>.<br><a id="more"></a></p>
-<h3 id="Mistrzowie-wstaja-wczesnie"><a href="#Mistrzowie-wstaja-wczesnie" class="headerlink" title="Mistrzowie wstają wcześnie."></a>Mistrzowie wstają wcześnie.</h3><p>Wstawanie 2 czy 3 godziny przed wyjściem z domu rano może wydawać się przerażające. Często jednak nie zdajemy sobie sprawy ile możliwości nam oferuje. Mamy czas, by przy kubku świeżo zaparzonej kawy przemyśleć, co czeka nas w nadchodzącym dniu. Znajdzie się też na pewno pół godziny na trening. Możemy wybrać się na jesienny spacer i posłuchać muzyki czy podcastu. Obejrzeć motywujący wykładu czy poczytać książkę. Tak! Naprawdę da radę to zrobić rano! A co więcej, przy okazji ćwiczymy naszą silną wolę.</p>
-<h3 id="Mistrzowie-cwicza-kilka-razy-w-tygodniu"><a href="#Mistrzowie-cwicza-kilka-razy-w-tygodniu" class="headerlink" title="Mistrzowie ćwiczą kilka razy w tygodniu."></a>Mistrzowie ćwiczą kilka razy w tygodniu.</h3><p>Sport to szkoła osiągania sukcesów. Gdy wylewamy siódme poty na siłowni lub pokonujemy nasty kilometr w terenie ćwiczymy naszą wytrwałość, determinację w osiąganiu celów i silną wolę. Podczas ćwiczeń wentylujemy nasz mózg, ryzykując zalewem dobrych pomysłów i wyzwalamy produkcję endorfin, które sprawiają, że nic już nam nie jest straszne.</p>
-<p>Ruszenie się z kanapy po ciężkim dniu pracy jest trudne. Przyznaję. Jednak mistrzowie mają na to sposoby ;) Dobrym pomysłem jest wybranie się na siłownię rano lub od razu po pracy, szkole, uczelni.</p>
-<h3 id="Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…"><a href="#Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…" class="headerlink" title="Mistrzowie planują zadania na dany dzień, tydzień, rok…"></a>Mistrzowie planują zadania na dany dzień, tydzień, rok…</h3><p>Bez planu zginiemy. Zatoniemy w natłoku obowiązków, zaległych terminów, wizyt u dentysty i telefonów z okazji urodzin. Mistrzowie wiedzą, że lista zadań na dany dzień to obowiązek! Jednak, by rozwijać się w pożądanym kierunku w perspektywie długoterminowej potrzebujemy też listy celów na najbliższy miesiąc czy rok. Zerkanie co jakiś czas na spis naszych priorytetów i dążeń pozwala nam upewnić się czy jesteśmy na dobrej drodze.</p>
-<h3 id="Mistrzowie-rozwijaja-swoja-siec-kontaktow"><a href="#Mistrzowie-rozwijaja-swoja-siec-kontaktow" class="headerlink" title="Mistrzowie rozwijają swoją sieć kontaktów."></a>Mistrzowie rozwijają swoją sieć kontaktów.</h3><p>My, zwykli zjadacze chleba, często nie doceniamy wagi i siły networkingu. Nie mamy na to czasu, nie lubimy rozmawiać z obcymi ludźmi. Ale przecież… Poznawanie nowych ludzi jest fajne! I inspirujące! I wnosi bardzo dużo do naszego życia :) Szczególnie, gdy poznajemy ludzi spoza naszej branży. W ten sposób poszerzamy nasze horyzonty i często jesteśmy zmuszeni do wyjścia ze strefy komfortu. A każde wyjście z naszej bezpiecznej skorupki jest wejściem do świata “where the magic happens”.</p>
-<p>Czy Was również jesień tak motywuje?</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Kolejny &lt;strong&gt;Rozwojowy Poniedziałek&lt;/strong&gt; przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili &lt;strong&gt;nawyki mistrzów&lt;/strong&gt;.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
-    
-      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
-    
-      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
-    
-      <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Nie tłumacz się, działaj!</title>
     <link href="https://kernelgonnapanic.pl/2016/08/08/NieTlumaczSieDzialaj/"/>
     <id>https://kernelgonnapanic.pl/2016/08/08/NieTlumaczSieDzialaj/</id>
     <published>2016-08-08T06:00:00.000Z</published>
-    <updated>2017-02-07T19:29:07.140Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>Dziś wracam do Was z recenzją książki Briana Tracy’ego “Nie tłumacz się, działaj! Odkryj moc samodyscypliny”. Pewnie dla tej części z Was, którzy kiedykolwiek zabłądzili w księgarni lub bibliotece do działu z książkami dotyczącymi rozwoju osobistego, nazwisko autora nie jest obce. Mając na uwadze jednak tych, którzy jeszcze o nim nie słyszeli, naskrobię kilka dodatkowych słów.<br><a id="more"></a></p>
 <h2 id="Historia-“from-zero-to-superhero”"><a href="#Historia-“from-zero-to-superhero”" class="headerlink" title="Historia “from zero to superhero”"></a>Historia “from zero to superhero”</h2><p>Brian Tracy obecnie to ceniony doradca w zakresie zarządzania, handlowiec, a także autor. Kiedyś - robotnik, który został zmuszony do pracy fizycznej z powodu nieukończonej szkoły średniej. Dokonawszy tak wielkiego awansu społecznego dzieli się swoimi metodami w trakcie warsztatów, wykładów i jako mówca motywacyjny. Jest również autorem kilkudziesięciu książek o samorozwoju m. in. “Zjedz tę żabę”, czy właśnie “Nie tłumacz się, działaj!”.  </p>
@@ -420,15 +474,15 @@
     
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
-    
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
-      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
+      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
     
       <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.pl/tags/RozwojowyPoniedzialek/"/>
     
       <category term="Samodyscyplina" scheme="https://kernelgonnapanic.pl/tags/Samodyscyplina/"/>
+    
+      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
     
   </entry>
   
@@ -437,7 +491,7 @@
     <link href="https://kernelgonnapanic.pl/2016/05/03/Rozwojowy-poniedzialek5/"/>
     <id>https://kernelgonnapanic.pl/2016/05/03/Rozwojowy-poniedzialek5/</id>
     <published>2016-05-03T20:04:00.000Z</published>
-    <updated>2016-10-18T20:28:50.609Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>Dziś porządka dawka tego co uwielbiam. W ramach <strong>Rozwojowego poniedziałku #5</strong> zapraszam na apetyczny mix programowania i rozwoju osobistego. Opowiem dziś kilka słów o “Today I learned” -<br>projekcie, który bardzo przypadł mi do gustu. Już tłumaczę o co chodzi ;)<br><a id="more"></a></p>
 <h2 id="Github-od-JavaScriptu-do-przepisow-kulinarnych"><a href="#Github-od-JavaScriptu-do-przepisow-kulinarnych" class="headerlink" title="Github - od JavaScriptu do przepisów kulinarnych"></a>Github - od JavaScriptu do przepisów kulinarnych</h2><p>Github już dawno przestał być tylko bazą kodu. Oprócz repozytoriów z czymś wartościowym, możemy tu znaleźć <a href="https://github.com/matslina/awib" target="_blank" rel="external">programy napisane w Brainfuck’u</a>, <a href="https://github.com/adambom/dictionary" target="_blank" rel="external">słowniki</a>, <a href="https://github.com/bundestag/gesetze" target="_blank" rel="external">prawo niemieckie</a> czy współtworzony przez społeczność przepis na <a href="https://github.com/sinker/tacofancy" target="_blank" rel="external">taco</a>.  </p>
@@ -470,7 +524,7 @@
     <link href="https://kernelgonnapanic.pl/2016/02/06/Trzy-litery-i-kropka/"/>
     <id>https://kernelgonnapanic.pl/2016/02/06/Trzy-litery-i-kropka/</id>
     <published>2016-02-06T18:12:00.000Z</published>
-    <updated>2016-10-18T20:34:47.406Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>Inż.</strong> - trzy magiczne literki i kropka. Gdy stawiałeś swoje pierwsze kroki na uczelni, cztery lata temu, były one odległym i upragnionym celem. Miały sprawić, że narody przed Tobą klękną, a pracodawcy będą ustawiać się do Ciebie w kolejce. Wyszarpane, opłacone potem i krwią, wreszcie przywędrowały i dumnie zasiadły przed twoim nazwiskiem. Tylko jedna rzecz zaczęła Cię nurtować: “Czemu nic się nie zmieniło?”.<br><a id="more"></a>  </p>
 <p>Budzisz się z kacem po “opijaniu inżyniera”. Jest godzina 13:00. Wzdychasz. Robisz sobie kanapkę. Włączasz telewizor. W końcu Ci się należy, tyle uczyłeś się do tego egzaminu. Przełączasz kanał. I jeszcze raz. Zerkasz na zegarek, już 18:00. W międzyczasie obejrzałeś na facebook’u posty wszystkich kolegów, którzy też cieszą się z tytułu. Sprawdziłeś Instagrama, 9gag’a, Kwejka. Cztery razy. Czekasz. Na ofertę pracy. Na poniedziałek. Na lepszy dzień.  </p>
@@ -505,7 +559,7 @@
     <link href="https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/"/>
     <id>https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/</id>
     <published>2016-01-03T12:58:00.000Z</published>
-    <updated>2017-01-26T18:44:50.382Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>Nie da rady wejść w Nowy Rok, omijając sezon na postanowienia noworoczne. Dla niektórych osób są one bezsensowne, bo uważają oni, że cyferki w kalendarzu nic nie zmieniają. Inni śmieją się z tabunów odwiedzających siłownie w styczniu. Dla mnie z kolei każdy moment jest dobry na zmiany, wyjście ze strefy komfortu, zrobienie czegoś fajnego, kreatywnego i rozwijającego czy zaprzestanie czegoś, co nas niszczy.<br><a id="more"></a></p>
 <p>Jednak do okołosylwestrowych planów należy podejść, będąc odpowiednio przygotowanym. Spojrzeć na nie rozsądnym okiem, zdecydować co jest osiągalne, a co nie. Bardzo pomocne jest w tym momencie przeanalizowanie ich w kontekście kryteriów <strong>S.M.A.R.T.  </strong>  </p>
@@ -538,7 +592,7 @@
     <link href="https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/"/>
     <id>https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/</id>
     <published>2015-09-11T07:00:00.000Z</published>
-    <updated>2017-02-07T18:28:57.314Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>Od jakiego tematu można by zacząć cykl dotyczący programowania? No właśnie od tego! Dziś chciałabym się z Wami podzielić platformami, dzięki którym można zarazić się “koderskim” bakcylem i wiele się nauczyć. Zaczęłam z nich korzystać, gdy byłam totalnie zielona w tym temacie, no i co tu dużo mówić - “wpadłam po uszy” :)<br><a id="more"></a></p>
 <h2 id="Codecademy"><a href="#Codecademy" class="headerlink" title="Codecademy"></a><a href="https://www.codecademy.com/" target="_blank" rel="external">Codecademy</a></h2><p>Dla tych, którzy lubią, gdy się wszystko świeci, miga, kręci, obraca i zmienia kolory Codecademy stworzyło ciekawe projekty, np. “Zbuduj własną galaktykę”. Tym z Was, którym wystarczy fachowa wiedza, wykładana od podstaw, co więcej, podana w bardzo przystępny i interaktywny sposób, polecam rozpoczęcie jednego z dostępnych kursów. Pakiet jest wyraźnie nakierowany w stronę web developmentu. Mamy do wyboru: <strong>Html + CSS</strong>, <strong>Javascript</strong>, <strong>jQuery</strong>, <strong>PHP</strong>, <strong>Pythona</strong> oraz <strong>Ruby</strong> :)</p>
@@ -558,9 +612,9 @@
     </summary>
     
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
-    
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
       <category term="Podstawy programowania" scheme="https://kernelgonnapanic.pl/tags/Podstawy-programowania/"/>
     
@@ -573,7 +627,7 @@
     <link href="https://kernelgonnapanic.pl/2015/07/26/SmashingMagazine/"/>
     <id>https://kernelgonnapanic.pl/2015/07/26/SmashingMagazine/</id>
     <published>2015-07-26T20:24:00.000Z</published>
-    <updated>2017-02-07T19:27:51.748Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>Wszyscy zainteresowani technologiami webowymi i tworzeniem stron internetowych z pewnością słyszeli o <a href="http://www.smashingmagazine.com/" target="_blank" rel="external">The Smashing Magazine</a>. Tym, którzy jeszcze go nie odkryli, szczerze polecam pobuszowanie w czeluściach jego artykułów czy polubienie na fb, bo warto :) Mimo że idea tego portalu bardzo mi się podoba, jakoś rzadko tam zaglądam. Dlatego, gdy w bibliotece natrafiłam na ich książkę, bardzo się ucieszyłam i postanowiłam nadrobić zaległości.<br><a id="more"></a></p>
 <p><strong>The Smashing Magazine</strong> publikuje w sieci artykuły dotyczące tworzenia stron internetowych - projektowania grafiki, programowania czy zagadnień związanych z user experience itd. Najlepsze, czy też najbardziej godne uwagi teksty, publikuje w formie książek i e-booków. Powstaje w ten sposób publikacja, która jest połączeniem różnych artykułów, oscylujących wokół jednego tematu, lecz napisanych przez innych autorów. Pomysł równie ciekawy, co ambitny.</p>
@@ -617,7 +671,7 @@
     <link href="https://kernelgonnapanic.pl/2015/07/16/BiznesDoGoryNogami/"/>
     <id>https://kernelgonnapanic.pl/2015/07/16/BiznesDoGoryNogami/</id>
     <published>2015-07-16T18:26:00.000Z</published>
-    <updated>2017-02-07T19:05:14.718Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>Podsumowanie <strong>Bookathonu</strong> już za mną, ale ostatnie bookathonowe dziecko jeszcze czeka na recenzję :) Chodzi mi o książkę, którą wybrał dla mnie mój brat, czyli o <strong>“Biznes do góry nogami wywrócony” Richarda Bransona</strong>.<br><a id="more"></a></p>
 <p>Zacznę od tego, że bardzo się ucieszyłam, gdy okazało się, że to właśnie tę książkę będę czytać w ramach wyzwania. Znając mojego brata, mógł mi wybrać coś masakrycznego i patrzeć jak się z tym męczę :) Richarda Bransona kojarzyłam już wcześniej jako założyciela grupy Virgin i świetnego przedsiębiorcę. Od dawna miałam ochotę, by poczytać o jego podejściu do pieniędzy i przemyśleniach na temat biznesu.</p>
@@ -638,9 +692,9 @@
     </summary>
     
     
-      <category term="Biznes" scheme="https://kernelgonnapanic.pl/tags/Biznes/"/>
-    
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+      <category term="Biznes" scheme="https://kernelgonnapanic.pl/tags/Biznes/"/>
     
       <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
     
@@ -653,7 +707,7 @@
     <link href="https://kernelgonnapanic.pl/2015/04/10/wlacz-sie-do-gry/"/>
     <id>https://kernelgonnapanic.pl/2015/04/10/wlacz-sie-do-gry/</id>
     <published>2015-04-10T16:58:32.000Z</published>
-    <updated>2017-02-10T18:04:47.901Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>Dziś Rozwojowy Poniedziałek powraca w trochę innym kontekście. Bloga przejmuje Sheryl Sandberg wraz ze swoją książką <strong>“Włącz się do gry. Kobiety, praca i chęć przywództwa”</strong>.<br><a id="more"></a></p>
 <h3 id="Rownouprawnienie-o-co-tyle-szumu"><a href="#Rownouprawnienie-o-co-tyle-szumu" class="headerlink" title="Równouprawnienie - o co tyle szumu?"></a>Równouprawnienie - o co tyle szumu?</h3><p>Na książkę napisaną przez COO Facebooka trafiłam dzięki sugestii blogerki - <a href="http://www.ewelinamierzwinska.pl/kobieta-niezalezna-czyli-jaka-najcenniejsze-rady-kobiet-sukcesu/" target="_blank" rel="external">Eweliny Mierzwińskiej</a> Zachęcił mnie prosty tytuł. Zwyczajne - “Włącz się do gry”! Stwierdziłam, że Sheryl musi wiedzieć o czym mówi - w końcu wiele z nas postrzega ją jako kobietę sukcesu. I nie myliłam się.<br>Dlaczego temat równouprawnienia? Mimo pozornego wyrównania szans kobiet i mężczyzn, o które walczyły nasze babcie i matki, wciąż wiele z nas decyduje się zrezygnować ze swoich marzeń. Robimy to świadomie, lecz także i podświadomie - poprzez nasze zachowania w biznesowych relacjach oraz nasze nawyki. Autorka “Włącz się do gry” podkreśla, że w kwestii wyrównania szans możemy wiele zdziałać indywidualnie i powinnyśmy to robić :)</p>
@@ -685,7 +739,7 @@
     <link href="https://kernelgonnapanic.pl/2015/04/02/scrum-o-zwinnym-zarzadzaniu-projektami-chrapko/"/>
     <id>https://kernelgonnapanic.pl/2015/04/02/scrum-o-zwinnym-zarzadzaniu-projektami-chrapko/</id>
     <published>2015-04-02T16:58:32.000Z</published>
-    <updated>2017-02-10T18:09:45.798Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>“Scrum. O zwinnym zarządzaniu projektami” Mariusza Chrapko pojawia się dziś na blogu wraz z kolejnym, już trzecim, “Rozwojowym poniedziałkiem”.<br><a id="more"></a></p>
 <h3 id="O-co-chodzi-z-tym-Agile’m"><a href="#O-co-chodzi-z-tym-Agile’m" class="headerlink" title="O co chodzi z tym Agile’m?"></a>O co chodzi z tym Agile’m?</h3><p>Agile, Scrum, Kanban, Lean, XP - wszędzie tego pełno, wszyscy o tym mówią, ale z czym to się je? Ostatnio też byłam w takiej rozterce, dlatego zdecydowałam nadgonić i szybko się w tej kwestii podszkolić :) Moje zainteresowanie niestety nie zostało ugaszone, a wręcz przeciwnie stale rośnie. Dlatego ostrzegam! Podobne posty mogą pojawiać się coraz częściej :)<br>Agile to zbiór dobrych praktyk w dziedzinie prowadzenia projektów. Każdy z nas może zaczerpnąć coś z niego, by ułatwić sobie pracę. To, co najbardziej cenię sobie w zwinnych metodologiach to przeplatająca się we wszystkich aspektach pracy szczerość oraz docenienie potęgi, jaką może tworzyć zespół ludzi. A właśnie, jeśli już o tym mowa, to…</p>
@@ -723,7 +777,7 @@
     <link href="https://kernelgonnapanic.pl/2015/03/10/zwinny-samuraj/"/>
     <id>https://kernelgonnapanic.pl/2015/03/10/zwinny-samuraj/</id>
     <published>2015-03-10T17:50:19.000Z</published>
-    <updated>2017-02-10T17:56:49.196Z</updated>
+    <updated>2017-03-16T18:30:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>Tak jak zapowiadałam, dziś rozpoczynamy na blogu nową serię  - <strong>“Rozwojowe poniedziałki”</strong>. Pierwsza recenzja z tego cyklu dotyczyć będzie książki <strong>Jonathana Rasmussona “Zwinny samuraj. Jak programują mistrzowie zwinności”</strong>. Absolutny must-have dla każdego nowoczesnego programisty czy kierownika zwinnego projektu IT :)<br><a id="more"></a></p>
 <h3 id="Agile-nie-taki-straszny"><a href="#Agile-nie-taki-straszny" class="headerlink" title="Agile - nie taki straszny"></a>Agile - nie taki straszny</h3><p>“Zwinny samuraj” to doskonałe wprowadzenie w metodologię <strong>agile</strong> :) Książka jest znakomita dla początkujących, którzy nie mieli do tej pory styczności z tym sposobem prowadzenia projektów. Jednak nawet Ci, którzy już “liznęli temat” też odnajdą w niej coś dla siebie.</p>
