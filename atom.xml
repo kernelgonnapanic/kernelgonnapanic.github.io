@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2017-03-18T14:31:55.000Z</updated>
+  <updated>2017-03-26T17:49:34.000Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -16,11 +16,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Praca programisty - od euforii do rozpaczy</title>
+    <link href="https://kernelgonnapanic.pl/2017/03/25/praca-programisty-od-euforii-do-rozpaczy/"/>
+    <id>https://kernelgonnapanic.pl/2017/03/25/praca-programisty-od-euforii-do-rozpaczy/</id>
+    <published>2017-03-25T14:49:33.000Z</published>
+    <updated>2017-03-26T17:49:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Witajcie w piękny wiosenny dzień!<br>Dziś tematem postu będą uczucia, które pojawiają się w człowieku w trakcie programowania. Zdaję sobie w tym miejscu sprawę, że dla wielu ludzi spoza IT temat ten może się wydać trochę dziwny. Zazwyczaj programiści nie wyglądają na osoby, w których wnętrzu kotłują się stada emocji. Nic bardziej mylnego. My koderzy, w trakcie pracy, jesteśmy wystawieni na działanie wielu, czasem naprawdę skrajnych, uczuć. Dziś przyjrzymy się, jak to się dzieje, że w ciągu dnia jesteśmy w stanie popadać z ekscytacji w rozpacz i co możemy z tym fantem zrobić.<br><a id="more"></a></p>
+<h2 id="Ekscytacja"><a href="#Ekscytacja" class="headerlink" title="Ekscytacja"></a>Ekscytacja</h2><p>Nie mogłabym zacząć tego tematu od jakiegokolwiek innego stanu emocjonalnego. Kurczę, większość z nas robi to, co robi, dlatego, że uwielbia uczucie ekscytacji, pojawiające się w momencie rozwiązania problemu. Gdy po dłuższym czasie okazuje się, że nasz kod działa, wielu z nas ma ochotę rzucić klawiaturę w kąt i odtańczyć na środku taniec zwycięstwa (ku uciesze naszych kolegów z pracy).</p>
+<p>Podekscytowanie pojawia się równie często, gdy stajemy przed nowym, ciekawie się zapowiadającym problemem. Czy tylko mnie przechodzą dreszcze jak widzę na horyzoncie jakieś wyzwanie? Z pewnością nie powinniśmy walczyć z emocjami tego typu. To one sprawiają, że wykonywanie zawodu programisty sprawia nam radość. Czasami jednak na taką ekscytację należy uważać. Zbytnie zajaranie się problemem może powodować, że stracimy rozsądek w ocenie sytuacji. Ekscytacja nowymi technologiami może się skończyć wymienianiem framework’a co 3 miesiące. Zbyt kreatywne podejście do problemów może skutkować overengineeringiem i zdecydowanie przerośniętym rozwiązaniem. Podekscytowanie jest w porządku, dopóki nadal korzystamy z rozsądku.</p>
+<h2 id="Zniechecenie"><a href="#Zniechecenie" class="headerlink" title="Zniechęcenie"></a>Zniechęcenie</h2><p>Na drugiej stronie szali pojawia się uczucie zniechęcenia i przygnębienia. Nadchodzą chwile, a czasem nawet godziny czy dni, gdy nasza praca nie sprawia nam radości. Dzieje się tak z wielu powodów. Być może rozwiązanie problemu od dłuższego czasu majaczy nam na horyzoncie, a my nie jesteśmy w stanie go dorwać i urzeczywistnić.<br>Może akurat trafiło nam się jakieś nudniejsze zadanie do wykonania i nie realizujemy w nim całego naszego potencjału lub wręcz przeciwnie, mamy w ostatnim czasie zbyt dużo obowiązków. Najgorsze co może się przytrafić to początki czającego się w oddali (lub może już całkiem blisko) wypalenia zawodowego.</p>
+<p>Tego typu emocje również często są częścią palety uczuć programisty i jako takie należy nauczyć się je akceptować. Jednak głupstwem byłoby w tym momencie nie podjąć żadnego działania lub kontynuować je w takiej formie jak obecnie i oczekiwać innych rezultatów. Zniechęcenie powinno być raczej postrzegane jako sygnał do zmiany - czy to sposobu podejścia do problemu czy naszej organizacji czasu, a może nawet pracodawcy, formy pracy czy też zawodu.</p>
+<h2 id="Zdziwienie"><a href="#Zdziwienie" class="headerlink" title="Zdziwienie"></a>Zdziwienie</h2><p>Oj, programiści dziwnią się często. Począwszy od: “Czemu to NIE działa?!”, skończywszy na “A czemu TO działa?”. Uczucie zdziwienia towarzyszy nam w pracy nie rzadko. Często czyni naszą pracę ciekawą, ale może być również powodem frustracji. Gdy dziwimy się nad niezbyt czytelnym kodem, wytworzonym przez kogoś innego, może czasem paść kilka słów za dużo. (Śmiesznie jest, gdy okazuje się, że to my jesteśmy autorami tego niezbyt zgrabnego rozwiązania :)</p>
+<p>Zazwyczaj, gdy się dziwimy okazuje się, że wtedy gdzieś z boku czai się okazja do nauki. Warto pójść za ciosem i takie zdziwienie wynikające z niewiedzy przekuć na naszą korzyść i się czegoś nauczyć.</p>
+<p>Życie w IT jest pełne różnych odcieni. W ciągu jednego dnia jesteśmy w stanie przejść od histerii do euforii gapiąc się na jeden fragment kodu :) Ale taka już nasza praca. Nie bójmy się tych uczuć doświadczać, bo powodują, że to co robimy jest takie ciekawe :)</p>
+<p>A jakich Wy emocji doświadczacie jako programiści? Koniecznie podzielcie się z innymi w komentarzach.</p>
+<p>Do następnego,<br>Ania</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Witajcie w piękny wiosenny dzień!&lt;br&gt;Dziś tematem postu będą uczucia, które pojawiają się w człowieku w trakcie programowania. Zdaję sobie w tym miejscu sprawę, że dla wielu ludzi spoza IT temat ten może się wydać trochę dziwny. Zazwyczaj programiści nie wyglądają na osoby, w których wnętrzu kotłują się stada emocji. Nic bardziej mylnego. My koderzy, w trakcie pracy, jesteśmy wystawieni na działanie wielu, czasem naprawdę skrajnych, uczuć. Dziś przyjrzymy się, jak to się dzieje, że w ciągu dnia jesteśmy w stanie popadać z ekscytacji w rozpacz i co możemy z tym fantem zrobić.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
+    
+      <category term="Dobre praktyki" scheme="https://kernelgonnapanic.pl/tags/Dobre-praktyki/"/>
+    
+  </entry>
+  
+  <entry>
     <title>To żyje! Elm w akcji.</title>
     <link href="https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/"/>
     <id>https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/</id>
     <published>2017-03-18T14:23:00.000Z</published>
-    <updated>2017-03-18T14:31:55.000Z</updated>
+    <updated>2017-03-25T15:12:59.000Z</updated>
     
     <content type="html"><![CDATA[<p>Kolejny odcinek zmagań z Elmem przed nami. Dziś timer ożyje. Będziemy mieć okazję zobaczyć jak wygląda architektura aplikacji w Elmie i czemu może się Wam wydawać znajoma.<a id="more"></a> Let’s start!</p>
 <p>W poprzednim wpisie pokazałam jak, za pomocą Elma, możemy wyrenderować kilka divów. Ale od kilku DOM elementów do pełnej aplikacji jeszcze daleko. Dziś nadamy timerowi trochę ram i obsłużymy pierwsze kliknięcia. Na razie nie poświęcałam zbędnego czasu na stylowanie, więc wybaczcie wizualne koszmarki. Na rozprawienie się z nimi też przyjdzie pora.</p>
@@ -371,6 +405,39 @@
   </entry>
   
   <entry>
+    <title>Nawyki mistrzów</title>
+    <link href="https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/"/>
+    <id>https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/</id>
+    <published>2016-08-11T07:10:00.000Z</published>
+    <updated>2017-03-16T18:30:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Kolejny <strong>Rozwojowy Poniedziałek</strong> przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili <strong>nawyki mistrzów</strong>.<br><a id="more"></a></p>
+<h3 id="Mistrzowie-wstaja-wczesnie"><a href="#Mistrzowie-wstaja-wczesnie" class="headerlink" title="Mistrzowie wstają wcześnie."></a>Mistrzowie wstają wcześnie.</h3><p>Wstawanie 2 czy 3 godziny przed wyjściem z domu rano może wydawać się przerażające. Często jednak nie zdajemy sobie sprawy ile możliwości nam oferuje. Mamy czas, by przy kubku świeżo zaparzonej kawy przemyśleć, co czeka nas w nadchodzącym dniu. Znajdzie się też na pewno pół godziny na trening. Możemy wybrać się na jesienny spacer i posłuchać muzyki czy podcastu. Obejrzeć motywujący wykładu czy poczytać książkę. Tak! Naprawdę da radę to zrobić rano! A co więcej, przy okazji ćwiczymy naszą silną wolę.</p>
+<h3 id="Mistrzowie-cwicza-kilka-razy-w-tygodniu"><a href="#Mistrzowie-cwicza-kilka-razy-w-tygodniu" class="headerlink" title="Mistrzowie ćwiczą kilka razy w tygodniu."></a>Mistrzowie ćwiczą kilka razy w tygodniu.</h3><p>Sport to szkoła osiągania sukcesów. Gdy wylewamy siódme poty na siłowni lub pokonujemy nasty kilometr w terenie ćwiczymy naszą wytrwałość, determinację w osiąganiu celów i silną wolę. Podczas ćwiczeń wentylujemy nasz mózg, ryzykując zalewem dobrych pomysłów i wyzwalamy produkcję endorfin, które sprawiają, że nic już nam nie jest straszne.</p>
+<p>Ruszenie się z kanapy po ciężkim dniu pracy jest trudne. Przyznaję. Jednak mistrzowie mają na to sposoby ;) Dobrym pomysłem jest wybranie się na siłownię rano lub od razu po pracy, szkole, uczelni.</p>
+<h3 id="Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…"><a href="#Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…" class="headerlink" title="Mistrzowie planują zadania na dany dzień, tydzień, rok…"></a>Mistrzowie planują zadania na dany dzień, tydzień, rok…</h3><p>Bez planu zginiemy. Zatoniemy w natłoku obowiązków, zaległych terminów, wizyt u dentysty i telefonów z okazji urodzin. Mistrzowie wiedzą, że lista zadań na dany dzień to obowiązek! Jednak, by rozwijać się w pożądanym kierunku w perspektywie długoterminowej potrzebujemy też listy celów na najbliższy miesiąc czy rok. Zerkanie co jakiś czas na spis naszych priorytetów i dążeń pozwala nam upewnić się czy jesteśmy na dobrej drodze.</p>
+<h3 id="Mistrzowie-rozwijaja-swoja-siec-kontaktow"><a href="#Mistrzowie-rozwijaja-swoja-siec-kontaktow" class="headerlink" title="Mistrzowie rozwijają swoją sieć kontaktów."></a>Mistrzowie rozwijają swoją sieć kontaktów.</h3><p>My, zwykli zjadacze chleba, często nie doceniamy wagi i siły networkingu. Nie mamy na to czasu, nie lubimy rozmawiać z obcymi ludźmi. Ale przecież… Poznawanie nowych ludzi jest fajne! I inspirujące! I wnosi bardzo dużo do naszego życia :) Szczególnie, gdy poznajemy ludzi spoza naszej branży. W ten sposób poszerzamy nasze horyzonty i często jesteśmy zmuszeni do wyjścia ze strefy komfortu. A każde wyjście z naszej bezpiecznej skorupki jest wejściem do świata “where the magic happens”.</p>
+<p>Czy Was również jesień tak motywuje?</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Kolejny &lt;strong&gt;Rozwojowy Poniedziałek&lt;/strong&gt; przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili &lt;strong&gt;nawyki mistrzów&lt;/strong&gt;.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
+    
+      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
+    
+      <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Akcja Subskrypcja</title>
     <link href="https://kernelgonnapanic.pl/2016/08/11/Akcja-Subskrypcja/"/>
     <id>https://kernelgonnapanic.pl/2016/08/11/Akcja-Subskrypcja/</id>
@@ -408,39 +475,6 @@
       <category term="Internet" scheme="https://kernelgonnapanic.pl/tags/Internet/"/>
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nawyki mistrzów</title>
-    <link href="https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/"/>
-    <id>https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/</id>
-    <published>2016-08-11T07:10:00.000Z</published>
-    <updated>2017-03-16T18:30:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Kolejny <strong>Rozwojowy Poniedziałek</strong> przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili <strong>nawyki mistrzów</strong>.<br><a id="more"></a></p>
-<h3 id="Mistrzowie-wstaja-wczesnie"><a href="#Mistrzowie-wstaja-wczesnie" class="headerlink" title="Mistrzowie wstają wcześnie."></a>Mistrzowie wstają wcześnie.</h3><p>Wstawanie 2 czy 3 godziny przed wyjściem z domu rano może wydawać się przerażające. Często jednak nie zdajemy sobie sprawy ile możliwości nam oferuje. Mamy czas, by przy kubku świeżo zaparzonej kawy przemyśleć, co czeka nas w nadchodzącym dniu. Znajdzie się też na pewno pół godziny na trening. Możemy wybrać się na jesienny spacer i posłuchać muzyki czy podcastu. Obejrzeć motywujący wykładu czy poczytać książkę. Tak! Naprawdę da radę to zrobić rano! A co więcej, przy okazji ćwiczymy naszą silną wolę.</p>
-<h3 id="Mistrzowie-cwicza-kilka-razy-w-tygodniu"><a href="#Mistrzowie-cwicza-kilka-razy-w-tygodniu" class="headerlink" title="Mistrzowie ćwiczą kilka razy w tygodniu."></a>Mistrzowie ćwiczą kilka razy w tygodniu.</h3><p>Sport to szkoła osiągania sukcesów. Gdy wylewamy siódme poty na siłowni lub pokonujemy nasty kilometr w terenie ćwiczymy naszą wytrwałość, determinację w osiąganiu celów i silną wolę. Podczas ćwiczeń wentylujemy nasz mózg, ryzykując zalewem dobrych pomysłów i wyzwalamy produkcję endorfin, które sprawiają, że nic już nam nie jest straszne.</p>
-<p>Ruszenie się z kanapy po ciężkim dniu pracy jest trudne. Przyznaję. Jednak mistrzowie mają na to sposoby ;) Dobrym pomysłem jest wybranie się na siłownię rano lub od razu po pracy, szkole, uczelni.</p>
-<h3 id="Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…"><a href="#Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…" class="headerlink" title="Mistrzowie planują zadania na dany dzień, tydzień, rok…"></a>Mistrzowie planują zadania na dany dzień, tydzień, rok…</h3><p>Bez planu zginiemy. Zatoniemy w natłoku obowiązków, zaległych terminów, wizyt u dentysty i telefonów z okazji urodzin. Mistrzowie wiedzą, że lista zadań na dany dzień to obowiązek! Jednak, by rozwijać się w pożądanym kierunku w perspektywie długoterminowej potrzebujemy też listy celów na najbliższy miesiąc czy rok. Zerkanie co jakiś czas na spis naszych priorytetów i dążeń pozwala nam upewnić się czy jesteśmy na dobrej drodze.</p>
-<h3 id="Mistrzowie-rozwijaja-swoja-siec-kontaktow"><a href="#Mistrzowie-rozwijaja-swoja-siec-kontaktow" class="headerlink" title="Mistrzowie rozwijają swoją sieć kontaktów."></a>Mistrzowie rozwijają swoją sieć kontaktów.</h3><p>My, zwykli zjadacze chleba, często nie doceniamy wagi i siły networkingu. Nie mamy na to czasu, nie lubimy rozmawiać z obcymi ludźmi. Ale przecież… Poznawanie nowych ludzi jest fajne! I inspirujące! I wnosi bardzo dużo do naszego życia :) Szczególnie, gdy poznajemy ludzi spoza naszej branży. W ten sposób poszerzamy nasze horyzonty i często jesteśmy zmuszeni do wyjścia ze strefy komfortu. A każde wyjście z naszej bezpiecznej skorupki jest wejściem do świata “where the magic happens”.</p>
-<p>Czy Was również jesień tak motywuje?</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Kolejny &lt;strong&gt;Rozwojowy Poniedziałek&lt;/strong&gt; przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili &lt;strong&gt;nawyki mistrzów&lt;/strong&gt;.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
-    
-      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
-    
-      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
-    
-      <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
     
   </entry>
   
@@ -758,43 +792,6 @@
     <summary type="html">
     
       &lt;p&gt;“Scrum. O zwinnym zarządzaniu projektami” Mariusza Chrapko pojawia się dziś na blogu wraz z kolejnym, już trzecim, “Rozwojowym poniedziałkiem”.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
-    
-      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
-    
-      <category term="Scrum" scheme="https://kernelgonnapanic.pl/tags/Scrum/"/>
-    
-      <category term="Agile" scheme="https://kernelgonnapanic.pl/tags/Agile/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Zwinny samuraj. Jak programują mistrzowie zwinności</title>
-    <link href="https://kernelgonnapanic.pl/2015/03/10/zwinny-samuraj/"/>
-    <id>https://kernelgonnapanic.pl/2015/03/10/zwinny-samuraj/</id>
-    <published>2015-03-10T17:50:19.000Z</published>
-    <updated>2017-03-16T18:30:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Tak jak zapowiadałam, dziś rozpoczynamy na blogu nową serię  - <strong>“Rozwojowe poniedziałki”</strong>. Pierwsza recenzja z tego cyklu dotyczyć będzie książki <strong>Jonathana Rasmussona “Zwinny samuraj. Jak programują mistrzowie zwinności”</strong>. Absolutny must-have dla każdego nowoczesnego programisty czy kierownika zwinnego projektu IT :)<br><a id="more"></a></p>
-<h3 id="Agile-nie-taki-straszny"><a href="#Agile-nie-taki-straszny" class="headerlink" title="Agile - nie taki straszny"></a>Agile - nie taki straszny</h3><p>“Zwinny samuraj” to doskonałe wprowadzenie w metodologię <strong>agile</strong> :) Książka jest znakomita dla początkujących, którzy nie mieli do tej pory styczności z tym sposobem prowadzenia projektów. Jednak nawet Ci, którzy już “liznęli temat” też odnajdą w niej coś dla siebie.</p>
-<h3 id="Czym-sa-zwinne-metodologie"><a href="#Czym-sa-zwinne-metodologie" class="headerlink" title="Czym są zwinne metodologie?"></a>Czym są zwinne metodologie?</h3><p>Agile to coraz bardziej popularny sposób prowadzenia projektów, który opiera się na zasadzie, że wymagania klienta będą się cały czas zmieniać. Gdy oprogramowanie tworzone jest w tradycyjny sposób, w długich, np. rocznych przedsięwzięciach; warunki i wymagania, które zostały zaobserwowane na początku projektu, na końcu mogą już być dawno nieaktualne. Tu z pomocą przychodzi agile, dzięki któremu software tworzony jest w krótkich np. dwutygodniowych cyklach, podczas których ma miejsce analiza, projektowanie, programowanie i testowanie małych, kompletnych części większej aplikacji.</p>
-<p>Książka skupia się przede wszystkim na zasadach, jakimi rządzi się świat agile. Nie tylko je przedstawia, lecz także wyjaśnia skąd pochodzą, aby łatwiej można je było zaakceptować i wdrożyć. Swoje miejsce ma tutaj także opis podstawowych narzędzi, jakimi powinien posługiwać się zwinny programista. Opisane zostały m.in. continuous integration (CI), test-driven development (TDD), testy jednostkowe (unit testing).</p>
-<h3 id="Agile-z-czym-to-sie-je"><a href="#Agile-z-czym-to-sie-je" class="headerlink" title="Agile - z czym to się je?"></a>Agile - z czym to się je?</h3><p>Czytając tę książkę jesteśmy prowadzeni przez meandry zwinnego projektu. Rozpoczynamy podróż od trzech prostych prawd - wymagania się zmieniają, nie jest możliwe zebranie ich wszystkich na początku oraz zawsze będzie więcej do zrobienia, niż pozwala na to czas i budżet. Następnie poznajemy zwinny zespół, role jakie przyjmują jego członkowie oraz jak rozkłada się odpowiedzialność.</p>
-<div class="figure center fig-100" style="width:;"><img class="fig-img" src="macbetter.jpeg" alt=""></div><div style="clear:both;"></div>
-<p>Uczymy się narzędzi, które są bardzo istotne w planowaniu projektu - tablicy koncepcyjnej, listy “NIE”, konieczności zadawania trudnych pytań. Jeśli chodzi o realizację dokładnie opisane zostało tworzenie i zarządzanie historiami użytkownika. Dowiadujemy się również o sposobach ich oceniania i wyznaczaniu prędkości zespołu.</p>
-<p>Bardzo dużo uwagi autor poświęcił “wielkiej czwórce” - budżetowi, czasowi, jakości i zakresowi. Rasmusson podkreśla, że nie da się ich wszystkich ustawić na sztywno. Uważa, że najlepszym wyjściem jest by zakres mógł się stale dostosowywać do warunków.</p>
-<p>Autor bardzo ciekawie przedstawia konieczność refaktoryzacji kodu - nazywa to spłacaniem długu technicznego. Jeśli chcecie dowiedzieć się na ten temat więcej -  musicie przeczytać!</p>
-<p>Dla mnie dużym plusem jest ogromna ilość odnośników do innych książek, nie tylko z dziedziny agile, lecz także np. z socjologii. Wszystkie interesujące skrupulatnie notowałam. Spodziewajcie się recenzji niektórych już niedługo!</p>
-<p>Polecam wszystkim programistom. Nawet tym doświadczonym w dziedzinie zwinnego kodzenia. Ta książka z pewnością potrafi pomóc zrozumieć o co, tak naprawdę, w agile’u chodzi :)</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Tak jak zapowiadałam, dziś rozpoczynamy na blogu nową serię  - &lt;strong&gt;“Rozwojowe poniedziałki”&lt;/strong&gt;. Pierwsza recenzja z tego cyklu dotyczyć będzie książki &lt;strong&gt;Jonathana Rasmussona “Zwinny samuraj. Jak programują mistrzowie zwinności”&lt;/strong&gt;. Absolutny must-have dla każdego nowoczesnego programisty czy kierownika zwinnego projektu IT :)&lt;br&gt;
     
     </summary>
     
