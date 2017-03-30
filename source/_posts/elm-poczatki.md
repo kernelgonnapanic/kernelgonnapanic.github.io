@@ -5,7 +5,7 @@ tags:
   - Podstawy
   - Daj się poznać 2017
   - Frontend
-thumbnailImagePosition: top
+thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial
 thumbnailImage: forest.jpg
@@ -49,7 +49,7 @@ import Html.Attributes exposing (class, rel, href)
 css path =
   node "link" [ rel "stylesheet", href path ] []
 
-main = 
+main =
     div [] [
         css "styles.css",
         div [class "hello"] [
