@@ -291,7 +291,7 @@
     <link href="https://kernelgonnapanic.pl/2016/10/02/software-craftsman/"/>
     <id>https://kernelgonnapanic.pl/2016/10/02/software-craftsman/</id>
     <published>2016-10-02T10:44:24.000Z</published>
-    <updated>2017-03-16T18:30:56.000Z</updated>
+    <updated>2017-05-05T19:36:58.000Z</updated>
     
     <content type="html"><![CDATA[<p>Wrzesień minął tak szybko! Nie wiem jak Was, ale mnie nadejście jesieni bardzo motywuje. Kojarzy mi się z rozpoczęciem szkoły, czuję, że jest to czas nowych porządków. Jesienną słotę można fajnie wykorzystać np. siadając z herbatą, kocem i książką. Dlatego też podrzucam Wam dziś kolejną recenzję. Pora powiedzieć kilka słów na temat książki Sandro Mancuso “Software Craftsman. Profesjonalizm, czysty kod i techniczna precyzja”.<br><a id="more"></a></p>
 <h2 id="Software-Craftsmanship"><a href="#Software-Craftsmanship" class="headerlink" title="Software Craftsmanship"></a>Software Craftsmanship</h2><p>Dla osób, którym nigdy nie obiło się o uszy pojęcie “programisty rzemieślnika” lub “software craftsmanship”, dedykuje kilka słów wstępu.</p>
@@ -309,7 +309,7 @@
 <h2 id="Rekrutacja-w-IT"><a href="#Rekrutacja-w-IT" class="headerlink" title="Rekrutacja w IT"></a>Rekrutacja w IT</h2><p>Świetnie, że autor poświęcił aż 3 rozdziały na ten temat. Mimo że podejście do rekrutacji w IT cały czas zmienia się na lepsze, to wciąż można spotkać rekrutujących, którzy przepytują kandydatów na okoliczność nazw konkretnych metod w danej bibliotece i innych informacji natury encyklopedycznej.</p>
 <p>Mancuso w swojej książce określa to jako jeden z antywzorców rozmowy kwalifikacyjnej, wraz z np. pisaniem kodu na papierze (sic!), blokowaniem internetu czy zadawaniem pytań na które nie zna się odpowiedzi. W zamian podsuwa swoje sugestie na przeprowadzenie rekrutacji. Mnie najbardziej spodobała się koncepcja programowania w parach rekrutujący-kandydat. Pozwala ono na sprawdzenie delikwenta “w warunkach bojowych”. Książkę zdecydowanie warto przeczytać chociażby dla tego tematu.</p>
 <h2 id="Projektowi-sceptycy"><a href="#Projektowi-sceptycy" class="headerlink" title="Projektowi sceptycy"></a>Projektowi sceptycy</h2><p>Punktem, który najbardziej zapadł mi w pamięć po przeczytaniu tej książki był rozdział mówiący o typach sceptyków, których możemy spotkać w projekcie. I tak, możemy przeczytać o sposobach na radzenie sobie z np. sceptykami irracjonalnymi, wypalonymi czy niedoinformowanymi. Uprzedzam! Dużo fajnych wskazówek odnośnie codziennej pracy w projekcie/grupie.</p>
-<p>Gorąco polecam tę książkę wszystkim programistom! Może nie jest to pozycja obowiązkowa, ale jestem zadowolona, że poświęciłam jej swój czas. Pozwala na spojrzenie na swoją pracę z trochę innej perspektywy, dostrzeżenie błędów, przemyślenie kilku rzeczy.</p>
+<p>Gorąco polecam tę książkę wszystkim programistom! Można ją zakupić <a href="http://helion.pl/view/90202/prorze.htm" target="_blank" rel="external">TUTAJ</a> i oczywiście czekam na wasze opinie w komentarzach.</p>
 <p>A jakie książki według Was każdy programista musi znać?</p>
 ]]></content>
     
@@ -547,9 +547,9 @@
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
-      <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.pl/tags/RozwojowyPoniedzialek/"/>
-    
       <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
+    
+      <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.pl/tags/RozwojowyPoniedzialek/"/>
     
   </entry>
   
