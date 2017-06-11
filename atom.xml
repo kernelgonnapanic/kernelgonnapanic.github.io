@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2017-05-28T11:44:07.000Z</updated>
+  <updated>2017-06-11T12:08:32.000Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -16,11 +16,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Identity &amp; Data Security for Web Development</title>
+    <link href="https://kernelgonnapanic.pl/2017/06/08/security-in-web-dev/"/>
+    <id>https://kernelgonnapanic.pl/2017/06/08/security-in-web-dev/</id>
+    <published>2017-06-08T07:38:04.000Z</published>
+    <updated>2017-06-11T12:08:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Piękne Zakopane przywitało mnie słońcem, lecz cudna pogoda trwała tylko dzień. Dzisiejszy deszcz ma jednak swoją dobrą stronę. Mam chwilę, by podzielić się z Wami moimi przemyśleniami odnośnie książki <strong>“Identity &amp; Data Security for Web Development”</strong> autorstwa Jonathana LeBlanc i Tima Messerschmidta. <a id="more"></a>Jest to część serii wydawnictwa o’Reilly skierowanej do web developerów, którą można rozpoznać po zielonym (właściwie morskim) kolorze okładek.</p>
+<p>Kupując tę książkę, miałam co do niej spore oczekiwania. Wiedzy w temacie bezpieczeństwa stron internetowych nigdy za wiele. Czuję również, że moja znajomość tego tematu nie jest zbyt obszerna. Dodatkowo, porusza ona temat identyfikacji użytkownika w Internecie, co miało mi się przydać do projektu, który przygotowywałam na studiach. To wszystko sprawiło, że zdecydowałam się na zakup “Identity &amp; Data Security for Web Development”.</p>
+<p>Niestety solidnie się zawiodłam.</p>
+<p>Książka porusza dwa główne tematy - identyfikację i autoryzację użytkownika w Internecie oraz bezpieczeństwo aplikacji webowych. Zawiera sporo frgamentów kodu, napisanych w Node (za to plus), które mają za zadanie pokazać teoretyczne koncepty w praktyce. Autorzy zaczynają od wprowadzenia tematu bezpieczeństwa pokazując, że to człowiek jest najsłabszym ogniwem całego mechanizmu. Poźniej poruszają tematy haszowania haseł, różnych sposobów identyfikacji użytkownika, mechanizmów OAuth 2 i OpenID Connect. Mówią też o najbardziej popularnych atakach - XSS oraz CSRF i sposobach na zabezpieczenie się przed nimi. Na deser dostajemy jeszcze rozdział na temat protokołu SSL/TLS oraz symetrycznej i asymetrycznej kryptografii.</p>
+<p>I jak tak teraz opisuje te tematy, czy też w momencie gdy czytałam spis treści tej książki, wydają mi się one bardzo ciekawe. Z chęcią dowiedziałabym się o nich więcej. Niestety przeczytana książka w małym stopniu przyczyniła się do zaspokojenia mojego pragnienia wiedzy.</p>
+<p>W szczególności interesuje mnie temat OAutha i OpenID Connect - technologii powszechnie używanych w dzisiejszych czasach do przeprowadzenia procesu autentykacji i autoryzacji. Zdecydowanie za mało na ten temat wiem. Niestety suchy, książkowy wywód i duże fragmenty kodu nie przekazały istoty problemu, które te technologie rozwiązują. Nie dowiedziałam się również nic na temat motywacji, które stoją za tym, że proces autoryzacji za pomocą OAuth’a wygląda tak, a nie inaczej. Dużo bardziej cenię sobie książki, które zamiast gotowych rozwiązań kształtują w Tobie intuicję.</p>
+<p>Podobnie było z tematem XSSów i innych ataków. Dowiedziałam się jakich pakietów npmowych użyć, by dostać (niejako w gratisie) zabezpieczenie przed nimi. Zabrakło mi jednak lepszego wyjaśnienia problemów, z którymi mierzymy się na co dzień i jakie zagrożenie stwarzają dla nas i naszych użytkowników.</p>
+<p>Ogólnie, miałam nadzieję, że będę mogła polecić tę książkę, ale niestety nie mogę.  Zbyt duże skupienie na szczegółach implementacyjnych sprawiło, że w wielu miejsca autorom umknęła istota problemu. Szczególnie odradzam początkującym, którzy mają minimalną lub żadną wiedzę w temacie web security - zagłębianie się w treści tej książki może wywołać tylko większy mętlik w głowie. Jeśli jednak chcesz wiedzieć jakich narzędzi użyć korzystając ze stack’a Node + Express i masz już całkiem ugruntowaną wiedzę teoretyczną na te tematy - wtedy śmiało sięgaj. To jest coś czego tej książce odmówić nie można.</p>
+<p>A Wy co ciekawego ostatnio przeczytaliście/czytacie? Powoli zbieram się do posta o programistycznych must-read. Liczę na Wasze sugestie w tym temacie!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Piękne Zakopane przywitało mnie słońcem, lecz cudna pogoda trwała tylko dzień. Dzisiejszy deszcz ma jednak swoją dobrą stronę. Mam chwilę, by podzielić się z Wami moimi przemyśleniami odnośnie książki &lt;strong&gt;“Identity &amp;amp; Data Security for Web Development”&lt;/strong&gt; autorstwa Jonathana LeBlanc i Tima Messerschmidta.
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
+    
+      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
+    
+      <category term="Dobre praktyki" scheme="https://kernelgonnapanic.pl/tags/Dobre-praktyki/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Pamiętnik programistki 2 - Girls in IT, Code Europe, Front Trends.</title>
     <link href="https://kernelgonnapanic.pl/2017/05/28/pamietnik-programistki-2/"/>
     <id>https://kernelgonnapanic.pl/2017/05/28/pamietnik-programistki-2/</id>
     <published>2017-05-28T09:53:32.000Z</published>
-    <updated>2017-05-28T11:44:07.000Z</updated>
+    <updated>2017-06-08T07:48:11.000Z</updated>
     
     <content type="html"><![CDATA[<p>Co to był za tydzień! Poproszę więcej takich. Doświadczyłam super kombo - trzech świetnych imprez w ciągu jednego tygodnia. Mnóstwo poznanych ludzi, wiele świetnej zabawy i tona nowych perspektyw i wiedzy.<br><a id="more"></a></p>
 <h2 id="Poniedzialek-Girls-in-IT"><a href="#Poniedzialek-Girls-in-IT" class="headerlink" title="Poniedziałek - Girls in IT"></a>Poniedziałek - <em>Girls in IT</em></h2><p><blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:37.5% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BUZsvhRlKms/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">#GirlsinIT in motion!  #meetatmonterail #monterail #vsco #vscocam #vscobest #vscogood #vscopoland #vscowroclaw #igerspoland #igerswroclaw #coding #programming #IT #girlsthatcode  #technology #event #wroclaw</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">Post udostępniony przez Monterail🔻 (@monterail) <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-05-22T16:36:06+00:00">22 Maj, 2017 o 9:36 PDT</time></p></div></blockquote></p>
@@ -28,7 +61,7 @@
 
 <p>Kilka miesięcy temu moja koleżanka z Monterail wyszła z pomysłem zoorganizowania spotkania dla dziewczyn, przybliżającego im branżę IT. Trochę czasu później i po wielu godzinach wspólnej pracy, udało się nam się zaprosić dziewczyny do naszego biura. Spotkanie, w formie panelu dyskusyjnego, było kierowane głównie do dziewczyn z liceum, które mają jeszcze przed sobą wybór ścieżki zawodowej. Jestem ogromnie szczęśliwa, że wraz z moimi koleżankami z pracy, miałam okazję podzielić się moją historią, tym, jak wyglądały moje początki w tym zawodzie i opowiedzieć o tym, co najbardziej mnie w nim cieszy.</p>
 <p>Jednak nie spodziewałam się, że to wydarzenie okaże się tak inspirujące dla mnie. Słysząc tyle pasji i zaangażowania w głosie dziewczyn, gdy opowiadały o swoim życiu i pracy, nie można pozostać obojętnym. To był bardzo obiecujący początek tygodnia.</p>
-<h2 id="Wtorek-Code-Europe"><a href="#Wtorek-Code-Europe" class="headerlink" title="Wtorek - Code Europe"></a>Wtorek - <em>Code Europe</em></h2><p>Łaaaa…. Stresowałam się tym dniem bardzo. Lecz dokładnie w momencie gdy skończyłam swoją prezentację zaczęłam planować kolejną. We wtorek miałam okazję współprowadzić z moim kolegą talka <em>“How not to fall under a hype train? Lessons learned from the frontend history”</em> na Code Europe we Wrocławiu. To moja pierwsza pełnowymiarowa prezentacja na tak dużej konferencji. Mimo kilku niedoróbek świetnie się bawiłam, dostałam dużo pozytywnego feedbacku od słuchaczy i już się nie mogę doczekać następnej okazji, by podzielić się swoimi przemyśleniami i umiejętnościami z innymi :)</p>
+<h2 id="Wtorek-Code-Europe"><a href="#Wtorek-Code-Europe" class="headerlink" title="Wtorek - Code Europe"></a>Wtorek - <em>Code Europe</em></h2><p>Łaaaa…. Stresowałam się tym dniem bardzo. Lecz dokładnie w momencie, gdy skończyłam swoją prezentację zaczęłam planować kolejną. We wtorek miałam okazję współprowadzić z moim kolegą talka <em>“How not to fall under a hype train? Lessons learned from the frontend history”</em> na Code Europe we Wrocławiu. To moja pierwsza pełnowymiarowa prezentacja na tak dużej konferencji. Mimo kilku niedoróbek świetnie się bawiłam, dostałam dużo pozytywnego feedbacku od słuchaczy i już się nie mogę doczekać następnej okazji, by podzielić się swoimi przemyśleniami i umiejętnościami z innymi :)</p>
 <p><blockquote class="twitter-tweet" data-lang="pl"><p lang="en" dir="ltr">.<a href="https://twitter.com/frizi09" target="_blank" rel="external">@frizi09</a> &amp; <a href="https://twitter.com/konopka_ania" target="_blank" rel="external">@konopka_ania</a> about how to not fall under hype train at <a href="https://twitter.com/code_europe" target="_blank" rel="external">@code_europe</a> 2017&#13;<a href="https://twitter.com/hashtag/codeeurope?src=hash" target="_blank" rel="external">#codeeurope</a> <a href="https://t.co/HmVwkZP5sT" target="_blank" rel="external">pic.twitter.com/HmVwkZP5sT</a></p>&mdash; Michał Łukaszewski (@m_lukaszewski) <a href="https://twitter.com/m_lukaszewski/status/866938078698647553" target="_blank" rel="external">23 maja 2017</a></blockquote></p>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -86,9 +119,9 @@
     </summary>
     
     
-      <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
-    
       <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
+    
+      <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
     
       <category term="Dobre praktyki" scheme="https://kernelgonnapanic.pl/tags/Dobre-praktyki/"/>
     
@@ -282,9 +315,9 @@
     </summary>
     
     
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
       <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="Microservices" scheme="https://kernelgonnapanic.pl/tags/Microservices/"/>
     
@@ -731,9 +764,9 @@
     
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
-    
       <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
+    
+      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
     
       <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
     
@@ -778,38 +811,6 @@
       <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
     
       <category term="Biografie" scheme="https://kernelgonnapanic.pl/tags/Biografie/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Włącz się do gry</title>
-    <link href="https://kernelgonnapanic.pl/2015/04/10/wlacz-sie-do-gry/"/>
-    <id>https://kernelgonnapanic.pl/2015/04/10/wlacz-sie-do-gry/</id>
-    <published>2015-04-10T16:58:32.000Z</published>
-    <updated>2017-03-16T18:30:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Dziś Rozwojowy Poniedziałek powraca w trochę innym kontekście. Bloga przejmuje Sheryl Sandberg wraz ze swoją książką <strong>“Włącz się do gry. Kobiety, praca i chęć przywództwa”</strong>.<br><a id="more"></a></p>
-<h3 id="Rownouprawnienie-o-co-tyle-szumu"><a href="#Rownouprawnienie-o-co-tyle-szumu" class="headerlink" title="Równouprawnienie - o co tyle szumu?"></a>Równouprawnienie - o co tyle szumu?</h3><p>Na książkę napisaną przez COO Facebooka trafiłam dzięki sugestii blogerki - <a href="http://www.ewelinamierzwinska.pl/kobieta-niezalezna-czyli-jaka-najcenniejsze-rady-kobiet-sukcesu/" target="_blank" rel="external">Eweliny Mierzwińskiej</a> Zachęcił mnie prosty tytuł. Zwyczajne - “Włącz się do gry”! Stwierdziłam, że Sheryl musi wiedzieć o czym mówi - w końcu wiele z nas postrzega ją jako kobietę sukcesu. I nie myliłam się.<br>Dlaczego temat równouprawnienia? Mimo pozornego wyrównania szans kobiet i mężczyzn, o które walczyły nasze babcie i matki, wciąż wiele z nas decyduje się zrezygnować ze swoich marzeń. Robimy to świadomie, lecz także i podświadomie - poprzez nasze zachowania w biznesowych relacjach oraz nasze nawyki. Autorka “Włącz się do gry” podkreśla, że w kwestii wyrównania szans możemy wiele zdziałać indywidualnie i powinnyśmy to robić :)</p>
-<h3 id="Kobiece-grzeszki-dlaczego-nie-odnosimy-sukcesu"><a href="#Kobiece-grzeszki-dlaczego-nie-odnosimy-sukcesu" class="headerlink" title="Kobiece grzeszki - dlaczego nie odnosimy sukcesu?"></a>Kobiece grzeszki - dlaczego nie odnosimy sukcesu?</h3><p>Sheryl w swojej książce poświęca dużo miejsca na omówienie takich małych grzeszków, które sprawiają, że nieświadomie wycofujemy się z walki o wysokie stanowiska czy lepsze zarobki.<br>Jednym z nich jest często odczuwany przez kobiety “syndrom oszusta”.Często nie czujemy, że to, co osiągnęłyśmy zawdzięczamy swoim umiejętnościom czy talentowi. Według nas to zazwyczaj przypadek, łut szczęścia czy pomoc innych sprawiają, że osiągamy sukces. Mamy mylne wrażenie, że i tak w końcu zostaniemy zdemaskowane, że ludzie wkoło zdadzą sobie sprawę, że nie zasługujemy na uznanie. Autorka prosi wszystkie kobiety, by nie bały się przyznawać, że są dobre w tym, co robią i zasługują na nagrodę czy komplement. Wierzmy w siebie :)</p>
-<h3 id="Zasiadz-do-stolu"><a href="#Zasiadz-do-stolu" class="headerlink" title="Zasiądź do stołu"></a>Zasiądź do stołu</h3><p>Autorka opowiada też wiele ciekawych i dających do myślenia anegdotek z jej życia zawodowego. Jedną z nich jest historia, która miała miejsce na jednym ze spotkań biznesowych, w których uczestniczyła. Nie była jedyną kobietą, która brała udział w tym spotkaniu, lecz jako jedyna usiadła wraz z mężczyznami przy głównym stole w trakcie posiłku. Reszta kobiet trzymała się na uboczu. Sheryl nawołuje, że nie powinnyśmy same pozbawiać się szans na zaistnienie, awans. Rezygnując z siadania przy stole - miejsca, w którym nadaje się bieg wydarzeniom, same rzucamy sobie kłody pod nogi.</p>
-<div class="figure center fig-100" style="width:;"><img class="fig-img" src="wlacz_sie_dodatk.png" alt=""></div><div style="clear:both;"></div>
-<h3 id="Zdrowy-feminizm"><a href="#Zdrowy-feminizm" class="headerlink" title="Zdrowy feminizm"></a>Zdrowy feminizm</h3><p>“To” słowo jest aktualnie passe. Kojarzy się z wizerunkiem wojującej feministki palącej staniki na stosie. Wiele kobiet, w tym ja, chciałoby przyznać, że popiera równe szanse i równe traktowanie kobiety i mężczyzny. I że w tych słowach mieści się wolny wybór dotyczący sposobu życia, który każda kobieta i każdy mężczyzna powinien móc podjąć. Sandberg mówi również o tej kwestii w swojej książce. Że najwyższy czas zmienić wizerunek feministki. I że jest to zadanie dla wszystkich :) Nie tylko kobiet.</p>
-<h3 id="Kobieta-sukcesu-jak-nia-zostac"><a href="#Kobieta-sukcesu-jak-nia-zostac" class="headerlink" title="Kobieta sukcesu - jak nią zostać?"></a>Kobieta sukcesu - jak nią zostać?</h3><p>“Co byś zrobiła, gdybyś się nie bała?”. To pytanie zadane przez Sheryl Sandberg sprawiło, że na chwilę odłożyłam książkę i zaczęłam się nad tym zastanawiać. Proste pytanie - a tak dużo potrafi zmienić. Co byś zrobiła, gdybyś nie bała się tego, co powiedzą inni? Co byś zrobiła, gdybyś nie bała się zaryzykować? Co byś zrobiła, gdybyś nie bała się spełnić swoje marzenia?<br>A co jeśli nie jesteś na tyle odważna, żeby to zrobić? Autorka na to również ma swoje rozwiązanie. Fake it till you feel it :) Udawanie pewności siebie daje wspaniałe rezultaty. Gdy wkładamy maskę pewnej siebie, w rzeczywistości stajemy się odważniejsze i lepiej postrzegane przez innych.</p>
-<h3 id="Czytac-czy-nie"><a href="#Czytac-czy-nie" class="headerlink" title="Czytać czy nie?"></a>Czytać czy nie?</h3><p>Moim zadaniem jest przede wszystkim ocenić książkę, a nie tylko idee w niej zawarte ;) Po pierwsze uważam, że kwintesencja tej książki zawarta jest w kilku rozdziałach, a nawet na kilku stronach. W szczególności końcówka pozostawiła na mnie wrażenie niewnoszącej zbyt wiele i niepotrzebnej.<br>Z drugiej strony, wybaczam autorce nie zawsze dobrze zbudowaną treść, a to dzięki wielu ciekawym myślom i wskazówkom, które każdej kobiecie, niezależnie od stanowiska czy innych życiowych wyborów, mogą wiele pomóc. A więc - <strong>czytać</strong> ;)</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Dziś Rozwojowy Poniedziałek powraca w trochę innym kontekście. Bloga przejmuje Sheryl Sandberg wraz ze swoją książką &lt;strong&gt;“Włącz się do gry. Kobiety, praca i chęć przywództwa”&lt;/strong&gt;.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
-    
-      <category term="Kobieta" scheme="https://kernelgonnapanic.pl/tags/Kobieta/"/>
-    
-      <category term="Leadership" scheme="https://kernelgonnapanic.pl/tags/Leadership/"/>
     
   </entry>
   
