@@ -60,6 +60,6 @@ Mancuso w swojej książce określa to jako jeden z antywzorców rozmowy kwalifi
 
 Punktem, który najbardziej zapadł mi w pamięć po przeczytaniu tej książki był rozdział mówiący o typach sceptyków, których możemy spotkać w projekcie. I tak, możemy przeczytać o sposobach na radzenie sobie z np. sceptykami irracjonalnymi, wypalonymi czy niedoinformowanymi. Uprzedzam! Dużo fajnych wskazówek odnośnie codziennej pracy w projekcie/grupie.
 
-Gorąco polecam tę książkę wszystkim programistom! Może nie jest to pozycja obowiązkowa, ale jestem zadowolona, że poświęciłam jej swój czas. Pozwala na spojrzenie na swoją pracę z trochę innej perspektywy, dostrzeżenie błędów, przemyślenie kilku rzeczy.
+Gorąco polecam tę książkę wszystkim programistom! Można ją zakupić [TUTAJ](http://helion.pl/view/90202/prorze.htm) i oczywiście czekam na wasze opinie w komentarzach.
 
 A jakie książki według Was każdy programista musi znać?

@@ -1,6 +1,6 @@
 ---
 title: Praca programisty - od euforii do rozpaczy
-thumbnailImagePosition: top
+thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial
 date: 2017-03-25 15:49:33

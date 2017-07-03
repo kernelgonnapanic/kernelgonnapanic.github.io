@@ -40,3 +40,4 @@ Autor bardzo ciekawie przedstawia konieczność refaktoryzacji kodu - nazywa to 
 Dla mnie dużym plusem jest ogromna ilość odnośników do innych książek, nie tylko z dziedziny agile, lecz także np. z socjologii. Wszystkie interesujące skrupulatnie notowałam. Spodziewajcie się recenzji niektórych już niedługo!
 
 Polecam wszystkim programistom. Nawet tym doświadczonym w dziedzinie zwinnego kodzenia. Ta książka z pewnością potrafi pomóc zrozumieć o co, tak naprawdę, w agile'u chodzi :)
+Ten smakowity kąsek można nabyć [TUTAJ](http://helion.pl/view/90202/zwisam.htm).

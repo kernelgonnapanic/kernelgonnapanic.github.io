@@ -5,6 +5,7 @@ tags:
   - Programowanie
   - Podstawy programowania
   - Darmowe kursy
+  - 5 rzeczy
 coverMeta: out
 coverSize: partial
 thumbnailImage: code2.jpg

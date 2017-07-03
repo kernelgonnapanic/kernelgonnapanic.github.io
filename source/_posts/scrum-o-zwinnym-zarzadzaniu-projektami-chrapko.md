@@ -54,3 +54,9 @@ Dla mnie pozycja zdecydowanie na plus. Jeśli ktoś ma ochotę dowiedzieć się 
 Niestety znalazłam w internecie kilka zastrzeżeń co do kwestii merytorycznych, lecz jestem w tym temacie dopiero początkująca, więc nie mnie to oceniać :)
 Dodatkowo na plus - kilka fajnych ćwiczeń, eksperymentów myślowych oraz ciekawe ilustracje.
 Zastrzeżenia mam co do okładki.. Nie wiem co tam robią Ci parkour'owcy. Może jakieś dalekie nawiązanie do tego, że są zwinni? Ale ok, nie okładka zdobi człowieka, hmm... znaczy książkę :)
+
+UPDATE:
+Książka doczekała się wydania drugiego - rozszerzonego (z okładki na szczęście zniknęli parkour'owcy :). Jeśli chcecie poznać Scrum'a - gorąco polecam sprawić sobie taki prezent (można [TUTAJ](http://helion.pl/view/90202/scrum2.htm)).
+
+Pozdrawiam,
+Ania
