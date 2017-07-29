@@ -44,9 +44,9 @@
     </summary>
     
     
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
       <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
     
@@ -587,11 +587,11 @@
     </summary>
     
     
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
       <category term="AkcjaSubskrypcja" scheme="https://kernelgonnapanic.pl/tags/AkcjaSubskrypcja/"/>
     
       <category term="Internet" scheme="https://kernelgonnapanic.pl/tags/Internet/"/>
-    
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
@@ -631,11 +631,11 @@
     
       <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
     
-      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
-    
       <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.pl/tags/RozwojowyPoniedzialek/"/>
     
       <category term="Samodyscyplina" scheme="https://kernelgonnapanic.pl/tags/Samodyscyplina/"/>
+    
+      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
     
   </entry>
   
@@ -666,9 +666,9 @@
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
-      <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
-    
       <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.pl/tags/RozwojowyPoniedzialek/"/>
+    
+      <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
     
   </entry>
   
@@ -765,6 +765,8 @@
     </summary>
     
     
+      <category term="5 rzeczy" scheme="https://kernelgonnapanic.pl/tags/5-rzeczy/"/>
+    
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
       <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
@@ -772,8 +774,6 @@
       <category term="Podstawy programowania" scheme="https://kernelgonnapanic.pl/tags/Podstawy-programowania/"/>
     
       <category term="Darmowe kursy" scheme="https://kernelgonnapanic.pl/tags/Darmowe-kursy/"/>
-    
-      <category term="5 rzeczy" scheme="https://kernelgonnapanic.pl/tags/5-rzeczy/"/>
     
   </entry>
   
