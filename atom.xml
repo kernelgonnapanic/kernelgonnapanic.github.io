@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2017-06-11T12:08:32.000Z</updated>
+  <updated>2017-07-29T16:18:44.000Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -16,11 +16,52 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Javascript - to test or not to test? [Frontend testing #1]</title>
+    <link href="https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/"/>
+    <id>https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/</id>
+    <published>2017-07-29T13:12:00.000Z</published>
+    <updated>2017-07-29T16:18:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>“Testy, hmmm… testy… Ja przepraszam bardzo, ale czy ktoś je kiedykolwiek widział we frontendowym repozytorium? Ja rozumiem że na backendzie, ale żeby na frontendzie? No chyba się tym programistom w głowach poprzewracało i za dużo czasu mają”</p>
+<p>Czyżby?<br><a id="more"></a></p>
+<p>Hej wszystkim!<br>Tematem mojej dzisiejszej pogawędki będzie testowanie. A właściwie będzie to wstęp do dłuższej dyskusji, która (mam nadzieję) będzie się toczyć na blogu, w postaci serii postów. (Trzymajcie kciuki za mój zapał).</p>
+<p>Zanim jednak zaczniemy rozważać konkretne narzędzia, techniki, ich plusy i minusy, zacznijmy od zadania sobie ważnego pytania - po co to komu?<br>Sceptyków (jak ten ze wstępu) znajdziemy w najszej branży trochę. “Nie mam czasu na pisanie testów”, “To za dużo wysiłku”, “Jaki ja mam z tego zysk?”. Spróbujmy dziś rozprawić się z choć częścią tych wymówek.</p>
+<h1 id="Frontend-nie-potrzebuje-testow"><a href="#Frontend-nie-potrzebuje-testow" class="headerlink" title="Frontend nie potrzebuje testów"></a>Frontend nie potrzebuje testów</h1><p>Ja wiem, wiem. My, frontendowcy, nie powinniśmy się nawet nazywać programistami, skoro robimy sobie stronki w htmlu. A tak na poważnie, zdajemy sobie sprawę z tego, że frontend to obecnie zazwyczaj pokaźnych rozmiarów i całkiem skomplikowana aplikacja. I w kontekście testów nie różni się w żaden sposób od backendu. Mamy kod, chcemy się upewnić czy działa on poprawnie, czyli tak, jak tego oczekujemy. I nie ma tu znaczenia, czy jest uruchamiany na serwerze, w przeglądarce czy na urządzeniu mobilnym jako natywna aplikacja.</p>
+<h1 id="Nie-mam-czasu-na-pisanie-testow"><a href="#Nie-mam-czasu-na-pisanie-testow" class="headerlink" title="Nie mam czasu na pisanie testów"></a>Nie mam czasu na pisanie testów</h1><p>Jeśli nie masz czasu na pisania testów, wtedy z pewnością będziesz musiał znaleźć go na naprawianie bugów.<br>Czasem mam wrażenie, że wymówka “brakiem czasu” w temacie pisania testów jest spowodowana tak naprawdę brakiem umiejętności i znajomości narzędzi. Zawsze gdy robimy coś po raz pierwszy, wydaje się to niekomfortowe i obciążające, ale gdy wejdzie nam to w krew, okazuje się, że nie zajmuje to wcale aż tak dużo czasu.<br>Uważam również, że nie powinniśmy podchodzić do tego tematu zero-jedynkowo. Jesteśmy w stanie kontrolować jak dużo czasu przeznaczamy na testowanie i na które części kodu patrzymy ze szczególną uwagą. Jeśli mamy ograniczony czas, możemy kierować swoje wysiłki w miejsca, które tego najbardziej potrzebują. Myślę, że i w tym przypadku działa zasada Pareto, czyli teoria wedle której 20% wkładanego wysiłku, odpowiada za 80% procent ostatecznego zysku. Czasem niewiele dobrze napisanych testów daje o wiele więcej zysku niż 100% pokrycie kodu.</p>
+<h1 id="Jaki-ja-mam-z-tego-zysk"><a href="#Jaki-ja-mam-z-tego-zysk" class="headerlink" title="Jaki ja mam z tego zysk?"></a>Jaki ja mam z tego zysk?</h1><p>Oprócz lepszego snu (lub w ogóle obecności snu) w noc po releasie to w sumie nic.<br>Nie no, żartuję. Ale z pewnością świadomość posiadania dobrych testów dodaje wiele spokoju do developmentu. Ja uwielbiam tę swobodę refaktorowania, w momencie gdy wiem, że ktoś tam z tyłu za mną stoi (testy, testy), patrzy mi na klawiaturę i jest w stanie złapać mnie za rękę, gdy robię coś głupiego.</p>
+<p>Lecz oprócz zdrowia psychicznego programistów i ich długiego, niczym niezmąconego snu, testowanie ma inne korzyści. Pozwala np. na utrzymanie stałego tempa developmentu, mimo ciągłego wzrostu aplikacji i bazy kodu. Często, gdy aplikacja się powiększa, dodawanie kolejnych funkcjonalności jest coraz większym problemem, a zmiany w istniejącym kodzie są coraz bardziej niebezpieczne. Testy pozwalają ograniczyć ryzyko związane ze zmianami. W ten sposób zwraca się, często z nawiązką, czas na nie poświęcony.</p>
+<p>Mam nawet wrażenie, że kod, który programista pisze, mając z tyłu głowy konieczność napisania do niego testów, jest bardziej uporządkowany, mniej “związany ze sobą”, bardziej modułowy, a co za tym idzie łatwiejszy do testowania. Skutkuje to tym, że taki kod jest później również łatwiejszy do utrzymywania i mniej oporny na rozszerzanie.</p>
+<p>A skoro już wiemy po co, teraz warto dowiedzieć się jak. Szykujcie się na porządną dawkę informacji o dostępnych narzędziach w kolejnych artykułach.</p>
+<p>Ania</p>
+<p>PS<br>Jakimi narzędziami w szczególności jesteście zainteresowani? Uchylając rąbka tajemnicy powiem, że na pewno pojawi się Jest, Enzyme, może również Detox jako narzędzie do e2e dla aplikacji natywnych. Chciałabym też powiedzieć kilka słów na temat visual regression testing. Będzie się działo!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;“Testy, hmmm… testy… Ja przepraszam bardzo, ale czy ktoś je kiedykolwiek widział we frontendowym repozytorium? Ja rozumiem że na backendzie, ale żeby na frontendzie? No chyba się tym programistom w głowach poprzewracało i za dużo czasu mają”&lt;/p&gt;
+&lt;p&gt;Czyżby?&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
+      <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
+    
+      <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
+    
+      <category term="Tutoriale" scheme="https://kernelgonnapanic.pl/tags/Tutoriale/"/>
+    
+      <category term="Frontend testing" scheme="https://kernelgonnapanic.pl/tags/Frontend-testing/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Identity &amp; Data Security for Web Development</title>
     <link href="https://kernelgonnapanic.pl/2017/06/08/security-in-web-dev/"/>
     <id>https://kernelgonnapanic.pl/2017/06/08/security-in-web-dev/</id>
     <published>2017-06-08T07:38:04.000Z</published>
-    <updated>2017-06-11T12:08:32.000Z</updated>
+    <updated>2017-07-01T08:29:47.000Z</updated>
     
     <content type="html"><![CDATA[<p>Piękne Zakopane przywitało mnie słońcem, lecz cudna pogoda trwała tylko dzień. Dzisiejszy deszcz ma jednak swoją dobrą stronę. Mam chwilę, by podzielić się z Wami moimi przemyśleniami odnośnie książki <strong>“Identity &amp; Data Security for Web Development”</strong> autorstwa Jonathana LeBlanc i Tima Messerschmidta. <a id="more"></a>Jest to część serii wydawnictwa o’Reilly skierowanej do web developerów, którą można rozpoznać po zielonym (właściwie morskim) kolorze okładek.</p>
 <p>Kupując tę książkę, miałam co do niej spore oczekiwania. Wiedzy w temacie bezpieczeństwa stron internetowych nigdy za wiele. Czuję również, że moja znajomość tego tematu nie jest zbyt obszerna. Dodatkowo, porusza ona temat identyfikacji użytkownika w Internecie, co miało mi się przydać do projektu, który przygotowywałam na studiach. To wszystko sprawiło, że zdecydowałam się na zakup “Identity &amp; Data Security for Web Development”.</p>
@@ -40,9 +81,9 @@
     </summary>
     
     
-      <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
-    
       <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
+    
+      <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
     
       <category term="Dobre praktyki" scheme="https://kernelgonnapanic.pl/tags/Dobre-praktyki/"/>
     
@@ -119,9 +160,9 @@
     </summary>
     
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
-    
       <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
       <category term="Dobre praktyki" scheme="https://kernelgonnapanic.pl/tags/Dobre-praktyki/"/>
     
@@ -315,9 +356,9 @@
     </summary>
     
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
-    
       <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
       <category term="Microservices" scheme="https://kernelgonnapanic.pl/tags/Microservices/"/>
     
@@ -400,9 +441,9 @@
     
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
-    
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
       <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
     
@@ -546,11 +587,11 @@
     </summary>
     
     
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
-    
       <category term="AkcjaSubskrypcja" scheme="https://kernelgonnapanic.pl/tags/AkcjaSubskrypcja/"/>
     
       <category term="Internet" scheme="https://kernelgonnapanic.pl/tags/Internet/"/>
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
@@ -625,9 +666,9 @@
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
-      <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.pl/tags/RozwojowyPoniedzialek/"/>
-    
       <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
+    
+      <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.pl/tags/RozwojowyPoniedzialek/"/>
     
   </entry>
   
@@ -704,7 +745,7 @@
     <link href="https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/"/>
     <id>https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/</id>
     <published>2015-09-11T07:00:00.000Z</published>
-    <updated>2017-03-16T18:30:56.000Z</updated>
+    <updated>2017-07-01T08:46:16.000Z</updated>
     
     <content type="html"><![CDATA[<p>Od jakiego tematu można by zacząć cykl dotyczący programowania? No właśnie od tego! Dziś chciałabym się z Wami podzielić platformami, dzięki którym można zarazić się “koderskim” bakcylem i wiele się nauczyć. Zaczęłam z nich korzystać, gdy byłam totalnie zielona w tym temacie, no i co tu dużo mówić - “wpadłam po uszy” :)<br><a id="more"></a></p>
 <h2 id="Codecademy"><a href="#Codecademy" class="headerlink" title="Codecademy"></a><a href="https://www.codecademy.com/" target="_blank" rel="external">Codecademy</a></h2><p>Dla tych, którzy lubią, gdy się wszystko świeci, miga, kręci, obraca i zmienia kolory Codecademy stworzyło ciekawe projekty, np. “Zbuduj własną galaktykę”. Tym z Was, którym wystarczy fachowa wiedza, wykładana od podstaw, co więcej, podana w bardzo przystępny i interaktywny sposób, polecam rozpoczęcie jednego z dostępnych kursów. Pakiet jest wyraźnie nakierowany w stronę web developmentu. Mamy do wyboru: <strong>Html + CSS</strong>, <strong>Javascript</strong>, <strong>jQuery</strong>, <strong>PHP</strong>, <strong>Pythona</strong> oraz <strong>Ruby</strong> :)</p>
@@ -731,6 +772,8 @@
       <category term="Podstawy programowania" scheme="https://kernelgonnapanic.pl/tags/Podstawy-programowania/"/>
     
       <category term="Darmowe kursy" scheme="https://kernelgonnapanic.pl/tags/Darmowe-kursy/"/>
+    
+      <category term="5 rzeczy" scheme="https://kernelgonnapanic.pl/tags/5-rzeczy/"/>
     
   </entry>
   
@@ -764,9 +807,9 @@
     
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
-    
       <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
+    
+      <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
     
       <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
     
@@ -775,42 +818,6 @@
       <category term="UX" scheme="https://kernelgonnapanic.pl/tags/UX/"/>
     
       <category term="Grafika" scheme="https://kernelgonnapanic.pl/tags/Grafika/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Biznes do góry nogami wywrócony - Richard Branson</title>
-    <link href="https://kernelgonnapanic.pl/2015/07/16/BiznesDoGoryNogami/"/>
-    <id>https://kernelgonnapanic.pl/2015/07/16/BiznesDoGoryNogami/</id>
-    <published>2015-07-16T18:26:00.000Z</published>
-    <updated>2017-03-16T18:30:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Podsumowanie <strong>Bookathonu</strong> już za mną, ale ostatnie bookathonowe dziecko jeszcze czeka na recenzję :) Chodzi mi o książkę, którą wybrał dla mnie mój brat, czyli o <strong>“Biznes do góry nogami wywrócony” Richarda Bransona</strong>.<br><a id="more"></a></p>
-<p>Zacznę od tego, że bardzo się ucieszyłam, gdy okazało się, że to właśnie tę książkę będę czytać w ramach wyzwania. Znając mojego brata, mógł mi wybrać coś masakrycznego i patrzeć jak się z tym męczę :) Richarda Bransona kojarzyłam już wcześniej jako założyciela grupy Virgin i świetnego przedsiębiorcę. Od dawna miałam ochotę, by poczytać o jego podejściu do pieniędzy i przemyśleniach na temat biznesu.</p>
-<p>Spodziewałam się porad biznesowych - wskazówek jak zarabiać dużo, dobrze się bawiąc. Bo z takim przesłaniem najbardziej kojarzy mi się autor. Jak wielkie było moje zdziwienie, gdy okazało się, że głównym tematem książki jest <strong>ochrona środowiska</strong> i <strong>działanie na rzecz pokoju na świecie</strong>.</p>
-<p>Autor w swoje książce przedstawia ideę Kapitalizmu 24902 - nowego oblicza biznesu, nastawionego nie tylko na zysk, ale też na dobrobyt wszystkich ludzi i ochronę Ziemi. Przedstawia historię ludzi i stojących za nimi firm, które zdecydowały się zmienić podejście i zarabiać na czynieniu dobra.</p>
-<p>Branson podkreśla, że zdecydowanie zbyt długo wielkie koncerny, jak i małe, lokalne firmy, zaniedbywały otoczenie w pogoni za zyskiem. W obecnych czasach ludzkość zanieczyszcza środowisko bardziej, niż kiedykolwiek wcześniej. Co więcej, działania podejmowane w kierunku przeciwdziałania takiemu stanowi rzeczy spalają na panewce. Ważne jest znalezienie takiego środka działania, który wzniesie się ponad bariery polityczne, geograficzne czy religijne. Branson jako rozwiązanie podaje właśnie: <strong>BIZNES</strong> :)</p>
-<div class="figure center fig-100" style="width:;"><img class="fig-img" src="biznes_kubek.JPG" alt=""></div><div style="clear:both;"></div>
-<p>Z książki możemy się dowiedzieć dużo na temat działań Virgin Unite - organizacji non-profit organizującej działania dobroczynne całej grupy Virgin. Autor opisuje w jaki sposób wielkie koncerny dbają o środowisko, a przy okazji ograniczają swoje koszty. Mówi o wielu firmach, które bazują na produktach lub usługach zmieniających świat na lepsze. Jedną z nich jest firma Living Goods, tworząca sieć domokrążnych sprzedawców, którzy zapewniają Ugandyjczykom podstawowe leki na malarię, siatki przeciw komarom czy filtry wody. W ten sposób organizacja ta zatrudnia wiele młodych kobiet, a co za tym idzie - zapewnia byt ich rodzinom.</p>
-<p>“Biznes do góry nogami wywrócony” udowodnił mi, że się da :) Że można mieć prosperujący biznes, czyniąc dobro i dbając o środowisko. Że nie trzeba być stereotypowym, wyzbytym z uczuć biznesmenem oprawcą. Co więcej, pokazał mi, że działania na rzecz lepszego świata pozwalają rozwinąć swój biznes i zarobić całkiem pokaźne sumki :)</p>
-<p>Trudno mi stwierdzić, czy książka mi się podobała czy nie :) Uważam, że Branson ciekawie przedstawił ten temat. Gdyby było inaczej, pewnie nie zaszczyciłabym jej swoim czasem :) Twierdzę również, że warto na ten temat mówić i pisać. Jednak sama książka nie zachwyciła mnie, nie porwała ani nie rzuciła na kolana. Nie wynotowywałam sobie z niej myśli i cytatów jak szalona. Nie zastanawiałam się na każdym zdaniem. Sami wiecie. Fajnie, ale nie zjawiskowo :)</p>
-<p>Ania</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Podsumowanie &lt;strong&gt;Bookathonu&lt;/strong&gt; już za mną, ale ostatnie bookathonowe dziecko jeszcze czeka na recenzję :) Chodzi mi o książkę, którą wybrał dla mnie mój brat, czyli o &lt;strong&gt;“Biznes do góry nogami wywrócony” Richarda Bransona&lt;/strong&gt;.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
-    
-      <category term="Biznes" scheme="https://kernelgonnapanic.pl/tags/Biznes/"/>
-    
-      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
-    
-      <category term="Biografie" scheme="https://kernelgonnapanic.pl/tags/Biografie/"/>
     
   </entry>
   
