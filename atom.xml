@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2017-07-29T16:18:44.000Z</updated>
+  <updated>2017-08-11T20:07:08.000Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -16,11 +16,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>A co jeśli programowanie to nie moje powołanie?</title>
+    <link href="https://kernelgonnapanic.pl/2017/08/08/a-co-jesli-programowanie-to-nie-moje-powolanie/"/>
+    <id>https://kernelgonnapanic.pl/2017/08/08/a-co-jesli-programowanie-to-nie-moje-powolanie/</id>
+    <published>2017-08-08T08:47:00.000Z</published>
+    <updated>2017-08-11T20:07:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Wiem, że przyjdzie dzień, pewnie już całkiem niedługo, w którym rzucę programowanie w kąt. I tak jak z dnia na dzień się w tym zajęciu zakochałam, tak też z dnia na dzień ta przygoda się skończy. Kiedyś myślałam, że takie uczucie jest oznaką, że coś w moim życiu jest nie tak. Że być może nie robię tego, co powinnam, że nie znalazłam jeszcze swojego powołania. I było tak do momentu, gdy obejrzałam TED talka, który totalnie zmienił moje odczucia.<br><a id="more"></a></p>
+<p>Czy byliście kiedyś w miejscu, w którym zdaliście sobie sprawę, że coś co uwielbialiście robić przestaje być dla Was wyzwaniem, staje się nudne i męczące? Czy czuliście związany z tym smutek?<br>A może świat zawsze wmawiał Wam jak ważne jest bycie specjalistą w jednej dziedzinie. A Wy nie wiedzieliście jak ze wszystkich swoich zainteresowań wybrać jedno jedyne, któremu mieliście poświęcić całe życie. Czuliście ciężar związany z tą decyzją lub wręcz przeciwnie, byliście przekonani, że taki wybór jest niemożliwy i tym samym nie będziecie mieli szansy na żadną poważną karierę.</p>
+<p>Ja byłam w takiej sytuacji.</p>
+<p>Pamiętam jak dużo stresu u mnie to generowało i jak bardzo ucierpiało na tym moje poczucie wartości. Ale w pewnym momencie obejrzałam talka Emilie Wapnick - <a href="https://www.youtube.com/watch?v=QJORi5VO1F8" target="_blank" rel="external">Why Some of us Don’t Have One True Calling</a>, który pomógł mi kilka rzeczy sobie uświadomić i zaakceptować.</p>
+<p>Emily opowiado o swoich doświadczeniach jako multipotenitalite<sup>*</sup>. Zadaje sobie pytanie: Czy na pewno wszyscy z nas powinni być specjalistami w jednej dziedzinie?</p>
+<p>Multipotentialite to osoba, która ma w życiu wiele zainteresowań i żadne z nich nie jest uprzywilejowane względem innych. To typ osobowości, który źle czuje się gdy próbuje się go wtłoczyć w ramy jedej ścieżki kariery (przeciwieństwo specjalisty). Taka osoba może rozwijać swoje talenty równocześnie, ale może także opanowywać różne umiejętności jedna po drugiej, przełączając się między nimi, gdy tylko krzywa uczenia się zaczyna się robić zbyt płaska.</p>
+<p>Osoby o tym typie osobowości mogą odczuwać presję społeczeństwa, by zdecydowali się na jeden kierunek kariery. Ich poczucie wartości może ucierpieć, gdy znudzą się kolejnym podjętym przez siebie tematem. Zazwyczaj muszą się pogodzić z tym, że wiele razy znajdą się w pozycji juniora, zarówno mentalnie, jak i finansowo.</p>
+<p>Lecz z drugiej strony, multipotenitalite to zazwyczaj osoba, która wie jak się uczyć i robi to szybko. Znajomość wielu dziedzin i umiejętność ich syntezy daje wielkie pole do popisu. Większość innowacji zdarza się na przecięciu różnych specjalności. Dodatkowo takie osoby często świetnie nadają się na liderów.</p>
+<p>Bardzo się cieszę, że w pewnym momencie trafiłam na wystąpienie Emily. Uświadomiło mi ono, że na tym świecie jest miejsce dla specjalistów, ale też dla ludzi, którzy w ciągu swojego życia “z wielu pieców będą jedli chleb”. Bardzo pomogła mi świadomość, że są gdzieś na świecie osoby, które mają podobne doświadczenia do moich. Z tego też powodu, powstał ten post. Jeżeli choć jedna osoba poczuje się dzięki niemu lepiej, będę wniebowzięta.</p>
+<p>Do następnego!</p>
+<p><sup>*</sup> Wiem, wiem, powinniśmy używać języka polskiego. Lecz dla mnie tłumaczenie: “człowiek renesansu” nie odpowiada dobrze temu znaczeniu i niepotrzebnie przywołuje skojarzenia z Leonardem da Vinci ;)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Wiem, że przyjdzie dzień, pewnie już całkiem niedługo, w którym rzucę programowanie w kąt. I tak jak z dnia na dzień się w tym zajęciu zakochałam, tak też z dnia na dzień ta przygoda się skończy. Kiedyś myślałam, że takie uczucie jest oznaką, że coś w moim życiu jest nie tak. Że być może nie robię tego, co powinnam, że nie znalazłam jeszcze swojego powołania. I było tak do momentu, gdy obejrzałam TED talka, który totalnie zmienił moje odczucia.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+      <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Javascript - to test or not to test? [Frontend testing #1]</title>
     <link href="https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/"/>
     <id>https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/</id>
     <published>2017-07-29T13:12:00.000Z</published>
-    <updated>2017-07-29T16:18:44.000Z</updated>
+    <updated>2017-08-08T19:28:54.000Z</updated>
     
     <content type="html"><![CDATA[<p>“Testy, hmmm… testy… Ja przepraszam bardzo, ale czy ktoś je kiedykolwiek widział we frontendowym repozytorium? Ja rozumiem że na backendzie, ale żeby na frontendzie? No chyba się tym programistom w głowach poprzewracało i za dużo czasu mają”</p>
 <p>Czyżby?<br><a id="more"></a></p>
@@ -524,39 +557,6 @@
   </entry>
   
   <entry>
-    <title>Nawyki mistrzów</title>
-    <link href="https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/"/>
-    <id>https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/</id>
-    <published>2016-08-11T07:10:00.000Z</published>
-    <updated>2017-03-16T18:30:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Kolejny <strong>Rozwojowy Poniedziałek</strong> przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili <strong>nawyki mistrzów</strong>.<br><a id="more"></a></p>
-<h3 id="Mistrzowie-wstaja-wczesnie"><a href="#Mistrzowie-wstaja-wczesnie" class="headerlink" title="Mistrzowie wstają wcześnie."></a>Mistrzowie wstają wcześnie.</h3><p>Wstawanie 2 czy 3 godziny przed wyjściem z domu rano może wydawać się przerażające. Często jednak nie zdajemy sobie sprawy ile możliwości nam oferuje. Mamy czas, by przy kubku świeżo zaparzonej kawy przemyśleć, co czeka nas w nadchodzącym dniu. Znajdzie się też na pewno pół godziny na trening. Możemy wybrać się na jesienny spacer i posłuchać muzyki czy podcastu. Obejrzeć motywujący wykładu czy poczytać książkę. Tak! Naprawdę da radę to zrobić rano! A co więcej, przy okazji ćwiczymy naszą silną wolę.</p>
-<h3 id="Mistrzowie-cwicza-kilka-razy-w-tygodniu"><a href="#Mistrzowie-cwicza-kilka-razy-w-tygodniu" class="headerlink" title="Mistrzowie ćwiczą kilka razy w tygodniu."></a>Mistrzowie ćwiczą kilka razy w tygodniu.</h3><p>Sport to szkoła osiągania sukcesów. Gdy wylewamy siódme poty na siłowni lub pokonujemy nasty kilometr w terenie ćwiczymy naszą wytrwałość, determinację w osiąganiu celów i silną wolę. Podczas ćwiczeń wentylujemy nasz mózg, ryzykując zalewem dobrych pomysłów i wyzwalamy produkcję endorfin, które sprawiają, że nic już nam nie jest straszne.</p>
-<p>Ruszenie się z kanapy po ciężkim dniu pracy jest trudne. Przyznaję. Jednak mistrzowie mają na to sposoby ;) Dobrym pomysłem jest wybranie się na siłownię rano lub od razu po pracy, szkole, uczelni.</p>
-<h3 id="Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…"><a href="#Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…" class="headerlink" title="Mistrzowie planują zadania na dany dzień, tydzień, rok…"></a>Mistrzowie planują zadania na dany dzień, tydzień, rok…</h3><p>Bez planu zginiemy. Zatoniemy w natłoku obowiązków, zaległych terminów, wizyt u dentysty i telefonów z okazji urodzin. Mistrzowie wiedzą, że lista zadań na dany dzień to obowiązek! Jednak, by rozwijać się w pożądanym kierunku w perspektywie długoterminowej potrzebujemy też listy celów na najbliższy miesiąc czy rok. Zerkanie co jakiś czas na spis naszych priorytetów i dążeń pozwala nam upewnić się czy jesteśmy na dobrej drodze.</p>
-<h3 id="Mistrzowie-rozwijaja-swoja-siec-kontaktow"><a href="#Mistrzowie-rozwijaja-swoja-siec-kontaktow" class="headerlink" title="Mistrzowie rozwijają swoją sieć kontaktów."></a>Mistrzowie rozwijają swoją sieć kontaktów.</h3><p>My, zwykli zjadacze chleba, często nie doceniamy wagi i siły networkingu. Nie mamy na to czasu, nie lubimy rozmawiać z obcymi ludźmi. Ale przecież… Poznawanie nowych ludzi jest fajne! I inspirujące! I wnosi bardzo dużo do naszego życia :) Szczególnie, gdy poznajemy ludzi spoza naszej branży. W ten sposób poszerzamy nasze horyzonty i często jesteśmy zmuszeni do wyjścia ze strefy komfortu. A każde wyjście z naszej bezpiecznej skorupki jest wejściem do świata “where the magic happens”.</p>
-<p>Czy Was również jesień tak motywuje?</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Kolejny &lt;strong&gt;Rozwojowy Poniedziałek&lt;/strong&gt; przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili &lt;strong&gt;nawyki mistrzów&lt;/strong&gt;.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
-    
-      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
-    
-      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
-    
-      <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Akcja Subskrypcja</title>
     <link href="https://kernelgonnapanic.pl/2016/08/11/Akcja-Subskrypcja/"/>
     <id>https://kernelgonnapanic.pl/2016/08/11/Akcja-Subskrypcja/</id>
@@ -587,13 +587,46 @@
     </summary>
     
     
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
-    
       <category term="AkcjaSubskrypcja" scheme="https://kernelgonnapanic.pl/tags/AkcjaSubskrypcja/"/>
     
       <category term="Internet" scheme="https://kernelgonnapanic.pl/tags/Internet/"/>
     
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nawyki mistrzów</title>
+    <link href="https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/"/>
+    <id>https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/</id>
+    <published>2016-08-11T07:10:00.000Z</published>
+    <updated>2017-03-16T18:30:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Kolejny <strong>Rozwojowy Poniedziałek</strong> przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili <strong>nawyki mistrzów</strong>.<br><a id="more"></a></p>
+<h3 id="Mistrzowie-wstaja-wczesnie"><a href="#Mistrzowie-wstaja-wczesnie" class="headerlink" title="Mistrzowie wstają wcześnie."></a>Mistrzowie wstają wcześnie.</h3><p>Wstawanie 2 czy 3 godziny przed wyjściem z domu rano może wydawać się przerażające. Często jednak nie zdajemy sobie sprawy ile możliwości nam oferuje. Mamy czas, by przy kubku świeżo zaparzonej kawy przemyśleć, co czeka nas w nadchodzącym dniu. Znajdzie się też na pewno pół godziny na trening. Możemy wybrać się na jesienny spacer i posłuchać muzyki czy podcastu. Obejrzeć motywujący wykładu czy poczytać książkę. Tak! Naprawdę da radę to zrobić rano! A co więcej, przy okazji ćwiczymy naszą silną wolę.</p>
+<h3 id="Mistrzowie-cwicza-kilka-razy-w-tygodniu"><a href="#Mistrzowie-cwicza-kilka-razy-w-tygodniu" class="headerlink" title="Mistrzowie ćwiczą kilka razy w tygodniu."></a>Mistrzowie ćwiczą kilka razy w tygodniu.</h3><p>Sport to szkoła osiągania sukcesów. Gdy wylewamy siódme poty na siłowni lub pokonujemy nasty kilometr w terenie ćwiczymy naszą wytrwałość, determinację w osiąganiu celów i silną wolę. Podczas ćwiczeń wentylujemy nasz mózg, ryzykując zalewem dobrych pomysłów i wyzwalamy produkcję endorfin, które sprawiają, że nic już nam nie jest straszne.</p>
+<p>Ruszenie się z kanapy po ciężkim dniu pracy jest trudne. Przyznaję. Jednak mistrzowie mają na to sposoby ;) Dobrym pomysłem jest wybranie się na siłownię rano lub od razu po pracy, szkole, uczelni.</p>
+<h3 id="Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…"><a href="#Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…" class="headerlink" title="Mistrzowie planują zadania na dany dzień, tydzień, rok…"></a>Mistrzowie planują zadania na dany dzień, tydzień, rok…</h3><p>Bez planu zginiemy. Zatoniemy w natłoku obowiązków, zaległych terminów, wizyt u dentysty i telefonów z okazji urodzin. Mistrzowie wiedzą, że lista zadań na dany dzień to obowiązek! Jednak, by rozwijać się w pożądanym kierunku w perspektywie długoterminowej potrzebujemy też listy celów na najbliższy miesiąc czy rok. Zerkanie co jakiś czas na spis naszych priorytetów i dążeń pozwala nam upewnić się czy jesteśmy na dobrej drodze.</p>
+<h3 id="Mistrzowie-rozwijaja-swoja-siec-kontaktow"><a href="#Mistrzowie-rozwijaja-swoja-siec-kontaktow" class="headerlink" title="Mistrzowie rozwijają swoją sieć kontaktów."></a>Mistrzowie rozwijają swoją sieć kontaktów.</h3><p>My, zwykli zjadacze chleba, często nie doceniamy wagi i siły networkingu. Nie mamy na to czasu, nie lubimy rozmawiać z obcymi ludźmi. Ale przecież… Poznawanie nowych ludzi jest fajne! I inspirujące! I wnosi bardzo dużo do naszego życia :) Szczególnie, gdy poznajemy ludzi spoza naszej branży. W ten sposób poszerzamy nasze horyzonty i często jesteśmy zmuszeni do wyjścia ze strefy komfortu. A każde wyjście z naszej bezpiecznej skorupki jest wejściem do świata “where the magic happens”.</p>
+<p>Czy Was również jesień tak motywuje?</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Kolejny &lt;strong&gt;Rozwojowy Poniedziałek&lt;/strong&gt; przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili &lt;strong&gt;nawyki mistrzów&lt;/strong&gt;.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
+    
+      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
+    
+      <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
     
   </entry>
   
@@ -631,11 +664,11 @@
     
       <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
     
+      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
+    
       <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.pl/tags/RozwojowyPoniedzialek/"/>
     
       <category term="Samodyscyplina" scheme="https://kernelgonnapanic.pl/tags/Samodyscyplina/"/>
-    
-      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
     
   </entry>
   
@@ -774,50 +807,6 @@
       <category term="Podstawy programowania" scheme="https://kernelgonnapanic.pl/tags/Podstawy-programowania/"/>
     
       <category term="Darmowe kursy" scheme="https://kernelgonnapanic.pl/tags/Darmowe-kursy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Smashing magazine</title>
-    <link href="https://kernelgonnapanic.pl/2015/07/26/SmashingMagazine/"/>
-    <id>https://kernelgonnapanic.pl/2015/07/26/SmashingMagazine/</id>
-    <published>2015-07-26T20:24:00.000Z</published>
-    <updated>2017-03-16T18:30:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Wszyscy zainteresowani technologiami webowymi i tworzeniem stron internetowych z pewnością słyszeli o <a href="http://www.smashingmagazine.com/" target="_blank" rel="external">The Smashing Magazine</a>. Tym, którzy jeszcze go nie odkryli, szczerze polecam pobuszowanie w czeluściach jego artykułów czy polubienie na fb, bo warto :) Mimo że idea tego portalu bardzo mi się podoba, jakoś rzadko tam zaglądam. Dlatego, gdy w bibliotece natrafiłam na ich książkę, bardzo się ucieszyłam i postanowiłam nadrobić zaległości.<br><a id="more"></a></p>
-<p><strong>The Smashing Magazine</strong> publikuje w sieci artykuły dotyczące tworzenia stron internetowych - projektowania grafiki, programowania czy zagadnień związanych z user experience itd. Najlepsze, czy też najbardziej godne uwagi teksty, publikuje w formie książek i e-booków. Powstaje w ten sposób publikacja, która jest połączeniem różnych artykułów, oscylujących wokół jednego tematu, lecz napisanych przez innych autorów. Pomysł równie ciekawy, co ambitny.</p>
-<p>Książka, którą aktualnie trzymam w ręce, została wydana w 2011 roku, więc jak na publikację dotyczącą technologii, a zwłaszcza Internetu, może być już uważana za dinozaura. :) Niestety czuje się to również w trakcie czytania - niektóre z wymienianych technologii są już dawno uważane za przestarzałe. Jednak tak długo jak się dało, autorzy starali się odchodzić od szczegółów na rzecz ogólnych i uniwersalnych zasad, które można wykorzystywać przez lata.</p>
-<p>Każdy z 10 rozdziałów <strong>“The Smashing Book #2”</strong> niesie ze sobą inny temat. Mnie najbardziej przypadł do gustu tekst o <strong>projektowaniu grafiki doskonałej</strong>. Wiele z przedstawionych zasad mogę wykorzystać, a czasem nawet już nieświadomie używałam, w codziennej pracy nad blogiem czy zdjęciami. W tym rozdziale można również przeczytać kilka słów o tym, jak budować napięcie za pomocą grafiki czy jak przy pomocy pustki i kontrastu sprawić, że witryna jest jeszcze ciekawsza.</p>
-<p>Wcale nie gorsze były artykuły, które opisywały backstage tworzenia stron internetowych. Jednym z nich był tekst o <strong>szkicach i prototypach</strong>. Zawierał on wiele odkrywczych, przynajmniej dla mnie, wskazówek na temat procesu projektowania. Etapu, który często jest pomijany lub traktowany po macoszemu :)</p>
-<div class="figure center fig-100" style="width:;"><img class="fig-img" src="stosik.JPG" alt=""></div><div style="clear:both;"></div>
-<p>Genialny jest również tekst na temat <strong>grywalizacji</strong>. Wcześniej raczej o niej nie słyszałam, a po przeczytaniu tego artykułu w mojej głowie pojawiło się wiele pytań i chęć jeszcze lepszego poznania tego tematu. Na pewno możecie się spodziewać, że temat gamifikacji na blogu jeszcze powróci :)</p>
-<p>Natomiast jednym tekstem bardzo się rozczarowałam. Artykuł o e-commerce okazał się przepełnionym procentami i liczbami porównaniem wielu sklepów internetowych. Nic szczególnego nie wnosił, a nudny był jak flaki z olejem. Jeżeli zdecydujecie się na przeczytanie tej książki, ten rozdział możecie z czystym sercem ominąć. Nic nie stracicie. :) Ja do końca miałam nadzieję, że czegoś pożytecznego się dowiem. Nadzieja umiera ostatnia ;)</p>
-<p>Podsumowując, książki z serii The Smashing Book to lektura obowiązkowa dla każdego twórcy stron internetowych - począwszy od grafika czy projektanta user experience na programistach kończąc. Zdecydowanie polecam zapoznanie się z którymś z nowszych wydań. Gdyby jednak w wasze ręce trafiła przypadkiem “starsza” książka - z niej też możecie wyciągnąć wiele dobrego :)</p>
-<p>Dla wszystkich zainteresowanych tematem, mam bardzo dobre wieści. Aktualnie czeka na mnie na poczcie świeżutka, pachnąca nowością - The Smashing Book #5. Już się nie mogę doczekać jej zawartości :)</p>
-<p>Jeśli macie jakieś pomysły na najbliższe technologiczne recenzje i nie tylko - piszcie śmiało!  </p>
-<p>Ania</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Wszyscy zainteresowani technologiami webowymi i tworzeniem stron internetowych z pewnością słyszeli o &lt;a href=&quot;http://www.smashingmagazine.com/&quot;&gt;The Smashing Magazine&lt;/a&gt;. Tym, którzy jeszcze go nie odkryli, szczerze polecam pobuszowanie w czeluściach jego artykułów czy polubienie na fb, bo warto :) Mimo że idea tego portalu bardzo mi się podoba, jakoś rzadko tam zaglądam. Dlatego, gdy w bibliotece natrafiłam na ich książkę, bardzo się ucieszyłam i postanowiłam nadrobić zaległości.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
-    
-      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
-    
-      <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
-    
-      <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
-    
-      <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
-    
-      <category term="UX" scheme="https://kernelgonnapanic.pl/tags/UX/"/>
-    
-      <category term="Grafika" scheme="https://kernelgonnapanic.pl/tags/Grafika/"/>
     
   </entry>
   
