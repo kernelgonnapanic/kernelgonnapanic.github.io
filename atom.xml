@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2017-08-11T20:07:08.000Z</updated>
+  <updated>2017-08-27T14:59:37.000Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -16,11 +16,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Nie daj się ciemnej stronie mocy - czyli jak unikać hype&#39;u?</title>
+    <link href="https://kernelgonnapanic.pl/2017/08/26/hype-driven-development/"/>
+    <id>https://kernelgonnapanic.pl/2017/08/26/hype-driven-development/</id>
+    <published>2017-08-26T13:49:33.000Z</published>
+    <updated>2017-08-27T14:59:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Ciemna strona mocy kusiła rycerzy Jedi potężnymi możliwościami. Zwabieni perspektywą ogromnej siły powoli tracili kontrolę i wpadali w jej sidła. Z hype’m jest podobnie. Dzięki niemu zaczynasz myśleć, że kolejna technologia będzie rozwiązaniem na wszystkie Twoje problemy. Że ten nowiutki framework sprawi, że już nic Cię nie zaskoczy. Że możesz wszystko. Nie jesteś świadomy, że stąpasz bo bardzo cienkim lodzie i już całkiem niedługo to wszystko może się obrócić przeciwko Tobie.<br><a id="more"></a></p>
+<p>Zacznijmy od poznania naszego wroga. Jeśli nie wiesz czym jest hype, wystarczy, że pobędziesz we frontendowym środowisku przez kilka miesięcy. W tym czasie prawdopodobnie pojawi się i zniknie kilka frameworków, ktoś zacznie rozwijać forka jakiegoś narzędzia, przez twitter przeleje się kolejna fala entuzjastycznych postów o bibliotece X. W pewnym momencie nawet nie zauważysz, że bliżej Ci do ciemnej stony mocy. Zaczynasz podejmować decyzje w projekcie bazując na tych wszystkich zdarzeniach i opiniach. Twoje wyważone poglądy zmierzają w stronę: “Technologia Y jest świetna w każdych warunkach, bije na głowę wszystko inne”. To tu to tam, dorzucasz nową bibliotekę do zależności twojego projektu. W końcu dochodzi do tego, że chcesz przepisywać frontend co 3 miesiące, na co raz to nowy framework. Jeśli tak jest, wiedz, że coś się dzieje.</p>
+<p>Ale nie martw się. Świadomość tego, że coś jest na rzeczy, to już połowa sukcesu. Ponieżej znajdziesz kilka rad, które pozwolą Ci pozostać po jasnej stronie.</p>
+<h2 id="All-that-noise"><a href="#All-that-noise" class="headerlink" title="All that noise"></a>All that noise</h2><p>Zacznijmy od wylęgarni hype’u: Twittera. Gdy na scenie pojawi się kolejne narzędzie, na pewno dowiesz się o nim ze swojego walla. Jednak czerpanie wiedzy i inspiracji z Twittera może być zgubne. Przede wszystkim, raczenie się codziennie nowościami i sensacjami z tego źródła, może powodować poczucie, że twój projekt nie jest wystarczająco na czasie, a Ty jesteś do tyłu. Ludzie się w ten sposób nakręcają i przestają myśleć o prawdziwym celu naszej pracy - tworzeniu dobrych jakościowo aplikacji służących użytkownikowi. ( Nie ma tu nigdzie mowy o najnowszym frameworku, right?).<br>Dodatkowo, tweety są niebezpieczne z jeszcze jednego powodu. Są wystarczająco długie, żeby powiedzieć, że rozwiązanie X jest fajne, ale nie na tyle, żeby powiedzieć o wszystkich wadach i zaletach oraz pułapkach, które na Ciebie czekają.</p>
+<div class="figure center fig-100" style="width:;"><img class="fig-img" src="tweet.jpg" alt=""></div>
+<p>Znalazłeś fajną biblioteczkę, którą wszyscy polecają. Rozważasz dodanie jej do projektu… Co powinnieneś zrobić, żeby mieć pewność, że nie skońcysz w ciemnym zakątku, zwabiony genialnymi perspektywami?</p>
+<h2 id="Jaki-jest-Twoj-problem"><a href="#Jaki-jest-Twoj-problem" class="headerlink" title="Jaki jest Twój problem?"></a>Jaki jest Twój problem?</h2><p>Tworzenie rozwiązania zawsze zaczynaj od określenia problemu, jaki przed Tobą stoi. Logiczne, right? (Może myślicie sobie: Ania przestań nas zarzucać takimi truizmami). Ale w czasie gdy non stop jesteśmy bombardowani potencjalnymi rozwiązaniami, bardzo łatwo się dać się zwieść i wrzucić do projektu coś, co może i rozwiązuje bardzo ważny problem, ale nie jest i nigdy nie był to nasz problem. A jak wszyscy wiemy, kolejna zależność, nowa abstrakcja to więcej kodu do rozumienia i utrzymywania, co często oznacza nowe problemy.<br>Szukaj rozwiązań do problemu, a nie na odwrót. Porzuć podejście:</p>
+<blockquote>
+<p>“Znalazłem fajną biblioteczkę, wszyscy ją polecają, gdzie by tu ją zastosować?”</p>
+</blockquote>
+<p>na rzecz</p>
+<blockquote>
+<p>“Potrzebuję zredukować “time to interactive” do X sekund. Jak to osiągnąć?</p>
+</blockquote>
+<h2 id="Nie-oceniaj-po-okladce"><a href="#Nie-oceniaj-po-okladce" class="headerlink" title="Nie oceniaj po okładce"></a>Nie oceniaj po okładce</h2><p>Gdy już masz na oku konkretne rozwiązania (jeśli zastosowałeś się do poprzedniej rady, nie są to przypadkowe Twitterowe znaleziska), pora na sprawdzenie ich pod kątem technicznym. Czemu by nie zastosować w tym przypadku code review? Robimy je codziennie w naszych projektach, w tym wypadku też powinno się sprawdzić. Nigdy nie przestanę nawoływać do zaglądania do źródeł naszych zależności. Upewnienie się, że kod, który wprowadzasz do projektu wygląda znośnie jest twoim obowiązkiem. Nie ważne czy jest to fragment napisany przez twojego kolegę z zespołu czy twórcę biblioteki. Poza tym, to nie jest przecież czarna magia!<br>Przyjrzyj się również dokładnie stronie tego projektu na githubie. Ale nie sugeruj się tylko i wyłącznie liczbą gwiazdek. Przejrzyj kartę ze zgłoszonymi problemami (issues). Jeśli jest ich dużo, może świadczyć o dużej ilości bugów i niedoróbek (ale nie musi). Popatrz koniecznie na liczbę otwartych pull requestów (świadczy to o aktywności społeczności i maintainerów). Upewnij się, że projekt jest utrzymywany (sprawdź np. kiedy została wypuszczona ostatnia wersja). Jeśli biblioteka przeszła przez to szczelne sito, możesz spokojnie przejść do kolejnego punktu.</p>
+<h2 id="Perspektywa-biznesowa"><a href="#Perspektywa-biznesowa" class="headerlink" title="Perspektywa biznesowa"></a>Perspektywa biznesowa</h2><p>Przed Tobą największe wyzwanie. Bo z pewnością jest takim zadanie sobie przez developera pytania: “Czy stać nas (pod względem czasu i finansów w projekcie) na zmianę, którą chcemy przeprowadzić. Wielu programistów nie przykłada wagi do takich rozważań, psioczy jedynie na menadżerów, którzy nie pozwalają się pobawić najnowszymi zabawkami. Lecz uważam, że powinniśmy zacząć.<br>W momencie, gdy pokażemy osobom, które zarządzają projektem, że troszczymy się o perspektywę finansową, a nasze propozycje poparte są konkretami, otworzymy pole do dyskusji w temacie wyborów technologicznych i ich kosztów. Uważam, że zadawanie sobie przez developera pytań:</p>
+<blockquote>
+<p>“Jakie konsekwencje będzie mieć zmiana frameworka w krótkim i długim okresie czasu?”<br>“Kto zapłaci za czas nauki nowego rozwiązania?”<br>“Jak nowe narzedzia wpłyną na czas tworzenia funkcjonalności i developers’ experience?”<br>“Jak wysoko wyceniamy wiedzę, którą zdobędziemy?”<br>“Czy będziemy wspierać aplikację na tyle długo, żeby odczuć korzyści płynące ze zmiany technologii?”</p>
+</blockquote>
+<p>może przynieść same korzyści.<br>Dodatkowo dochodzi kwestia ryzyka, o której już trochę wspominałam. Dodanie każdego fragmentu kodu wiąże się z różnymi niebezpieczeństwami: potencjalnymi bugami czy koniecznością utrzymywania tego kodu, gdy osoby, które robiły to do tej pory zrezygnują. Niektóre rozwiązania są bardzo nowoczesne i odkrywcze, ale wiążą się z większym ryzykiem, nie są dobrze przetestowane, nie mają dużej grupy użytkowników. W tym momencie musimy się zastanowić czy taki stopień ryzyka pasuje do naszej organizacji czy projektu. Granica będzie w innym miejscu dla doinwestowanego startupu z wieloma developerami, dla korporacji i dla agencji.</p>
+<p>Okazuje się, że wcale nie tak trudno nie dać się porwać gorączce nowych frameworków. Programiści często śmieją się z frontendowców, jakoże w naszej branży hype jest najbardziej widoczny. Ale pamiętajcie, że to Wy, jako programiści, podejmujecie decyzje. A podążanie za rynkiem, ale rozważne i spokojne świadczy o waszym profesjonalizmie i dojrzałości.</p>
+<p>May the force be with you!<br>Ania</p>
+<p>PS<br>Od jutra (poniedziałek) zaczynam na moim Instagramie cykl - Praca programisty od kuchni :) Jeśli nie chcecie nic przegapić, polubcie mój profil.</p>
+<p><blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding-top:20px; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BYTOn2Jgw58/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Od jutra na Instagramie #pracaprogramistyodkuchni ☕📚💼💻</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">Post udostępniony przez Ania Konopka (@kernelgonnapanic) <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-08-27T14:23:03+00:00">27 Sie, 2017 o 7:23 PDT</time></p></div></blockquote> <script async defer src="//platform.instagram.com/en_US/embeds.js"></script></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Ciemna strona mocy kusiła rycerzy Jedi potężnymi możliwościami. Zwabieni perspektywą ogromnej siły powoli tracili kontrolę i wpadali w jej sidła. Z hype’m jest podobnie. Dzięki niemu zaczynasz myśleć, że kolejna technologia będzie rozwiązaniem na wszystkie Twoje problemy. Że ten nowiutki framework sprawi, że już nic Cię nie zaskoczy. Że możesz wszystko. Nie jesteś świadomy, że stąpasz bo bardzo cienkim lodzie i już całkiem niedługo to wszystko może się obrócić przeciwko Tobie.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
+    
+      <category term="Dobre praktyki" scheme="https://kernelgonnapanic.pl/tags/Dobre-praktyki/"/>
+    
+      <category term="Code Europe" scheme="https://kernelgonnapanic.pl/tags/Code-Europe/"/>
+    
+  </entry>
+  
+  <entry>
     <title>A co jeśli programowanie to nie moje powołanie?</title>
     <link href="https://kernelgonnapanic.pl/2017/08/08/a-co-jesli-programowanie-to-nie-moje-powolanie/"/>
     <id>https://kernelgonnapanic.pl/2017/08/08/a-co-jesli-programowanie-to-nie-moje-powolanie/</id>
     <published>2017-08-08T08:47:00.000Z</published>
-    <updated>2017-08-11T20:07:08.000Z</updated>
+    <updated>2017-08-26T12:34:19.000Z</updated>
     
     <content type="html"><![CDATA[<p>Wiem, że przyjdzie dzień, pewnie już całkiem niedługo, w którym rzucę programowanie w kąt. I tak jak z dnia na dzień się w tym zajęciu zakochałam, tak też z dnia na dzień ta przygoda się skończy. Kiedyś myślałam, że takie uczucie jest oznaką, że coś w moim życiu jest nie tak. Że być może nie robię tego, co powinnam, że nie znalazłam jeszcze swojego powołania. I było tak do momentu, gdy obejrzałam TED talka, który totalnie zmienił moje odczucia.<br><a id="more"></a></p>
 <p>Czy byliście kiedyś w miejscu, w którym zdaliście sobie sprawę, że coś co uwielbialiście robić przestaje być dla Was wyzwaniem, staje się nudne i męczące? Czy czuliście związany z tym smutek?<br>A może świat zawsze wmawiał Wam jak ważne jest bycie specjalistą w jednej dziedzinie. A Wy nie wiedzieliście jak ze wszystkich swoich zainteresowań wybrać jedno jedyne, któremu mieliście poświęcić całe życie. Czuliście ciężar związany z tą decyzją lub wręcz przeciwnie, byliście przekonani, że taki wybór jest niemożliwy i tym samym nie będziecie mieli szansy na żadną poważną karierę.</p>
@@ -77,9 +125,9 @@
     </summary>
     
     
-      <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
-    
       <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
+      <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
     
       <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
     
@@ -157,11 +205,11 @@
     
       <category term="Z Pamiętnika Programistki" scheme="https://kernelgonnapanic.pl/tags/Z-Pamietnika-Programistki/"/>
     
+      <category term="Code Europe" scheme="https://kernelgonnapanic.pl/tags/Code-Europe/"/>
+    
       <category term="Konferencje" scheme="https://kernelgonnapanic.pl/tags/Konferencje/"/>
     
       <category term="Girls in IT" scheme="https://kernelgonnapanic.pl/tags/Girls-in-IT/"/>
-    
-      <category term="Code Europe" scheme="https://kernelgonnapanic.pl/tags/Code-Europe/"/>
     
       <category term="Front Trends" scheme="https://kernelgonnapanic.pl/tags/Front-Trends/"/>
     
@@ -557,6 +605,39 @@
   </entry>
   
   <entry>
+    <title>Nawyki mistrzów</title>
+    <link href="https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/"/>
+    <id>https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/</id>
+    <published>2016-08-11T07:10:00.000Z</published>
+    <updated>2017-03-16T18:30:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Kolejny <strong>Rozwojowy Poniedziałek</strong> przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili <strong>nawyki mistrzów</strong>.<br><a id="more"></a></p>
+<h3 id="Mistrzowie-wstaja-wczesnie"><a href="#Mistrzowie-wstaja-wczesnie" class="headerlink" title="Mistrzowie wstają wcześnie."></a>Mistrzowie wstają wcześnie.</h3><p>Wstawanie 2 czy 3 godziny przed wyjściem z domu rano może wydawać się przerażające. Często jednak nie zdajemy sobie sprawy ile możliwości nam oferuje. Mamy czas, by przy kubku świeżo zaparzonej kawy przemyśleć, co czeka nas w nadchodzącym dniu. Znajdzie się też na pewno pół godziny na trening. Możemy wybrać się na jesienny spacer i posłuchać muzyki czy podcastu. Obejrzeć motywujący wykładu czy poczytać książkę. Tak! Naprawdę da radę to zrobić rano! A co więcej, przy okazji ćwiczymy naszą silną wolę.</p>
+<h3 id="Mistrzowie-cwicza-kilka-razy-w-tygodniu"><a href="#Mistrzowie-cwicza-kilka-razy-w-tygodniu" class="headerlink" title="Mistrzowie ćwiczą kilka razy w tygodniu."></a>Mistrzowie ćwiczą kilka razy w tygodniu.</h3><p>Sport to szkoła osiągania sukcesów. Gdy wylewamy siódme poty na siłowni lub pokonujemy nasty kilometr w terenie ćwiczymy naszą wytrwałość, determinację w osiąganiu celów i silną wolę. Podczas ćwiczeń wentylujemy nasz mózg, ryzykując zalewem dobrych pomysłów i wyzwalamy produkcję endorfin, które sprawiają, że nic już nam nie jest straszne.</p>
+<p>Ruszenie się z kanapy po ciężkim dniu pracy jest trudne. Przyznaję. Jednak mistrzowie mają na to sposoby ;) Dobrym pomysłem jest wybranie się na siłownię rano lub od razu po pracy, szkole, uczelni.</p>
+<h3 id="Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…"><a href="#Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…" class="headerlink" title="Mistrzowie planują zadania na dany dzień, tydzień, rok…"></a>Mistrzowie planują zadania na dany dzień, tydzień, rok…</h3><p>Bez planu zginiemy. Zatoniemy w natłoku obowiązków, zaległych terminów, wizyt u dentysty i telefonów z okazji urodzin. Mistrzowie wiedzą, że lista zadań na dany dzień to obowiązek! Jednak, by rozwijać się w pożądanym kierunku w perspektywie długoterminowej potrzebujemy też listy celów na najbliższy miesiąc czy rok. Zerkanie co jakiś czas na spis naszych priorytetów i dążeń pozwala nam upewnić się czy jesteśmy na dobrej drodze.</p>
+<h3 id="Mistrzowie-rozwijaja-swoja-siec-kontaktow"><a href="#Mistrzowie-rozwijaja-swoja-siec-kontaktow" class="headerlink" title="Mistrzowie rozwijają swoją sieć kontaktów."></a>Mistrzowie rozwijają swoją sieć kontaktów.</h3><p>My, zwykli zjadacze chleba, często nie doceniamy wagi i siły networkingu. Nie mamy na to czasu, nie lubimy rozmawiać z obcymi ludźmi. Ale przecież… Poznawanie nowych ludzi jest fajne! I inspirujące! I wnosi bardzo dużo do naszego życia :) Szczególnie, gdy poznajemy ludzi spoza naszej branży. W ten sposób poszerzamy nasze horyzonty i często jesteśmy zmuszeni do wyjścia ze strefy komfortu. A każde wyjście z naszej bezpiecznej skorupki jest wejściem do świata “where the magic happens”.</p>
+<p>Czy Was również jesień tak motywuje?</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Kolejny &lt;strong&gt;Rozwojowy Poniedziałek&lt;/strong&gt; przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili &lt;strong&gt;nawyki mistrzów&lt;/strong&gt;.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
+    
+      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
+    
+      <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Akcja Subskrypcja</title>
     <link href="https://kernelgonnapanic.pl/2016/08/11/Akcja-Subskrypcja/"/>
     <id>https://kernelgonnapanic.pl/2016/08/11/Akcja-Subskrypcja/</id>
@@ -594,39 +675,6 @@
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nawyki mistrzów</title>
-    <link href="https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/"/>
-    <id>https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/</id>
-    <published>2016-08-11T07:10:00.000Z</published>
-    <updated>2017-03-16T18:30:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Kolejny <strong>Rozwojowy Poniedziałek</strong> przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili <strong>nawyki mistrzów</strong>.<br><a id="more"></a></p>
-<h3 id="Mistrzowie-wstaja-wczesnie"><a href="#Mistrzowie-wstaja-wczesnie" class="headerlink" title="Mistrzowie wstają wcześnie."></a>Mistrzowie wstają wcześnie.</h3><p>Wstawanie 2 czy 3 godziny przed wyjściem z domu rano może wydawać się przerażające. Często jednak nie zdajemy sobie sprawy ile możliwości nam oferuje. Mamy czas, by przy kubku świeżo zaparzonej kawy przemyśleć, co czeka nas w nadchodzącym dniu. Znajdzie się też na pewno pół godziny na trening. Możemy wybrać się na jesienny spacer i posłuchać muzyki czy podcastu. Obejrzeć motywujący wykładu czy poczytać książkę. Tak! Naprawdę da radę to zrobić rano! A co więcej, przy okazji ćwiczymy naszą silną wolę.</p>
-<h3 id="Mistrzowie-cwicza-kilka-razy-w-tygodniu"><a href="#Mistrzowie-cwicza-kilka-razy-w-tygodniu" class="headerlink" title="Mistrzowie ćwiczą kilka razy w tygodniu."></a>Mistrzowie ćwiczą kilka razy w tygodniu.</h3><p>Sport to szkoła osiągania sukcesów. Gdy wylewamy siódme poty na siłowni lub pokonujemy nasty kilometr w terenie ćwiczymy naszą wytrwałość, determinację w osiąganiu celów i silną wolę. Podczas ćwiczeń wentylujemy nasz mózg, ryzykując zalewem dobrych pomysłów i wyzwalamy produkcję endorfin, które sprawiają, że nic już nam nie jest straszne.</p>
-<p>Ruszenie się z kanapy po ciężkim dniu pracy jest trudne. Przyznaję. Jednak mistrzowie mają na to sposoby ;) Dobrym pomysłem jest wybranie się na siłownię rano lub od razu po pracy, szkole, uczelni.</p>
-<h3 id="Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…"><a href="#Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…" class="headerlink" title="Mistrzowie planują zadania na dany dzień, tydzień, rok…"></a>Mistrzowie planują zadania na dany dzień, tydzień, rok…</h3><p>Bez planu zginiemy. Zatoniemy w natłoku obowiązków, zaległych terminów, wizyt u dentysty i telefonów z okazji urodzin. Mistrzowie wiedzą, że lista zadań na dany dzień to obowiązek! Jednak, by rozwijać się w pożądanym kierunku w perspektywie długoterminowej potrzebujemy też listy celów na najbliższy miesiąc czy rok. Zerkanie co jakiś czas na spis naszych priorytetów i dążeń pozwala nam upewnić się czy jesteśmy na dobrej drodze.</p>
-<h3 id="Mistrzowie-rozwijaja-swoja-siec-kontaktow"><a href="#Mistrzowie-rozwijaja-swoja-siec-kontaktow" class="headerlink" title="Mistrzowie rozwijają swoją sieć kontaktów."></a>Mistrzowie rozwijają swoją sieć kontaktów.</h3><p>My, zwykli zjadacze chleba, często nie doceniamy wagi i siły networkingu. Nie mamy na to czasu, nie lubimy rozmawiać z obcymi ludźmi. Ale przecież… Poznawanie nowych ludzi jest fajne! I inspirujące! I wnosi bardzo dużo do naszego życia :) Szczególnie, gdy poznajemy ludzi spoza naszej branży. W ten sposób poszerzamy nasze horyzonty i często jesteśmy zmuszeni do wyjścia ze strefy komfortu. A każde wyjście z naszej bezpiecznej skorupki jest wejściem do świata “where the magic happens”.</p>
-<p>Czy Was również jesień tak motywuje?</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Kolejny &lt;strong&gt;Rozwojowy Poniedziałek&lt;/strong&gt; przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili &lt;strong&gt;nawyki mistrzów&lt;/strong&gt;.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
-    
-      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
-    
-      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
-    
-      <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
     
   </entry>
   
@@ -770,43 +818,6 @@
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>5 najlepszych platform do nauki programowania</title>
-    <link href="https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/"/>
-    <id>https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/</id>
-    <published>2015-09-11T07:00:00.000Z</published>
-    <updated>2017-07-01T08:46:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Od jakiego tematu można by zacząć cykl dotyczący programowania? No właśnie od tego! Dziś chciałabym się z Wami podzielić platformami, dzięki którym można zarazić się “koderskim” bakcylem i wiele się nauczyć. Zaczęłam z nich korzystać, gdy byłam totalnie zielona w tym temacie, no i co tu dużo mówić - “wpadłam po uszy” :)<br><a id="more"></a></p>
-<h2 id="Codecademy"><a href="#Codecademy" class="headerlink" title="Codecademy"></a><a href="https://www.codecademy.com/" target="_blank" rel="external">Codecademy</a></h2><p>Dla tych, którzy lubią, gdy się wszystko świeci, miga, kręci, obraca i zmienia kolory Codecademy stworzyło ciekawe projekty, np. “Zbuduj własną galaktykę”. Tym z Was, którym wystarczy fachowa wiedza, wykładana od podstaw, co więcej, podana w bardzo przystępny i interaktywny sposób, polecam rozpoczęcie jednego z dostępnych kursów. Pakiet jest wyraźnie nakierowany w stronę web developmentu. Mamy do wyboru: <strong>Html + CSS</strong>, <strong>Javascript</strong>, <strong>jQuery</strong>, <strong>PHP</strong>, <strong>Pythona</strong> oraz <strong>Ruby</strong> :)</p>
-<p>Od czasu, gdy ostatni raz korzystałam z tej platformy, twórcy dodali wiele ciekawych ścieżek np. dotyczące <strong>Ruby on Rails</strong> czy ostatnio modnego <strong>AngularJs</strong>. Dostęp do wszystkich treści jest darmowy. Szczerze polecam :)</p>
-<h2 id="Code-school"><a href="#Code-school" class="headerlink" title="Code school"></a><a href="https://www.codeschool.com/" target="_blank" rel="external">Code school</a></h2><p>Code School oferuje nam już bazę konkretnej, użytecznej wiedzy. Kiedy jakiś temat Cię zainteresował tam będziesz mógł się w tej dziedzinie wyspecjalizować. Ale niestety nie jest aż tak kolorowo. Za część z kursów (szczególnie za te bardziej zaawansowane) trzeba zapłacić. Ja miałam to szczęście, że trafiłam na darmowy 30-dniowy okres próbny :) Nakodziłam się po wsze czasy :) Code school to miejsce, gdzie można wybierać sobie ścieżki rozwoju. Zawierają one różne kursy, które są skupione wokół jednego tematu. I tak, mamy ścieżki popularne, takie jak: <strong>Ruby</strong>, <strong>Html z CSS</strong> oraz niezrównana ścieżka <strong>Javascriptu</strong> (jeden z najlepszych kursów ever), ale też niespotykane np. <strong>iOS</strong> czy <strong>Git</strong>.  </p>
-<h2 id="Coursera"><a href="#Coursera" class="headerlink" title="Coursera"></a><a href="https://www.coursera.org/" target="_blank" rel="external">Coursera</a></h2><p>Na Coursera znajdziesz dosłownie wszystko. Wiele mówi to, że w aktualne ofercie są 104 kursy dotyczące technologii komputerowych - znajdzie się tu coś dla początkujących, jak i zaawansowanych. Od nauki pętli i funkcji do kwestii zabezpieczeń, projektowania grafiki, User Experience czy zagadnień dotyczących baz danych czy programowania urządzeń mobilnych. Minusem platformy jest to, że nie wszystkie kursy są równie ciekawe i dobrze przygotowane. Niestety zdarzają się nudne niewypały. Wiele kursów na Coursera jest darmowych. Nowością są specjalizacje - grupy kursów mające odzwierciedlać prawdziwe studia. Jednak w chwili obecnej są one płatne.  </p>
-<h2 id="Khan-Academy"><a href="#Khan-Academy" class="headerlink" title="Khan Academy"></a><a href="https://pl.khanacademy.org/" target="_blank" rel="external">Khan Academy</a></h2><p>Ojojoj… Khan Academy rozrósł się od czasu, kiedy ostatnio z niego korzystałam. Oprócz matematyki możemy się tu nauczyć programowania, nauk ścisłych, ekonomii czy innych kierunków humanistycznych. Każdy nowo stworzony użytkownik musi wybrać sobie małe kolorowe zwierzątko, które rośnie wraz z Twoją wiedzą. Khan Academy proponuje Ci np. godzinę kodowania, gdy akurat tyle masz czasu wolnego lub stałą naukę w Twoim własnym tempie. Zadania i wyzwania są zabawne i ciekawe, a prosty, potoczny język ułatwia naukę. W trakcie kodowania oglądamy również filmy, które…. taaaa dam.. są w języku polskim :) Co prawda nie wszystkie, ale akurat ten na którego trafiłam był :) Na Khan Academy nauczycie się nie tylko programować. Może zapałacie nawet miłością do rachunku różniczkowego… Kto wie? :)</p>
-<h2 id="Edx"><a href="#Edx" class="headerlink" title="Edx"></a><a href="https://www.edx.org/" target="_blank" rel="external">Edx</a></h2><p>Edx’a dażę szczególną sympatią, bo to właśnie tu zaczęła się moja przygoda z programowaniem. Pomysł przeniesienia kursów ze sławnych uczelni do internetu jest IMHO genialny :) Człowiek ma ogromną motywację do nauki wiedząc, że uczy się tego samego co studenci Harvardu czy MIT :) Szczególnie polecam dwa kursy: <a href="https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-5" target="_blank" rel="external"><strong>Podstawy programowania w Pythonie</strong></a>, który wspominam jako wymagający, ale też dający dużo wiedzy kurs oraz <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x" target="_blank" rel="external"><strong>Wstęp do programowania</strong></a>, który jest świetny dla totalnych początkujących, którym wszystkie te trudne zwroty i dziwne języki programowania nic nie mówią :) Oba kursy są oczywiście dostępne za darmo.</p>
-<p>Platformy do nauki programowania wiele mi dały, szczególnie na samym początku mojej drogi. Zaszczepiły mi wirusa kodowania, którego nie tak łatwo się pozbyć. Uważajcie, bo Wam może się przytrafić to samo :)  </p>
-<p>Ania  </p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Od jakiego tematu można by zacząć cykl dotyczący programowania? No właśnie od tego! Dziś chciałabym się z Wami podzielić platformami, dzięki którym można zarazić się “koderskim” bakcylem i wiele się nauczyć. Zaczęłam z nich korzystać, gdy byłam totalnie zielona w tym temacie, no i co tu dużo mówić - “wpadłam po uszy” :)&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="5 rzeczy" scheme="https://kernelgonnapanic.pl/tags/5-rzeczy/"/>
-    
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
-    
-      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
-    
-      <category term="Podstawy programowania" scheme="https://kernelgonnapanic.pl/tags/Podstawy-programowania/"/>
-    
-      <category term="Darmowe kursy" scheme="https://kernelgonnapanic.pl/tags/Darmowe-kursy/"/>
     
   </entry>
   
