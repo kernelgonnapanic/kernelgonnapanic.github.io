@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2017-08-27T14:59:37.000Z</updated>
+  <updated>2017-09-24T10:56:00.000Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -16,11 +16,48 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>W prawo czy w lewo? &quot;Labirynty Scruma&quot; Jacka Wieczorka</title>
+    <link href="https://kernelgonnapanic.pl/2017/09/23/w-prawo-czy-w-lewo-labirynty-scruma/"/>
+    <id>https://kernelgonnapanic.pl/2017/09/23/w-prawo-czy-w-lewo-labirynty-scruma/</id>
+    <published>2017-09-23T15:49:33.000Z</published>
+    <updated>2017-09-24T10:56:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Jesień w tym roku wzięła nas zdecydowanie z zaskoczenia. I chociaż niektórzy mogą narzekać na pluchę i zimno, dla mnie jest to pogoda stworzona do pewnego typu zajęć. Są nimi: programowanie i czytanie. Dlatego wraz z nadejściem pierwszych deszczy zaopatruje się w kubek herbaty, ciepłe skarpety, książkę (lub komputer) i działam. W ten właśnie sposób pierwszą ofiarą tej jesieni stały się “Labirynty Scruma” Jacka Wieczorka. Napisałam dla Was o niej kilka słów, więc “kubki w dłoń!” i zapraszam do czytania.<br><a id="more"></a></p>
+<p>Siedzicie wygodnie? Na początu chcę Was poprosić byście wyobrazili sobie cały proces w wyniku którego powstaje software. Teraz wyrzućcie, proszę, z tego obrazu czynność programowania. To co zostało dobrze określa to, co w wytwarzaniu oprogramowania najbardziej mnie interesuje. Proces zaczynający się u użytkownika, a kończący na serwerze produkcyjnym, ludzie, zespoły i ich interakcje, klienci i użytkownicy oraz ich potrzeby i wymagania.</p>
+<p>Z tego powodu bardzo chętnie sięgam po książki, których tematem jest zwinne podejście do wytwarzania oprogramowania, w tym również Scrum. I niezmiernie ucieszyłam się, gdy dostałam możliwość przedpremierowego przeczytania “Labiryntów Scruma” Jacka Wieczorka i podzielenia się z Wami recenzją.</p>
+<p>Mieliście kiedyś wrażenie, że Scrum w waszej firmie jest raczej Scrumo-podobnym czymś? Że pewne rzeczy mogłyby funkcjonować lepiej? A może macie konkretny problem, tylko nie wiecie jak możecie go rozwiązać? Tak? W takim razie “Labirynty Scruma” zostały napisane właśnie dla Was. Starają się podsunąć rozwiązanie dla ponad 150 problemów, na które możecie natknąć się używając Scruma przy organizacji pracy waszych zespołów.</p>
+<p>Wszystkie te wskazówki podane są w bardzo wygodnej formie. Zaczynamy od problemu, później zastanawiamy się jakie powoduje on konsekwencje a na końcu czytamy o proponowanym rozwiązaniu. Dodatkowo są one pogrupowane według tematu, którego dotyczą. I tak możemy przeczytać np. o kłopotach jakie może sprawić planowanie, retorspektywy, daily, przegląd sprintu czy które mogą się pojawić w kontekście sprawowanej roli, np. Scrum Mastera czy właściciela produktu.<br>Jedynym punktem, który mam do zarzucenia, jeśli chodzi o formę książki to to, że taka struktura jest czasem trochę sucha. Jednak, gdy książkę potraktujemy jako zbiór rozwiązań do których odwołujemy się, gdy są potrzebne, a nie jako lekturę do poduszki, nie jest to już tak istotne.</p>
+<div class="figure center fig-100" style="width:;"><img class="fig-img" src="scrum_srodek.jpg" alt=""></div><div style="clear:both;"></div>
+<p>Dla kogo jest ta książka? Myślę, że przede wszystkim dla Scrum Masterów. Ale jak autor kilkorotnie zaznaczył, bardzo ważne jest, by za jakość Scruma odpowiadali wszyscy członkowie zespołu. Dlatego gdy jesteś programistą (tak jak ja), ale chciałbyś wziąć trochę więcej z tej odpowiedzialności na siebie, to myślę, że warto do “Labiryntów Scruma” zajrzeć. Dodatkowo dodam, że nie jest to raczej lektura dla początkujących, którzy chcą dowiedzieć się o co w tym Scrumie chodzi. Często powody istnienia pewnych artefaktów Scruma czy zachowań nie są wyjaśnione, ponieważ autor wyszedł z założenia, że ta wiedza jest już czytelnikowi znana. Co więcej, uważam, że najwięcej z tej książki wyciągniesz, gdy będziesz miał własne, praktyczne doświadczenie pracy ze Scrumem i prawdopodobnie część wspomnianych problemów doświadczyłeś już na własnej skórze.</p>
+<p>W trakcie czytania o potencjalnych kłopotach występujących podczas używania Scruma, uświadomiałam sobie problemy, które pojawiają się w moim zespole. Tak to już jest, że niektóre rzeczy w naszym codziennym zachowaniu widzimy dopiero, gdy ktoś zwróci nam na nie uwagę (lub przeczytamy o nich w książce). Szczególnie podobały mi się rozdziały związane z rolami w Scrumie (dotyczące Scrum Mastera, właściciela produktu i zespołu developerskiego). W wielu wskazówkach podkreślona została wartość otwartej rozmowy, odwagi potrzebnej do naruszenia statusu quo w zespole i korzyści, które mogą z tego wynikać.<br>Zapisałam sobie również kilka książek, które warto przeczytać, a bardzo lubię, gdy autor mi takowe podrzuca :)</p>
+<p>Gdy czujesz, że coś nie działa w Twoim Scrumie tak jak powinno, ale nie za bardzo wiesz, co z tym zrobić, przeczytaj koniecznie książkę Jacka Wieczorka “Labirynty Scruma”. Na pewno uzyskasz w ten sposób co najmniej kilka pomysłów na to, jak możesz ulepszyć pracę swojego zespołu. Moje czekają już w notatniku na przedyskutowanie ;)</p>
+<p>Przypominam, że pisałam już o dwóch świetnych książkach o Scrumie - <a href="https://kernelgonnapanic.pl/2015/03/10/zwinny-samuraj/">“Zwinnym samuraju” Jonathana Rasmussona</a> oraz <a href="https://kernelgonnapanic.pl/2015/04/02/scrum-o-zwinnym-zarzadzaniu-projektami-chrapko/">“Scrum. O zwinnym zarządzaniu projektami.” Mariusza Chrapko</a>. Jeśli czujecie, że musicie najpierw nadrobić podstawy - zapraszam!</p>
+<p>Ania</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Jesień w tym roku wzięła nas zdecydowanie z zaskoczenia. I chociaż niektórzy mogą narzekać na pluchę i zimno, dla mnie jest to pogoda stworzona do pewnego typu zajęć. Są nimi: programowanie i czytanie. Dlatego wraz z nadejściem pierwszych deszczy zaopatruje się w kubek herbaty, ciepłe skarpety, książkę (lub komputer) i działam. W ten właśnie sposób pierwszą ofiarą tej jesieni stały się “Labirynty Scruma” Jacka Wieczorka. Napisałam dla Was o niej kilka słów, więc “kubki w dłoń!” i zapraszam do czytania.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
+    
+      <category term="Scrum" scheme="https://kernelgonnapanic.pl/tags/Scrum/"/>
+    
+      <category term="Agile" scheme="https://kernelgonnapanic.pl/tags/Agile/"/>
+    
+      <category term="Rozwoj" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Nie daj się ciemnej stronie mocy - czyli jak unikać hype&#39;u?</title>
     <link href="https://kernelgonnapanic.pl/2017/08/26/hype-driven-development/"/>
     <id>https://kernelgonnapanic.pl/2017/08/26/hype-driven-development/</id>
     <published>2017-08-26T13:49:33.000Z</published>
-    <updated>2017-08-27T14:59:37.000Z</updated>
+    <updated>2017-09-23T15:44:31.000Z</updated>
     
     <content type="html"><![CDATA[<p>Ciemna strona mocy kusiła rycerzy Jedi potężnymi możliwościami. Zwabieni perspektywą ogromnej siły powoli tracili kontrolę i wpadali w jej sidła. Z hype’m jest podobnie. Dzięki niemu zaczynasz myśleć, że kolejna technologia będzie rozwiązaniem na wszystkie Twoje problemy. Że ten nowiutki framework sprawi, że już nic Cię nie zaskoczy. Że możesz wszystko. Nie jesteś świadomy, że stąpasz bo bardzo cienkim lodzie i już całkiem niedługo to wszystko może się obrócić przeciwko Tobie.<br><a id="more"></a></p>
 <p>Zacznijmy od poznania naszego wroga. Jeśli nie wiesz czym jest hype, wystarczy, że pobędziesz we frontendowym środowisku przez kilka miesięcy. W tym czasie prawdopodobnie pojawi się i zniknie kilka frameworków, ktoś zacznie rozwijać forka jakiegoś narzędzia, przez twitter przeleje się kolejna fala entuzjastycznych postów o bibliotece X. W pewnym momencie nawet nie zauważysz, że bliżej Ci do ciemnej stony mocy. Zaczynasz podejmować decyzje w projekcie bazując na tych wszystkich zdarzeniach i opiniach. Twoje wyważone poglądy zmierzają w stronę: “Technologia Y jest świetna w każdych warunkach, bije na głowę wszystko inne”. To tu to tam, dorzucasz nową bibliotekę do zależności twojego projektu. W końcu dochodzi do tego, że chcesz przepisywać frontend co 3 miesiące, na co raz to nowy framework. Jeśli tak jest, wiedz, że coś się dzieje.</p>
@@ -125,9 +162,9 @@
     </summary>
     
     
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
       <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
     
@@ -522,9 +559,9 @@
     
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
-    
       <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
+    
+      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
       <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
     
@@ -668,11 +705,11 @@
     </summary>
     
     
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
       <category term="AkcjaSubskrypcja" scheme="https://kernelgonnapanic.pl/tags/AkcjaSubskrypcja/"/>
     
       <category term="Internet" scheme="https://kernelgonnapanic.pl/tags/Internet/"/>
-    
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
@@ -747,9 +784,9 @@
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
-      <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.pl/tags/RozwojowyPoniedzialek/"/>
-    
       <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
+    
+      <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.pl/tags/RozwojowyPoniedzialek/"/>
     
   </entry>
   
@@ -785,39 +822,6 @@
       <category term="O szczęściu" scheme="https://kernelgonnapanic.pl/tags/O-szczesciu/"/>
     
       <category term="Studia" scheme="https://kernelgonnapanic.pl/tags/Studia/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Jak nie dać się zwariować postanowieniom noworocznym?</title>
-    <link href="https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/"/>
-    <id>https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/</id>
-    <published>2016-01-03T12:58:00.000Z</published>
-    <updated>2017-03-16T18:30:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Nie da rady wejść w Nowy Rok, omijając sezon na postanowienia noworoczne. Dla niektórych osób są one bezsensowne, bo uważają oni, że cyferki w kalendarzu nic nie zmieniają. Inni śmieją się z tabunów odwiedzających siłownie w styczniu. Dla mnie z kolei każdy moment jest dobry na zmiany, wyjście ze strefy komfortu, zrobienie czegoś fajnego, kreatywnego i rozwijającego czy zaprzestanie czegoś, co nas niszczy.<br><a id="more"></a></p>
-<p>Jednak do okołosylwestrowych planów należy podejść, będąc odpowiednio przygotowanym. Spojrzeć na nie rozsądnym okiem, zdecydować co jest osiągalne, a co nie. Bardzo pomocne jest w tym momencie przeanalizowanie ich w kontekście kryteriów <strong>S.M.A.R.T.  </strong>  </p>
-<p><strong>S.M.A.R.T</strong> to technika formułowania planów w taki sposób, by zdecydowanie zwiększyć szansę na ich zrealizowanie. Podsuwa nam 5 cech, którymi charakteryzuje się dobry cel. Powinien on być:  </p>
-<h3 id="Konkretny-specific"><a href="#Konkretny-specific" class="headerlink" title="Konkretny (specific)"></a>Konkretny (specific)</h3><p>Jasne sprecyzowanie celu, nie pozostawiające miejsca na różne interpretacje, jest kluczem do sukcesu. Dodatkowo ważne jest by cel dotyczył pewniej wąskiej dziedziny życia. Nie stawiajmy sobie za cel “Zmienię swoje życie”, bo takie hasło dotyczy wszystkiego, a zarazem niczego :)  </p>
-<h3 id="Mierzalny-measurable"><a href="#Mierzalny-measurable" class="headerlink" title="Mierzalny (measurable)"></a>Mierzalny (measurable)</h3><p>Mierzalność to bardzo ważna cecha dobrego celu. Schudnę 5 kg, nauczę się 30 słówek tygodniowo… im więcej liczb tym lepiej. Pomogą nam jednoznacznie stwierdzić czy cel został osiągnięty czy nie. A co jeśli nie tak łatwo wtłoczyć nasz cel w świat matematyki? Warto zmienić optykę patrzenia na problem. Zamiast powiedzieć “będę więcej czasu spędzać z rodziną” za cel ustawić sobie “spędzanie 30 minut wieczorem na rozmowie z mamą”.  </p>
-<div class="figure center fig-100" style="width:;"><img class="fig-img" src="top_small.jpg" alt=""></div><div style="clear:both;"></div>
-<h3 id="Ambitny-ambitious"><a href="#Ambitny-ambitious" class="headerlink" title="Ambitny (ambitious)"></a>Ambitny (ambitious)</h3><p>Stawianie sobie ambitnych celów rozwija. Daje kopniaka z motywacji. Gdy poprzeczka nie jest ustawiona odpowiednio wysoko, nie jesteśmy wystarczająco zmotywowani do trwania w naszym postanowieniu. Cele typu “codziennie wstanę 10 minut wcześniej” nie są czymś, o co się chce człowiekowi walczyć.  </p>
-<h3 id="Realistyczny-realistic"><a href="#Realistyczny-realistic" class="headerlink" title="Realistyczny (realistic)"></a>Realistyczny (realistic)</h3><p>Oooo… to chyba najczęściej łamana zasada odnośnie stawiania sobie celów. Dużo ludzi chce schudnąć 20 kg w 2 tygodnie, rzucić dziś palenie czy nauczyć się płynnie mówić w danym języku w miesiąc. A… i najlepiej wszystko to zrobić naraz. Ale czy to jest w ogóle możliwe? Ambitne cele są super pod warunkiem, że mamy uczucie, że jesteśmy w stanie je zrealizować. W innym wypadku tylko zniechęcają.  </p>
-<h3 id="Okreslony-w-czasie-time-bound"><a href="#Okreslony-w-czasie-time-bound" class="headerlink" title="Określony w czasie (time-bound)"></a>Określony w czasie (time-bound)</h3><p>Zdecydowanie konieczne jest określenie ram czasowych przeznaczonych na realizację naszego celu. W kontekście postanowień noworocznych jako nasz <em>deadline</em> automatycznie narzuca się kolejny sylwester. Jednak czasem warto sobie postawić mniejsze, krótkoterminowe cele, które można zweryfikować szybciej niż po upływie całego roku.  </p>
-<p>Z okazji Nowego Roku życzę Wam wszystkim, by wasze cele były SMART :) By prowadziły Was do miejsc, w których jeszcze nie byliście i odkrywały przed Wami inspirujący, kreatywny i otwarty świat. By pozwalały Wam stać się lepszymi ludźmi. Pamiętajcie ‘only sky’s the limit’ :)  </p>
-<p>Ania  </p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Nie da rady wejść w Nowy Rok, omijając sezon na postanowienia noworoczne. Dla niektórych osób są one bezsensowne, bo uważają oni, że cyferki w kalendarzu nic nie zmieniają. Inni śmieją się z tabunów odwiedzających siłownie w styczniu. Dla mnie z kolei każdy moment jest dobry na zmiany, wyjście ze strefy komfortu, zrobienie czegoś fajnego, kreatywnego i rozwijającego czy zaprzestanie czegoś, co nas niszczy.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
-    
-      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
   </entry>
   
