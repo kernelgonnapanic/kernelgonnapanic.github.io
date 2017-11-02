@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2017-09-24T10:56:00.000Z</updated>
+  <updated>2017-11-02T21:15:50.000Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -16,11 +16,60 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Jak sprawić, by Twoja aplikacja w React była DRY?</title>
+    <link href="https://kernelgonnapanic.pl/2017/10/29/jak-sprawic-by-aplikacja-w-react-byla-dry/"/>
+    <id>https://kernelgonnapanic.pl/2017/10/29/jak-sprawic-by-aplikacja-w-react-byla-dry/</id>
+    <published>2017-10-29T12:35:00.000Z</published>
+    <updated>2017-11-02T21:15:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Jestem przekonana, że większość z Was, spotkała się już w swojej karierze z zasadą “don’t repeat yourself”. Nie ważne w jakim języku programujemy, dążymy do tego, by nasz kod był <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank" rel="external">DRY</a>. Z tego powodu korzystamy z różnego rodzaju abstrakcji czy wzorców, które pozwalają nam na uniknięcie kopiowana fragmentów kodu i konieczności późniejszego ich utrzymywania. Dziś chciałabym pokazać Wam 2 wzorce, które możecie zastosować w przypadku aplikacji bazujących na React’cie.<br><a id="more"></a><br><div class="figure center fig-50" style="width:;"><img class="fig-img" src="hoc.gif" alt=""></div><br>Wyobraźmy sobie klasyczną aplikację React’ową. Składa się ona z wielu komponentów, a jej rozszerzanie i rozbudowywanie zazwyczaj łączy się z tworzeniem kolejnych. Załóżmy, że naszym dzisiejszym zadaniem jest dodanie animującego się header’a. Chcielibyśmy, by początkowo był on przeźroczysty (opacity: 0) i w raz ze scrollowaniem strony, był coraz bardziej widoczny (aż do opacity: 1). Końcowym efektem jest to, co widzicie na gifie obok.</p>
+<div style="clear: both"></div>
+
+<p>Pierwszym naszym rozwiązaniem jest umieszczenie kodu odpowiedzialnego za tę funkcjonalność w komponencie, który wyświetla header i listę.</p>
+<figure class="highlight js"><figcaption><span>DummyPage.js</span><a href="https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/pages/DummyPage.js" target="_blank" rel="external">DummyPage.js</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">DummyPage</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>() &#123;</div><div class="line">    <span class="keyword">super</span>();</div><div class="line">    <span class="keyword">this</span>.state = &#123;</div><div class="line">      <span class="attr">scrollPos</span>: <span class="number">0</span>,</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">this</span>.scrollView = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">this</span>.handleScroll = <span class="keyword">this</span>.handleScroll.bind(<span class="keyword">this</span>);</div><div class="line">    <span class="keyword">this</span>.calculateOpacity = <span class="keyword">this</span>.calculateOpacity.bind(<span class="keyword">this</span>);</div><div class="line">  &#125;</div><div class="line">  calculateOpacity() &#123;</div><div class="line">    <span class="keyword">if</span>(!<span class="keyword">this</span>.state.scrollPos) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.state.scrollPos &gt; <span class="number">200</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.state.scrollPos / <span class="number">200</span>;</div><div class="line">  &#125;</div><div class="line">  handleScroll() &#123;</div><div class="line">    <span class="keyword">if</span>(!<span class="keyword">this</span>.scrollView) <span class="keyword">return</span>;</div><div class="line">    <span class="keyword">const</span> scrollPos = <span class="keyword">this</span>.scrollView.scrollTop;</div><div class="line">    <span class="keyword">this</span>.setState(&#123; scrollPos &#125;);</div><div class="line">  &#125;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;div</div><div class="line">        className="container"</div><div class="line">        onScroll=&#123;this.handleScroll&#125;</div><div class="line">        ref=&#123;ref =&gt; this.scrollView = ref&#125;</div><div class="line">      &gt;</div><div class="line">        &lt;Header</div><div class="line">          opacity=&#123;this.calculateOpacity()&#125;</div><div class="line">          text="Dummy page"</div><div class="line">        /&gt;</div><div class="line">        &lt;List /&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Wszystko pięknie śmiga, więc jesteśmy zadowoleni. Jednak za kilka dni, okazuje się, że to rozwiązanie tak przypadło użytkownikom do gustu, że chcielibyśmy je zastosować w innych miejscach aplikacji. I co teraz? Wiemy dobrze, że kopiowanie kodu odpowiedzialnego za animowanie headera to nie jest dobry pomysł. Jak sprawić, byśmy mogli użyć tego zachowania w wielu miejscach aplikacji?</p>
+<h2 id="Higher-Order-Component"><a href="#Higher-Order-Component" class="headerlink" title="Higher Order Component"></a>Higher Order Component</h2><p>Zacznijmy od krótkiego wstępu i powiedzenia kilku słów wyjaśnienia czym są <strong>Higher Order Components</strong> . HOC (używając skróconej nazwy komponentu wyższego rzędu) jest funkcją, która bierze jako argument komponent i zwraca nowy komponent. W ten sposób jesteśmy w stanie oddzielić pewną logikę, zamknąć ją w tejże funkcji i przekazując do niej różnego rodzaju komponenty, w pewien sposób powiększać ich możliwości.</p>
+<p>Zobaczmy jak wygląda to w przypadku naszej mini-aplikacji. Spróbujmy zaimplementować tę samą funkcjonalność, lecz oddzielić logikę odpowiedzialną za animowanie headera do naszego HOCa.</p>
+  <figure class="highlight js"><figcaption><span>PageWithHoc.js</span><a href="https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/pages/PageWithHoc.js" target="_blank" rel="external">PageWithHoc.js</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> withAnimatedHeader <span class="keyword">from</span> <span class="string">'../enhancers/withAnimatedHeader'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> PageWithHoc = <span class="function">(<span class="params">&#123; opacity &#125;</span>) =&gt;</span> (</div><div class="line">  &lt;div&gt;</div><div class="line">    &lt;Header</div><div class="line">      blue</div><div class="line">      opacity=&#123;opacity&#125;</div><div class="line">      text="Page with HOC"</div><div class="line">    /&gt;</div><div class="line">    &lt;List/&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">);</div><div class="line"></div><div class="line">export default withAnimatedHeader(PageWithHoc);</div><div class="line">  </div></pre></td></tr></table></figure>
+<p>Widzimy, że komponent zawierający header i listę znacząco się odchudził. Ale możemy też zauważyć, że nie jest on już eksportowany. Eksportujemy rezultat wywyołania funkcji <code>withAnimatedHeader</code>, do której przekazaliśmy nasz komponent. Czym jest ta funkcja? Dobrze myślicie, to jest właśnie Higher Order Component.</p>
+<p>Teraz sprawdźmy jak wygląda funkcja <code>withAnimatedHeader</code> czyli komponent wyższego rzędu.<br>  <figure class="highlight js"><figcaption><span>withAnimatedHeader.js</span><a href="https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/enhancers/withAnimatedHeader.js" target="_blank" rel="external">withAnimatedHeader.js</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> withAnimatedHeader = <span class="function">(<span class="params">WrappedComponent</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> <span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>() &#123;</div><div class="line">      <span class="keyword">super</span>();</div><div class="line">      <span class="keyword">this</span>.state = &#123;</div><div class="line">        <span class="attr">scrollPos</span>: <span class="number">0</span>,</div><div class="line">      &#125;;</div><div class="line">      <span class="keyword">this</span>.scrollView = <span class="literal">null</span>;</div><div class="line">      <span class="keyword">this</span>.handleScroll = <span class="keyword">this</span>.handleScroll.bind(<span class="keyword">this</span>);</div><div class="line">      <span class="keyword">this</span>.calculateOpacity = <span class="keyword">this</span>.calculateOpacity.bind(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line">    calculateOpacity() &#123;</div><div class="line">      <span class="keyword">if</span>(!<span class="keyword">this</span>.state.scrollPos) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">      <span class="keyword">if</span> (<span class="keyword">this</span>.state.scrollPos &gt; <span class="number">200</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.state.scrollPos / <span class="number">200</span>;</div><div class="line">    &#125;</div><div class="line">    handleScroll() &#123;</div><div class="line">      <span class="keyword">if</span>(!<span class="keyword">this</span>.scrollView) <span class="keyword">return</span>;</div><div class="line">      <span class="keyword">const</span> scrollPos = <span class="keyword">this</span>.scrollView.scrollTop;</div><div class="line">      <span class="keyword">this</span>.setState(&#123; scrollPos &#125;);</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">      <span class="keyword">return</span> (</div><div class="line">        &lt;div</div><div class="line">          className="container"</div><div class="line">          onScroll=&#123;this.handleScroll&#125;</div><div class="line">          ref=&#123;ref =&gt; this.scrollView = ref&#125;</div><div class="line">        &gt;</div><div class="line">          &lt;WrappedComponent &#123;...this.props&#125; opacity=&#123;this.calculateOpacity()&#125; /&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">      );</div><div class="line">    &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">export default withAnimatedHeader;</div><div class="line">  </div></pre></td></tr></table></figure></p>
+<p>Widzimy, że to właśnie tutaj jest zamknięta logika animacji. <code>WithAnimatedHeader</code> zwraca nowy komponent, który zdefiniowane ma metody <code>calculateOpacity</code> i <code>handleScroll</code>. Komponent ten, renderując się, tworzy kontener, który będzie obsługiwał scroll’a a następnie renderuje komponent, który przekazaliśmy jako argument do funkcji.</p>
+<p>Więcej na temat Higher Order Components możesz znaleźć w dokumentacji <a href="https://reactjs.org/docs/higher-order-components.html" target="_blank" rel="external">React’a</a>.</p>
+<h2 id="Function-as-children"><a href="#Function-as-children" class="headerlink" title="Function as children"></a>Function as children</h2><p>Kolejnym wzorcem, który pozwala na oddzielenie i reużywanie części logiki jest wykorzystanie <strong>function as children</strong>. Z pewnością spotkaliście się z użyciem <code>this.props.children</code> jako sposobu na zwiększenie komponowalności waszego React’owego kodu. (Jeśli nie, <a href="http://krasimirtsonev.com/blog/article/children-in-jsx" target="_blank" rel="external">tutaj</a> jest kilka informacji na ten temat). Ale czy wiedzieliście, że jako children możemy przekazać funkcję?</p>
+<p>Spójrzmy na przykład :)</p>
+  <figure class="highlight js"><figcaption><span>PageWithRenderCallback.js</span><a href="https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/pages/PageWithRenderCallback.js" target="_blank" rel="external">PageWithRenderCallback.js</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> ScrollViewWithAnimatedHeader <span class="keyword">from</span> <span class="string">'../enhancers/ScrollViewWithAnimatedHeader'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> PageWithRenderCallback = <span class="function">(<span class="params">&#123; opacity &#125;</span>) =&gt;</span> (</div><div class="line">  &lt;ScrollViewWithAnimatedHeader&gt;</div><div class="line">    &#123;</div><div class="line">      (opacity) =&gt; (</div><div class="line">        &lt;div&gt;</div><div class="line">          &lt;Header</div><div class="line">            green</div><div class="line">            opacity=&#123;opacity&#125;</div><div class="line">            text="Page with render callback"</div><div class="line">          /&gt;</div><div class="line">          &lt;List/&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">      )</div><div class="line">    &#125;</div><div class="line">  &lt;/ScrollViewWithAnimatedHeader&gt;</div><div class="line">);</div><div class="line"></div><div class="line">export default PageWithRenderCallback;</div><div class="line">  </div></pre></td></tr></table></figure>
+<p>Znów widzimy, że nasz komponent zawierający Header i Listę jest malutki, ale renderuje w środku komponent <code>ScrollViewWithAnimatedHeader</code>. Ten z kolei przyjmuje jako children funkcję. Ta funkcja zostanie w trakcie renderowania wywołana z argumentem opacity, który możemy przekazać headerowi.</p>
+<p>Z czego składa się <code>ScrollViewWithAnimatedHeader</code>?</p>
+  <figure class="highlight js"><figcaption><span>ScrollViewWithAnimatedHeader.js</span><a href="https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/enhancers/ScrollViewWithAnimatedHeader.js" target="_blank" rel="external">ScrollViewWithAnimatedHeader.js</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ScrollViewWithAnimatedHeader</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>() &#123;</div><div class="line">    <span class="keyword">super</span>();</div><div class="line">    <span class="keyword">this</span>.state = &#123;</div><div class="line">      <span class="attr">scrollPos</span>: <span class="number">0</span>,</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">/* ... */</span></div><div class="line">  &#125;</div><div class="line">  calculateOpacity() &#123;</div><div class="line">    <span class="comment">/* ... */</span></div><div class="line">    <span class="keyword">return</span> opacity;</div><div class="line">  &#125;</div><div class="line">  handleScroll() &#123;</div><div class="line">    <span class="comment">/* ... */</span></div><div class="line">  &#125;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;div</div><div class="line">        className="container"</div><div class="line">        onScroll=&#123;this.handleScroll&#125;</div><div class="line">        ref=&#123;ref =&gt; this.scrollView = ref&#125;</div><div class="line">      &gt;</div><div class="line">        &#123;this.props.children(this.calculateOpacity())&#125;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> ScrollViewWithAnimatedHeader;</div><div class="line">  </div></pre></td></tr></table></figure>
+<p>Jest to zwykły komponent, który dodatkowo w metodzie render wywołuje funkcję przekazaną jako <code>this.props.children</code> i przekazuje jej jako argument wyliczoną wartość opacity. To nie jest wcale takie trudne, prawda?</p>
+<h2 id="Roznice"><a href="#Roznice" class="headerlink" title="Różnice"></a>Różnice</h2><p>Pokazałam Wam 2 wzorce, które możecie zastosować, by wydzielić logikę pewnej funkcjonalności i sprawić, by wasz kod w React był bardziej DRY. Teraz całkiem prawdopodobne, że pojawi się pytanie: który z nich wybrać?<br>Jeśli wziąć pod uwagę popularność rozwiązania to zdecydowanie wygrywają Higher Order Components. Są bardzo często używane w środowisku React’owym, a jako przykład można podać <code>connect</code> z <code>react-redux</code>, które pewnie wielu z was kojarzy. Function as children nie jest tak popularne, ale niektóre biblioteki też korzystają z tego wzorca (np. <code>react-motion</code>).<br>Jeśli jednak przyjrzymy się konkretom to lepiej wypada function as children. Nie jest to widoczne na pierwszy rzut oka, w momencie gdy mamy do czynienia z jedną funkcjonalnością. Lecz gdybyśmy chcieli komponować kilka takich funkcjonalności ze sobą, to rozwiązanie prezentuje swoją siłę. (Jeśli chcecie dowiedzieć się więcej na ten temat zapraszam do obejrzenia <a href="https://www.youtube.com/watch?v=BcVAq3YFiuc&amp;t=6s" target="_blank" rel="external">tego talka</a>, który był też inspiracją do moich dzisiejszych poczynań).</p>
+<p>Mam nadzieję, że dzisiejszy artykuł pomoże Wam lepiej organizować logikę w waszych aplikacjach.<br>Repozytorium z kodem, który stworzyłam w ramach tego przykładu jest <a href="https://github.com/kernelgonnapanic/hoc-render-callback-example" target="_blank" rel="external">tutaj</a>.</p>
+<p>Do następnego!<br>Ania</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Jestem przekonana, że większość z Was, spotkała się już w swojej karierze z zasadą “don’t repeat yourself”. Nie ważne w jakim języku programujemy, dążymy do tego, by nasz kod był &lt;a href=&quot;https://en.wikipedia.org/wiki/Don%27t_repeat_yourself&quot;&gt;DRY&lt;/a&gt;. Z tego powodu korzystamy z różnego rodzaju abstrakcji czy wzorców, które pozwalają nam na uniknięcie kopiowana fragmentów kodu i konieczności późniejszego ich utrzymywania. Dziś chciałabym pokazać Wam 2 wzorce, które możecie zastosować w przypadku aplikacji bazujących na React’cie.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
+      <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
+    
+      <category term="Dobre praktyki" scheme="https://kernelgonnapanic.pl/tags/Dobre-praktyki/"/>
+    
+      <category term="React" scheme="https://kernelgonnapanic.pl/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
     <title>W prawo czy w lewo? &quot;Labirynty Scruma&quot; Jacka Wieczorka</title>
     <link href="https://kernelgonnapanic.pl/2017/09/23/w-prawo-czy-w-lewo-labirynty-scruma/"/>
     <id>https://kernelgonnapanic.pl/2017/09/23/w-prawo-czy-w-lewo-labirynty-scruma/</id>
     <published>2017-09-23T15:49:33.000Z</published>
-    <updated>2017-09-24T10:56:00.000Z</updated>
+    <updated>2017-10-13T05:35:47.000Z</updated>
     
     <content type="html"><![CDATA[<p>Jesień w tym roku wzięła nas zdecydowanie z zaskoczenia. I chociaż niektórzy mogą narzekać na pluchę i zimno, dla mnie jest to pogoda stworzona do pewnego typu zajęć. Są nimi: programowanie i czytanie. Dlatego wraz z nadejściem pierwszych deszczy zaopatruje się w kubek herbaty, ciepłe skarpety, książkę (lub komputer) i działam. W ten właśnie sposób pierwszą ofiarą tej jesieni stały się “Labirynty Scruma” Jacka Wieczorka. Napisałam dla Was o niej kilka słów, więc “kubki w dłoń!” i zapraszam do czytania.<br><a id="more"></a></p>
 <p>Siedzicie wygodnie? Na początu chcę Was poprosić byście wyobrazili sobie cały proces w wyniku którego powstaje software. Teraz wyrzućcie, proszę, z tego obrazu czynność programowania. To co zostało dobrze określa to, co w wytwarzaniu oprogramowania najbardziej mnie interesuje. Proces zaczynający się u użytkownika, a kończący na serwerze produkcyjnym, ludzie, zespoły i ich interakcje, klienci i użytkownicy oraz ich potrzeby i wymagania.</p>
@@ -40,6 +89,8 @@
       &lt;p&gt;Jesień w tym roku wzięła nas zdecydowanie z zaskoczenia. I chociaż niektórzy mogą narzekać na pluchę i zimno, dla mnie jest to pogoda stworzona do pewnego typu zajęć. Są nimi: programowanie i czytanie. Dlatego wraz z nadejściem pierwszych deszczy zaopatruje się w kubek herbaty, ciepłe skarpety, książkę (lub komputer) i działam. W ten właśnie sposób pierwszą ofiarą tej jesieni stały się “Labirynty Scruma” Jacka Wieczorka. Napisałam dla Was o niej kilka słów, więc “kubki w dłoń!” i zapraszam do czytania.&lt;br&gt;
     
     </summary>
+    
+      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/categories/Recenzje/"/>
     
     
       <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
@@ -94,9 +145,9 @@
     
       <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
-      <category term="Dobre praktyki" scheme="https://kernelgonnapanic.pl/tags/Dobre-praktyki/"/>
-    
       <category term="Code Europe" scheme="https://kernelgonnapanic.pl/tags/Code-Europe/"/>
+    
+      <category term="Dobre praktyki" scheme="https://kernelgonnapanic.pl/tags/Dobre-praktyki/"/>
     
   </entry>
   
@@ -138,7 +189,7 @@
     <link href="https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/"/>
     <id>https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/</id>
     <published>2017-07-29T13:12:00.000Z</published>
-    <updated>2017-08-08T19:28:54.000Z</updated>
+    <updated>2017-10-13T05:35:10.000Z</updated>
     
     <content type="html"><![CDATA[<p>“Testy, hmmm… testy… Ja przepraszam bardzo, ale czy ktoś je kiedykolwiek widział we frontendowym repozytorium? Ja rozumiem że na backendzie, ale żeby na frontendzie? No chyba się tym programistom w głowach poprzewracało i za dużo czasu mają”</p>
 <p>Czyżby?<br><a id="more"></a></p>
@@ -162,15 +213,13 @@
     </summary>
     
     
-      <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
-    
       <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
+      <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
     
       <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
     
       <category term="Tutoriale" scheme="https://kernelgonnapanic.pl/tags/Tutoriale/"/>
-    
-      <category term="Frontend testing" scheme="https://kernelgonnapanic.pl/tags/Frontend-testing/"/>
     
   </entry>
   
@@ -242,11 +291,11 @@
     
       <category term="Z Pamiętnika Programistki" scheme="https://kernelgonnapanic.pl/tags/Z-Pamietnika-Programistki/"/>
     
-      <category term="Code Europe" scheme="https://kernelgonnapanic.pl/tags/Code-Europe/"/>
-    
       <category term="Konferencje" scheme="https://kernelgonnapanic.pl/tags/Konferencje/"/>
     
       <category term="Girls in IT" scheme="https://kernelgonnapanic.pl/tags/Girls-in-IT/"/>
+    
+      <category term="Code Europe" scheme="https://kernelgonnapanic.pl/tags/Code-Europe/"/>
     
       <category term="Front Trends" scheme="https://kernelgonnapanic.pl/tags/Front-Trends/"/>
     
@@ -642,39 +691,6 @@
   </entry>
   
   <entry>
-    <title>Nawyki mistrzów</title>
-    <link href="https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/"/>
-    <id>https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/</id>
-    <published>2016-08-11T07:10:00.000Z</published>
-    <updated>2017-03-16T18:30:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Kolejny <strong>Rozwojowy Poniedziałek</strong> przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili <strong>nawyki mistrzów</strong>.<br><a id="more"></a></p>
-<h3 id="Mistrzowie-wstaja-wczesnie"><a href="#Mistrzowie-wstaja-wczesnie" class="headerlink" title="Mistrzowie wstają wcześnie."></a>Mistrzowie wstają wcześnie.</h3><p>Wstawanie 2 czy 3 godziny przed wyjściem z domu rano może wydawać się przerażające. Często jednak nie zdajemy sobie sprawy ile możliwości nam oferuje. Mamy czas, by przy kubku świeżo zaparzonej kawy przemyśleć, co czeka nas w nadchodzącym dniu. Znajdzie się też na pewno pół godziny na trening. Możemy wybrać się na jesienny spacer i posłuchać muzyki czy podcastu. Obejrzeć motywujący wykładu czy poczytać książkę. Tak! Naprawdę da radę to zrobić rano! A co więcej, przy okazji ćwiczymy naszą silną wolę.</p>
-<h3 id="Mistrzowie-cwicza-kilka-razy-w-tygodniu"><a href="#Mistrzowie-cwicza-kilka-razy-w-tygodniu" class="headerlink" title="Mistrzowie ćwiczą kilka razy w tygodniu."></a>Mistrzowie ćwiczą kilka razy w tygodniu.</h3><p>Sport to szkoła osiągania sukcesów. Gdy wylewamy siódme poty na siłowni lub pokonujemy nasty kilometr w terenie ćwiczymy naszą wytrwałość, determinację w osiąganiu celów i silną wolę. Podczas ćwiczeń wentylujemy nasz mózg, ryzykując zalewem dobrych pomysłów i wyzwalamy produkcję endorfin, które sprawiają, że nic już nam nie jest straszne.</p>
-<p>Ruszenie się z kanapy po ciężkim dniu pracy jest trudne. Przyznaję. Jednak mistrzowie mają na to sposoby ;) Dobrym pomysłem jest wybranie się na siłownię rano lub od razu po pracy, szkole, uczelni.</p>
-<h3 id="Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…"><a href="#Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…" class="headerlink" title="Mistrzowie planują zadania na dany dzień, tydzień, rok…"></a>Mistrzowie planują zadania na dany dzień, tydzień, rok…</h3><p>Bez planu zginiemy. Zatoniemy w natłoku obowiązków, zaległych terminów, wizyt u dentysty i telefonów z okazji urodzin. Mistrzowie wiedzą, że lista zadań na dany dzień to obowiązek! Jednak, by rozwijać się w pożądanym kierunku w perspektywie długoterminowej potrzebujemy też listy celów na najbliższy miesiąc czy rok. Zerkanie co jakiś czas na spis naszych priorytetów i dążeń pozwala nam upewnić się czy jesteśmy na dobrej drodze.</p>
-<h3 id="Mistrzowie-rozwijaja-swoja-siec-kontaktow"><a href="#Mistrzowie-rozwijaja-swoja-siec-kontaktow" class="headerlink" title="Mistrzowie rozwijają swoją sieć kontaktów."></a>Mistrzowie rozwijają swoją sieć kontaktów.</h3><p>My, zwykli zjadacze chleba, często nie doceniamy wagi i siły networkingu. Nie mamy na to czasu, nie lubimy rozmawiać z obcymi ludźmi. Ale przecież… Poznawanie nowych ludzi jest fajne! I inspirujące! I wnosi bardzo dużo do naszego życia :) Szczególnie, gdy poznajemy ludzi spoza naszej branży. W ten sposób poszerzamy nasze horyzonty i często jesteśmy zmuszeni do wyjścia ze strefy komfortu. A każde wyjście z naszej bezpiecznej skorupki jest wejściem do świata “where the magic happens”.</p>
-<p>Czy Was również jesień tak motywuje?</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Kolejny &lt;strong&gt;Rozwojowy Poniedziałek&lt;/strong&gt; przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili &lt;strong&gt;nawyki mistrzów&lt;/strong&gt;.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
-    
-      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
-    
-      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
-    
-      <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Akcja Subskrypcja</title>
     <link href="https://kernelgonnapanic.pl/2016/08/11/Akcja-Subskrypcja/"/>
     <id>https://kernelgonnapanic.pl/2016/08/11/Akcja-Subskrypcja/</id>
@@ -716,6 +732,39 @@
   </entry>
   
   <entry>
+    <title>Nawyki mistrzów</title>
+    <link href="https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/"/>
+    <id>https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/</id>
+    <published>2016-08-11T07:10:00.000Z</published>
+    <updated>2017-03-16T18:30:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Kolejny <strong>Rozwojowy Poniedziałek</strong> przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili <strong>nawyki mistrzów</strong>.<br><a id="more"></a></p>
+<h3 id="Mistrzowie-wstaja-wczesnie"><a href="#Mistrzowie-wstaja-wczesnie" class="headerlink" title="Mistrzowie wstają wcześnie."></a>Mistrzowie wstają wcześnie.</h3><p>Wstawanie 2 czy 3 godziny przed wyjściem z domu rano może wydawać się przerażające. Często jednak nie zdajemy sobie sprawy ile możliwości nam oferuje. Mamy czas, by przy kubku świeżo zaparzonej kawy przemyśleć, co czeka nas w nadchodzącym dniu. Znajdzie się też na pewno pół godziny na trening. Możemy wybrać się na jesienny spacer i posłuchać muzyki czy podcastu. Obejrzeć motywujący wykładu czy poczytać książkę. Tak! Naprawdę da radę to zrobić rano! A co więcej, przy okazji ćwiczymy naszą silną wolę.</p>
+<h3 id="Mistrzowie-cwicza-kilka-razy-w-tygodniu"><a href="#Mistrzowie-cwicza-kilka-razy-w-tygodniu" class="headerlink" title="Mistrzowie ćwiczą kilka razy w tygodniu."></a>Mistrzowie ćwiczą kilka razy w tygodniu.</h3><p>Sport to szkoła osiągania sukcesów. Gdy wylewamy siódme poty na siłowni lub pokonujemy nasty kilometr w terenie ćwiczymy naszą wytrwałość, determinację w osiąganiu celów i silną wolę. Podczas ćwiczeń wentylujemy nasz mózg, ryzykując zalewem dobrych pomysłów i wyzwalamy produkcję endorfin, które sprawiają, że nic już nam nie jest straszne.</p>
+<p>Ruszenie się z kanapy po ciężkim dniu pracy jest trudne. Przyznaję. Jednak mistrzowie mają na to sposoby ;) Dobrym pomysłem jest wybranie się na siłownię rano lub od razu po pracy, szkole, uczelni.</p>
+<h3 id="Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…"><a href="#Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…" class="headerlink" title="Mistrzowie planują zadania na dany dzień, tydzień, rok…"></a>Mistrzowie planują zadania na dany dzień, tydzień, rok…</h3><p>Bez planu zginiemy. Zatoniemy w natłoku obowiązków, zaległych terminów, wizyt u dentysty i telefonów z okazji urodzin. Mistrzowie wiedzą, że lista zadań na dany dzień to obowiązek! Jednak, by rozwijać się w pożądanym kierunku w perspektywie długoterminowej potrzebujemy też listy celów na najbliższy miesiąc czy rok. Zerkanie co jakiś czas na spis naszych priorytetów i dążeń pozwala nam upewnić się czy jesteśmy na dobrej drodze.</p>
+<h3 id="Mistrzowie-rozwijaja-swoja-siec-kontaktow"><a href="#Mistrzowie-rozwijaja-swoja-siec-kontaktow" class="headerlink" title="Mistrzowie rozwijają swoją sieć kontaktów."></a>Mistrzowie rozwijają swoją sieć kontaktów.</h3><p>My, zwykli zjadacze chleba, często nie doceniamy wagi i siły networkingu. Nie mamy na to czasu, nie lubimy rozmawiać z obcymi ludźmi. Ale przecież… Poznawanie nowych ludzi jest fajne! I inspirujące! I wnosi bardzo dużo do naszego życia :) Szczególnie, gdy poznajemy ludzi spoza naszej branży. W ten sposób poszerzamy nasze horyzonty i często jesteśmy zmuszeni do wyjścia ze strefy komfortu. A każde wyjście z naszej bezpiecznej skorupki jest wejściem do świata “where the magic happens”.</p>
+<p>Czy Was również jesień tak motywuje?</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Kolejny &lt;strong&gt;Rozwojowy Poniedziałek&lt;/strong&gt; przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili &lt;strong&gt;nawyki mistrzów&lt;/strong&gt;.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
+    
+      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
+    
+      <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Nie tłumacz się, działaj!</title>
     <link href="https://kernelgonnapanic.pl/2016/08/08/NieTlumaczSieDzialaj/"/>
     <id>https://kernelgonnapanic.pl/2016/08/08/NieTlumaczSieDzialaj/</id>
@@ -745,9 +794,9 @@
     
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
-    
       <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
+    
+      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
       <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
     
@@ -784,44 +833,9 @@
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
-      <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
-    
       <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.pl/tags/RozwojowyPoniedzialek/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Trzy litery i kropka - czy studia mają sens?</title>
-    <link href="https://kernelgonnapanic.pl/2016/02/06/Trzy-litery-i-kropka/"/>
-    <id>https://kernelgonnapanic.pl/2016/02/06/Trzy-litery-i-kropka/</id>
-    <published>2016-02-06T18:12:00.000Z</published>
-    <updated>2017-03-16T18:30:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>Inż.</strong> - trzy magiczne literki i kropka. Gdy stawiałeś swoje pierwsze kroki na uczelni, cztery lata temu, były one odległym i upragnionym celem. Miały sprawić, że narody przed Tobą klękną, a pracodawcy będą ustawiać się do Ciebie w kolejce. Wyszarpane, opłacone potem i krwią, wreszcie przywędrowały i dumnie zasiadły przed twoim nazwiskiem. Tylko jedna rzecz zaczęła Cię nurtować: “Czemu nic się nie zmieniło?”.<br><a id="more"></a>  </p>
-<p>Budzisz się z kacem po “opijaniu inżyniera”. Jest godzina 13:00. Wzdychasz. Robisz sobie kanapkę. Włączasz telewizor. W końcu Ci się należy, tyle uczyłeś się do tego egzaminu. Przełączasz kanał. I jeszcze raz. Zerkasz na zegarek, już 18:00. W międzyczasie obejrzałeś na facebook’u posty wszystkich kolegów, którzy też cieszą się z tytułu. Sprawdziłeś Instagrama, 9gag’a, Kwejka. Cztery razy. Czekasz. Na ofertę pracy. Na poniedziałek. Na lepszy dzień.  </p>
-<h2 id="Czekanie-na-…"><a href="#Czekanie-na-…" class="headerlink" title="Czekanie na …"></a>Czekanie na …</h2><p>Chcę Ci powiedzieć, że można tak czekać w nieskończoność. Liczyć na to, że “trzy literki i kropka” przed nazwiskiem w magiczny sposób zmienią twoją przyszłość. Nie uczyć się na własną rękę wierząc w to, że będąc markowym produktem politechniki będziesz atrakcyjny na rynku pracy.  </p>
-<p>Jednak takie podejście szybko może przynieść rozczarowanie. W szczególności, gdy po wyjściu z sali egzaminacyjnej, z piękną piąteczką na dyplomie, rozejrzysz się dookoła i stwierdzisz, że nic się nie zmieniło. Nic a nic. Lub na rozmowie kwalifikacyjnej zapytają się Ciebie o to, co zrobiłeś przez te 4 lata. A ty nie będziesz w stanie wymyślić nic sensownego.  </p>
-<div class="figure center fig-100" style="width:;"><img class="fig-img" src="clock.jpg" alt=""></div><div style="clear:both;"></div>
-<h2 id="Czy-studia-maja-sens"><a href="#Czy-studia-maja-sens" class="headerlink" title="Czy studia mają sens?"></a>Czy studia mają sens?</h2><p>Studia przede wszystkim dają Ci czas. Czas na naukę, staż, praktyki, podjęcie pierwszej pracy “na próbę”. Nikt Cię wtedy nie goni, nie wymaga, byś zarabiał na rodzinę. Możesz eksperymentować, być odważnym, stawiać sobie wyzwania. Spróbować wielu rzeczy i wielu rzeczy się nauczyć.  </p>
-<p>Jest to też świetny czas na spełnianie marzeń, podróżowanie, odkrywanie świata. Studencki portfel jest cienki, ale mam nadzieję, że już zdążyłeś się przekonać, że nie potrzeba dużej ilości pieniędzy, by zwiedzać świat. To czas na nabieranie doświadczenia, poznawanie ludzi, działalność społeczną.  </p>
-<h2 id="Dobrze-wykorzystaj-ten-czas"><a href="#Dobrze-wykorzystaj-ten-czas" class="headerlink" title="Dobrze wykorzystaj ten czas."></a>Dobrze wykorzystaj ten czas.</h2><p>Gdy dobrze wykorzystasz ten czas, na pytanie: “co zrobiłeś w czasie studiów?” będziesz miał szansę pochwalić się stażem, który robiłeś za granicą, opowiedzieć o tym, co jadłeś na przedmieściach Sajgonu czy zaprezentować grę, którą stworzyłeś z kolegami.  </p>
-<p>Nie pozwólcie, by studia były dla Was czasem czekania - aż profesor Was czegoś nauczy, aż będziecie wystarczająco poważni/dojrzali/starzy, by mieć pracę czy odnieść sukces. To wy sterujecie swoim losem i to od Was zależy na co poświęcacie swój czas.  </p>
-<p><strong>Ania</strong>  </p>
-<p>A jakie jest wasze podejście do studiowania? Warto?</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;Inż.&lt;/strong&gt; - trzy magiczne literki i kropka. Gdy stawiałeś swoje pierwsze kroki na uczelni, cztery lata temu, były one odległym i upragnionym celem. Miały sprawić, że narody przed Tobą klękną, a pracodawcy będą ustawiać się do Ciebie w kolejce. Wyszarpane, opłacone potem i krwią, wreszcie przywędrowały i dumnie zasiadły przed twoim nazwiskiem. Tylko jedna rzecz zaczęła Cię nurtować: “Czemu nic się nie zmieniło?”.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
-    
-      <category term="O szczęściu" scheme="https://kernelgonnapanic.pl/tags/O-szczesciu/"/>
-    
-      <category term="Studia" scheme="https://kernelgonnapanic.pl/tags/Studia/"/>
+      <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
     
   </entry>
   
