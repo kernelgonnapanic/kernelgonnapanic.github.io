@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2017-11-02T21:15:50.000Z</updated>
+  <updated>2017-11-02T21:32:30.000Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -20,11 +20,10 @@
     <link href="https://kernelgonnapanic.pl/2017/10/29/jak-sprawic-by-aplikacja-w-react-byla-dry/"/>
     <id>https://kernelgonnapanic.pl/2017/10/29/jak-sprawic-by-aplikacja-w-react-byla-dry/</id>
     <published>2017-10-29T12:35:00.000Z</published>
-    <updated>2017-11-02T21:15:50.000Z</updated>
+    <updated>2017-11-02T21:32:30.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Jestem przekonana, że większość z Was, spotkała się już w swojej karierze z zasadą “don’t repeat yourself”. Nie ważne w jakim języku programujemy, dążymy do tego, by nasz kod był <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank" rel="external">DRY</a>. Z tego powodu korzystamy z różnego rodzaju abstrakcji czy wzorców, które pozwalają nam na uniknięcie kopiowana fragmentów kodu i konieczności późniejszego ich utrzymywania. Dziś chciałabym pokazać Wam 2 wzorce, które możecie zastosować w przypadku aplikacji bazujących na React’cie.<br><a id="more"></a><br><div class="figure center fig-50" style="width:;"><img class="fig-img" src="hoc.gif" alt=""></div><br>Wyobraźmy sobie klasyczną aplikację React’ową. Składa się ona z wielu komponentów, a jej rozszerzanie i rozbudowywanie zazwyczaj łączy się z tworzeniem kolejnych. Załóżmy, że naszym dzisiejszym zadaniem jest dodanie animującego się header’a. Chcielibyśmy, by początkowo był on przeźroczysty (opacity: 0) i w raz ze scrollowaniem strony, był coraz bardziej widoczny (aż do opacity: 1). Końcowym efektem jest to, co widzicie na gifie obok.</p>
-<div style="clear: both"></div>
-
+    <content type="html"><![CDATA[<p>Jestem przekonana, że większość z Was, spotkała się już w swojej karierze z zasadą “don’t repeat yourself”. Nie ważne w jakim języku programujemy, dążymy do tego, by nasz kod był <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank" rel="external">DRY</a>. Z tego powodu korzystamy z różnego rodzaju abstrakcji czy wzorców, które pozwalają nam na uniknięcie kopiowana fragmentów kodu i konieczności późniejszego ich utrzymywania. Dziś chciałabym pokazać Wam 2 wzorce, które możecie zastosować w przypadku aplikacji bazujących na React’cie.<br><a id="more"></a><br>Wyobraźmy sobie klasyczną aplikację React’ową. Składa się ona z wielu komponentów, a jej rozszerzanie i rozbudowywanie zazwyczaj łączy się z tworzeniem kolejnych. Załóżmy, że naszym dzisiejszym zadaniem jest dodanie animującego się header’a. Chcielibyśmy, by początkowo był on przeźroczysty (opacity: 0) i w raz ze scrollowaniem strony, był coraz bardziej widoczny (aż do opacity: 1). Końcowym efektem jest to, co widzicie na gifie poniżej.</p>
+<div class="figure center fig-100" style="width:;"><img class="fig-img" src="hoc.gif" alt=""></div>
 <p>Pierwszym naszym rozwiązaniem jest umieszczenie kodu odpowiedzialnego za tę funkcjonalność w komponencie, który wyświetla header i listę.</p>
 <figure class="highlight js"><figcaption><span>DummyPage.js</span><a href="https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/pages/DummyPage.js" target="_blank" rel="external">DummyPage.js</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">DummyPage</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>() &#123;</div><div class="line">    <span class="keyword">super</span>();</div><div class="line">    <span class="keyword">this</span>.state = &#123;</div><div class="line">      <span class="attr">scrollPos</span>: <span class="number">0</span>,</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">this</span>.scrollView = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">this</span>.handleScroll = <span class="keyword">this</span>.handleScroll.bind(<span class="keyword">this</span>);</div><div class="line">    <span class="keyword">this</span>.calculateOpacity = <span class="keyword">this</span>.calculateOpacity.bind(<span class="keyword">this</span>);</div><div class="line">  &#125;</div><div class="line">  calculateOpacity() &#123;</div><div class="line">    <span class="keyword">if</span>(!<span class="keyword">this</span>.state.scrollPos) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.state.scrollPos &gt; <span class="number">200</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.state.scrollPos / <span class="number">200</span>;</div><div class="line">  &#125;</div><div class="line">  handleScroll() &#123;</div><div class="line">    <span class="keyword">if</span>(!<span class="keyword">this</span>.scrollView) <span class="keyword">return</span>;</div><div class="line">    <span class="keyword">const</span> scrollPos = <span class="keyword">this</span>.scrollView.scrollTop;</div><div class="line">    <span class="keyword">this</span>.setState(&#123; scrollPos &#125;);</div><div class="line">  &#125;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;div</div><div class="line">        className="container"</div><div class="line">        onScroll=&#123;this.handleScroll&#125;</div><div class="line">        ref=&#123;ref =&gt; this.scrollView = ref&#125;</div><div class="line">      &gt;</div><div class="line">        &lt;Header</div><div class="line">          opacity=&#123;this.calculateOpacity()&#125;</div><div class="line">          text="Dummy page"</div><div class="line">        /&gt;</div><div class="line">        &lt;List /&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>Wszystko pięknie śmiga, więc jesteśmy zadowoleni. Jednak za kilka dni, okazuje się, że to rozwiązanie tak przypadło użytkownikom do gustu, że chcielibyśmy je zastosować w innych miejscach aplikacji. I co teraz? Wiemy dobrze, że kopiowanie kodu odpowiedzialnego za animowanie headera to nie jest dobry pomysł. Jak sprawić, byśmy mogli użyć tego zachowania w wielu miejscach aplikacji?</p>
@@ -54,13 +53,13 @@
     </summary>
     
     
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
       <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
     
-      <category term="Dobre praktyki" scheme="https://kernelgonnapanic.pl/tags/Dobre-praktyki/"/>
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="React" scheme="https://kernelgonnapanic.pl/tags/React/"/>
+    
+      <category term="Dobre praktyki" scheme="https://kernelgonnapanic.pl/tags/Dobre-praktyki/"/>
     
   </entry>
   
@@ -145,9 +144,9 @@
     
       <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
-      <category term="Code Europe" scheme="https://kernelgonnapanic.pl/tags/Code-Europe/"/>
-    
       <category term="Dobre praktyki" scheme="https://kernelgonnapanic.pl/tags/Dobre-praktyki/"/>
+    
+      <category term="Code Europe" scheme="https://kernelgonnapanic.pl/tags/Code-Europe/"/>
     
   </entry>
   
@@ -213,9 +212,9 @@
     </summary>
     
     
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
       <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
     
@@ -291,11 +290,11 @@
     
       <category term="Z Pamiętnika Programistki" scheme="https://kernelgonnapanic.pl/tags/Z-Pamietnika-Programistki/"/>
     
+      <category term="Code Europe" scheme="https://kernelgonnapanic.pl/tags/Code-Europe/"/>
+    
       <category term="Konferencje" scheme="https://kernelgonnapanic.pl/tags/Konferencje/"/>
     
       <category term="Girls in IT" scheme="https://kernelgonnapanic.pl/tags/Girls-in-IT/"/>
-    
-      <category term="Code Europe" scheme="https://kernelgonnapanic.pl/tags/Code-Europe/"/>
     
       <category term="Front Trends" scheme="https://kernelgonnapanic.pl/tags/Front-Trends/"/>
     
@@ -608,9 +607,9 @@
     
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
-    
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
       <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
     
@@ -721,11 +720,11 @@
     </summary>
     
     
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
-    
       <category term="AkcjaSubskrypcja" scheme="https://kernelgonnapanic.pl/tags/AkcjaSubskrypcja/"/>
     
       <category term="Internet" scheme="https://kernelgonnapanic.pl/tags/Internet/"/>
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
@@ -794,9 +793,9 @@
     
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
-    
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
+    
+      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
     
       <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
     
