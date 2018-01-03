@@ -1,6 +1,6 @@
 ---
 title: W prawo czy w lewo? "Labirynty Scruma" Jacka Wieczorka
-thumbnailImagePosition: top
+thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial
 date: 2017-09-23 17:49:33

@@ -5,7 +5,6 @@ tags:
   - Javascript
   - Tutoriale
   - Frontend
-  - Frontend testing
 thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial
