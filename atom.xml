@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2018-01-02T13:06:10.000Z</updated>
+  <updated>2018-02-25T22:07:27.000Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -16,11 +16,78 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Snapshot testing - co to takiego? [Frontend testing #2]</title>
+    <link href="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/"/>
+    <id>https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/</id>
+    <published>2018-02-15T20:56:00.000Z</published>
+    <updated>2018-02-25T22:07:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<!-- excerpt --></p>
+<p>Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Obiecałam wtedy kilka fajnych wpisów dotyczących narzędzi, jakie mamy do dyspozycji pisząc testy w JSie. Mam nadzieję, że nie zapomnieliście o temacie!</p>
+<p>A w dzisiejszym odcinku zobaczymy czym jest <strong>Jest</strong>. Dokładniej przyjrzymy się jednej z jego funkcjonalności, jaką jest snapshot testing. Czytajcie do końca, żeby dowiedzieć się, co tam jeszcze knuję w temacie wpisów o testowaniu. Enjoy!</p>
+<h2 id="Jest-co-to-jest"><a href="#Jest-co-to-jest" class="headerlink" title="Jest - co to jest ?"></a>Jest - co to jest ?</h2><p>Zacznijmy od tego co to jest ten Jest i co może nam zaoferować. Żeby móc wygodnie pisać frontowe testy jednostkowe potrzebujemy narzędzi, które pomagają w uruchomieniu tych testów oraz usprawniają walidowanie wyników poszczególnych operacji. Gdy chcemy do tego podejść bardziej szczegółowo, jest to kilka poziomów, o które musimy się zatroszczyć. Jest środowisko uruchomieniowe (test runner), mamy również test framework, który definuje jak od strony kodu będą wyglądać nasze testy oraz potrzebujemy narzędzia, które ułatwia pisanie asercji, czyli walidowanie efektów np. wywołania funkcji (assertion library).</p>
+<p>Do tej pory elementy te często istniały jako osobne biblioteki, obecnie często są nam podane w jednym pakiecie. I tak też jest w przypadku Jesta.<br>Jeśli ktoś chciałby się dowiedzieć trochę więcej o tym, z jakich elementów składa się środowisko testowe i czym się od siebie różnią, <a href="http://amzotti.github.io/testing/2015/03/16/what-is-the-difference-between-a-test-runner-testing-framework-assertion-library-and-a-testing-plugin/" target="_blank" rel="external">tutaj</a> znajdziecie fajny artykuł na ten temat.</p>
+<p>Ustaliliśmy już, że Jest oferuje nam wszystko co jest potrzebne do wystartowania z pisaniem testów. Co więcej twórcy chwalą się, że jest to narzędzie typu zero-configuration. Z moich doświadczeń wynika jednak, że nie zawsze obędziemy się bez dodatkowej konfiguracji i jeśli twój projekt korzysta z preprocesorów czy np. jakichś specyficznych loaderów do webpacka to zazwyczaj trzeba coś więcej poustawiać.</p>
+<h2 id="Co-fajnego-Jest-nam-oferuje"><a href="#Co-fajnego-Jest-nam-oferuje" class="headerlink" title="Co fajnego Jest nam oferuje?"></a>Co fajnego Jest nam oferuje?</h2><ol>
+<li><p>Dla mnie najistotniejszy jest fakt, że Jest jest ewidentnie rezultatem ewolucji narzędzi do testowania. Mamy tu do dyspozycji wbudowany mechanizm do mockowania na poziomie rozwiązywania zależności (importów), ale też możemy ręcznie podmienić implementację danej funkcji na czas testów. Zgrabnie też jesteśmy w stanie testować kod asynchroniczny, używając np. konstrukcji async/await. Dodatkowo mamy również wbudowane mierzenie pokrycia kodu, co czasem przydaje się w celach informacyjnych, jednak z wielu powodów nie powinno być traktowane jako wyznacznik jakości otestowania kodu.</p>
+<p><em>Przykład tworzenia mocków.</em></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> mock = jest.fn();</div><div class="line"></div><div class="line"><span class="keyword">const</span> betterMock = jest.fn(<span class="function"><span class="params">()</span> =&gt;</span> (&#123;</div><div class="line">  <span class="attr">answerToLife</span>: <span class="number">42</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><em>Przykład testowania wyniku asynchronicznej operacji</em></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">test(<span class="string">'the data is peanut butter'</span>, <span class="keyword">async</span> () =&gt; &#123;</div><div class="line">  expect.assertions(<span class="number">1</span>);</div><div class="line">  <span class="keyword">const</span> data = <span class="keyword">await</span> fetchData();</div><div class="line">  expect(data).toBe(<span class="string">'peanut butter'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>Zespoły, które wcześniej korzystały z innego setupu dla testów jednostkowych względnie łatwo mogą się przesiąść na Jest’a, ponieważ wspiera on składnie Jasmine’a. Dla tych, którzy korzystali z mniej popularnych opcji, istnieją rozwiązania takie jak <code>jest-codemods</code>, które jednorazowo zmieniają składnię testów i wykonują większość brudnej roboty za nas.</p>
+</li>
+<li>Jest’a z podstawowymi ustawieniami, gotowego do działania otrzymujemy “za darmo”, gdy tworzymy nową aplikację używając <code>create-react-app</code> lub <code>react-native init</code>.</li>
+<li>No i oczywiście oferuje mechanizm do testowania za pomocą snapshotów, którym za raz się zajmiejmy w szczegółach.</li>
+</ol>
+<h2 id="Co-to-jest-snapshot-testing"><a href="#Co-to-jest-snapshot-testing" class="headerlink" title="Co to jest snapshot testing?"></a>Co to jest snapshot testing?</h2><p>Testowanie przy użyciu snapshotów jest jednym z rodzajów testów, które możemy tworzyć dla kodu frontendowego. Przydaje się w szczególności do testowania komponentów (np. w React czy Vue), ale możemy bazując na tym podejściu pisać też testy logiki biznesowej.</p>
+<p>Głównym jego założeniem jest porównywanie wyniku uruchomienia funkcji z jakimś oczekiwanym efektem, który w postaci pliku przechowujemy w repozytorium. W rezultacie uruchomienia testu otrzymujemy diffa między aktualnym, a oczekiwanym rezultatem. Podejrzewam, że nadal nie jest to wystarczająco jasne, dlatego rzućmy okiem na przykład.</p>
+<p>Załóżmy, że chcemy przetestować wynik renderowania komponentu <code>Article</code> w React:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Article</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;div className="article"&gt;</div><div class="line">        &lt;header className="article-header"&gt;</div><div class="line">          &#123;this.props.title&#125;</div><div class="line">        &lt;/header&gt;</div><div class="line">        &#123;this.props.children&#125;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> Article;</div></pre></td></tr></table></figure></p>
+<p>Tworzymy do niego nasz pierwszy snapshot test.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> Article <span class="keyword">from</span> <span class="string">'./Article.js'</span>;</div><div class="line"><span class="keyword">import</span> renderer <span class="keyword">from</span> <span class="string">'react-test-renderer'</span>;</div><div class="line"></div><div class="line">it(<span class="string">'renders correctly'</span>, () =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> tree = renderer</div><div class="line">    .create(&lt;Article title="Title"&gt;The contents&lt;/Article&gt;)</div><div class="line">    .toJSON();</div><div class="line">  expect(tree).toMatchSnapshot();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>Zauważmy, że używamy <code>react-test-renderer</code>, by stworzyć instancję komponentu, a następnie wywołujemy metodę <code>toJSON</code>. Mówi to nam o tym, że efekt renderowania tego komponentu będzie serializowany do stringa. W asercji oczekujemy, że rezultat będzie odpowiadał snapshotowi.</p>
+<p><strong>Ale co to ten snapshot i gdzie on się znajduje?</strong></p>
+<p>Gdy pierwszy raz uruchomimy ten test zauważymy, że obok komponentu pojawił się katalog <code>__snapshots__</code> z plikiem o takiej zawartości:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">exports[<span class="string">`renders correctly 1`</span>] = <span class="string">`</span></div><div class="line">&lt;div</div><div class="line">  className="article"</div><div class="line">&gt;</div><div class="line">  &lt;header</div><div class="line">    className="article-header"</div><div class="line">  &gt;</div><div class="line">    Title</div><div class="line">  &lt;/header&gt;</div><div class="line">  The contents</div><div class="line">&lt;/div&gt;</div><div class="line">`;</div></pre></td></tr></table></figure>
+<p>To jest właśnie snapshot, stworzony przy pierwszym uruchomieniu testu, do którego będziemy z każdym kolejnym odpaleniem testu porównywać wynik. Widzimy, że jest to zserializowany wynik wywołania funkcji render, zapis w postaci tekstowej drzewa DOM, które zostałoby wygenerowane dla tego komponentu.</p>
+<h2 id="Praca-ze-snapshotami"><a href="#Praca-ze-snapshotami" class="headerlink" title="Praca ze snapshotami"></a>Praca ze snapshotami</h2><p>Przejdźmy teraz może przez cały proces pracy z snapshotami, żeby sobie go utrwalić.</p>
+<ol>
+<li>Pierwsze uruchomienie testu, generuje nam bazowy snapshot.</li>
+<li>Snapshot jest przechowywany w repozytorium jako wzorzec prawidłowego rezultatu testu.</li>
+<li>Za każdym razem, gdy wprowadzamy jakieś zmiany w aplikacji, uruchamiamy testy i sprawdzamy czy ich wyniki są nadal prawidłowe.</li>
+<li>Jeśli w wyniku naszych zmian, wzorzec w postaci snapshota musi ulec zmianie jesteśmy w stanie go nadpisać za pomocą komendy <code>jest -u</code>.</li>
+</ol>
+<p>Ponieważ snapshot jest przechowywany w repozytorium każda jego zmiana jest częścią naszych pull requestów, co za tym idzie przechodzi również code review. Jest to bardzo ważny etap, ponieważ pomaga zwalidować czy zmiany w snapshocie nie są wynikiem błędu lub są niepotrzebne.</p>
+<h2 id="Ale-po-co"><a href="#Ale-po-co" class="headerlink" title="Ale po co?"></a>Ale po co?</h2><p>Snapshot testy komponentów sprawdzają czy będą one wyglądać tak, jak tego oczekujemy. W szczególności pozwalają na zobaczenie, jak wygląd tego komponentu będzie się zmieniał pod wpływem różnego rodzaju propsów do niego przekazywanych. Dodatkowo, jeśli używamy jakiegoś z narzędzi, które bazuje na ustawianiu styli inline, możemy również walidować ich poprawność (skąd już bardzo blisku do visual regression testing). Nie testują one jednak zachowania komponentu, np. wykonania odpowiednej akcji po kliknięciu. Tym tematem zajmiemy się już niedługo.</p>
+<p>Na dziś już wystarczy :) Czuję jednak, że temat nie jest wyczerpany, dlatego chciałabym poświęcić mu kolejny artykuł. Jeśli masz jakieś pytanie związane z testowaniem z użyciem snapshotów, zadaj je proszę w komentarzu, a ja postaram się na nie odpowiedzieć w kolejnym wpisie.</p>
+<p>Oprócz testowania fukcjonalności komponentów czy kolejnego wpisu odnośnie pracy z snapshotami, w ramach naszej serii planuję również poruszyć temat testów e2e, testów dla React Native (Detox, Appium) czy visual regression testing. Na pewno znajdziecie wśród nich czegoś dla siebie, czegoś, co pozwoli Wam pisać lepsze aplikacje frontendowe 💻</p>
+<p>Jeżeli nie chcecie przegapić żadnego wpisu w tym temacie, zapraszam do polubienia fanpage’a bloga <a href="https://www.facebook.com/kernelgonnapanic/" target="_blank" rel="external">[TUTAJ]</a>.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Dziś porozmawiamy o Jest oraz snapshot testingu - jednej z jego funkcjonalności.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
+      <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
+    
+      <category term="Tutoriale" scheme="https://kernelgonnapanic.pl/tags/Tutoriale/"/>
+    
+      <category term="FrontendTesting" scheme="https://kernelgonnapanic.pl/tags/FrontendTesting/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Moje plany na 2018</title>
     <link href="https://kernelgonnapanic.pl/2018/01/01/moje-plany-2018/"/>
     <id>https://kernelgonnapanic.pl/2018/01/01/moje-plany-2018/</id>
     <published>2018-01-01T18:35:00.000Z</published>
-    <updated>2018-01-02T13:06:10.000Z</updated>
+    <updated>2018-02-15T21:21:19.000Z</updated>
     
     <content type="html"><![CDATA[<p>Nie jestem fanką zaczynania od jutra, od poniedziałku, od Nowego Roku. Każda pora jest dobra, by coś w swoim życiu zmienić.<br>Ale nie da się ukryć, że koniec roku jest świetną okazją na przemyślenie pewnych rzeczy, podsumowanie, stwierdzenie co było i jest fajne, czego chcemy robić więcej, a czego mniej lub wcale. Ja też postanowiłam skorzystać z tej okazji i tymi przemyśleniami chcę się dziś z Wami podzielić.<br><a id="more"></a></p>
 <p>W takim razie nie ma na co czekać. Do dzieła!</p>
@@ -225,7 +292,7 @@
     <link href="https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/"/>
     <id>https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/</id>
     <published>2017-07-29T13:12:00.000Z</published>
-    <updated>2017-10-13T05:35:10.000Z</updated>
+    <updated>2018-02-15T20:56:43.000Z</updated>
     
     <content type="html"><![CDATA[<p>“Testy, hmmm… testy… Ja przepraszam bardzo, ale czy ktoś je kiedykolwiek widział we frontendowym repozytorium? Ja rozumiem że na backendzie, ale żeby na frontendzie? No chyba się tym programistom w głowach poprzewracało i za dużo czasu mają”</p>
 <p>Czyżby?<br><a id="more"></a></p>
@@ -256,6 +323,8 @@
       <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
     
       <category term="Tutoriale" scheme="https://kernelgonnapanic.pl/tags/Tutoriale/"/>
+    
+      <category term="FrontendTesting" scheme="https://kernelgonnapanic.pl/tags/FrontendTesting/"/>
     
   </entry>
   
@@ -644,9 +713,9 @@
     
       <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
-      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
-    
       <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
+    
+      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
       <category term="IT" scheme="https://kernelgonnapanic.pl/tags/IT/"/>
     
@@ -727,39 +796,6 @@
   </entry>
   
   <entry>
-    <title>Nawyki mistrzów</title>
-    <link href="https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/"/>
-    <id>https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/</id>
-    <published>2016-08-11T07:10:00.000Z</published>
-    <updated>2017-03-16T18:30:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Kolejny <strong>Rozwojowy Poniedziałek</strong> przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili <strong>nawyki mistrzów</strong>.<br><a id="more"></a></p>
-<h3 id="Mistrzowie-wstaja-wczesnie"><a href="#Mistrzowie-wstaja-wczesnie" class="headerlink" title="Mistrzowie wstają wcześnie."></a>Mistrzowie wstają wcześnie.</h3><p>Wstawanie 2 czy 3 godziny przed wyjściem z domu rano może wydawać się przerażające. Często jednak nie zdajemy sobie sprawy ile możliwości nam oferuje. Mamy czas, by przy kubku świeżo zaparzonej kawy przemyśleć, co czeka nas w nadchodzącym dniu. Znajdzie się też na pewno pół godziny na trening. Możemy wybrać się na jesienny spacer i posłuchać muzyki czy podcastu. Obejrzeć motywujący wykładu czy poczytać książkę. Tak! Naprawdę da radę to zrobić rano! A co więcej, przy okazji ćwiczymy naszą silną wolę.</p>
-<h3 id="Mistrzowie-cwicza-kilka-razy-w-tygodniu"><a href="#Mistrzowie-cwicza-kilka-razy-w-tygodniu" class="headerlink" title="Mistrzowie ćwiczą kilka razy w tygodniu."></a>Mistrzowie ćwiczą kilka razy w tygodniu.</h3><p>Sport to szkoła osiągania sukcesów. Gdy wylewamy siódme poty na siłowni lub pokonujemy nasty kilometr w terenie ćwiczymy naszą wytrwałość, determinację w osiąganiu celów i silną wolę. Podczas ćwiczeń wentylujemy nasz mózg, ryzykując zalewem dobrych pomysłów i wyzwalamy produkcję endorfin, które sprawiają, że nic już nam nie jest straszne.</p>
-<p>Ruszenie się z kanapy po ciężkim dniu pracy jest trudne. Przyznaję. Jednak mistrzowie mają na to sposoby ;) Dobrym pomysłem jest wybranie się na siłownię rano lub od razu po pracy, szkole, uczelni.</p>
-<h3 id="Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…"><a href="#Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…" class="headerlink" title="Mistrzowie planują zadania na dany dzień, tydzień, rok…"></a>Mistrzowie planują zadania na dany dzień, tydzień, rok…</h3><p>Bez planu zginiemy. Zatoniemy w natłoku obowiązków, zaległych terminów, wizyt u dentysty i telefonów z okazji urodzin. Mistrzowie wiedzą, że lista zadań na dany dzień to obowiązek! Jednak, by rozwijać się w pożądanym kierunku w perspektywie długoterminowej potrzebujemy też listy celów na najbliższy miesiąc czy rok. Zerkanie co jakiś czas na spis naszych priorytetów i dążeń pozwala nam upewnić się czy jesteśmy na dobrej drodze.</p>
-<h3 id="Mistrzowie-rozwijaja-swoja-siec-kontaktow"><a href="#Mistrzowie-rozwijaja-swoja-siec-kontaktow" class="headerlink" title="Mistrzowie rozwijają swoją sieć kontaktów."></a>Mistrzowie rozwijają swoją sieć kontaktów.</h3><p>My, zwykli zjadacze chleba, często nie doceniamy wagi i siły networkingu. Nie mamy na to czasu, nie lubimy rozmawiać z obcymi ludźmi. Ale przecież… Poznawanie nowych ludzi jest fajne! I inspirujące! I wnosi bardzo dużo do naszego życia :) Szczególnie, gdy poznajemy ludzi spoza naszej branży. W ten sposób poszerzamy nasze horyzonty i często jesteśmy zmuszeni do wyjścia ze strefy komfortu. A każde wyjście z naszej bezpiecznej skorupki jest wejściem do świata “where the magic happens”.</p>
-<p>Czy Was również jesień tak motywuje?</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Kolejny &lt;strong&gt;Rozwojowy Poniedziałek&lt;/strong&gt; przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili &lt;strong&gt;nawyki mistrzów&lt;/strong&gt;.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
-    
-      <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
-    
-      <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
-    
-      <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Akcja Subskrypcja</title>
     <link href="https://kernelgonnapanic.pl/2016/08/11/Akcja-Subskrypcja/"/>
     <id>https://kernelgonnapanic.pl/2016/08/11/Akcja-Subskrypcja/</id>
@@ -790,40 +826,35 @@
     </summary>
     
     
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
       <category term="AkcjaSubskrypcja" scheme="https://kernelgonnapanic.pl/tags/AkcjaSubskrypcja/"/>
     
       <category term="Internet" scheme="https://kernelgonnapanic.pl/tags/Internet/"/>
-    
-      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
   </entry>
   
   <entry>
-    <title>Nie tłumacz się, działaj!</title>
-    <link href="https://kernelgonnapanic.pl/2016/08/08/NieTlumaczSieDzialaj/"/>
-    <id>https://kernelgonnapanic.pl/2016/08/08/NieTlumaczSieDzialaj/</id>
-    <published>2016-08-08T06:00:00.000Z</published>
+    <title>Nawyki mistrzów</title>
+    <link href="https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/"/>
+    <id>https://kernelgonnapanic.pl/2016/08/11/NawykiMistrzow/</id>
+    <published>2016-08-11T07:10:00.000Z</published>
     <updated>2017-03-16T18:30:56.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Dziś wracam do Was z recenzją książki Briana Tracy’ego “Nie tłumacz się, działaj! Odkryj moc samodyscypliny”. Pewnie dla tej części z Was, którzy kiedykolwiek zabłądzili w księgarni lub bibliotece do działu z książkami dotyczącymi rozwoju osobistego, nazwisko autora nie jest obce. Mając na uwadze jednak tych, którzy jeszcze o nim nie słyszeli, naskrobię kilka dodatkowych słów.<br><a id="more"></a></p>
-<h2 id="Historia-“from-zero-to-superhero”"><a href="#Historia-“from-zero-to-superhero”" class="headerlink" title="Historia “from zero to superhero”"></a>Historia “from zero to superhero”</h2><p>Brian Tracy obecnie to ceniony doradca w zakresie zarządzania, handlowiec, a także autor. Kiedyś - robotnik, który został zmuszony do pracy fizycznej z powodu nieukończonej szkoły średniej. Dokonawszy tak wielkiego awansu społecznego dzieli się swoimi metodami w trakcie warsztatów, wykładów i jako mówca motywacyjny. Jest również autorem kilkudziesięciu książek o samorozwoju m. in. “Zjedz tę żabę”, czy właśnie “Nie tłumacz się, działaj!”.  </p>
-<p>Książka wpadła mi w oko już dawno, niestety dopiero kilka tygodni temu wpadła mi do koszyka. Szczerze interesuje mnie temat samodyscypliny, bo, co tu dużo ukrywać, często zdarza mi się mieć z nią problemy. Dlatego gdy taki temat wzięła na tapetę osoba, która musiała wykorzystywać samodyscyplinę po wielokroć, bardzo paliłam się, by poznać szczegóły. Wcześniej czytałam już “Zjedz tę żabę” i z tego co pamiętam, nawet mi się podobała. Dlatego zaczęłam z dużym zapałem i chęcią połknięcia książki “na raz”. Niestety w ramach czytania mój entuzjazm stygł, a do przeczytania ostatnich słów musiałam się zmuszać :(  </p>
-<h2 id="Ale-od-poczatku…"><a href="#Ale-od-poczatku…" class="headerlink" title="Ale od początku…"></a>Ale od początku…</h2><p>“Nie tłumacz się, działaj!” podzielona jest na 3 główne części, odnoszące się do dziedzin życia, w których samodyscyplina może być użyteczna. Tak więc, możemy przeczytać o dyscyplinowaniu siebie w zakresie sukcesu osobistego, finansów i sprzedaży oraz dobrego życia. Teoretycznie, powinniśmy zobaczyć wachlarz różnych spojrzeń na samodyscyplinę. Dodatkowo, każdy z podrozdziałów zakończony jest pytaniami,a właściwie małymi ćwiczeniami, których wykonanie powinno nam pomóc odnieść treści zawarte w danym rozdziale do własnego życia.<br>I tak, jak pytania uznałam za całkiem użyteczne i sądzę, że pochylenie się nad nimi może wnieść sporo do naszego życia, tak w treści samej książki nie znalazłam dużo pożywienia dla umysłu. Mimo fajnie podzielonego na rozdziały tematu, duża część zawartości to zwykłe lanie wody i przepisywanie w kółko jednej czy dwóch myśli. Szczerze, spodziewałam się czegoś więcej po tym autorze. Dodatkowo książka nakierowana jest wyraźnie do ludzi na etacie i do tego, głównie do sprzedawców.  </p>
-<div class="figure center fig-100" style="width:;"><img class="fig-img" src="drugie.JPG" alt=""></div><div style="clear:both;"></div>
-<p>Na blisko 250 stronach książki znalazłam zaledwie kilka myśli czy sposobów, które uznałam za warte uwagi i wystarczająco szczegółowe, by wcielić je w życie. Nimi właśnie, chcę się z Wami podzielić.  </p>
-<h2 id="Ciezka-praca"><a href="#Ciezka-praca" class="headerlink" title="Ciężka praca"></a>Ciężka praca</h2><p>W książce Tracy’ego spodobało mi się przede wszystkim to, jak podkreślona została wartość ciężkiej pracy. Autor cytuje Elberta Hubbard’a: <strong>“Samodyscyplina to zdolność robienia tego, co trzeba, wtedy kiedy trzeba i bez względu na to czy nam się chce czy nie</strong>“.  Sukces rodzi się po prostu z dużej ilości porządnej i zaangażowanej pracy. Natomist nauka to środek do tego, by osiągnąć pracę i zarobki marzeń oraz zostać ekspertem w swojej dziedzinie. Dodatkowo powinno się przeznaczać stały procent swoich zarobków na rozwój osobisty.  </p>
-<h2 id="Nasladuj-liderow"><a href="#Nasladuj-liderow" class="headerlink" title="Naśladuj liderów"></a>Naśladuj liderów</h2><p>Kopiuj sposób w jaki planują dzień, to, jak się ubierają, odżywiają, spędzają czas wolny. Przebywaj z ludźmi, których uważasz za godnych naśladowania. Nie bój się również zadawać im pytań, interesować się tym co oni robią, by osiągnąć sukces. Spędzaj z nimi jak najwięcej czasu, bo “z kim przestajesz, takim się stajesz”.  </p>
-<h2 id="Badz-odpowiedzialny"><a href="#Badz-odpowiedzialny" class="headerlink" title="Bądź odpowiedzialny"></a>Bądź odpowiedzialny</h2><p>To, czy jesteś szczęśliwy w życiu zależy głównie od Ciebie. Oczywiście nie masz wpływu na wszystko, co się w twoim życiu wydarzy, ale masz wpływ na to, jak na te wydarzenia zareagujesz. Liderzy nie mają w nawyku narzekać lub złościć się na coś, na co nie mieli wpływu. Nie obwiniają również innych za swoje niepowodzenia. Dopiero przejęcie odpowiedzialności za swoje życie daje poczucie kontroli, które jest bardzo uwalniające i daje możliwość na realizowanie swoich celów.  </p>
-<p><strong>“Nie tłumacz się, działaj!”</strong> podsunęło mi kilka ważnych myśli. Lecz raczej nie polecałabym czytania tej książki “od deski do deski”. Więc gdyby kiedyś wpadła Ci do ręki, poświęć kilka chwil, by ją przejrzeć, ale raczej nie wrzucaj do koszyka. Dla mnie była przede wszystkim sposobem na przekierowanie uwagi na rzeczy dla mnie ważne i w efekcie również na napisanie tego posta.  </p>
-<p>A teraz czas na to, żebyście wy podzieli się sposobami na to, by zmotywować się do spełniania swoich marzeń. Co robicie, gdy wasz “bucket list” zajmuje już kilka stron, a “to do” lista rośnie odwrotnie proporcjonalnie do motywacji?  </p>
-<p>Ania</p>
+    <content type="html"><![CDATA[<p>Kolejny <strong>Rozwojowy Poniedziałek</strong> przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili <strong>nawyki mistrzów</strong>.<br><a id="more"></a></p>
+<h3 id="Mistrzowie-wstaja-wczesnie"><a href="#Mistrzowie-wstaja-wczesnie" class="headerlink" title="Mistrzowie wstają wcześnie."></a>Mistrzowie wstają wcześnie.</h3><p>Wstawanie 2 czy 3 godziny przed wyjściem z domu rano może wydawać się przerażające. Często jednak nie zdajemy sobie sprawy ile możliwości nam oferuje. Mamy czas, by przy kubku świeżo zaparzonej kawy przemyśleć, co czeka nas w nadchodzącym dniu. Znajdzie się też na pewno pół godziny na trening. Możemy wybrać się na jesienny spacer i posłuchać muzyki czy podcastu. Obejrzeć motywujący wykładu czy poczytać książkę. Tak! Naprawdę da radę to zrobić rano! A co więcej, przy okazji ćwiczymy naszą silną wolę.</p>
+<h3 id="Mistrzowie-cwicza-kilka-razy-w-tygodniu"><a href="#Mistrzowie-cwicza-kilka-razy-w-tygodniu" class="headerlink" title="Mistrzowie ćwiczą kilka razy w tygodniu."></a>Mistrzowie ćwiczą kilka razy w tygodniu.</h3><p>Sport to szkoła osiągania sukcesów. Gdy wylewamy siódme poty na siłowni lub pokonujemy nasty kilometr w terenie ćwiczymy naszą wytrwałość, determinację w osiąganiu celów i silną wolę. Podczas ćwiczeń wentylujemy nasz mózg, ryzykując zalewem dobrych pomysłów i wyzwalamy produkcję endorfin, które sprawiają, że nic już nam nie jest straszne.</p>
+<p>Ruszenie się z kanapy po ciężkim dniu pracy jest trudne. Przyznaję. Jednak mistrzowie mają na to sposoby ;) Dobrym pomysłem jest wybranie się na siłownię rano lub od razu po pracy, szkole, uczelni.</p>
+<h3 id="Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…"><a href="#Mistrzowie-planuja-zadania-na-dany-dzien-tydzien-rok…" class="headerlink" title="Mistrzowie planują zadania na dany dzień, tydzień, rok…"></a>Mistrzowie planują zadania na dany dzień, tydzień, rok…</h3><p>Bez planu zginiemy. Zatoniemy w natłoku obowiązków, zaległych terminów, wizyt u dentysty i telefonów z okazji urodzin. Mistrzowie wiedzą, że lista zadań na dany dzień to obowiązek! Jednak, by rozwijać się w pożądanym kierunku w perspektywie długoterminowej potrzebujemy też listy celów na najbliższy miesiąc czy rok. Zerkanie co jakiś czas na spis naszych priorytetów i dążeń pozwala nam upewnić się czy jesteśmy na dobrej drodze.</p>
+<h3 id="Mistrzowie-rozwijaja-swoja-siec-kontaktow"><a href="#Mistrzowie-rozwijaja-swoja-siec-kontaktow" class="headerlink" title="Mistrzowie rozwijają swoją sieć kontaktów."></a>Mistrzowie rozwijają swoją sieć kontaktów.</h3><p>My, zwykli zjadacze chleba, często nie doceniamy wagi i siły networkingu. Nie mamy na to czasu, nie lubimy rozmawiać z obcymi ludźmi. Ale przecież… Poznawanie nowych ludzi jest fajne! I inspirujące! I wnosi bardzo dużo do naszego życia :) Szczególnie, gdy poznajemy ludzi spoza naszej branży. W ten sposób poszerzamy nasze horyzonty i często jesteśmy zmuszeni do wyjścia ze strefy komfortu. A każde wyjście z naszej bezpiecznej skorupki jest wejściem do świata “where the magic happens”.</p>
+<p>Czy Was również jesień tak motywuje?</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Dziś wracam do Was z recenzją książki Briana Tracy’ego “Nie tłumacz się, działaj! Odkryj moc samodyscypliny”. Pewnie dla tej części z Was, którzy kiedykolwiek zabłądzili w księgarni lub bibliotece do działu z książkami dotyczącymi rozwoju osobistego, nazwisko autora nie jest obce. Mając na uwadze jednak tych, którzy jeszcze o nim nie słyszeli, naskrobię kilka dodatkowych słów.&lt;br&gt;
+      &lt;p&gt;Kolejny &lt;strong&gt;Rozwojowy Poniedziałek&lt;/strong&gt; przed nami :) Jesień zbliża się wielkimi krokami i jest to idealny moment na wprowadzenie kilku zmian w swojej organizacji dnia. Dla mnie, od czasów szkolnych, ten okres roku jest pełny świeżych pomysłów i zapału do pracy. Zazwyczaj to właśnie we wrześniu mam największą motywację, by coś w swoim życiu zmienić. A dziś proponuję właśnie Wam, byście do swojego życia wprowadzili &lt;strong&gt;nawyki mistrzów&lt;/strong&gt;.&lt;br&gt;
     
     </summary>
     
@@ -832,13 +863,9 @@
     
       <category term="Sukces" scheme="https://kernelgonnapanic.pl/tags/Sukces/"/>
     
-      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
-    
       <category term="Nawyki" scheme="https://kernelgonnapanic.pl/tags/Nawyki/"/>
     
-      <category term="RozwojowyPoniedziałek" scheme="https://kernelgonnapanic.pl/tags/RozwojowyPoniedzialek/"/>
-    
-      <category term="Samodyscyplina" scheme="https://kernelgonnapanic.pl/tags/Samodyscyplina/"/>
+      <category term="Rozwojowy poniedziałek" scheme="https://kernelgonnapanic.pl/tags/Rozwojowy-poniedzialek/"/>
     
   </entry>
   
