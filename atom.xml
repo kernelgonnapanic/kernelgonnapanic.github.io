@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2018-02-25T22:07:27.000Z</updated>
+  <updated>2018-02-25T22:11:15.000Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/"/>
     <id>https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/</id>
     <published>2018-02-15T20:56:00.000Z</published>
-    <updated>2018-02-25T22:07:27.000Z</updated>
+    <updated>2018-02-25T22:11:15.000Z</updated>
     
     <content type="html"><![CDATA[<!-- excerpt --></p>
 <p>Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Obiecałam wtedy kilka fajnych wpisów dotyczących narzędzi, jakie mamy do dyspozycji pisząc testy w JSie. Mam nadzieję, że nie zapomnieliście o temacie!</p>
@@ -70,13 +70,13 @@
     </summary>
     
     
-      <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
-    
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
       <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
     
+      <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
+    
       <category term="Tutoriale" scheme="https://kernelgonnapanic.pl/tags/Tutoriale/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="FrontendTesting" scheme="https://kernelgonnapanic.pl/tags/FrontendTesting/"/>
     
@@ -316,13 +316,13 @@
     </summary>
     
     
-      <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
-    
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
       <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
     
+      <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
+    
       <category term="Tutoriale" scheme="https://kernelgonnapanic.pl/tags/Tutoriale/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="FrontendTesting" scheme="https://kernelgonnapanic.pl/tags/FrontendTesting/"/>
     
@@ -484,13 +484,13 @@
     </summary>
     
     
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
       <category term="Elm" scheme="https://kernelgonnapanic.pl/tags/Elm/"/>
     
       <category term="Podstawy" scheme="https://kernelgonnapanic.pl/tags/Podstawy/"/>
     
       <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
-    
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
   </entry>
   
@@ -522,13 +522,13 @@
     </summary>
     
     
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
       <category term="Elm" scheme="https://kernelgonnapanic.pl/tags/Elm/"/>
     
       <category term="Podstawy" scheme="https://kernelgonnapanic.pl/tags/Podstawy/"/>
     
       <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
-    
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
   </entry>
   
@@ -556,11 +556,11 @@
     </summary>
     
     
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
       <category term="Elm" scheme="https://kernelgonnapanic.pl/tags/Elm/"/>
     
       <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
-    
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
     
