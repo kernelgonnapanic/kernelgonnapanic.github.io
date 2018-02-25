@@ -2,7 +2,7 @@
 title: Moje plany na 2018
 tags:
 keywords:
-thumbnailImagePosition: top
+thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial
 thumbnailImage: plany_foto.jpg
