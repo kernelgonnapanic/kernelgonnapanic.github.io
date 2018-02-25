@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2018-02-25T22:11:15.000Z</updated>
+  <updated>2018-02-25T22:19:40.000Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>Snapshot testing - co to takiego? [Frontend testing #2]</title>
-    <link href="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/"/>
-    <id>https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/</id>
-    <published>2018-02-15T20:56:00.000Z</published>
-    <updated>2018-02-25T22:11:15.000Z</updated>
+    <link href="https://kernelgonnapanic.pl/2018/02/25/jest-snapshot-testing/"/>
+    <id>https://kernelgonnapanic.pl/2018/02/25/jest-snapshot-testing/</id>
+    <published>2018-02-25T20:56:00.000Z</published>
+    <updated>2018-02-25T22:19:40.000Z</updated>
     
     <content type="html"><![CDATA[<!-- excerpt --></p>
 <p>Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Obiecałam wtedy kilka fajnych wpisów dotyczących narzędzi, jakie mamy do dyspozycji pisząc testy w JSie. Mam nadzieję, że nie zapomnieliście o temacie!</p>
@@ -70,9 +70,9 @@
     </summary>
     
     
-      <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
-    
       <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
+    
+      <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
     
       <category term="Tutoriale" scheme="https://kernelgonnapanic.pl/tags/Tutoriale/"/>
     
@@ -316,9 +316,9 @@
     </summary>
     
     
-      <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
-    
       <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
+    
+      <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
     
       <category term="Tutoriale" scheme="https://kernelgonnapanic.pl/tags/Tutoriale/"/>
     
