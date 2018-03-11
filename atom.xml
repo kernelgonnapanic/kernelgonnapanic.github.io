@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2018-03-11T21:15:22.000Z</updated>
+  <updated>2018-03-11T21:17:51.000Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://kernelgonnapanic.pl/2018/03/11/7-grzechow-glownych-przywiazanie/"/>
     <id>https://kernelgonnapanic.pl/2018/03/11/7-grzechow-glownych-przywiazanie/</id>
     <published>2018-03-11T19:00:00.000Z</published>
-    <updated>2018-03-11T21:15:22.000Z</updated>
+    <updated>2018-03-11T21:17:51.000Z</updated>
     
     <content type="html"><![CDATA[<!-- excerpt -->
 <p>Kolejny tydzień i kolejny post! Dzisiaj rozpoczynamy serię, której temat od dawna nosiłam gdzieś z tyłu głowy i bardzo chciałam na blogu poruszyć. Zajmiemy się grzechami programistów, czyli tym co przeszkadza nam osiągać sukcesy w naszej pracy. Czasami zdajemy sobie z nich sprawę, lecz częściej ich nie zauważamy. A w ten sposób nie jesteśmy w stanie ich unikać. To skutkuje gorszym kodem, gorszą pracą w zespole czy niedostarczaniem tego, czego oczekują od nas współpracownicy. W ten sposób stajemy się również obciążeniem dla innych - a tego nie chcemy!</p>
@@ -117,11 +117,11 @@
     
       <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
     
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
       <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
     
       <category term="Tutoriale" scheme="https://kernelgonnapanic.pl/tags/Tutoriale/"/>
-    
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="FrontendTesting" scheme="https://kernelgonnapanic.pl/tags/FrontendTesting/"/>
     
@@ -363,11 +363,11 @@
     
       <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
     
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
       <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
     
       <category term="Tutoriale" scheme="https://kernelgonnapanic.pl/tags/Tutoriale/"/>
-    
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="FrontendTesting" scheme="https://kernelgonnapanic.pl/tags/FrontendTesting/"/>
     
@@ -529,13 +529,13 @@
     </summary>
     
     
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
       <category term="Elm" scheme="https://kernelgonnapanic.pl/tags/Elm/"/>
     
       <category term="Podstawy" scheme="https://kernelgonnapanic.pl/tags/Podstawy/"/>
     
       <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
   </entry>
   
@@ -567,13 +567,13 @@
     </summary>
     
     
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
       <category term="Elm" scheme="https://kernelgonnapanic.pl/tags/Elm/"/>
     
       <category term="Podstawy" scheme="https://kernelgonnapanic.pl/tags/Podstawy/"/>
     
       <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
   </entry>
   
@@ -601,11 +601,11 @@
     </summary>
     
     
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
       <category term="Elm" scheme="https://kernelgonnapanic.pl/tags/Elm/"/>
     
       <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
     
