@@ -12138,48 +12138,6 @@ return jQuery;
 ;(function($) {
   'use strict';
 
-  var Modal = function() {
-    this.$modal = $('#modal');
-    this.$overlay = $('#overlay');
-    this.$closeBtn = $('#closeBtn');
-    this.timeout = 5000;
-  };
-
-  Modal.prototype = {
-    run: function() {
-      var self = this;
-      this.$modal.show(300);
-      this.$overlay.show();
-      this.setCookie();
-      this.$overlay.click(function(event) {
-        event.preventDefault();
-      })
-      this.$closeBtn.click(function() {
-        self.$modal.hide();
-        self.$overlay.hide();
-      })
-    },
-    setCookie: function() {
-    var d = new Date();
-    d.setTime(d.getTime() + (45*24*60*1000));
-    var expires = "expires="+ d.toUTCString();
-    document.cookie = "fb_modal_shown=true;" + expires + ";path=/";
-}
-  };
-
-  $(document).ready(function() {
-    var modal = new Modal();
-    var showModal = !/fb_modal_shown/.test(document.cookie);
-    if (showModal) {
-      setTimeout(function() {
-        modal.run();
-      }, modal.timeout);
-    }
-  });
-})(jQuery);
-;(function($) {
-  'use strict';
-
   // Hide the post bottom bar when the post footer is visible by the user,
   // and show it when the post footer isn't visible by the user
 

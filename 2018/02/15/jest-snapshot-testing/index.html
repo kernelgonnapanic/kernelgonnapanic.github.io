@@ -18,12 +18,14 @@
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
     <meta name="description" content="Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Dziś porozmawiamy o Jest oraz snapshot testingu">
+<meta name="keywords" content="Javascript,Frontend,Testowanie,Tutoriale,FrontendTesting">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Snapshot testing - co to takiego? [Frontend testing #2]">
 <meta property="og:url" content="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/index.html">
 <meta property="og:site_name" content="kernelgonnapanic.pl">
 <meta property="og:description" content="Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Dziś porozmawiamy o Jest oraz snapshot testingu">
-<meta property="og:updated_time" content="2018-02-25T22:11:15.000Z">
+<meta property="og:locale" content="pl">
+<meta property="og:updated_time" content="2018-11-02T16:16:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Snapshot testing - co to takiego? [Frontend testing #2]">
 <meta name="twitter:description" content="Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Dziś porozmawiamy o Jest oraz snapshot testingu">
@@ -45,7 +47,7 @@
     
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-um1woefwrfklo2btav4o6iczwajp76kj2h2lh5p0ba5to4hrshul0yuk4w6d.min.css">
+    <link rel="stylesheet" href="/assets/css/style-5vep6rqjmqro1n7d9e29h9buiwwykxbgqomapbiwl0urtijpxktfe9mduoje.min.css">
     <!--STYLES END-->
     
     <script type="text/javascript">
@@ -80,11 +82,10 @@
     </div>
     
         
-            <a  class="header-right-picture "
-                href="#about">
+            <a class="header-right-picture " href="#about">
         
         
-            <img class="header-picture" src="/assets/images/zdjecie.jpg" alt="global.author_picture"/>
+            <img class="header-picture" src="/assets/images/zdjecie.jpg" alt="global.author_picture">
         
         </a>
     
@@ -102,7 +103,7 @@
         
             <div class="sidebar-profile">
                 <a href="/#about">
-                    <img class="sidebar-profile-picture" src="/assets/images/zdjecie.jpg" alt="global.author_picture"/>
+                    <img class="sidebar-profile-picture" src="/assets/images/zdjecie.jpg" alt="global.author_picture">
                 </a>
                 <h4 class="sidebar-profile-name">Anna Konopka</h4>
                 
@@ -116,10 +117,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/ "
-                            
-                        >
+                        <a class="sidebar-button-link " href="/ ">
                     
                         <i class="sidebar-button-icon fa fa-lg fa-home"></i>
                         <span class="sidebar-button-desc">Home</span>
@@ -128,10 +126,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="#about"
-                            
-                        >
+                        <a class="sidebar-button-link " href="#about">
                     
                         <i class="sidebar-button-icon fa fa-lg fa-question"></i>
                         <span class="sidebar-button-desc">O mnie</span>
@@ -140,10 +135,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/atom.xml"
-                            
-                        >
+                        <a class="sidebar-button-link " href="/atom.xml">
                     
                         <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
                         <span class="sidebar-button-desc">RSS</span>
@@ -152,10 +144,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/all-categories"
-                            
-                        >
+                        <a class="sidebar-button-link " href="/all-categories">
                     
                         <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
                         <span class="sidebar-button-desc">Kategorie</span>
@@ -164,10 +153,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/all-tags"
-                            
-                        >
+                        <a class="sidebar-button-link " href="/all-tags">
                     
                         <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
                         <span class="sidebar-button-desc">Tagi</span>
@@ -180,7 +166,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link " href="https://github.com/kernelgonnapanic" target="_blank">
+                        <a class="sidebar-button-link " href="https://github.com/kernelgonnapanic" target="_blank">
                     
                         <i class="sidebar-button-icon fa fa-lg fa-github"></i>
                         <span class="sidebar-button-desc">GitHub</span>
@@ -189,7 +175,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link " href="https://twitter.com/konopka_ania" target="_blank">
+                        <a class="sidebar-button-link " href="https://twitter.com/konopka_ania" target="_blank">
                     
                         <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
                         <span class="sidebar-button-desc">Twitter</span>
@@ -198,7 +184,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link " href="https://www.facebook.com/kernelgonnapanic/" target="_blank">
+                        <a class="sidebar-button-link " href="https://www.facebook.com/kernelgonnapanic/" target="_blank">
                     
                         <i class="sidebar-button-icon fa fa-lg fa-facebook"></i>
                         <span class="sidebar-button-desc">Facebook</span>
@@ -207,7 +193,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link " href="https://www.instagram.com/kernelgonnapanic/" target="_blank">
+                        <a class="sidebar-button-link " href="https://www.instagram.com/kernelgonnapanic/" target="_blank">
                     
                         <i class="sidebar-button-icon fa fa-lg fa-instagram"></i>
                         <span class="sidebar-button-desc">Instagram</span>
@@ -216,7 +202,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link " href="https://pl.linkedin.com/in/anna-konopka-3b0043115" target="_blank">
+                        <a class="sidebar-button-link " href="https://pl.linkedin.com/in/anna-konopka-3b0043115" target="_blank">
                     
                         <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
                         <span class="sidebar-button-desc">LinkedIn</span>
@@ -231,9 +217,7 @@
             
         <div class="post-header-cover
                     text-left
-                    post-header-cover--partial"
-             style="background-image:url('/2018/02/15/jest-snapshot-testing/camera.jpg');"
-             data-behavior="4">
+                    post-header-cover--partial" style="background-image:url('/2018/02/15/jest-snapshot-testing/camera.jpg');" data-behavior="4">
             
         </div>
 
@@ -242,7 +226,7 @@
                         hasCoverMetaOut
                         ">
                 
-<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
     
     
         <div class="post-header main-content-wrap text-left">
@@ -264,18 +248,18 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <!-- excerpt --></p>
+            <!-- excerpt --><p></p>
 <p>Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Obiecałam wtedy kilka fajnych wpisów dotyczących narzędzi, jakie mamy do dyspozycji pisząc testy w JSie. Mam nadzieję, że nie zapomnieliście o temacie!</p>
 <p>A w dzisiejszym odcinku zobaczymy czym jest <strong>Jest</strong>. Dokładniej przyjrzymy się jednej z jego funkcjonalności, jaką jest snapshot testing. Czytajcie do końca, żeby dowiedzieć się, co tam jeszcze knuję w temacie wpisów o testowaniu. Enjoy!</p>
 <h2 id="Jest-co-to-jest"><a href="#Jest-co-to-jest" class="headerlink" title="Jest - co to jest ?"></a>Jest - co to jest ?</h2><p>Zacznijmy od tego co to jest ten Jest i co może nam zaoferować. Żeby móc wygodnie pisać frontowe testy jednostkowe potrzebujemy narzędzi, które pomagają w uruchomieniu tych testów oraz usprawniają walidowanie wyników poszczególnych operacji. Gdy chcemy do tego podejść bardziej szczegółowo, jest to kilka poziomów, o które musimy się zatroszczyć. Jest środowisko uruchomieniowe (test runner), mamy również test framework, który definuje jak od strony kodu będą wyglądać nasze testy oraz potrzebujemy narzędzia, które ułatwia pisanie asercji, czyli walidowanie efektów np. wywołania funkcji (assertion library).</p>
-<p>Do tej pory elementy te często istniały jako osobne biblioteki, obecnie często są nam podane w jednym pakiecie. I tak też jest w przypadku Jesta.<br>Jeśli ktoś chciałby się dowiedzieć trochę więcej o tym, z jakich elementów składa się środowisko testowe i czym się od siebie różnią, <a href="http://amzotti.github.io/testing/2015/03/16/what-is-the-difference-between-a-test-runner-testing-framework-assertion-library-and-a-testing-plugin/" target="_blank" rel="external">tutaj</a> znajdziecie fajny artykuł na ten temat.</p>
+<p>Do tej pory elementy te często istniały jako osobne biblioteki, obecnie często są nam podane w jednym pakiecie. I tak też jest w przypadku Jesta.<br>Jeśli ktoś chciałby się dowiedzieć trochę więcej o tym, z jakich elementów składa się środowisko testowe i czym się od siebie różnią, <a href="http://amzotti.github.io/testing/2015/03/16/what-is-the-difference-between-a-test-runner-testing-framework-assertion-library-and-a-testing-plugin/" target="_blank" rel="noopener">tutaj</a> znajdziecie fajny artykuł na ten temat.</p>
 <p>Ustaliliśmy już, że Jest oferuje nam wszystko co jest potrzebne do wystartowania z pisaniem testów. Co więcej twórcy chwalą się, że jest to narzędzie typu zero-configuration. Z moich doświadczeń wynika jednak, że nie zawsze obędziemy się bez dodatkowej konfiguracji i jeśli twój projekt korzysta z preprocesorów czy np. jakichś specyficznych loaderów do webpacka to zazwyczaj trzeba coś więcej poustawiać.</p>
 <h2 id="Co-fajnego-Jest-nam-oferuje"><a href="#Co-fajnego-Jest-nam-oferuje" class="headerlink" title="Co fajnego Jest nam oferuje?"></a>Co fajnego Jest nam oferuje?</h2><ol>
 <li><p>Dla mnie najistotniejszy jest fakt, że Jest jest ewidentnie rezultatem ewolucji narzędzi do testowania. Mamy tu do dyspozycji wbudowany mechanizm do mockowania na poziomie rozwiązywania zależności (importów), ale też możemy ręcznie podmienić implementację danej funkcji na czas testów. Zgrabnie też jesteśmy w stanie testować kod asynchroniczny, używając np. konstrukcji async/await. Dodatkowo mamy również wbudowane mierzenie pokrycia kodu, co czasem przydaje się w celach informacyjnych, jednak z wielu powodów nie powinno być traktowane jako wyznacznik jakości otestowania kodu.</p>
 <p><em>Przykład tworzenia mocków.</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> mock = jest.fn();</div><div class="line"></div><div class="line"><span class="keyword">const</span> betterMock = jest.fn(<span class="function"><span class="params">()</span> =&gt;</span> (&#123;</div><div class="line">  <span class="attr">answerToLife</span>: <span class="number">42</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mock = jest.fn();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> betterMock = jest.fn(<span class="function"><span class="params">()</span> =&gt;</span> (&#123;</span><br><span class="line">  answerToLife: <span class="number">42</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p><em>Przykład testowania wyniku asynchronicznej operacji</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">test(<span class="string">'the data is peanut butter'</span>, <span class="keyword">async</span> () =&gt; &#123;</div><div class="line">  expect.assertions(<span class="number">1</span>);</div><div class="line">  <span class="keyword">const</span> data = <span class="keyword">await</span> fetchData();</div><div class="line">  expect(data).toBe(<span class="string">'peanut butter'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">'the data is peanut butter'</span>, <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  expect.assertions(<span class="number">1</span>);</span><br><span class="line">  <span class="keyword">const</span> data = <span class="keyword">await</span> fetchData();</span><br><span class="line">  expect(data).toBe(<span class="string">'peanut butter'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Zespoły, które wcześniej korzystały z innego setupu dla testów jednostkowych względnie łatwo mogą się przesiąść na Jest’a, ponieważ wspiera on składnie Jasmine’a. Dla tych, którzy korzystali z mniej popularnych opcji, istnieją rozwiązania takie jak <code>jest-codemods</code>, które jednorazowo zmieniają składnię testów i wykonują większość brudnej roboty za nas.</p>
 </li>
@@ -284,13 +268,13 @@
 </ol>
 <h2 id="Co-to-jest-snapshot-testing"><a href="#Co-to-jest-snapshot-testing" class="headerlink" title="Co to jest snapshot testing?"></a>Co to jest snapshot testing?</h2><p>Testowanie przy użyciu snapshotów jest jednym z rodzajów testów, które możemy tworzyć dla kodu frontendowego. Przydaje się w szczególności do testowania komponentów (np. w React czy Vue), ale możemy bazując na tym podejściu pisać też testy logiki biznesowej.</p>
 <p>Głównym jego założeniem jest porównywanie wyniku uruchomienia funkcji z jakimś oczekiwanym efektem, który w postaci pliku przechowujemy w repozytorium. W rezultacie uruchomienia testu otrzymujemy diffa między aktualnym, a oczekiwanym rezultatem. Podejrzewam, że nadal nie jest to wystarczająco jasne, dlatego rzućmy okiem na przykład.</p>
-<p>Załóżmy, że chcemy przetestować wynik renderowania komponentu <code>Article</code> w React:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Article</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;div className="article"&gt;</div><div class="line">        &lt;header className="article-header"&gt;</div><div class="line">          &#123;this.props.title&#125;</div><div class="line">        &lt;/header&gt;</div><div class="line">        &#123;this.props.children&#125;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> Article;</div></pre></td></tr></table></figure></p>
+<p>Załóżmy, że chcemy przetestować wynik renderowania komponentu <code>Article</code> w React:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Article</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div className=<span class="string">"article"</span>&gt;</span><br><span class="line">        &lt;header className=<span class="string">"article-header"</span>&gt;</span><br><span class="line">          &#123;<span class="keyword">this</span>.props.title&#125;</span><br><span class="line">        &lt;<span class="regexp">/header&gt;</span></span><br><span class="line"><span class="regexp">        &#123;this.props.children&#125;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Article;</span><br></pre></td></tr></table></figure></p>
 <p>Tworzymy do niego nasz pierwszy snapshot test.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> Article <span class="keyword">from</span> <span class="string">'./Article.js'</span>;</div><div class="line"><span class="keyword">import</span> renderer <span class="keyword">from</span> <span class="string">'react-test-renderer'</span>;</div><div class="line"></div><div class="line">it(<span class="string">'renders correctly'</span>, () =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> tree = renderer</div><div class="line">    .create(&lt;Article title="Title"&gt;The contents&lt;/Article&gt;)</div><div class="line">    .toJSON();</div><div class="line">  expect(tree).toMatchSnapshot();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> Article <span class="keyword">from</span> <span class="string">'./Article.js'</span>;</span><br><span class="line"><span class="keyword">import</span> renderer <span class="keyword">from</span> <span class="string">'react-test-renderer'</span>;</span><br><span class="line"></span><br><span class="line">it(<span class="string">'renders correctly'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> tree = renderer</span><br><span class="line">    .create(&lt;Article title="Title"&gt;The contents&lt;/Article&gt;)</span><br><span class="line">    .toJSON();</span><br><span class="line">  expect(tree).toMatchSnapshot();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>Zauważmy, że używamy <code>react-test-renderer</code>, by stworzyć instancję komponentu, a następnie wywołujemy metodę <code>toJSON</code>. Mówi to nam o tym, że efekt renderowania tego komponentu będzie serializowany do stringa. W asercji oczekujemy, że rezultat będzie odpowiadał snapshotowi.</p>
 <p><strong>Ale co to ten snapshot i gdzie on się znajduje?</strong></p>
 <p>Gdy pierwszy raz uruchomimy ten test zauważymy, że obok komponentu pojawił się katalog <code>__snapshots__</code> z plikiem o takiej zawartości:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">exports[<span class="string">`renders correctly 1`</span>] = <span class="string">`</span></div><div class="line">&lt;div</div><div class="line">  className="article"</div><div class="line">&gt;</div><div class="line">  &lt;header</div><div class="line">    className="article-header"</div><div class="line">  &gt;</div><div class="line">    Title</div><div class="line">  &lt;/header&gt;</div><div class="line">  The contents</div><div class="line">&lt;/div&gt;</div><div class="line">`;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">exports[<span class="string">`renders correctly 1`</span>] = <span class="string">`</span></span><br><span class="line"><span class="string">&lt;div</span></span><br><span class="line"><span class="string">  className="article"</span></span><br><span class="line"><span class="string">&gt;</span></span><br><span class="line"><span class="string">  &lt;header</span></span><br><span class="line"><span class="string">    className="article-header"</span></span><br><span class="line"><span class="string">  &gt;</span></span><br><span class="line"><span class="string">    Title</span></span><br><span class="line"><span class="string">  &lt;/header&gt;</span></span><br><span class="line"><span class="string">  The contents</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure>
 <p>To jest właśnie snapshot, stworzony przy pierwszym uruchomieniu testu, do którego będziemy z każdym kolejnym odpaleniem testu porównywać wynik. Widzimy, że jest to zserializowany wynik wywołania funkcji render, zapis w postaci tekstowej drzewa DOM, które zostałoby wygenerowane dla tego komponentu.</p>
 <h2 id="Praca-ze-snapshotami"><a href="#Praca-ze-snapshotami" class="headerlink" title="Praca ze snapshotami"></a>Praca ze snapshotami</h2><p>Przejdźmy teraz może przez cały proces pracy z snapshotami, żeby sobie go utrwalić.</p>
 <ol>
@@ -303,14 +287,14 @@
 <h2 id="Ale-po-co"><a href="#Ale-po-co" class="headerlink" title="Ale po co?"></a>Ale po co?</h2><p>Snapshot testy komponentów sprawdzają czy będą one wyglądać tak, jak tego oczekujemy. W szczególności pozwalają na zobaczenie, jak wygląd tego komponentu będzie się zmieniał pod wpływem różnego rodzaju propsów do niego przekazywanych. Dodatkowo, jeśli używamy jakiegoś z narzędzi, które bazuje na ustawianiu styli inline, możemy również walidować ich poprawność (skąd już bardzo blisku do visual regression testing). Nie testują one jednak zachowania komponentu, np. wykonania odpowiednej akcji po kliknięciu. Tym tematem zajmiemy się już niedługo.</p>
 <p>Na dziś już wystarczy :) Czuję jednak, że temat nie jest wyczerpany, dlatego chciałabym poświęcić mu kolejny artykuł. Jeśli masz jakieś pytanie związane z testowaniem z użyciem snapshotów, zadaj je proszę w komentarzu, a ja postaram się na nie odpowiedzieć w kolejnym wpisie.</p>
 <p>Oprócz testowania fukcjonalności komponentów czy kolejnego wpisu odnośnie pracy z snapshotami, w ramach naszej serii planuję również poruszyć temat testów e2e, testów dla React Native (Detox, Appium) czy visual regression testing. Na pewno znajdziecie wśród nich czegoś dla siebie, czegoś, co pozwoli Wam pisać lepsze aplikacje frontendowe 💻</p>
-<p>Jeżeli nie chcecie przegapić żadnego wpisu w tym temacie, zapraszam do polubienia fanpage’a bloga <a href="https://www.facebook.com/kernelgonnapanic/" target="_blank" rel="external">[TUTAJ]</a>.</p>
+<p>Jeżeli nie chcecie przegapić żadnego wpisu w tym temacie, zapraszam do polubienia fanpage’a bloga <a href="https://www.facebook.com/kernelgonnapanic/" target="_blank" rel="noopener">[TUTAJ]</a>.</p>
             
         </div>
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
         
             <div class="post-footer-tags">
-                <span class="text-color-light text-small">TAGI</span><br/>
+                <span class="text-color-light text-small">TAGI</span><br>
                 
     <a class="tag tag--primary tag--small t-link" href="/tags/Frontend/">Frontend</a> <a class="tag tag--primary tag--small t-link" href="/tags/FrontendTesting/">FrontendTesting</a> <a class="tag tag--primary tag--small t-link" href="/tags/Javascript/">Javascript</a> <a class="tag tag--primary tag--small t-link" href="/tags/Testowanie/">Testowanie</a> <a class="tag tag--primary tag--small t-link" href="/tags/Tutoriale/">Tutoriale</a>
 
@@ -321,7 +305,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/03/11/7-grzechow-glownych-przywiazanie/" data-tooltip="Siedem grzechów głównych programistów - przywiązanie">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">POPRZEDNI</span>
@@ -339,7 +323,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
                 <i class="fa fa-share-alt"></i>
             </a>
         </li>
@@ -402,7 +386,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/03/11/7-grzechow-glownych-przywiazanie/" data-tooltip="Siedem grzechów głównych programistów - przywiązanie">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">POPRZEDNI</span>
@@ -420,7 +404,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
                 <i class="fa fa-share-alt"></i>
             </a>
         </li>
@@ -480,7 +464,6 @@
 <div id="share-options-mask" class="share-options-mask"></div>
 
             
-
         </div>
         
 
@@ -495,7 +478,7 @@
             <i class="fa fa-remove"></i>
         </div>
         
-            <img id="about-card-picture" src="/assets/images/zdjecie.jpg" alt="global.author_picture"/>
+            <img id="about-card-picture" src="/assets/images/zdjecie.jpg" alt="global.author_picture">
         
             <h4 id="about-card-name">Anna Konopka</h4>
         
@@ -505,15 +488,15 @@
         
             <div id="about-card-job">
                 <i class="fa fa-briefcase"></i>
-                <br/>
-                <p>Frontend developer contractor at <a href="https://monterail.com/">Monterail</a></p>
+                <br>
+                <p>Senior Frontend Developer</p>
 
             </div>
         
         
             <div id="about-card-location">
                 <i class="fa fa-map-marker"></i>
-                <br/>
+                <br>
                 Wrocław, Polska
             </div>
         
@@ -530,9 +513,7 @@
             </a>
             <i class="search-icon fa fa-search"></i>
             <form id="algolia-search-form">
-                <input type="text" id="algolia-search-input" name="search"
-                    class="form-control input--large search-input" placeholder="Search "
-                    autofocus="autofocus"/>
+                <input type="text" id="algolia-search-input" name="search" class="form-control input--large search-input" placeholder="Search " autofocus="autofocus">
             </form>
         </div>
         <div class="modal-body">
@@ -543,7 +524,7 @@
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/03/10/zwinny-samuraj/">
-                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/03/10/zwinny-samuraj/samuraj.JPG" width="90" height="90"/>
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/03/10/zwinny-samuraj/samuraj.JPG" width="90" height="90">
                         </a>
                     </div>
                     
@@ -558,7 +539,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Tak jak zapowiadałam, dziś rozpoczynamy na blogu nową serię  - <strong>“Rozwojowe poniedziałki”</strong>. Pierwsza recenzja z tego cyklu dotyczyć będzie książki <strong>Jonathana Rasmussona “Zwinny samuraj. Jak programują mistrzowie zwinności”</strong>. Absolutny must-have dla każdego nowoczesnego programisty czy kierownika zwinnego projektu IT :)<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Tak jak zapowiadałam, dziś rozpoczynamy na blogu nową serię  - <strong>“Rozwojowe poniedziałki”</strong>. Pierwsza recenzja z tego cyklu dotyczyć będzie książki <strong>Jonathana Rasmussona “Zwinny samuraj. Jak programują mistrzowie zwinności”</strong>. Absolutny must-have dla każdego nowoczesnego programisty czy kierownika zwinnego projektu IT :)<br></p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -568,7 +549,7 @@
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/04/02/scrum-o-zwinnym-zarzadzaniu-projektami-chrapko/">
-                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/04/02/scrum-o-zwinnym-zarzadzaniu-projektami-chrapko/scrum_dodatk.JPG" width="90" height="90"/>
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/04/02/scrum-o-zwinnym-zarzadzaniu-projektami-chrapko/scrum_dodatk.JPG" width="90" height="90">
                         </a>
                     </div>
                     
@@ -583,7 +564,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>“Scrum. O zwinnym zarządzaniu projektami” Mariusza Chrapko pojawia się dziś na blogu wraz z kolejnym, już trzecim, “Rozwojowym poniedziałkiem”.<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>“Scrum. O zwinnym zarządzaniu projektami” Mariusza Chrapko pojawia się dziś na blogu wraz z kolejnym, już trzecim, “Rozwojowym poniedziałkiem”.<br></p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -593,7 +574,7 @@
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/04/10/wlacz-sie-do-gry/">
-                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/04/10/wlacz-sie-do-gry/wlacz_sie_profil.png" width="90" height="90"/>
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/04/10/wlacz-sie-do-gry/wlacz_sie_profil.png" width="90" height="90">
                         </a>
                     </div>
                     
@@ -608,7 +589,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Dziś Rozwojowy Poniedziałek powraca w trochę innym kontekście. Bloga przejmuje Sheryl Sandberg wraz ze swoją książką <strong>“Włącz się do gry. Kobiety, praca i chęć przywództwa”</strong>.<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Dziś Rozwojowy Poniedziałek powraca w trochę innym kontekście. Bloga przejmuje Sheryl Sandberg wraz ze swoją książką <strong>“Włącz się do gry. Kobiety, praca i chęć przywództwa”</strong>.<br></p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -618,7 +599,7 @@
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/07/16/BiznesDoGoryNogami/">
-                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/07/16/BiznesDoGoryNogami/biznes_profilowe2.JPG" width="90" height="90"/>
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/07/16/BiznesDoGoryNogami/biznes_profilowe2.JPG" width="90" height="90">
                         </a>
                     </div>
                     
@@ -633,7 +614,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Podsumowanie <strong>Bookathonu</strong> już za mną, ale ostatnie bookathonowe dziecko jeszcze czeka na recenzję :) Chodzi mi o książkę, którą wybrał dla mnie mój brat, czyli o <strong>“Biznes do góry nogami wywrócony” Richarda Bransona</strong>.<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Podsumowanie <strong>Bookathonu</strong> już za mną, ale ostatnie bookathonowe dziecko jeszcze czeka na recenzję :) Chodzi mi o książkę, którą wybrał dla mnie mój brat, czyli o <strong>“Biznes do góry nogami wywrócony” Richarda Bransona</strong>.<br></p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -643,7 +624,7 @@
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/07/26/SmashingMagazine/">
-                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/07/26/SmashingMagazine/smashing.JPG" width="90" height="90"/>
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/07/26/SmashingMagazine/smashing.JPG" width="90" height="90">
                         </a>
                     </div>
                     
@@ -658,7 +639,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Wszyscy zainteresowani technologiami webowymi i tworzeniem stron internetowych z pewnością słyszeli o <a href="http://www.smashingmagazine.com/">The Smashing Magazine</a>. Tym, którzy jeszcze go nie odkryli, szczerze polecam pobuszowanie w czeluściach jego artykułów czy polubienie na fb, bo warto :) Mimo że idea tego portalu bardzo mi się podoba, jakoś rzadko tam zaglądam. Dlatego, gdy w bibliotece natrafiłam na ich książkę, bardzo się ucieszyłam i postanowiłam nadrobić zaległości.<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Wszyscy zainteresowani technologiami webowymi i tworzeniem stron internetowych z pewnością słyszeli o <a href="http://www.smashingmagazine.com/" target="_blank" rel="noopener">The Smashing Magazine</a>. Tym, którzy jeszcze go nie odkryli, szczerze polecam pobuszowanie w czeluściach jego artykułów czy polubienie na fb, bo warto :) Mimo że idea tego portalu bardzo mi się podoba, jakoś rzadko tam zaglądam. Dlatego, gdy w bibliotece natrafiłam na ich książkę, bardzo się ucieszyłam i postanowiłam nadrobić zaległości.<br></p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -668,7 +649,7 @@
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/">
-                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/code2.jpg" width="90" height="90"/>
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/code2.jpg" width="90" height="90">
                         </a>
                     </div>
                     
@@ -683,7 +664,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Od jakiego tematu można by zacząć cykl dotyczący programowania? No właśnie od tego! Dziś chciałabym się z Wami podzielić platformami, dzięki którym można zarazić się “koderskim” bakcylem i wiele się nauczyć. Zaczęłam z nich korzystać, gdy byłam totalnie zielona w tym temacie, no i co tu dużo mówić - “wpadłam po uszy” :)<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Od jakiego tematu można by zacząć cykl dotyczący programowania? No właśnie od tego! Dziś chciałabym się z Wami podzielić platformami, dzięki którym można zarazić się “koderskim” bakcylem i wiele się nauczyć. Zaczęłam z nich korzystać, gdy byłam totalnie zielona w tym temacie, no i co tu dużo mówić - “wpadłam po uszy” :)<br></p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -693,7 +674,7 @@
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/">
-                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/stars5_small.jpg" width="90" height="90"/>
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/stars5_small.jpg" width="90" height="90">
                         </a>
                     </div>
                     
@@ -708,7 +689,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Nie da rady wejść w Nowy Rok, omijając sezon na postanowienia noworoczne. Dla niektórych osób są one bezsensowne, bo uważają oni, że cyferki w kalendarzu nic nie zmieniają. Inni śmieją się z tabunów odwiedzających siłownie w styczniu. Dla mnie z kolei każdy moment jest dobry na zmiany, wyjście ze strefy komfortu, zrobienie czegoś fajnego, kreatywnego i rozwijającego czy zaprzestanie czegoś, co nas niszczy.<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Nie da rady wejść w Nowy Rok, omijając sezon na postanowienia noworoczne. Dla niektórych osób są one bezsensowne, bo uważają oni, że cyferki w kalendarzu nic nie zmieniają. Inni śmieją się z tabunów odwiedzających siłownie w styczniu. Dla mnie z kolei każdy moment jest dobry na zmiany, wyjście ze strefy komfortu, zrobienie czegoś fajnego, kreatywnego i rozwijającego czy zaprzestanie czegoś, co nas niszczy.<br></p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -718,7 +699,7 @@
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/02/06/Trzy-litery-i-kropka/">
-                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/02/06/Trzy-litery-i-kropka/man.jpg" width="90" height="90"/>
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/02/06/Trzy-litery-i-kropka/man.jpg" width="90" height="90">
                         </a>
                     </div>
                     
@@ -733,7 +714,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p><strong>Inż.</strong> - trzy magiczne literki i kropka. Gdy stawiałeś swoje pierwsze kroki na uczelni, cztery lata temu, były one odległym i upragnionym celem. Miały sprawić, że narody przed Tobą klękną, a pracodawcy będą ustawiać się do Ciebie w kolejce. Wyszarpane, opłacone potem i krwią, wreszcie przywędrowały i dumnie zasiadły przed twoim nazwiskiem. Tylko jedna rzecz zaczęła Cię nurtować: “Czemu nic się nie zmieniło?”.<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p><strong>Inż.</strong> - trzy magiczne literki i kropka. Gdy stawiałeś swoje pierwsze kroki na uczelni, cztery lata temu, były one odległym i upragnionym celem. Miały sprawić, że narody przed Tobą klękną, a pracodawcy będą ustawiać się do Ciebie w kolejce. Wyszarpane, opłacone potem i krwią, wreszcie przywędrowały i dumnie zasiadły przed twoim nazwiskiem. Tylko jedna rzecz zaczęła Cię nurtować: “Czemu nic się nie zmieniło?”.<br></p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -743,7 +724,7 @@
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/05/03/Rozwojowy-poniedzialek5/">
-                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/05/03/Rozwojowy-poniedzialek5/rozwojowy-poniedzialek5.jpg" width="90" height="90"/>
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/05/03/Rozwojowy-poniedzialek5/rozwojowy-poniedzialek5.jpg" width="90" height="90">
                         </a>
                     </div>
                     
@@ -758,7 +739,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Dziś porządka dawka tego co uwielbiam. W ramach <strong>Rozwojowego poniedziałku #5</strong> zapraszam na apetyczny mix programowania i rozwoju osobistego. Opowiem dziś kilka słów o “Today I learned” -<br>projekcie, który bardzo przypadł mi do gustu. Już tłumaczę o co chodzi ;)<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Dziś porządka dawka tego co uwielbiam. W ramach <strong>Rozwojowego poniedziałku #5</strong> zapraszam na apetyczny mix programowania i rozwoju osobistego. Opowiem dziś kilka słów o “Today I learned” -<br>projekcie, który bardzo przypadł mi do gustu. Już tłumaczę o co chodzi ;)<br></p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -768,7 +749,7 @@
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/08/08/NieTlumaczSieDzialaj/">
-                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/08/08/NieTlumaczSieDzialaj/tytulowe.JPG" width="90" height="90"/>
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/08/08/NieTlumaczSieDzialaj/tytulowe.JPG" width="90" height="90">
                         </a>
                     </div>
                     
@@ -783,7 +764,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Dziś wracam do Was z recenzją książki Briana Tracy’ego “Nie tłumacz się, działaj! Odkryj moc samodyscypliny”. Pewnie dla tej części z Was, którzy kiedykolwiek zabłądzili w księgarni lub bibliotece do działu z książkami dotyczącymi rozwoju osobistego, nazwisko autora nie jest obce. Mając na uwadze jednak tych, którzy jeszcze o nim nie słyszeli, naskrobię kilka dodatkowych słów.<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Dziś wracam do Was z recenzją książki Briana Tracy’ego “Nie tłumacz się, działaj! Odkryj moc samodyscypliny”. Pewnie dla tej części z Was, którzy kiedykolwiek zabłądzili w księgarni lub bibliotece do działu z książkami dotyczącymi rozwoju osobistego, nazwisko autora nie jest obce. Mając na uwadze jednak tych, którzy jeszcze o nim nie słyszeli, naskrobię kilka dodatkowych słów.<br></p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -792,53 +773,17 @@
             </div>
         </div>
         <div class="modal-footer">
-            <p class="results-count text-medium"
-                data-message-zero="Jeszcze nie napisałam posta, którego szukasz."
-                data-message-one="Jesteś szczęściarzem! Znaleziono jednego posta."
-                data-message-other="Znaleziono {n} postów :)">
-                Znaleziono 30 postów :)
+            <p class="results-count text-medium" data-message-zero="Jeszcze nie napisałam posta, którego szukasz." data-message-one="Jesteś szczęściarzem! Znaleziono jednego posta." data-message-other="Znaleziono {n} postów :)">
+                Znaleziono 32 postów :)
             </p>
         </div>
     </div>
 </div>
         
 <div id="cover" style="background-image:url('/assets/images/sky.jpg');"></div>
-        <div id="overlay"></div>
-<div id="modal">
-  <div id="closeBtn">
-    <i class="fa fa-times" aria-hidden="true"></i>
-  </div>
-  <div id="modal-text">
-    <div class="intro">Cześć!</div>
-      Dołącz do mnie na facebooku, bym mogła dać Ci znać o każdym najnowszym poście i
-      dzielić się z Tobą nowinkami ze świata IT i rozwoju osobistego :)
-      Miłego czytania!
-  </div>
-  <div id="fb-widget">
-    <div class="fb-page" data-href="https://www.facebook.com/kernelgonnapanic"
-      data-small-header="false"
-      data-width="280"
-      data-adapt-container-width="true"
-      data-hide-cover="false"
-      data-show-facepile="true">
-      <blockquote cite="https://www.facebook.com/kernelgonnapanic" class="fb-xfbml-parse-ignore">
-        <a href="https://www.facebook.com/kernelgonnapanic">kernelgonnapanic.pl</a>
-      </blockquote>
-    </div>
-  </div>
-</div>
-
         <!--SCRIPTS-->
-<script src="/assets/js/script-xbyjvriqxrte513q4rughvhzmxjtc1y4mrtpkdaps4dwklucamn2wcctvwz1.min.js"></script>
+<script src="/assets/js/script-oxm9fqwkgxfzzzzjcjnkdmnvqtvwc8dnjrchixde9lpdl7nglh3zckx6opbd.min.js"></script>
 <!--SCRIPTS END-->
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.9";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
 
     
         <script>
@@ -858,7 +803,6 @@
             })();
         </script>
     
-
 
 
 
