@@ -3,7 +3,7 @@ title: "Jak być speakerem i nie zwariować?"
 tags:
   - Prezentacje
   - Konferencje
-thumbnailImagePosition: top
+thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial
 thumbnailImage: presentation.jpeg
@@ -30,21 +30,23 @@ A co najważniejsze, układam luźne idee, które istnieją tylko w mojej głowi
 
 # 3. Stwórz sobie linked listę
 Gdy już stworzyliście sobie pełen tekst prezentacji i zwalidowaliście czy wszystko jest na swoim miejscu, a prezentacja jest spójna, nie próbujcie przypadkiem uczyć się jej na pamięć. Z dużym prawdopodobieństwem skończy się to katastrofą. W trakcie wygłaszania prelekcji, gdy tylko dany fragment wyleci Wam z głowy będziecie panicznie próbowali sobie go przypomnieć, przez co drastycznie ucierpi płynność mówienia. Wiem, coś o tym, sprawdziłam to na własnych błędach.
+{% pullquote right %}
+Stworzenie **"linked listy"** pozwoli Wam na płynne przedstawienie całej prezentacji.
+{% endpullquote %}
+Czymś, co obecnie praktykuje, jest tworzenie sobie "linked listy" (robocza nazwa mojego autorstwa). Jest to spis tematów, które po kolei poruszam i dzięki którym jestem w stanie płynnie przekazać całą zawartość prezentacji. Do jej stworzenia, polecam korzystać z bezokoliczników, krótkich fraz, które wskazują bezpośrednio na to, co mamy powiedzieć. Są to dla mnie takie przypominacze, wystarczy mi rzut oka, by zwizualizować sobie cały paragraf z mojej prezentacji.
 
-Czymś, co obecnie praktykuje, jest tworzenie sobie czegoś, co roboczo nazywam "linked listą". Jest to spis tematów, które po kolei poruszamy i dzięki którym jesteśmy w stanie płynnie przekazać całą zawartość prezentacji. Polecam korzystać z bezokoliczników, krótkich fraz, które wskazują bezpośrednio na to co mamy powiedzieć. Są to dla mnie takie triggery, wystarczy mi rzut oka, by przypomnieć sobie cały paragraf z mojej prezentacji.
-
-Tak stworzona linked lista to świetny materiał do powtórek. Przydaje się też na scenie, bo daje Wam komfort, że opowiecie o wszystkim o czym chcieliście powiedzieć. Sprawia również, że nie recytujecie swojej prezentacji, lecz opowiadacie własnymi słowami, co w ogromnym stopniu poprawia komfort Waszych słuchaczy.
+Tak stworzona "linked lista" to świetny materiał do powtórek. Przydaje się też na scenie, bo daje Wam komfort, że przekażecie słuchaczom wszystkie informacje. Sprawia również, że nie recytujecie swojej prezentacji, lecz opowiadacie własnymi słowami, co w ogromnym stopniu poprawia komfort uczestników konferencji/meetupu.
 
 # 4. Kumpel z pracy i TY
-W największy sposób uspokaja mnie przed prezentacją zmiana perspektywy, której używam, gdy o niej myślę. Staram się wytłumaczyć sobie, że ta sytuacja to nic innego jak spotkanie z kolegą z pracy i opowiedzenie mu o nowym narzędziu czy technice. Wiem, że czasem trudno uzyskać taki mindset, w szczególności, kiedy np. widzicie przed sobą kilkaset osób :O lub nigdy tego dotychczas nie robiliście. Ale gdy ju to uda to dużo łatwiej się w tej rzeczywistości odnajdziecie.
+W największy sposób uspokaja mnie przed prezentacją zmiana perspektywy, której używam, gdy o niej myślę. Staram się wytłumaczyć sobie, że ta sytuacja to nic innego, jak spotkanie z kolegą z pracy i opowiedzenie mu o nowym narzędziu czy technice. Wiem, że czasem trudno uzyskać taki mindset, w szczególności, kiedy np. widzicie przed sobą kilkaset osób :O lub nigdy tego dotychczas nie robiliście. Ale gdy już to uda to dużo łatwiej odnaleźć się nam w tej konferencyjnej rzeczywistości.
 
-W trakcie samej prezentacji lubię odnaleźć wzrokiem na sali osoby, które są sympatycznie do mnie nastawione i widocznie zainteresowane tematem (potakują, gdy się zgadzają lub śmieją się z żartów) i to do nich kieruje swój przekaz.
+W trakcie samej prezentacji lubię znajdować wzrokiem osoby na sali, które są sympatycznie do mnie nastawione i widocznie zainteresowane tematem (potakują, gdy się zgadzają lub śmieją się z żartów) i to do nich kieruje swój przekaz.
 
 Ten punkt ma jeszcze drugie oblicze: "TY". Uważam, że bardzo ważne jest na scenie pozostać w kontakcie ze sobą, nie udawać nikogo, śmiać się ze swoich błędów i nie kwestionować swoich wyborów. Jest to moment, w którym robota została już zrobiona, przygotowałeś/aś się najlepiej jak to było możliwe. Teraz pozostaje tylko z pełną otwartością, serdecznością i z użyciem całych zasobów pozytywnej energii przekazać merytorykę, którą przygotowałeś/aś. Dać ludziom wartość, okraszając ją swoim temperamentem :)
 
 # 5. Miej na scenie wodę
-A ostatni tip, jest jednym z tych bardzo przyziemnych. Zawsze zabierajcie ze sobą na scenę wodę. Po pierwsze jest duże prawdopodobieństwo, że zaschnie Wam w gardle, a mówienie w takim stanie nie jest przyjemne ani dla speakera, ani dla słuchaczy. Po drugie, trickiem, z którego korzystają prezentujący, jest sięganie po butelkę wody w momencie, gdy stracili wątek. 
+A ostatni tip jest jednym z tych bardzo przyziemnych. Zawsze zabierajcie ze sobą na scenę wodę. Po pierwsze, jest duże prawdopodobieństwo, że zaschnie Wam w gardle, a mówienie w takim stanie nie jest przyjemne ani dla speakera, ani dla słuchaczy. Po drugie, trickiem, z którego korzystają prezentujący, jest sięganie po butelkę wody w momencie, gdy stracili wątek. 
 
-Mam nadzieję, że moje tips & tricks pomogą Wam stanąć na scenie i podzielić się z innymi swoją wiedzą. Kolejny Meet.js Summit dopiero za rok, ale wcześniej z pewnością znajdzie się mnóstwo okazji by spróbować swoich sił jako speaker.
+Mam nadzieję, że moje tips & tricks pomogą Wam stanąć na scenie i podzielić się swoją wiedzą z innymi. Kolejny Meet.js Summit dopiero za rok, ale wcześniej z pewnością znajdzie się mnóstwo okazji by spróbować swoich sił jako speaker.
 
 Ania
