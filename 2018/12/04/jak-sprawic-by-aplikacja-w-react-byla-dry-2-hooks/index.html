@@ -1,0 +1,810 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="kernelgonnapanic.pl">
+    <title>Jak sprawić, by Twoja aplikacja w React była DRY? - Hooks - kernelgonnapanic.pl</title>
+    <meta name="author" content="Anna Konopka">
+    
+        <meta name="keywords" content="frontend,javascript,kernelgonnapanic,React,Higher Order Components,dobre praktyki React,wzorce React,render prop,react hooks">
+    
+    
+        <link rel="icon" href="https://kernelgonnapanic.pl/assets/images/favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="Jeśli jesteście na bieżąco z newsami we frontendowym świecie, z pewnością słyszeliście już o wprowadzeniu do React nowego API o nazwie Hooks. Postanowiłam przyjrzeć się mu lepiej i zobaczyć, jak możem">
+<meta name="keywords" content="React,Higher Order Components,dobre praktyki React,wzorce React,render prop,react hooks">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Jak sprawić, by Twoja aplikacja w React była DRY? - Hooks">
+<meta property="og:url" content="https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/index.html">
+<meta property="og:site_name" content="kernelgonnapanic.pl">
+<meta property="og:description" content="Jeśli jesteście na bieżąco z newsami we frontendowym świecie, z pewnością słyszeliście już o wprowadzeniu do React nowego API o nazwie Hooks. Postanowiłam przyjrzeć się mu lepiej i zobaczyć, jak możem">
+<meta property="og:locale" content="pl">
+<meta property="og:image" content="https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/hoc.gif">
+<meta property="og:updated_time" content="2018-12-05T09:41:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jak sprawić, by Twoja aplikacja w React była DRY? - Hooks">
+<meta name="twitter:description" content="Jeśli jesteście na bieżąco z newsami we frontendowym świecie, z pewnością słyszeliście już o wprowadzeniu do React nowego API o nazwie Hooks. Postanowiłam przyjrzeć się mu lepiej i zobaczyć, jak możem">
+<meta name="twitter:image" content="https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/hoc.gif">
+<meta name="twitter:creator" content="@konopka_ania">
+    
+        <link rel="publisher" href="https://plus.google.com/116973627351289720000"/>
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/cracks.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/cracks.jpg" />
+    
+    
+        <meta property="og:image" content="https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/cracks.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/cracks.jpg" />
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-5vep6rqjmqro1n7d9e29h9buiwwykxbgqomapbiwl0urtijpxktfe9mduoje.min.css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91276922-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">kernelgonnapanic.pl</a>
+    </div>
+    
+        
+            <a class="header-right-picture " href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/zdjecie.jpg" alt="global.author_picture">
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/zdjecie.jpg" alt="global.author_picture">
+                </a>
+                <h4 class="sidebar-profile-name">Anna Konopka</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>Geek girl. Enthusiastic coder. Frontend developer. Blog author. Speaker.</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/ ">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="#about">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">O mnie</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/atom.xml">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-categories">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">Kategorie</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-tags">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">Tagi</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://github.com/kernelgonnapanic" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://twitter.com/konopka_ania" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://www.facebook.com/kernelgonnapanic/" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-facebook"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://www.instagram.com/kernelgonnapanic/" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-instagram"></i>
+                        <span class="sidebar-button-desc">Instagram</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://pl.linkedin.com/in/anna-konopka-3b0043115" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-left
+                    post-header-cover--partial" style="background-image:url('/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/cracks.jpg');" data-behavior="4">
+            
+        </div>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaOut
+                        ">
+                
+<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            Jak sprawić, by Twoja aplikacja w React była DRY? - Hooks
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2018-12-04T19:35:00+01:00">
+	
+		    04.12.2018
+    	
+    </time>
+    
+</div>
+
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>Jeśli jesteście na bieżąco z newsami we frontendowym świecie, z pewnością słyszeliście już o wprowadzeniu do React nowego API o nazwie <span class="highlight-text primary">Hooks</span>. Postanowiłam przyjrzeć się mu lepiej i zobaczyć, jak możemy go porównać z rozwiązaniami, które wykorzystywaliśmy w React do tej pory.<br><a id="more"></a></p>
+<p>Rok temu, napisałam dla Was posta o wykorzystaniu <code>render propów</code> i <code>higher order components</code> do współdzielenia kodu między komponentami w aplikacjach React. Możecie go sobie odświeżyć <a href="https://kernelgonnapanic.pl/2017/10/29/jak-sprawic-by-aplikacja-w-react-byla-dry/">tutaj</a>. Myślę, że warto to zrobić, zanim pobiegniemy z tematem dalej.<br>Jesteście już z powrotem? :) W tamtym czasie były to najbardziej popularne, specyficzne dla React, mechanizmy, dzięki którym nasze aplikacje mogły być bardziej DRY. Ostatnio jednak okazało się, że zespół tworzący React planuje wprowadzeniego nowego API, które ma nam to zadanie ułatwić. Przyjrzyjmy się temu, czym są hooki i jak mogą nam pomóc.</p>
+<h2 id="Hooks-po-co-nowy-mechanizm"><a href="#Hooks-po-co-nowy-mechanizm" class="headerlink" title="Hooks - po co nowy mechanizm?"></a>Hooks - po co nowy mechanizm?</h2><p>Myślę, że można stwierdzić, że komponenty wyższych rzędów (HOCs) i używanie render propów (i będącym tego odmianą mechanizm “children as a function”) zostały już przez społeczność reactową całkiem dobrze przyjęte i szeroko stosowane. Można zapytać: po co w takim razie wprowadzać nowy mechanizm?</p>
+<p>Otóż właśnie, wraz z szerokim użyciem wcześniej wymienionych technik, użytkownicy React doszli do wniosku, że czegoś im brakuje. Istniał np. problem z reużywaniem kodu obsługującego stan w komponentach. Jeżeli logika z tym związana była potrzebna w dwóch miejscach zazwyczaj trzeba było ją powielać, wspomagając się co najwyżej wydzielaniem “czystych” funkcji, które operowały na danych. Sam kod związany z ustawieniem początkowego stanu, jego uaktualnieniem itd. niestety trzeba było powtórzyć.</p>
+<p>Dodatkowo, w sytuacjach gdy komponent obsługiwał kilka zachowań, kod, który był za nie odpowiedzialny, zaczynał się ze sobą przeplatać. Dla przykładu: zarówno funkcjonalność 1, jak i 2 miały część kodu w <code>componentDidMount</code> jak i <code>componentWillUnmount</code>. I trudno było je zgrabnie oddzielić, by móc korzystać z tego kodu w innym miejscu repozytorium.</p>
+<p>Naprzeciw tym właśnie problemom wychodzi mechanizm Hooks. Pozwala on na korzystanie z dotyczasowych funkcjonalności React tj. lokalnego stanu, contextu, refs przy pomocy innego API, które ułatwia współdzielenie kodu. Jeśli chcecie poczytać więcej o motywacjach stojących za ich stworzeniem i szczegółach dotyczących ich użycia - zachęcam do zajrzenia do oficjalnej <a href="https://reactjs.org/docs/hooks-intro.html" target="_blank" rel="noopener">dokumentacji</a>, która jest napisana prostym językiem i dużo objaśnia.</p>
+<p>A my zabieramy się do działania i zobaczymy jak hooki wyglądają od strony kodu.</p>
+<h2 id="Hooks-w-akcji"><a href="#Hooks-w-akcji" class="headerlink" title="Hooks w akcji"></a>Hooks w akcji</h2><div class="figure left fig-50" style="width:;"><img class="fig-img" src="hoc.gif" alt=""></div>
+<p>Żeby łatwiej nam się porównywało mechanizm hooków do render propów i HOC postanowiłam rozszerzyć przykład, który prezentowałam w pierwszym artykule o komponent korzystający z hooków. Przypomnijmy sobie, jak nasza mini-aplikacja wtedy wyglądała.</p>
+<p>Naszym zadaniem było stworzenie animującego się header’a. Chcieliśmy, by początkowo był on przezroczysty (opacity: 0) i wraz ze scrollowaniem strony, był coraz bardziej widoczny (aż do opacity: 1). Końcowy efekt widoczny jest na gifie. </p>
+<p><div style="clear:both"></div><br>Dodatkowo komponent ten zaimplementowaliśmy na <em>3 sposoby</em>:<br>1) bez współdzielenia kodu,<br>2) z wykorzystaniem higher order component,<br>3) z wykorzystaniem komponentu używającego render prop.<br>Wersja 2 i 3 były przykładami na to jak możemy budować nasze komponenty, by były przyjazne ich reużywaniu.</p>
+<p>Dziś naszym zadaniem jest stworzenie tego samego komponentu i sprawdzenie czy mechanizm hooków może nam w tym pomóc.</p>
+<p>Dla przypomnienia zobaczmy naszą funkcjonalność w czystej formie, umieszczoną całą w jednym komponencie.</p>
+<figure class="highlight jsx"><figcaption><span>DummyPage.js</span><a href="https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/pages/DummyPage.js" target="_blank" rel="noopener">DummyPage.js</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DummyPage</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">super</span>();</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      scrollPos: <span class="number">0</span>,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  calculateOpacity = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="keyword">this</span>.state.scrollPos) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.state.scrollPos &gt; <span class="number">200</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.state.scrollPos / <span class="number">200</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  handleScroll = <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> scrollPos = event.target.scrollTop;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123; scrollPos &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div className=<span class="string">"relativeContainer"</span>&gt;</span><br><span class="line">        &lt;div</span><br><span class="line">          className=<span class="string">"container"</span></span><br><span class="line">          onScroll=&#123;<span class="keyword">this</span>.handleScroll&#125;</span><br><span class="line">        &gt;</span><br><span class="line">          &lt;Header</span><br><span class="line">            opacity=&#123;<span class="keyword">this</span>.calculateOpacity()&#125;</span><br><span class="line">            text=<span class="string">"Dummy page"</span></span><br><span class="line">          /&gt;</span><br><span class="line">          &lt;List type=<span class="string">"dummy"</span> /&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Teraz spróbujmy to przeorganizować, z użyciem hooków. Nasz nowy komponent wygląda tak:</p>
+<figure class="highlight jsx"><figcaption><span>PageWithHooks.js</span><a href="https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/pages/PageWithHooks.js" target="_blank" rel="noopener">PageWithHooks.js</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> useOpacityFromScroll <span class="keyword">from</span> <span class="string">'../enhancers/useOpacityFromScrollHook'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> PageWithHooks = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; opacity, handleScroll &#125; = useOpacityFromScroll();</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=<span class="string">"relativeContainer"</span>&gt;</span><br><span class="line">      &lt;div</span><br><span class="line">        className=<span class="string">"container"</span></span><br><span class="line">        onScroll=&#123;handleScroll&#125;</span><br><span class="line">      &gt;</span><br><span class="line">        &lt;Header</span><br><span class="line">          opacity=&#123;opacity&#125;</span><br><span class="line">          text=<span class="string">"Page with hooks"</span></span><br><span class="line">          yellow</span><br><span class="line">        /&gt;</span><br><span class="line">        &lt;List type=<span class="string">"hooks"</span>/&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Zastanówmy się jakie zmiany zaszły w tym komponencie. Przede wszystkim widzimy tutaj wywołanie nowej funkcji o nazwie <code>useOpacityFromScroll</code>. To tam schowała się cała nasza logika odpowiedzialna za odczytywanie pozycji scrolla i przeliczanie jej na wartość opacity. Jest to tzw. <code>custom hook</code>, ponieważ nie pochodzi bezpośrednio z Reacta, a został napisany przeze mnie. </p>
+<p>Dodatkowo, co bardziej spostrzegawczy, z pewnością zwrócili uwagę na to, że nasz komponent nie jest już klasą, a stał się komponentem funkcyjnym (czyli po prostu funkcją). Tu dochodzimy do kolejnego problemu, który hooki starają się rozwiązać. Do tej pory, by komponent mógł przechowywać stan, musiał być klasą, dziedziczącą po <code>React.Component</code>. Hooki dodają możliwość przechowywania stanu w komponentach funkcyjnych. Też was wkurzało refactorowanie funkcji na klasę, w momencie gdy uświadamialiście sobie, że potrzebujecie lokalnego stanu w komponencie? Wygląda na to, że mamy ten kłopot już z głowy ;)</p>
+<h2 id="Custom-hook"><a href="#Custom-hook" class="headerlink" title="Custom hook"></a>Custom hook</h2><p>Najwyższy czas spojrzeć do stworzonego przez nas hooka.</p>
+<figure class="highlight jsx"><figcaption><span>useOpacityFromScrollHook.js</span><a href="https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/enhancers/useOpacityFromScrollHook.js" target="_blank" rel="noopener">useOpacityFromScrollHook.js</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> calculateOpacity = <span class="function">(<span class="params">scrollPos</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (!scrollPos) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span> (scrollPos &gt; <span class="number">200</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> scrollPos / <span class="number">200</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> useOpacityFromScroll = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> [scrollPos, setScroll] = useState(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> handleScroll = <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> scrollPos = event.target.scrollTop;</span><br><span class="line">    setScroll(scrollPos);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123; <span class="attr">opacity</span>: calculateOpacity(scrollPos), handleScroll &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Zacznijmy od przyjrzenia się funkcji <code>useOpacityFromScroll</code>. Jest to, jak już wspominałam, stworzony przez nas hook. Jego nazwa rozpoczyna się od <code>use</code>. Taką konwencję sugeruje dokumentacja i bazując na niej działają również lintery, które sprawdzają czy hooki są przez nas użyte w odpowiedni sposób.<br>W 8 linii możemy zobaczyć użycie hooka <code>useState</code>. Pochodzi on z Reacta i pozwala nam na korzystanie ze stanu. Ale wait? Nie mamy tu żadnego komponentu, jaki to jest stan w takim razie?</p>
+<p>No i właśnie, hooki pozwalają nam na odłączenie logiki obsługi stanu od komponentu. To oznacza, że kod ten będzie obsługiwał stan komponentu, w którym zostanie wywołany. W naszym przypadku jest on wywołany z <code>PageWithHooks</code> i stanem tego komponentu będzie się zajmował. Co istotne, wydzielamy w ten sposób kod obsługujący stan, a nie sam stan. W ten sposób, gdy inny komponent np. <code>SmartPage</code> będzie również korzystał z tego hooka, jego stan nie będzie współdzielny ze stanem <code>PageWithHooks</code>. </p>
+<p>Do hooka <code>useState</code> podajemy wartość początkową stanu (w naszym przypadku jest to 0) i zwraca on, aktualną wartość scrolla i funkcję, która pozwala nam na jej modyfikowanie. My z kolei funkcję <code>setScroll</code> dodatkowo opakowujemy w taki sposób, by była w stanie przyjąć scroll event.</p>
+<p>Wyliczoną wartość opacity i funkcję, która updatuje pozycję scrolla na podstawie eventu zwracamy z naszego hooka i korzystamy z nich w komponencie <code>PageWithHooks</code>.</p>
+<h2 id="Hooks-hooks-everywhere"><a href="#Hooks-hooks-everywhere" class="headerlink" title="Hooks, hooks everywhere"></a>Hooks, hooks everywhere</h2><p>Jeśli dalej czytasz, to szacun dla Ciebie :) Zostało nam tylko kilka ostatnich informacji. Zastanawiasz się może, jakie jeszcze hooki oferuje nam React. Mamy więc:</p>
+<ul>
+<li><code>useState</code>, którego używaliśmy dzisiaj,</li>
+<li><code>useEffect</code>, o którym za moment powiem trochę więcej,</li>
+<li><code>useContext</code>, który, jak sama nazwa mówi, pozwala na dostęp do contextu,</li>
+<li><code>useRef</code>, pozwalający na otrzymanie referencji do elementu DOMu.<br>i inne, o których możecie poczytać <a href="https://reactjs.org/docs/hooks-reference.html" target="_blank" rel="noopener">tutaj</a>.</li>
+</ul>
+<p>Hook <code>useEffect</code> pozwala na uruchamianie efektów. Czym one są? <code>Efekt</code> to funkcja, która jest wywoływana po tym, jak komponent zostanie wyrenderowany, a DOM zaktualizowany. W zamyśle twórców efekty pełnią w komponentach funkcyjnych podobną rolę, jak lifecycle hooki w klasach. Dzięki nim, jesteśmy np. w stanie zareagować na stan, który się zmienił i wykonać asynchroniczne zapytanie. Więcej o użyciu efektów dowiecie się <a href="https://reactjs.org/docs/hooks-effect.html" target="_blank" rel="noopener">tu</a>.</p>
+<p>Dodatkowo, pojawiło się już wiele hooków stworzonych przez społeczność, możecie je znaleźć np. w repozytorium <a href="https://github.com/rehooks/awesome-react-hooks" target="_blank" rel="noopener">awesome react hooks</a>. Powstała również <a href="https://usehooks.com/" target="_blank" rel="noopener">strona</a>, gdzie codziennie pojawia się ich nowe przykładowe użycie. To dużo fajnego materiału, dzięki któremu można bardziej wyczuć w jakich sytuacjach hooki okażą się pomocne.</p>
+<p>Warto pamiętać, że wprowadzenie hooków do React planowane jest w wersji 16.7, która obecnie jest dostępna w wersji alpha. Z pewnością nie jest rozwiązanie gotowe do wprowadzania do produkcyjnych aplikacji, ale warto już zacząć uczyć się budować kod w oparciu o tę koncepcję. Dokumentacja również przestrzega przed przepisywaniem na “huraaaa” bardzo skomplikowanych komponentów i zaleca, by zacząć używanie hooków od nowo tworzonych komponentów i mało znaczących części aplikacji i kodu.</p>
+<p>Post był długi i dużo się w nim działo. Jeśli dotrwałeś do tego momentu, to z pewnością twoje intuicje na temat hooków są już całkiem dobrze rozwinięte. Dajcie znać, czy warto pobawić się z tym tematem dalej, ilustrując sytuacje w których hooki pokazują swoją moc. Ciekawa jestem również, czy często używacie render propów i higher order components w swoim kodzie. Koniecznie podzielcie się swoimi przemyśleniami!</p>
+<p>Do następnego!<br>Ania</p>
+<p><em>Photo by Joshua Brown on Unsplash</em></p>
+
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGI</span><br>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Dobre-praktyki/">Dobre praktyki</a> <a class="tag tag--primary tag--small t-link" href="/tags/Frontend/">Frontend</a> <a class="tag tag--primary tag--small t-link" href="/tags/Javascript/">Javascript</a> <a class="tag tag--primary tag--small t-link" href="/tags/React/">React</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">POPRZEDNI</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/11/17/pamietnik-programistki-3/" data-tooltip="Pamiętnik programistki 3 - GDG DevFest, Cybersecurity i wakacje 🏖️🌴">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NASTĘPNY</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 Anna Konopka. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">POPRZEDNI</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/11/17/pamietnik-programistki-3/" data-tooltip="Pamiętnik programistki 3 - GDG DevFest, Cybersecurity i wakacje 🏖️🌴">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NASTĘPNY</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/">
+                <i class="fa fa-google-plus"></i><span>Udostępnij na Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/">
+                <i class="fa fa-facebook-official"></i><span>Udostępnij na Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/">
+                <i class="fa fa-twitter"></i><span>Udostępnij na Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/zdjecie.jpg" alt="global.author_picture">
+        
+            <h4 id="about-card-name">Anna Konopka</h4>
+        
+            <div id="about-card-bio"><p>Geek girl. Enthusiastic coder. Frontend developer. Blog author. Speaker.</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br>
+                <p>Senior Frontend Developer</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br>
+                Wrocław, Polska
+            </div>
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search" class="form-control input--large search-input" placeholder="Search " autofocus="autofocus">
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">Jeszcze nie napisałam posta, którego szukasz.</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/03/10/zwinny-samuraj/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/03/10/zwinny-samuraj/samuraj.JPG" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/03/10/zwinny-samuraj/">
+                            <h3 class="media-heading">Zwinny samuraj. Jak programują mistrzowie zwinności</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    10 mar 2015
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Tak jak zapowiadałam, dziś rozpoczynamy na blogu nową serię  - <strong>“Rozwojowe poniedziałki”</strong>. Pierwsza recenzja z tego cyklu dotyczyć będzie książki <strong>Jonathana Rasmussona “Zwinny samuraj. Jak programują mistrzowie zwinności”</strong>. Absolutny must-have dla każdego nowoczesnego programisty czy kierownika zwinnego projektu IT :)<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/04/02/scrum-o-zwinnym-zarzadzaniu-projektami-chrapko/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/04/02/scrum-o-zwinnym-zarzadzaniu-projektami-chrapko/scrum_dodatk.JPG" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/04/02/scrum-o-zwinnym-zarzadzaniu-projektami-chrapko/">
+                            <h3 class="media-heading">Scrum. O zwinnym zarządzaniu projektami.</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2 kwi 2015
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>“Scrum. O zwinnym zarządzaniu projektami” Mariusza Chrapko pojawia się dziś na blogu wraz z kolejnym, już trzecim, “Rozwojowym poniedziałkiem”.<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/04/10/wlacz-sie-do-gry/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/04/10/wlacz-sie-do-gry/wlacz_sie_profil.png" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/04/10/wlacz-sie-do-gry/">
+                            <h3 class="media-heading">Włącz się do gry</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    10 kwi 2015
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Dziś Rozwojowy Poniedziałek powraca w trochę innym kontekście. Bloga przejmuje Sheryl Sandberg wraz ze swoją książką <strong>“Włącz się do gry. Kobiety, praca i chęć przywództwa”</strong>.<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/07/16/BiznesDoGoryNogami/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/07/16/BiznesDoGoryNogami/biznes_profilowe2.JPG" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/07/16/BiznesDoGoryNogami/">
+                            <h3 class="media-heading">Biznes do góry nogami wywrócony - Richard Branson</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    16 lip 2015
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Podsumowanie <strong>Bookathonu</strong> już za mną, ale ostatnie bookathonowe dziecko jeszcze czeka na recenzję :) Chodzi mi o książkę, którą wybrał dla mnie mój brat, czyli o <strong>“Biznes do góry nogami wywrócony” Richarda Bransona</strong>.<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/07/26/SmashingMagazine/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/07/26/SmashingMagazine/smashing.JPG" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/07/26/SmashingMagazine/">
+                            <h3 class="media-heading">Smashing magazine</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    26 lip 2015
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Wszyscy zainteresowani technologiami webowymi i tworzeniem stron internetowych z pewnością słyszeli o <a href="http://www.smashingmagazine.com/" target="_blank" rel="noopener">The Smashing Magazine</a>. Tym, którzy jeszcze go nie odkryli, szczerze polecam pobuszowanie w czeluściach jego artykułów czy polubienie na fb, bo warto :) Mimo że idea tego portalu bardzo mi się podoba, jakoś rzadko tam zaglądam. Dlatego, gdy w bibliotece natrafiłam na ich książkę, bardzo się ucieszyłam i postanowiłam nadrobić zaległości.<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/code2.jpg" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/">
+                            <h3 class="media-heading">5 najlepszych platform do nauki programowania</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    11 wrz 2015
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Od jakiego tematu można by zacząć cykl dotyczący programowania? No właśnie od tego! Dziś chciałabym się z Wami podzielić platformami, dzięki którym można zarazić się “koderskim” bakcylem i wiele się nauczyć. Zaczęłam z nich korzystać, gdy byłam totalnie zielona w tym temacie, no i co tu dużo mówić - “wpadłam po uszy” :)<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/stars5_small.jpg" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/">
+                            <h3 class="media-heading">Jak nie dać się zwariować postanowieniom noworocznym?</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    3 sty 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Nie da rady wejść w Nowy Rok, omijając sezon na postanowienia noworoczne. Dla niektórych osób są one bezsensowne, bo uważają oni, że cyferki w kalendarzu nic nie zmieniają. Inni śmieją się z tabunów odwiedzających siłownie w styczniu. Dla mnie z kolei każdy moment jest dobry na zmiany, wyjście ze strefy komfortu, zrobienie czegoś fajnego, kreatywnego i rozwijającego czy zaprzestanie czegoś, co nas niszczy.<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/02/06/Trzy-litery-i-kropka/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/02/06/Trzy-litery-i-kropka/man.jpg" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/02/06/Trzy-litery-i-kropka/">
+                            <h3 class="media-heading">Trzy litery i kropka - czy studia mają sens?</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    6 lut 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p><strong>Inż.</strong> - trzy magiczne literki i kropka. Gdy stawiałeś swoje pierwsze kroki na uczelni, cztery lata temu, były one odległym i upragnionym celem. Miały sprawić, że narody przed Tobą klękną, a pracodawcy będą ustawiać się do Ciebie w kolejce. Wyszarpane, opłacone potem i krwią, wreszcie przywędrowały i dumnie zasiadły przed twoim nazwiskiem. Tylko jedna rzecz zaczęła Cię nurtować: “Czemu nic się nie zmieniło?”.<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/05/03/Rozwojowy-poniedzialek5/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/05/03/Rozwojowy-poniedzialek5/rozwojowy-poniedzialek5.jpg" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/05/03/Rozwojowy-poniedzialek5/">
+                            <h3 class="media-heading">Rozwojowy poniedziałek</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    3 maj 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Dziś porządka dawka tego co uwielbiam. W ramach <strong>Rozwojowego poniedziałku #5</strong> zapraszam na apetyczny mix programowania i rozwoju osobistego. Opowiem dziś kilka słów o “Today I learned” -<br>projekcie, który bardzo przypadł mi do gustu. Już tłumaczę o co chodzi ;)<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/08/08/NieTlumaczSieDzialaj/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/08/08/NieTlumaczSieDzialaj/tytulowe.JPG" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/08/08/NieTlumaczSieDzialaj/">
+                            <h3 class="media-heading">Nie tłumacz się, działaj!</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    8 sie 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Dziś wracam do Was z recenzją książki Briana Tracy’ego “Nie tłumacz się, działaj! Odkryj moc samodyscypliny”. Pewnie dla tej części z Was, którzy kiedykolwiek zabłądzili w księgarni lub bibliotece do działu z książkami dotyczącymi rozwoju osobistego, nazwisko autora nie jest obce. Mając na uwadze jednak tych, którzy jeszcze o nim nie słyszeli, naskrobię kilka dodatkowych słów.<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium" data-message-zero="Jeszcze nie napisałam posta, którego szukasz." data-message-one="Jesteś szczęściarzem! Znaleziono jednego posta." data-message-other="Znaleziono {n} postów :)">
+                Znaleziono 35 postów :)
+            </p>
+        </div>
+    </div>
+</div>
+        
+<div id="cover" style="background-image:url('/assets/images/sky.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-oxm9fqwkgxfzzzzjcjnkdmnvqtvwc8dnjrchixde9lpdl7nglh3zckx6opbd.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'https://kernelgonnapanic.pl/2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/';
+                 
+                    this.page.identifier = '2018/12/04/jak-sprawic-by-aplikacja-w-react-byla-dry-2-hooks/';
+                 
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'bookieandcookie';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+
+
+
+    </body>
+</html>
