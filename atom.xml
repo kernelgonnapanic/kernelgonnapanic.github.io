@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2018-12-18T11:11:06.000Z</updated>
+  <updated>2018-12-18T13:53:12.000Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://kernelgonnapanic.pl/2018/12/18/5-rzeczy-ktorych-nie-wiecie-o-JS/"/>
     <id>https://kernelgonnapanic.pl/2018/12/18/5-rzeczy-ktorych-nie-wiecie-o-JS/</id>
     <published>2018-12-18T10:53:00.000Z</published>
-    <updated>2018-12-18T11:11:06.000Z</updated>
+    <updated>2018-12-18T13:53:12.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Wspomnienie o JavaScript w mieszanym (pod względem używanego języka) środowisku programistycznym zazwyczaj powoduje duże poruszenie. Wielu programistów nienawidzi lub śmieje się z JSa, lecz część go uwielbia. Mi bliżej do drugiej kategorii. Podejrzewam, że gdyby nie JS, to pewnie nie zostałabym programistką. Używam go do tworzenia aplikacji webowych i mobilnych, od dawna planuje również pobawić się więcej Node.js. Dziś chciałabym Wam przedstawić kilka ciekawostek na temat tego języka, o których mogliście jeszcze nie słyszeć.<br><a id="more"></a></p><p>Starałam się zebrać ciekawe informacje, dziwności oraz fakty, które mnie zaskoczyły. Parzcie kawę i zaczynamy!</p><h2 id="1-6-znakow"><a href="#1-6-znakow" class="headerlink" title="1. 6 znaków"></a>1. 6 znaków</h2><p>Okazuje się, że używając JavaScriptu jesteśmy w stanie zapisać dowolny fragment kodu używając tylko 6 (sic!) znaków. Wyobraź sobie, że każdy z twoich produkcyjnych skryptów można przekształcić w dużą, naprawdę ogromną, ilość nawiasów, wykrzykników i plusów, a jego działanie pozostanie takie samo.<br>Narzędziem, które konwertuje dowolny kod do 6 znaków i które nosi adekwatną, bądź co bądź, nazwę możecie się pobawić tutaj -&gt; <a href="http://www.jsfuck.com/" target="_blank" rel="noopener">JSFuck</a>.</p><div class="figure center fig-100" style="width:;"><img class="fig-img" src="numbers.png" alt=""></div><div style="clear:both;"></div><p>Przekształcenia, które są przez tę stronę wykonywane bazują na różnych dziwactwach JSa (możecie je znaleźć w <a href="https://github.com/aemkei/jsfuck/blob/master/jsfuck.js" target="_blank" rel="noopener">tym</a> miejscu). Czy wiedzieliście na przykład, że dodanie do siebie dwóch pustych tablic daje w rezultacie stringa?<br>PS Nie dziwię się czemu ludzie żartują z JSa.</p><h2 id="2-Zbudujmy-lepszy-JavaScript"><a href="#2-Zbudujmy-lepszy-JavaScript" class="headerlink" title="2. Zbudujmy lepszy JavaScript"></a>2. Zbudujmy lepszy JavaScript</h2><p>Pewnie często słyszycie, że jakaś nowa funkcjonalność JavaScriptu jest w “stage 2” czy “stage 3”. Poszczególne poziomy mówią o tym, jak bardzo zaawansowane są prace nad nią i jak bardzo jesteśmy pewni, że wejdzie ona do języka właśnie w takiej formie. Ale czy wiedzieliście, że na Githubie istnieje <a href="https://github.com/tc39/proposals" target="_blank" rel="noopener">repozytorium</a>, gdzie możemy przeglądać wszystkie propozycje, począwszy od stage 1? Oprócz przejrzenia samych proposali zachęcam do głębszego pogrzebania w tym repo. Można tam znaleźć np. <a href="http://tc39.github.io/tc39-notes/" target="_blank" rel="noopener">minutki</a> ze spotkań komitetu TC39, który zajmuje się standardem języka JavaScript.<br><div class="figure center fig-100" style="width:;"><img class="fig-img" src="proposals.png" alt=""></div><div style="clear:both;"></div></p><h2 id="3-Pobawmy-sie-nazwami-zmiennych"><a href="#3-Pobawmy-sie-nazwami-zmiennych" class="headerlink" title="3. Pobawmy się nazwami zmiennych!"></a>3. Pobawmy się nazwami zmiennych!</h2><p>Specyfikacja języka JavaScript nakłada pewne zasady dotyczące tego, jak możemy nazywać zmienne. I pewnie większość z Was wie o tym, że muszą się one zaczynać od litery, mogą zawierać liczby, podkreślnik czy znak dolara i że nie możemy używać słów kluczowych języka jako identyfikatorów. Ale czy na pewno jest to takie proste? Mieliście kiedyś szansę przyjrzeć się bliżej tym regułom? Rezultatem moich wczorajszych poszukiwań i prób jest poniższa lista. Okazuje się, że tak naprawdę mamy do wyboru wiele znaków pochodzących z różnych języków (hebrajski, arabski, tamil, greka).<br>W ten sposób nasze zmienne nigdy już nie będą nudne (oczywiście nie polecam tego typu działań na kodzie produkcyjnym 😉).<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const நன்றி = &quot;thank you&quot;;</span><br><span class="line">const ꜛꜛꜛꜛ = -42;</span><br><span class="line">const ꜜꜜꜜꜜ = 42;</span><br><span class="line">const π = 3.14;</span><br><span class="line">const a𝟘𝟙𝟚𝟛 = &quot;a0123&quot;;</span><br><span class="line">const a𝟬𝟭𝟮𝟯 = &quot;a0123&quot;;</span><br><span class="line">const &lt;﹏ಠ﹏ಠ﹏&gt; = &quot;nah&quot;;</span><br></pre></td></tr></table></figure></p><p>Na <a href="https://mothereff.in/js-variables" target="_blank" rel="noopener">tej</a> stronie możecie poeksperymentować samemu, a znajdująca się w <a href="https://stackoverflow.com/questions/1661197/what-characters-are-valid-for-javascript-variable-names" target="_blank" rel="noopener">tym</a> wątku lista może Wam pomóc w odnalezieniu ciekawych znaków.</p><h2 id="4-A-co-z-nazwami-wlasciwosci-obiektow"><a href="#4-A-co-z-nazwami-wlasciwosci-obiektow" class="headerlink" title="4. A co z nazwami właściwości obiektów?"></a>4. A co z nazwami właściwości obiektów?</h2><p>Bawiliśmy się już nazywaniem zmiennych, teraz zobaczmy co będzie się działo przy nazywaniu właściwości obiektu. Z pomocą przychodzi nam kolejna <a href="https://mothereff.in/js-properties" target="_blank" rel="noopener">strona</a>. </p><p>Załóżmy, że tworzymy obiekt o takiej strukturze:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = &#123;</span><br><span class="line">  <span class="number">123e123</span>: <span class="number">42</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p><p>Jak myślicie, jak możemy się odwołać do właściwości, która przechowuje liczbę 42?<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="string">'1.23e+125'</span>] <span class="comment">// 42</span></span><br></pre></td></tr></table></figure></p><p>Okazuje się, że chcąc lub niekoniecznie, utworzyliśmy nazwę właściwości, która jest liczbą zapisaną w notacji wykładniczej. I teraz żeby ją odczytać również musimy zastosować notację wykładniczą, lecz w ustandaryzowanej wersji <code>1.23e+125</code>, z przecinkiem po pierwszej cyfrze znaczącej.</p><p>Ciekawiej robi się, gdy nasza liczba przestaje się mieścić w zakresie. Dla przykładu, do takiej własności musimy się odwołać przez:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> b = &#123;</span><br><span class="line">  <span class="number">123e9999999</span>: <span class="number">42</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">b[<span class="string">'Infinity'</span>] <span class="comment">// 42</span></span><br></pre></td></tr></table></figure></p><p>Oczywiście wszystko jest spowodowane faktem, że dla JSa nazwy tych właściwości są liczbami. Jeśli chcemy, żeby te ciągi zostały potraktowane jako stringi, wystarczy dodać apostrofy. </p><h2 id="5-Node-i-Deno"><a href="#5-Node-i-Deno" class="headerlink" title="5. Node i Deno"></a>5. Node i Deno</h2><p>Czy wiedzieliście, że twórca Node’a - Ryan Dahl - tworzy nowe środowisko uruchomieniowe dla JavaScriptu? Mimo tego, że Node jest obecnie bardzo popularny i często używany, Ryan zauważa w jego architekturze skutki wielu źle podjętych decyzji. Nauczony doświadczeniami tworzy nową platformę - Deno, która ma inaczej rozwiązywać zależności, uruchamiać kod w sandbox z ograniczonymi prawami dostępu do dysku i sieci, no i zawierać wsparcie dla TypeScripta out-of-the-box. Jeśli chcecie posłuchać więcej o tym, co konretnie Ryan Dahl uważa za swoje błędy przy projektowaniu Node’a i jak Deno wychodzi im na przeciw, gorąco zachęcam do obejrzenia!<br><br><br><div class="video-container"><iframe src="//www.youtube.com/embed/M3BM9TB-8yA" frameborder="0" allowfullscreen></iframe></div></p><p>Jeśli miałabym powiedzieć, który punkt mnie najbardziej zaskoczył to chyba czwóreczka. O wielu quirkach JSa wiedziałam, ale o tym nie miałam pojęcia. Jednak po przemyśleniu, jest to całkiem logiczne zachowanie. </p><p>A co dla Was jest najbardziej zaskakujące/ciekawe?</p><p>Ania</p><p><em>Photo by Toa Heftiba on Unsplash</em></p>]]></content>
+    <content type="html"><![CDATA[<p>Wspomnienie o JavaScript w mieszanym (pod względem używanego języka) środowisku programistycznym zazwyczaj powoduje duże poruszenie. Wielu programistów nienawidzi lub śmieje się z JSa, lecz część go uwielbia. Mi bliżej do drugiej kategorii. Podejrzewam, że gdyby nie JS, to pewnie nie zostałabym programistką. Używam go do tworzenia aplikacji webowych i mobilnych, od dawna planuje również pobawić się więcej Node.js. Dziś chciałabym Wam przedstawić kilka ciekawostek na temat tego języka, o których mogliście jeszcze nie słyszeć.<br><a id="more"></a></p><p>Starałam się zebrać ciekawe informacje, dziwności oraz fakty, które mnie zaskoczyły. Parzcie kawę i zaczynamy!</p><h2 id="1-6-znakow"><a href="#1-6-znakow" class="headerlink" title="1. 6 znaków"></a>1. 6 znaków</h2><p>Okazuje się, że używając JavaScriptu jesteśmy w stanie zapisać dowolny fragment kodu używając tylko 6 (sic!) znaków. Wyobraź sobie, że każdy z twoich produkcyjnych skryptów można przekształcić w dużą, naprawdę ogromną, ilość nawiasów, wykrzykników i plusów, a jego działanie pozostanie takie samo.<br>Narzędziem, które konwertuje dowolny kod do 6 znaków i które nosi adekwatną, bądź co bądź, nazwę możecie się pobawić tutaj -&gt; <a href="http://www.jsfuck.com/" target="_blank" rel="noopener">JSFuck</a>.</p><div class="figure center fig-100" style="width:;"><img class="fig-img" src="numbers.png" alt=""></div><div style="clear:both;"></div><p>Przekształcenia, które są przez tę stronę wykonywane bazują na różnych dziwactwach JSa (możecie je znaleźć w <a href="https://github.com/aemkei/jsfuck/blob/master/jsfuck.js" target="_blank" rel="noopener">tym</a> miejscu). Czy wiedzieliście na przykład, że dodanie do siebie dwóch pustych tablic daje w rezultacie stringa?<br>PS Nie dziwię się czemu ludzie żartują z JSa.</p><h2 id="2-Zbudujmy-lepszy-JavaScript"><a href="#2-Zbudujmy-lepszy-JavaScript" class="headerlink" title="2. Zbudujmy lepszy JavaScript"></a>2. Zbudujmy lepszy JavaScript</h2><p>Pewnie często słyszycie, że jakaś nowa funkcjonalność JavaScriptu jest w “stage 2” czy “stage 3”. Poszczególne poziomy mówią o tym, jak bardzo zaawansowane są prace nad nią i jak bardzo jesteśmy pewni, że wejdzie ona do języka właśnie w takiej formie. Ale czy wiedzieliście, że na Githubie istnieje <a href="https://github.com/tc39/proposals" target="_blank" rel="noopener">repozytorium</a>, gdzie możemy przeglądać wszystkie propozycje, począwszy od stage 1? Oprócz przejrzenia samych proposali zachęcam do głębszego pogrzebania w tym repo. Można tam znaleźć np. <a href="http://tc39.github.io/tc39-notes/" target="_blank" rel="noopener">minutki</a> ze spotkań komitetu TC39, który zajmuje się standardem języka JavaScript.<br><div class="figure center fig-100" style="width:;"><img class="fig-img" src="proposals.png" alt=""></div><div style="clear:both;"></div></p><h2 id="3-Pobawmy-sie-nazwami-zmiennych"><a href="#3-Pobawmy-sie-nazwami-zmiennych" class="headerlink" title="3. Pobawmy się nazwami zmiennych!"></a>3. Pobawmy się nazwami zmiennych!</h2><p>Specyfikacja języka JavaScript nakłada pewne zasady dotyczące tego, jak możemy nazywać zmienne. I pewnie większość z Was wie o tym, że muszą się one zaczynać od litery, mogą zawierać liczby, podkreślnik czy znak dolara i że nie możemy używać słów kluczowych języka jako identyfikatorów. Ale czy na pewno jest to takie proste? Mieliście kiedyś szansę przyjrzeć się bliżej tym regułom? Rezultatem moich wczorajszych poszukiwań i prób jest poniższa lista. Okazuje się, że tak naprawdę mamy do wyboru wiele znaków pochodzących z różnych języków (hebrajski, arabski, tamilski, greka).<br>W ten sposób nasze zmienne nigdy już nie będą nudne (oczywiście nie polecam tego typu działań na kodzie produkcyjnym 😉).<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const நன்றி = &quot;thank you&quot;;</span><br><span class="line">const ꜛꜛꜛꜛ = -42;</span><br><span class="line">const ꜜꜜꜜꜜ = 42;</span><br><span class="line">const π = 3.14;</span><br><span class="line">const a𝟘𝟙𝟚𝟛 = &quot;a0123&quot;;</span><br><span class="line">const a𝟬𝟭𝟮𝟯 = &quot;a0123&quot;;</span><br><span class="line">const &lt;﹏ಠ﹏ಠ﹏&gt; = &quot;nah&quot;;</span><br></pre></td></tr></table></figure></p><p>Na <a href="https://mothereff.in/js-variables" target="_blank" rel="noopener">tej</a> stronie możecie poeksperymentować samemu, a znajdująca się w <a href="https://stackoverflow.com/questions/1661197/what-characters-are-valid-for-javascript-variable-names" target="_blank" rel="noopener">tym</a> wątku lista może Wam pomóc w odnalezieniu ciekawych znaków.</p><h2 id="4-A-co-z-nazwami-wlasciwosci-obiektow"><a href="#4-A-co-z-nazwami-wlasciwosci-obiektow" class="headerlink" title="4. A co z nazwami właściwości obiektów?"></a>4. A co z nazwami właściwości obiektów?</h2><p>Bawiliśmy się już nazywaniem zmiennych, teraz zobaczmy co będzie się działo przy nazywaniu właściwości obiektu. Z pomocą przychodzi nam kolejna <a href="https://mothereff.in/js-properties" target="_blank" rel="noopener">strona</a>. </p><p>Załóżmy, że tworzymy obiekt o takiej strukturze:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = &#123;</span><br><span class="line">  <span class="number">123e123</span>: <span class="number">42</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p><p>Jak myślicie, jak możemy się odwołać do właściwości, która przechowuje liczbę 42?<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="string">'1.23e+125'</span>] <span class="comment">// 42</span></span><br></pre></td></tr></table></figure></p><p>Okazuje się, że chcąc lub niekoniecznie, utworzyliśmy nazwę właściwości, która jest liczbą zapisaną w notacji wykładniczej. I teraz żeby ją odczytać również musimy zastosować notację wykładniczą, lecz w ustandaryzowanej wersji <code>1.23e+125</code>, z przecinkiem po pierwszej cyfrze znaczącej.</p><p>Ciekawiej robi się, gdy nasza liczba przestaje się mieścić w zakresie. Dla przykładu, do takiej własności musimy się odwołać przez:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> b = &#123;</span><br><span class="line">  <span class="number">123e9999999</span>: <span class="number">42</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">b[<span class="string">'Infinity'</span>] <span class="comment">// 42</span></span><br></pre></td></tr></table></figure></p><p>Oczywiście wszystko jest spowodowane faktem, że dla JSa nazwy tych właściwości są liczbami. Jeśli chcemy, żeby te ciągi zostały potraktowane jako stringi, wystarczy dodać apostrofy. </p><h2 id="5-Node-i-Deno"><a href="#5-Node-i-Deno" class="headerlink" title="5. Node i Deno"></a>5. Node i Deno</h2><p>Czy wiedzieliście, że twórca Node’a - Ryan Dahl - tworzy nowe środowisko uruchomieniowe dla JavaScriptu? Mimo tego, że Node jest obecnie bardzo popularny i często używany, Ryan zauważa w jego architekturze skutki wielu źle podjętych decyzji. Nauczony doświadczeniami tworzy nową platformę - Deno, która ma inaczej rozwiązywać zależności, uruchamiać kod w sandbox z ograniczonymi prawami dostępu do dysku i sieci, no i zawierać wsparcie dla TypeScripta out-of-the-box. Jeśli chcecie posłuchać więcej o tym, co konretnie Ryan Dahl uważa za swoje błędy przy projektowaniu Node’a i jak Deno wychodzi im na przeciw, gorąco zachęcam do obejrzenia!<br><br><br><div class="video-container"><iframe src="//www.youtube.com/embed/M3BM9TB-8yA" frameborder="0" allowfullscreen></iframe></div></p><p>Jeśli miałabym powiedzieć, który punkt mnie najbardziej zaskoczył to chyba czwóreczka. O wielu quirkach JSa wiedziałam, ale o tym nie miałam pojęcia. Jednak po przemyśleniu, jest to całkiem logiczne zachowanie. </p><p>A co dla Was jest najbardziej zaskakujące/ciekawe?</p><p>Ania</p><p><em>Photo by Toa Heftiba on Unsplash</em></p>]]></content>
     
     <summary type="html">
     
@@ -32,9 +32,9 @@
     </summary>
     
     
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
       <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="Śmieszne" scheme="https://kernelgonnapanic.pl/tags/Smieszne/"/>
     
@@ -58,9 +58,9 @@
     </summary>
     
     
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
       <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="Dobre praktyki" scheme="https://kernelgonnapanic.pl/tags/Dobre-praktyki/"/>
     
@@ -176,13 +176,13 @@
     </summary>
     
     
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
       <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
     
       <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
     
       <category term="Tutoriale" scheme="https://kernelgonnapanic.pl/tags/Tutoriale/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="FrontendTesting" scheme="https://kernelgonnapanic.pl/tags/FrontendTesting/"/>
     
@@ -222,9 +222,9 @@
     </summary>
     
     
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
       <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="Dobre praktyki" scheme="https://kernelgonnapanic.pl/tags/Dobre-praktyki/"/>
     
@@ -323,13 +323,13 @@
     </summary>
     
     
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
       <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
     
       <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
     
       <category term="Tutoriale" scheme="https://kernelgonnapanic.pl/tags/Tutoriale/"/>
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="FrontendTesting" scheme="https://kernelgonnapanic.pl/tags/FrontendTesting/"/>
     
@@ -427,13 +427,13 @@
     </summary>
     
     
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
       <category term="Elm" scheme="https://kernelgonnapanic.pl/tags/Elm/"/>
     
       <category term="Podstawy" scheme="https://kernelgonnapanic.pl/tags/Podstawy/"/>
     
       <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
-    
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
   </entry>
   
@@ -453,13 +453,13 @@
     </summary>
     
     
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
       <category term="Elm" scheme="https://kernelgonnapanic.pl/tags/Elm/"/>
     
       <category term="Podstawy" scheme="https://kernelgonnapanic.pl/tags/Podstawy/"/>
     
       <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
-    
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
   </entry>
   
@@ -479,11 +479,11 @@
     </summary>
     
     
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
       <category term="Elm" scheme="https://kernelgonnapanic.pl/tags/Elm/"/>
     
       <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
-    
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="Web" scheme="https://kernelgonnapanic.pl/tags/Web/"/>
     
