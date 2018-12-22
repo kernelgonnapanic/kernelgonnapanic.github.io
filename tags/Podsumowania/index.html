@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="kernelgonnapanic.pl">
-    <title>Snapshot testing - co to takiego? [Frontend testing #2] - kernelgonnapanic.pl</title>
+    <title>Tag: Podsumowania - kernelgonnapanic.pl</title>
     <meta name="author" content="Anna Konopka">
     
         <meta name="keywords" content="frontend,javascript,kernelgonnapanic,">
@@ -17,18 +17,14 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Dziś porozmawiamy o Jest oraz snapshot testingu">
-<meta name="keywords" content="Frontend,Javascript,Testowanie,Tutoriale,FrontendTesting">
+    <meta name="keywords" content="frontend,javascript,kernelgonnapanic">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Snapshot testing - co to takiego? [Frontend testing #2]">
-<meta property="og:url" content="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/index.html">
+<meta property="og:title" content="kernelgonnapanic.pl">
+<meta property="og:url" content="https://kernelgonnapanic.pl/tags/Podsumowania/index.html">
 <meta property="og:site_name" content="kernelgonnapanic.pl">
-<meta property="og:description" content="Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Dziś porozmawiamy o Jest oraz snapshot testingu">
 <meta property="og:locale" content="pl">
-<meta property="og:updated_time" content="2018-11-03T10:10:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Snapshot testing - co to takiego? [Frontend testing #2]">
-<meta name="twitter:description" content="Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Dziś porozmawiamy o Jest oraz snapshot testingu">
+<meta name="twitter:title" content="kernelgonnapanic.pl">
 <meta name="twitter:creator" content="@konopka_ania">
     
         <link rel="publisher" href="https://plus.google.com/116973627351289720000"/>
@@ -37,12 +33,6 @@
         
     
     
-        <meta property="og:image" content="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/camera.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/camera.jpg" />
-    
-    
-        <meta property="og:image" content="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/camera.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/camera.jpg" />
     
     
     
@@ -75,7 +65,7 @@
         
     
 
-<header id="header" data-behavior="4">
+<header id="header" data-behavior="1">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">kernelgonnapanic.pl</a>
@@ -98,7 +88,7 @@
         
     
 
-<nav id="sidebar" data-behavior="4">
+<nav id="sidebar" data-behavior="1">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -215,161 +205,66 @@
 </nav>
 
             
-        <div class="post-header-cover
-                    text-left
-                    post-header-cover--partial" style="background-image:url('/2018/02/15/jest-snapshot-testing/camera.jpg');" data-behavior="4">
-            
-        </div>
-
-            <div id="main" data-behavior="4"
-                 class="hasCover
-                        hasCoverMetaOut
+            <div id="main" data-behavior="1"
+                 class="
+                        hasCoverMetaIn
                         ">
                 
-<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <section class="postShorten-group main-content-wrap">
     
     
-        <div class="post-header main-content-wrap text-left">
-    
-        <h1 class="post-title" itemprop="headline">
-            Snapshot testing - co to takiego? [Frontend testing #2]
-        </h1>
-    
-    <div class="post-meta">
-    <time itemprop="datePublished" datetime="2018-02-15T21:56:00+01:00">
+    <article class="postShorten postShorten--thumbnailimg-top" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+                <a href="/2018/12/22/podsumowanie-roku-2018/">
+                    <div class="postShorten-thumbnailimg">
+                        <img alt="" itemprop="image" src="https://kernelgonnapanic.pl/2018/12/22/podsumowanie-roku-2018/podsumowanie.jpg">
+                    </div>
+                </a>
+                
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2018/12/22/podsumowanie-roku-2018/">
+                            Podsumowanie roku 2018
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2018-12-22T15:05:00+01:00">
 	
-		    15.02.2018
+		    22.12.2018
     	
     </time>
     
 </div>
 
-</div>
-    
-    <div class="post-content markdown" itemprop="articleBody">
-        <div class="main-content-wrap">
-            <!-- excerpt --><p></p>
-<p>Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Obiecałam wtedy kilka fajnych wpisów dotyczących narzędzi, jakie mamy do dyspozycji pisząc testy w JSie. Mam nadzieję, że nie zapomnieliście o temacie!</p>
-<p>A w dzisiejszym odcinku zobaczymy czym jest <strong>Jest</strong>. Dokładniej przyjrzymy się jednej z jego funkcjonalności, jaką jest snapshot testing. Czytajcie do końca, żeby dowiedzieć się, co tam jeszcze knuję w temacie wpisów o testowaniu. Enjoy!</p>
-<h2 id="Jest-co-to-jest"><a href="#Jest-co-to-jest" class="headerlink" title="Jest - co to jest ?"></a>Jest - co to jest ?</h2><p>Zacznijmy od tego co to jest ten Jest i co może nam zaoferować. Żeby móc wygodnie pisać frontowe testy jednostkowe potrzebujemy narzędzi, które pomagają w uruchomieniu tych testów oraz usprawniają walidowanie wyników poszczególnych operacji. Gdy chcemy do tego podejść bardziej szczegółowo, jest to kilka poziomów, o które musimy się zatroszczyć. Jest środowisko uruchomieniowe (test runner), mamy również test framework, który definuje jak od strony kodu będą wyglądać nasze testy oraz potrzebujemy narzędzia, które ułatwia pisanie asercji, czyli walidowanie efektów np. wywołania funkcji (assertion library).</p>
-<p>Do tej pory elementy te często istniały jako osobne biblioteki, obecnie często są nam podane w jednym pakiecie. I tak też jest w przypadku Jesta.<br>Jeśli ktoś chciałby się dowiedzieć trochę więcej o tym, z jakich elementów składa się środowisko testowe i czym się od siebie różnią, <a href="http://amzotti.github.io/testing/2015/03/16/what-is-the-difference-between-a-test-runner-testing-framework-assertion-library-and-a-testing-plugin/" target="_blank" rel="noopener">tutaj</a> znajdziecie fajny artykuł na ten temat.</p>
-<p>Ustaliliśmy już, że Jest oferuje nam wszystko co jest potrzebne do wystartowania z pisaniem testów. Co więcej twórcy chwalą się, że jest to narzędzie typu zero-configuration. Z moich doświadczeń wynika jednak, że nie zawsze obędziemy się bez dodatkowej konfiguracji i jeśli twój projekt korzysta z preprocesorów czy np. jakichś specyficznych loaderów do webpacka to zazwyczaj trzeba coś więcej poustawiać.</p>
-<h2 id="Co-fajnego-Jest-nam-oferuje"><a href="#Co-fajnego-Jest-nam-oferuje" class="headerlink" title="Co fajnego Jest nam oferuje?"></a>Co fajnego Jest nam oferuje?</h2><ol>
-<li><p>Dla mnie najistotniejszy jest fakt, że Jest jest ewidentnie rezultatem ewolucji narzędzi do testowania. Mamy tu do dyspozycji wbudowany mechanizm do mockowania na poziomie rozwiązywania zależności (importów), ale też możemy ręcznie podmienić implementację danej funkcji na czas testów. Zgrabnie też jesteśmy w stanie testować kod asynchroniczny, używając np. konstrukcji async/await. Dodatkowo mamy również wbudowane mierzenie pokrycia kodu, co czasem przydaje się w celach informacyjnych, jednak z wielu powodów nie powinno być traktowane jako wyznacznik jakości otestowania kodu.</p>
-<p><em>Przykład tworzenia mocków.</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mock = jest.fn();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> betterMock = jest.fn(<span class="function"><span class="params">()</span> =&gt;</span> (&#123;</span><br><span class="line">  answerToLife: <span class="number">42</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p><em>Przykład testowania wyniku asynchronicznej operacji</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">'the data is peanut butter'</span>, <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  expect.assertions(<span class="number">1</span>);</span><br><span class="line">  <span class="keyword">const</span> data = <span class="keyword">await</span> fetchData();</span><br><span class="line">  expect(data).toBe(<span class="string">'peanut butter'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Zespoły, które wcześniej korzystały z innego setupu dla testów jednostkowych względnie łatwo mogą się przesiąść na Jest’a, ponieważ wspiera on składnie Jasmine’a. Dla tych, którzy korzystali z mniej popularnych opcji, istnieją rozwiązania takie jak <code>jest-codemods</code>, które jednorazowo zmieniają składnię testów i wykonują większość brudnej roboty za nas.</p>
-</li>
-<li>Jest’a z podstawowymi ustawieniami, gotowego do działania otrzymujemy “za darmo”, gdy tworzymy nową aplikację używając <code>create-react-app</code> lub <code>react-native init</code>.</li>
-<li>No i oczywiście oferuje mechanizm do testowania za pomocą snapshotów, którym za raz się zajmiejmy w szczegółach.</li>
-</ol>
-<h2 id="Co-to-jest-snapshot-testing"><a href="#Co-to-jest-snapshot-testing" class="headerlink" title="Co to jest snapshot testing?"></a>Co to jest snapshot testing?</h2><p>Testowanie przy użyciu snapshotów jest jednym z rodzajów testów, które możemy tworzyć dla kodu frontendowego. Przydaje się w szczególności do testowania komponentów (np. w React czy Vue), ale możemy bazując na tym podejściu pisać też testy logiki biznesowej.</p>
-<p>Głównym jego założeniem jest porównywanie wyniku uruchomienia funkcji z jakimś oczekiwanym efektem, który w postaci pliku przechowujemy w repozytorium. W rezultacie uruchomienia testu otrzymujemy diffa między aktualnym, a oczekiwanym rezultatem. Podejrzewam, że nadal nie jest to wystarczająco jasne, dlatego rzućmy okiem na przykład.</p>
-<p>Załóżmy, że chcemy przetestować wynik renderowania komponentu <code>Article</code> w React:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Article</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div className=<span class="string">"article"</span>&gt;</span><br><span class="line">        &lt;header className=<span class="string">"article-header"</span>&gt;</span><br><span class="line">          &#123;<span class="keyword">this</span>.props.title&#125;</span><br><span class="line">        &lt;<span class="regexp">/header&gt;</span></span><br><span class="line"><span class="regexp">        &#123;this.props.children&#125;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Article;</span><br></pre></td></tr></table></figure></p>
-<p>Tworzymy do niego nasz pierwszy snapshot test.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> Article <span class="keyword">from</span> <span class="string">'./Article.js'</span>;</span><br><span class="line"><span class="keyword">import</span> renderer <span class="keyword">from</span> <span class="string">'react-test-renderer'</span>;</span><br><span class="line"></span><br><span class="line">it(<span class="string">'renders correctly'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> tree = renderer</span><br><span class="line">    .create(&lt;Article title="Title"&gt;The contents&lt;/Article&gt;)</span><br><span class="line">    .toJSON();</span><br><span class="line">  expect(tree).toMatchSnapshot();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>Zauważmy, że używamy <code>react-test-renderer</code>, by stworzyć instancję komponentu, a następnie wywołujemy metodę <code>toJSON</code>. Mówi to nam o tym, że efekt renderowania tego komponentu będzie serializowany do stringa. W asercji oczekujemy, że rezultat będzie odpowiadał snapshotowi.</p>
-<p><strong>Ale co to ten snapshot i gdzie on się znajduje?</strong></p>
-<p>Gdy pierwszy raz uruchomimy ten test zauważymy, że obok komponentu pojawił się katalog <code>__snapshots__</code> z plikiem o takiej zawartości:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">exports[<span class="string">`renders correctly 1`</span>] = <span class="string">`</span></span><br><span class="line"><span class="string">&lt;div</span></span><br><span class="line"><span class="string">  className="article"</span></span><br><span class="line"><span class="string">&gt;</span></span><br><span class="line"><span class="string">  &lt;header</span></span><br><span class="line"><span class="string">    className="article-header"</span></span><br><span class="line"><span class="string">  &gt;</span></span><br><span class="line"><span class="string">    Title</span></span><br><span class="line"><span class="string">  &lt;/header&gt;</span></span><br><span class="line"><span class="string">  The contents</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure>
-<p>To jest właśnie snapshot, stworzony przy pierwszym uruchomieniu testu, do którego będziemy z każdym kolejnym odpaleniem testu porównywać wynik. Widzimy, że jest to zserializowany wynik wywołania funkcji render, zapis w postaci tekstowej drzewa DOM, które zostałoby wygenerowane dla tego komponentu.</p>
-<h2 id="Praca-ze-snapshotami"><a href="#Praca-ze-snapshotami" class="headerlink" title="Praca ze snapshotami"></a>Praca ze snapshotami</h2><p>Przejdźmy teraz może przez cały proces pracy z snapshotami, żeby sobie go utrwalić.</p>
-<ol>
-<li>Pierwsze uruchomienie testu, generuje nam bazowy snapshot.</li>
-<li>Snapshot jest przechowywany w repozytorium jako wzorzec prawidłowego rezultatu testu.</li>
-<li>Za każdym razem, gdy wprowadzamy jakieś zmiany w aplikacji, uruchamiamy testy i sprawdzamy czy ich wyniki są nadal prawidłowe.</li>
-<li>Jeśli w wyniku naszych zmian, wzorzec w postaci snapshota musi ulec zmianie jesteśmy w stanie go nadpisać za pomocą komendy <code>jest -u</code>.</li>
-</ol>
-<p>Ponieważ snapshot jest przechowywany w repozytorium każda jego zmiana jest częścią naszych pull requestów, co za tym idzie przechodzi również code review. Jest to bardzo ważny etap, ponieważ pomaga zwalidować czy zmiany w snapshocie nie są wynikiem błędu lub są niepotrzebne.</p>
-<h2 id="Ale-po-co"><a href="#Ale-po-co" class="headerlink" title="Ale po co?"></a>Ale po co?</h2><p>Snapshot testy komponentów sprawdzają czy będą one wyglądać tak, jak tego oczekujemy. W szczególności pozwalają na zobaczenie, jak wygląd tego komponentu będzie się zmieniał pod wpływem różnego rodzaju propsów do niego przekazywanych. Dodatkowo, jeśli używamy jakiegoś z narzędzi, które bazuje na ustawianiu styli inline, możemy również walidować ich poprawność (skąd już bardzo blisku do visual regression testing). Nie testują one jednak zachowania komponentu, np. wykonania odpowiednej akcji po kliknięciu. Tym tematem zajmiemy się już niedługo.</p>
-<p>Na dziś już wystarczy :) Czuję jednak, że temat nie jest wyczerpany, dlatego chciałabym poświęcić mu kolejny artykuł. Jeśli masz jakieś pytanie związane z testowaniem z użyciem snapshotów, zadaj je proszę w komentarzu, a ja postaram się na nie odpowiedzieć w kolejnym wpisie.</p>
-<p>Oprócz testowania fukcjonalności komponentów czy kolejnego wpisu odnośnie pracy z snapshotami, w ramach naszej serii planuję również poruszyć temat testów e2e, testów dla React Native (Detox, Appium) czy visual regression testing. Na pewno znajdziecie wśród nich czegoś dla siebie, czegoś, co pozwoli Wam pisać lepsze aplikacje frontendowe 💻</p>
-<p>Jeżeli nie chcecie przegapić żadnego wpisu w tym temacie, zapraszam do polubienia fanpage’a bloga <a href="https://www.facebook.com/kernelgonnapanic/" target="_blank" rel="noopener">[TUTAJ]</a>.</p>
+            </div>
+            
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <p>Koniec roku już za rogiem, więc przyszła pora na refleksje dotyczące minionych 12 miesięcy. W styczniu ruszałam z zestawem zdefiniowanych celów na rok 2018, jednak po drodze wydarzyło się “życie” i zmieniły się również trochę moje priorytety. Zobaczmy, które z zadań udało mi się zrealizować, a które muszę przesunąć na następny rok.<br>
+                    
+                        <a href="/2018/12/22/podsumowanie-roku-2018/" class="postShorten-excerpt_link link">
+                            Czytaj dalej...
+                        </a>
+                        
+                    
+                </p></div>
             
         </div>
-    </div>
-    <div id="post-footer" class="post-footer main-content-wrap">
         
-            <div class="post-footer-tags">
-                <span class="text-color-light text-small">TAGI</span><br>
-                
-    <a class="tag tag--primary tag--small t-link" href="/tags/Frontend/">Frontend</a> <a class="tag tag--primary tag--small t-link" href="/tags/FrontendTesting/">FrontendTesting</a> <a class="tag tag--primary tag--small t-link" href="/tags/Javascript/">Javascript</a> <a class="tag tag--primary tag--small t-link" href="/tags/Testowanie/">Testowanie</a> <a class="tag tag--primary tag--small t-link" href="/tags/Tutoriale/">Tutoriale</a>
-
-            </div>
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
         
-        <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/03/11/7-grzechow-glownych-przywiazanie/" data-tooltip="Siedem grzechów głównych programistów - przywiązanie">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">POPRZEDNI</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/01/01/moje-plany-2018/" data-tooltip="Moje plany na 2018">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">NASTĘPNY</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/">
-                <i class="fa fa-google-plus"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/">
-                <i class="fa fa-facebook-official"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/">
-                <i class="fa fa-twitter"></i>
-            </a>
-        </li>
         
-            <li class="post-action">
-                <a class="post-action-btn btn btn--default" href="#disqus_thread">
-                    <i class="fa fa-comment-o"></i>
-                </a>
-            </li>
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
+        <li class="pagination-number">strona 1 z 1</li>
     </ul>
 </div>
 
-
-        
-            
-                <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-            
-        
-    </div>
-</article>
-
+</section>
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -379,90 +274,6 @@
 </footer>
 
             </div>
-            
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-                    <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/03/11/7-grzechow-glownych-przywiazanie/" data-tooltip="Siedem grzechów głównych programistów - przywiązanie">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">POPRZEDNI</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/01/01/moje-plany-2018/" data-tooltip="Moje plany na 2018">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">NASTĘPNY</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/">
-                <i class="fa fa-google-plus"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/">
-                <i class="fa fa-facebook-official"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/">
-                <i class="fa fa-twitter"></i>
-            </a>
-        </li>
-        
-            <li class="post-action">
-                <a class="post-action-btn btn btn--default" href="#disqus_thread">
-                    <i class="fa fa-comment-o"></i>
-                </a>
-            </li>
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-                </div>
-                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-    <ul class="share-options">
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/">
-                <i class="fa fa-google-plus"></i><span>Udostępnij na Google Plus</span>
-            </a>
-        </li>
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/">
-                <i class="fa fa-facebook-official"></i><span>Udostępnij na Facebook</span>
-            </a>
-        </li>
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/">
-                <i class="fa fa-twitter"></i><span>Udostępnij na Twitter</span>
-            </a>
-        </li>
-    </ul>
-</div>
-<div id="share-options-mask" class="share-options-mask"></div>
-
             
         </div>
         
@@ -784,25 +595,6 @@
         <!--SCRIPTS-->
 <script src="/assets/js/script-oxm9fqwkgxfzzzzjcjnkdmnvqtvwc8dnjrchixde9lpdl7nglh3zckx6opbd.min.js"></script>
 <!--SCRIPTS END-->
-
-    
-        <script>
-             var disqus_config = function () {
-                 this.page.url = 'https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/';
-                 
-                    this.page.identifier = '2018/02/15/jest-snapshot-testing/';
-                 
-             };
-            (function() {
-                var d = document, s = d.createElement('script');
-                var disqus_shortname = 'bookieandcookie';
-                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-    
 
 
 
