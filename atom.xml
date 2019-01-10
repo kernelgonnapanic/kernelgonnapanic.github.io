@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2019-01-03T11:29:05.000Z</updated>
+  <updated>2019-01-10T17:30:07.000Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Mentor w IT - jak ?</title>
+    <link href="https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/"/>
+    <id>https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/</id>
+    <published>2019-01-09T11:00:00.000Z</published>
+    <updated>2019-01-10T17:30:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Dużo piszę na tym blogu o tym, w jaki sposób rozwijać się w zawodzie programisty. Staram się podsuwać Wam przydatne książki, omawiam ciekawe wzorce i opisuję codzienne życie frontendowca. Jednak do tej pory, jedno z lepszych narzędzi pozwalających na rozwój w dziedzinie programowania, umykało naszej uwadze. Dlatego dziś postanowiłam je uchwycić i porozmawiać z Wami o MENTORINGU.<br><a id="more"></a></p><blockquote><p>“Mentoring jest relacją nakierowaną na rozwój, opiekę, dzielenie się i pomoc, w której jedna osoba inwestuje swój czas, know-how i energię, żeby pobudzić i przyspieszyć rozwój innej osoby, rozwinąć jej wiedzę oraz zdolności.”[1]</p></blockquote><p>Mamy więc dwie strony w takiej relacji:</p><ul><li>👩‍🏫 mentora - który służy swoim doświadczeniem i wiedzą,</li><li>👨‍💻 ucznia (mentee) - który, korzystając z pomocy mentora, rozwija swój potencjał.</li></ul><p>W praktyce, mentoring realizowany jest zazwyczaj poprzez regularne spotkania, na których rozmawiamy, uczymy się i motywujemy. Lecz może to być również relacja nieformalna i nieregularna, gdzie starszy kolega przy piwie opowie nam o swoich doświadczeniach. Jak to się mówi - co kto lubi 👍.</p><p>Zdaje sobię sprawę, że wielu z Was może być nastawionych do tej koncepcji sceptycznie. Uważać ją za coachingowe brednie, mieć złe doświadczenia ze spotkań typu 1-1, które mogą okazać się nudne i bezużyteczne, gdy są źle prowadzone. Moim zadaniem na dziś jest przekonanie Was, że posiadanie dobrego mentora to jeden z lepszych sposobów na rozwój swojej programistycznej kariery.</p><h2 id="Co-moze-Ci-zaoferowac-mentor"><a href="#Co-moze-Ci-zaoferowac-mentor" class="headerlink" title="Co może Ci zaoferować mentor?"></a>Co może Ci zaoferować mentor?</h2><p>Do tej pory miałam wielkie szczęście i okazję współpracować z dwójką świetnych mentorów - programistów. I na podstawie moich doświadczeń, chciałabym Wam opowiedzieć o tym, czego możecie się po takiej relacji spodziewać. Od mentora możecie oczekiwać:</p><ul><li>porządnej dawki motywacji, która nie pozwoli Wam siedzieć w miejscu,</li><li>porady przy okazji technicznego problemu i możliwości skorzystania z większego doświadczenia niż twoje własne,</li><li>podpowiedzi przy określeniu twoich kolejnych celów, ścieżki kariery,</li><li>pomocy przy określeniu własnych silnych i słabych stron oraz umiejętności, które należy rozwijać,</li><li>asysty przy wyciąganiu wniosków z zaistniałych sytuacji (“co dwie głowy to nie jedna”).</li></ul><p>Brzmi dobrze, prawda? Jednak za dużo nasłuchałam się już w swoim życiu historii o nieudanym mentoringu, niezaangażowanych nauczycielach i niewnoszących nic spotkaniach “jeden na jeden”. Okazuje się, że nie każdy mentor robi dobrze swoją robotę.</p><h2 id="Jak-rozpoznac-dobrego-mentora"><a href="#Jak-rozpoznac-dobrego-mentora" class="headerlink" title="Jak rozpoznać dobrego mentora?"></a>Jak rozpoznać dobrego mentora?</h2><h3 id="1-ma-duze-doswiadczenie"><a href="#1-ma-duze-doswiadczenie" class="headerlink" title="1. ma duże doświadczenie"></a>1. ma duże doświadczenie</h3><p>Mentor w świecie IT, to osoba, od której oczekujemy, że pomoże nam z zagadnieniami technicznymi i liczymy na jego/jej duże doświadczenie na tym polu. Jak możemy ocenić to doświadczenie? Według mnie nie jest to kwestia ilości przepracowanych lat, a bardziej ilości projektów, ich skomplikowania i zróżnicowania. Nie możemy też zapomnieć o doświadczeniach w pracy z różnymi zespołami czy w różnych typach firm (korporacjach, startupach itp.).</p><h4 id="2-umie-sluchac"><a href="#2-umie-sluchac" class="headerlink" title="2. umie słuchać"></a>2. umie słuchać</h4><p>Od mentora należy oczekiwać szacunku i tego, że potrafi dobrze słuchać. Z jednej strony, nie będzie bagatelizował twoich problemów, ale także pokaże Ci drugą stronę medalu i uświadomi twoje błędy. Dodatkowo, dobry mentor będzie potrafił nakierować Cię na potencjalne luki w Twoim rozumowaniu, nie brzmiąc przy okazji jakby pozjadał wszystkie rozumy. </p><h4 id="3-jest-zaangazowany-i-umie-budowac-relacje"><a href="#3-jest-zaangazowany-i-umie-budowac-relacje" class="headerlink" title="3. jest zaangażowany i umie budować relacje"></a>3. jest zaangażowany i umie budować relacje</h4><p>Niezaangażowany mentor jest gorszy niż brak mentora. Uczucie, że ktoś pojawia się na spotkaniach z Tobą “za karę” straszliwie demotywuje. Dobrzy mentorzy to tacy, którzy umieją budować fajne relacje z innymi ludźmi. Relacje, w których jest miejsce na zaufanie, bez którego człowiek nie ma się jak rozwijać. By zrobić coś lepiej, trzeba zaryzykować, czasem odsłonić swój czuły punkt - do tego konieczne jest zaufanie.</p><h4 id="4-umiejetnie-przekazuje-wiedze"><a href="#4-umiejetnie-przekazuje-wiedze" class="headerlink" title="4. umiejętnie przekazuje wiedzę"></a>4. umiejętnie przekazuje wiedzę</h4><p>Ile razy spotkaliście w świecie IT osobę, która znała się na danym temacie jak nikt inny, lecz niestety nie umiała przekazać swojej wiedzy w bezbolesny sposób? No właśnie. Trudno współpracuje się z takimi osobami w roli mentorów, ponieważ brakuje im, bardzo potrzebnej w tym wypadku, umiejętności efektywnej komunikacji.</p><h4 id="5-nie-wystawia-kategorycznych-osadow"><a href="#5-nie-wystawia-kategorycznych-osadow" class="headerlink" title="5. nie wystawia kategorycznych osądów"></a>5. nie wystawia kategorycznych osądów</h4><p>Tak się jakoś składa, że mam pewien dystans do osób, które mają kategoryczne poglądy, w szczególności w sprawach technologii. Gdy ktoś Tobie mówi, że narzędzie X jest “zawsze i wszędzie, bezwględnie lepsze” to coś tutaj śmierdzi. Z mojego doświadczenia, im ktoś więcej rzeczy widział i robił, tym mniej wygłasza takich dogmatycznych stwierdzeń. Ważne, by mentor pomagał Tobie znaleźć plusy i minusy różnych rozwiązań. </p><h2 id="Jak-znalezc-taka-osobe"><a href="#Jak-znalezc-taka-osobe" class="headerlink" title="Jak znaleźć taką osobę?"></a>Jak znaleźć taką osobę?</h2><p>Hmmm… Różnie z tym bywa. Niektórym dopisze szczęście, inni muszą się trochę postarać. Moja rada numer&nbsp;1: szukaj. Wiele firm deweloperskich prowadzi takie programy mentoringowe w ramach własnej organizacji. Jeśli tak jest w twoim wypadku, pewnie takiego mentora masz już przydzielonego. Jeśli jednak nie możesz się z nim dogadać, nie widzisz korzyści z tej relacji, to czas na zmianę. Z pewnością Twoja organizacja takie przypadki również przewiduje. A może w twojej firmie jest jakaś osoba, od której wiesz, że możesz się wiele nauczyć? Nie pozwól, by taka dobra okazja na mentorską relację przeszła Ci koło nosa!</p><p>Jeśli jednak Twoja firma takiego programu nie ma lub czujesz, że nie jest to dla Ciebie wystarczające to warto swojego mentora poszukać na zewnątrz. Możecie to zrobić w ramach darmowych programów mentorskich, takich jak np. <a href="https://techleaders.eu/poland" target="_blank" rel="noopener">Tech Leaders Poland</a> lub umówić się na mentoring z konkretną osobą. </p><p>Bardzo mnie ciekawi jak to wygląda w waszych firmach? Macie mentorów? Jesteście zadowoleni ze swoich mentorskich relacji? Czy może nie widzicie wartości w tego typu działaniach? Nie mogę się doczekać Waszych opinii na ten temat!</p><p>Do następnego!<br>Ania</p><p>1) Gordon Shea, Can a supervisor mentor?, „Supervision”, 56 (11), 1995, s. 3.</p><p><em>Photo by Clark Tibbs on Unsplash</em></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Dużo piszę na tym blogu o tym, w jaki sposób rozwijać się w zawodzie programisty. Staram się podsuwać Wam przydatne książki, omawiam ciekawe wzorce i opisuję codzienne życie frontendowca. Jednak do tej pory, jedno z lepszych narzędzi pozwalających na rozwój w dziedzinie programowania, umykało naszej uwadze. Dlatego dziś postanowiłam je uchwycić i porozmawiać z Wami o MENTORINGU.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
+      <category term="Rozwój" scheme="https://kernelgonnapanic.pl/tags/Rozwoj/"/>
+    
+      <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
+    
+      <category term="Leadership" scheme="https://kernelgonnapanic.pl/tags/Leadership/"/>
+    
+      <category term="Mentor" scheme="https://kernelgonnapanic.pl/tags/Mentor/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Cele na 2019 - trochę inaczej ⚽</title>
     <link href="https://kernelgonnapanic.pl/2019/01/03/cele-na-2019-troche-inaczej/"/>
     <id>https://kernelgonnapanic.pl/2019/01/03/cele-na-2019-troche-inaczej/</id>
     <published>2019-01-03T09:53:00.000Z</published>
-    <updated>2019-01-03T11:29:05.000Z</updated>
+    <updated>2019-01-09T15:11:42.000Z</updated>
     
     <content type="html"><![CDATA[<p>Dziś mamy trzeci dzień nowego roku. Nie wiem jak Wy, ale ja już mam po dziurki w nosie czytania nagłówków w stylu: “Jak możesz sprawić, by twoje postanowienia noworoczne tym razem udało się zrealizować?”. Jakoś tym razem ten temat denerwuje mnie dużo bardziej niż zwykle.<br><a id="more"></a></p><p>Na szczęście udało mi się spisać moje aktualne cele zanim ta cała gorączka rozpoczęła się na dobre. Do planowania tego roku podeszłam w inny sposób niż zwykle. Analizując moje postanowienia na 2018 rok (<a href="https://kernelgonnapanic.pl/2018/12/22/podsumowanie-roku-2018/">tutaj</a>), doszłam do wniosku, że:<br>1) za dużo było wśród nich tematów, które szybko mi się znudziły i nie miałam ochoty ich dalej realizować,<br>2) nie widziałam szerszej i dalszej perspektywy, przez co nie byłam zmotywowana,<br>3) lista zaginęła w czeluściach bloga i ślad po niej zaginął (nie wracałam do niej w trakcie roku).</p><p>Dlatego, planując co będę robić w nowym roku, chciałam podejść do tematu troszkę inaczej. W ten sposób pojawiły się nowe założenia:</p><h2 id="Kroki-w-perspektywie-3-5-lat"><a href="#Kroki-w-perspektywie-3-5-lat" class="headerlink" title="Kroki w perspektywie 3-5 lat"></a>Kroki w perspektywie 3-5 lat</h2><p>Chcąc zwizualizować kierunek, w który dane cele mnie prowadzą, spisuje je w postaci kolejnych etapów do osiągnięcia. Jest to podejście zainspirowane <a href="https://trzypoziomy.pl/zadania/" target="_blank" rel="noopener">Trzema Poziomami</a> Mirosława Burnejki. Jeśli jeszcze nie znacie Mirka, to gorąco polecam <a href="https://www.youtube.com/channel/UCwmFNbGnBeEy9nTt42F4WHw" target="_blank" rel="noopener">jego kanał</a> na YouTube, gdzie codziennie publikuje nowy vlog o prowadzeniu firmy, projektowaniu swojego życia i stawaniu się lepszym każdego dnia.</p><h2 id="Zwolnij-i-pomysl"><a href="#Zwolnij-i-pomysl" class="headerlink" title="Zwolnij i pomyśl"></a>Zwolnij i pomyśl</h2><p>Chciałam też upewnić się, że na mojej liście nie znajdą się rzeczy, które wymyśliłam wczoraj czy przedwczoraj. Głupio to przyznać, ale często moje listy postanowień nie były do końca przemyślane 😉, np.&nbsp;powstawały w ciągu jednego wieczoru. To sprawiało, że pojawiały się tam cele, które tak naprawdę nic dla mnie nie znaczyły.<br>Tym razem, listę, którą zaraz zobaczycie, wielokrotnie przerabiałam i skupiłam się w szczególności na eliminowaniu z niej punktów. Chciałam się upewnić, że będą to marzenia, które są w mojej głowie już od dłuższego czasu.</p><h2 id="Cele-szczegolowe-z-doza-dowolnosci"><a href="#Cele-szczegolowe-z-doza-dowolnosci" class="headerlink" title="Cele - szczegółowe, z dozą dowolności"></a>Cele - szczegółowe, z dozą dowolności</h2><p>Nie od dziś wiadomo, że dużo łatwiej realizuje nam się postanowienia, które są SMART (napisałam już kiedyś na ten temat <a href="https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/">artykuł</a>). Jednak sztywne stosowanie się do tej reguły odbiło mi się czkawką. Traciłam motywację, bo moje zainteresowania zmieniały się w trakcie roku. Dlatego też, wśród moich obecnych celów, pojawiła się np. nauka nowego języka do poziomu B2, ale nie dospecyfikowuje na razie jakiego. Jeśli za rok bardziej niż włoski, będzie mi się podobał język rosyjski, to ruszę z rosyjskim.</p><h2 id="Radiator-informacji"><a href="#Radiator-informacji" class="headerlink" title="Radiator informacji"></a>Radiator informacji</h2><p>Aby w tym roku częściej spoglądać na moje cele postanowiłam wdrożyć 2 strategie:</p><ul><li>umieścić informacje o celach, nad którymi pracuje, na tablicy obok biurka,</li><li>stworzyć miejsce na blogu (poza postami), gdzie będę się mogła szybko do niej odwołać.</li></ul><p>W ten sposób powstała strona z moimi aktualnymi celami, którą znajdziecie <a href="https://kernelgonnapanic.pl/cele.html">tutaj</a>. Link jest również zawsze dostępny w menu strony.</p><div class="figure center fig-100" style="width:;"><img class="fig-img" src="strona.jpg" alt=""></div><p>Tyle na dziś. Do następnego!<br>Ania</p><p><em>Photo by Nikita Kachanovsky on Unsplash</em></p>]]></content>
     
@@ -102,11 +130,11 @@
     </summary>
     
     
-      <category term="Śmieszne" scheme="https://kernelgonnapanic.pl/tags/Smieszne/"/>
-    
       <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
       <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
+    
+      <category term="Śmieszne" scheme="https://kernelgonnapanic.pl/tags/Smieszne/"/>
     
       <category term="5 rzeczy" scheme="https://kernelgonnapanic.pl/tags/5-rzeczy/"/>
     
@@ -176,9 +204,9 @@
     </summary>
     
     
-      <category term="Kopendium Frontendu" scheme="https://kernelgonnapanic.pl/tags/Kopendium-Frontendu/"/>
-    
       <category term="Podstawy" scheme="https://kernelgonnapanic.pl/tags/Podstawy/"/>
+    
+      <category term="Kopendium Frontendu" scheme="https://kernelgonnapanic.pl/tags/Kopendium-Frontendu/"/>
     
   </entry>
   
@@ -248,9 +276,9 @@
     
       <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
-      <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
-    
       <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
+    
+      <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
     
       <category term="Tutoriale" scheme="https://kernelgonnapanic.pl/tags/Tutoriale/"/>
     
@@ -395,9 +423,9 @@
     
       <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
     
-      <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
-    
       <category term="Testowanie" scheme="https://kernelgonnapanic.pl/tags/Testowanie/"/>
+    
+      <category term="Javascript" scheme="https://kernelgonnapanic.pl/tags/Javascript/"/>
     
       <category term="Tutoriale" scheme="https://kernelgonnapanic.pl/tags/Tutoriale/"/>
     
@@ -473,37 +501,11 @@
     </summary>
     
     
+      <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
+    
       <category term="Programowanie" scheme="https://kernelgonnapanic.pl/tags/Programowanie/"/>
     
-      <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
-    
       <category term="Dobre praktyki" scheme="https://kernelgonnapanic.pl/tags/Dobre-praktyki/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>To żyje! Elm w akcji.</title>
-    <link href="https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/"/>
-    <id>https://kernelgonnapanic.pl/2017/03/18/to-zyje-elm-w-akcji/</id>
-    <published>2017-03-18T14:23:00.000Z</published>
-    <updated>2018-11-03T10:10:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Kolejny odcinek zmagań z Elmem przed nami. Dziś timer ożyje. Będziemy mieć okazję zobaczyć jak wygląda architektura aplikacji w Elmie i czemu może się Wam wydawać znajoma.<a id="more"></a> Let’s start!</p><p>W poprzednim wpisie pokazałam jak, za pomocą Elma, możemy wyrenderować kilka divów. Ale od kilku DOM elementów do pełnej aplikacji jeszcze daleko. Dziś nadamy timerowi trochę ram i obsłużymy pierwsze kliknięcia. Na razie nie poświęcałam zbędnego czasu na stylowanie, więc wybaczcie wizualne koszmarki. Na rozprawienie się z nimi też przyjdzie pora.</p><p>Swoje poszukiwania na temat “Jak wygląda aplikacja w Elmie?” zaczęłam od tutoriala. Lecz nie jest on zbyt obszerny i szybko przestał mi wystarczać. Dużo więcej zrozumiałam przeglądając kod przykładowej appki - <a href="https://github.com/sporto/elm-tutorial-app" target="_blank" rel="noopener">tutaj</a>. Nie wiem jak inni, ale ja na przykładach uczę się najwięcej.</p><p>Chcąc, by aplikacja ożyła dodałam do niej możliwość ustawienia liczby minut, od której mamy odliczać. Na razie użyłam do tego stringów, ale z pewnością szybko się to zmieni.</p><p>Jeśli chodzi o podstawowe części składowe architektury elmowej aplikacji to mamy tutaj:</p><ul><li>model: jest to stan naszej aplikacji. Dodatkowo obok niego definiujemy również funkcję init, która zwraca stan, od którego aplikacja zacznie swoje działanie</li></ul><figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="keyword">alias</span> <span class="type">Model</span> =</span><br><span class="line">    <span class="type">String</span></span><br><span class="line"></span><br><span class="line"><span class="title">init</span> : ( <span class="type">Model</span>, <span class="type">Cmd</span> <span class="type">Msg</span> )</span><br><span class="line"><span class="title">init</span> =</span><br><span class="line">    ( <span class="string">"10:00"</span>, <span class="type">Cmd</span>.none )</span><br></pre></td></tr></table></figure><ul><li>messages: wiadomości sygnalizują zdarzenia, które mają miejsce w naszej aplikacji</li></ul><figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="type">Msg</span></span><br><span class="line">  = <span class="type">SetTimer</span> <span class="type">String</span></span><br></pre></td></tr></table></figure><ul><li>view: widok renderujemy na podstawie stanu naszej aplikacji (w tym przypadku przekazuje stan do komponentu <code>timer</code>)</li></ul><figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">view</span> : <span class="type">Model</span> -&gt; <span class="type">Html</span> <span class="type">Msg</span></span><br><span class="line"><span class="title">view</span> model =</span><br><span class="line">    timer model</span><br></pre></td></tr></table></figure><ul><li>update: mamy również funkcję, która jest wywoływana przez program, przy każdym pojawieniu się wiadomości. Modyfikuje ona stan aplikacji i może zwracać commandy (o nich kiedy indziej)</li></ul><figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">update</span> : <span class="type">Msg</span> -&gt; <span class="type">Model</span> -&gt; ( <span class="type">Model</span>, <span class="type">Cmd</span> <span class="type">Msg</span> )</span><br><span class="line"><span class="title">update</span> msg model =</span><br><span class="line">    <span class="keyword">case</span> msg <span class="keyword">of</span></span><br><span class="line">        <span class="type">Messages</span>.<span class="type">SetTimer</span> number -&gt;</span><br><span class="line">            ( number, <span class="type">Cmd</span>.none )</span><br></pre></td></tr></table></figure><ul><li>subskrypcje: za ich pomocą nasłuchujemy na zewnętrze wejście (np. ruchy myszką), na razie z nich nie korzystałam</li></ul><p>Potrzebujemy również <code>program</code>, który zbiera wszystkie te elementy i sprawia, że nasza aplikacja ożywa.</p><p>Pełne źródła można oczywiście znaleźć na <a href="https://github.com/kernelgonnapanic/timer" target="_blank" rel="noopener">githubie</a>.</p><p>Dla Was pozostawiam zagadkę. Co przypomina Wam taka struktura aplikacji? Podobieństwo do dużo bardziej popularnej obecnie technologii jest uderzające. Dajcie znać w komentarzu co myślicie.</p><p>Ania</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Kolejny odcinek zmagań z Elmem przed nami. Dziś timer ożyje. Będziemy mieć okazję zobaczyć jak wygląda architektura aplikacji w Elmie i czemu może się Wam wydawać znajoma.
-    
-    </summary>
-    
-    
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
-      <category term="Podstawy" scheme="https://kernelgonnapanic.pl/tags/Podstawy/"/>
-    
-      <category term="Daj się poznać 2017" scheme="https://kernelgonnapanic.pl/tags/Daj-sie-poznac-2017/"/>
-    
-      <category term="Elm" scheme="https://kernelgonnapanic.pl/tags/Elm/"/>
     
   </entry>
   

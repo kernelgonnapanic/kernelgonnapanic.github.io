@@ -1,0 +1,792 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="kernelgonnapanic.pl">
+    <title>Mentor w IT - jak ? - kernelgonnapanic.pl</title>
+    <meta name="author" content="Anna Konopka">
+    
+        <meta name="keywords" content="frontend,javascript,kernelgonnapanic,">
+    
+    
+        <link rel="icon" href="https://kernelgonnapanic.pl/assets/images/favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="Dużo piszę na tym blogu o tym, w jaki sposób rozwijać się w zawodzie programisty. Staram się podsuwać Wam przydatne książki, omawiam ciekawe wzorce i opisuję codzienne życie frontendowca. Jednak do te">
+<meta name="keywords" content="Frontend,Rozwój,Programowanie,Leadership,Mentor">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Mentor w IT - jak ?">
+<meta property="og:url" content="https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/index.html">
+<meta property="og:site_name" content="kernelgonnapanic.pl">
+<meta property="og:description" content="Dużo piszę na tym blogu o tym, w jaki sposób rozwijać się w zawodzie programisty. Staram się podsuwać Wam przydatne książki, omawiam ciekawe wzorce i opisuję codzienne życie frontendowca. Jednak do te">
+<meta property="og:locale" content="pl">
+<meta property="og:updated_time" content="2019-01-10T17:30:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mentor w IT - jak ?">
+<meta name="twitter:description" content="Dużo piszę na tym blogu o tym, w jaki sposób rozwijać się w zawodzie programisty. Staram się podsuwać Wam przydatne książki, omawiam ciekawe wzorce i opisuję codzienne życie frontendowca. Jednak do te">
+<meta name="twitter:creator" content="@konopka_ania">
+    
+        <link rel="publisher" href="https://plus.google.com/116973627351289720000"/>
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/great.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/great.jpg" />
+    
+    
+        <meta property="og:image" content="https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/great.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/great.jpg" />
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-5vep6rqjmqro1n7d9e29h9buiwwykxbgqomapbiwl0urtijpxktfe9mduoje.min.css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91276922-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">kernelgonnapanic.pl</a>
+    </div>
+    
+        
+            <a class="header-right-picture " href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/zdjecie.jpg" alt="global.author_picture">
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/zdjecie.jpg" alt="global.author_picture">
+                </a>
+                <h4 class="sidebar-profile-name">Anna Konopka</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>Geek girl. Enthusiastic coder. Frontend developer. Blog author. Speaker.</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/ ">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="#about">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-user"></i>
+                        <span class="sidebar-button-desc">O mnie</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/cele.html">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bolt"></i>
+                        <span class="sidebar-button-desc">Moje cele</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-tags">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">Tagi</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://github.com/kernelgonnapanic" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://twitter.com/konopka_ania" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://www.facebook.com/kernelgonnapanic/" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-facebook"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://www.instagram.com/kernelgonnapanic/" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-instagram"></i>
+                        <span class="sidebar-button-desc">Instagram</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://pl.linkedin.com/in/anna-konopka-3b0043115" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-left
+                    post-header-cover--partial" style="background-image:url('/2019/01/09/mentor-w-IT/great.jpg');" data-behavior="4">
+            
+        </div>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaOut
+                        ">
+                
+<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            Mentor w IT - jak ?
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2019-01-09T12:00:00+01:00">
+	
+		    09.01.2019
+    	
+    </time>
+    
+</div>
+
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>Dużo piszę na tym blogu o tym, w jaki sposób rozwijać się w zawodzie programisty. Staram się podsuwać Wam przydatne książki, omawiam ciekawe wzorce i opisuję codzienne życie frontendowca. Jednak do tej pory, jedno z lepszych narzędzi pozwalających na rozwój w dziedzinie programowania, umykało naszej uwadze. Dlatego dziś postanowiłam je uchwycić i porozmawiać z Wami o MENTORINGU.<br><a id="more"></a></p>
+<blockquote><p>“Mentoring jest relacją nakierowaną na rozwój, opiekę, dzielenie się i pomoc, w której jedna osoba inwestuje swój czas, know-how i energię, żeby pobudzić i przyspieszyć rozwój innej osoby, rozwinąć jej wiedzę oraz zdolności.”[1]</p>
+</blockquote>
+<p>Mamy więc dwie strony w takiej relacji:</p>
+<ul>
+<li>👩‍🏫 mentora - który służy swoim doświadczeniem i wiedzą,</li>
+<li>👨‍💻 ucznia (mentee) - który, korzystając z pomocy mentora, rozwija swój potencjał.</li>
+</ul>
+<p>W praktyce, mentoring realizowany jest zazwyczaj poprzez regularne spotkania, na których rozmawiamy, uczymy się i motywujemy. Lecz może to być również relacja nieformalna i nieregularna, gdzie starszy kolega przy piwie opowie nam o swoich doświadczeniach. Jak to się mówi - co kto lubi 👍.</p>
+<p>Zdaje sobię sprawę, że wielu z Was może być nastawionych do tej koncepcji sceptycznie. Uważać ją za coachingowe brednie, mieć złe doświadczenia ze spotkań typu 1-1, które mogą okazać się nudne i bezużyteczne, gdy są źle prowadzone. Moim zadaniem na dziś jest przekonanie Was, że posiadanie dobrego mentora to jeden z lepszych sposobów na rozwój swojej programistycznej kariery.</p>
+<h2 id="Co-moze-Ci-zaoferowac-mentor"><a href="#Co-moze-Ci-zaoferowac-mentor" class="headerlink" title="Co może Ci zaoferować mentor?"></a>Co może Ci zaoferować mentor?</h2><p>Do tej pory miałam wielkie szczęście i okazję współpracować z dwójką świetnych mentorów - programistów. I na podstawie moich doświadczeń, chciałabym Wam opowiedzieć o tym, czego możecie się po takiej relacji spodziewać. Od mentora możecie oczekiwać:</p>
+<ul>
+<li>porządnej dawki motywacji, która nie pozwoli Wam siedzieć w miejscu,</li>
+<li>porady przy okazji technicznego problemu i możliwości skorzystania z większego doświadczenia niż twoje własne,</li>
+<li>podpowiedzi przy określeniu twoich kolejnych celów, ścieżki kariery,</li>
+<li>pomocy przy określeniu własnych silnych i słabych stron oraz umiejętności, które należy rozwijać,</li>
+<li>asysty przy wyciąganiu wniosków z zaistniałych sytuacji (“co dwie głowy to nie jedna”).</li>
+</ul>
+<p>Brzmi dobrze, prawda? Jednak za dużo nasłuchałam się już w swoim życiu historii o nieudanym mentoringu, niezaangażowanych nauczycielach i niewnoszących nic spotkaniach “jeden na jeden”. Okazuje się, że nie każdy mentor robi dobrze swoją robotę.</p>
+<h2 id="Jak-rozpoznac-dobrego-mentora"><a href="#Jak-rozpoznac-dobrego-mentora" class="headerlink" title="Jak rozpoznać dobrego mentora?"></a>Jak rozpoznać dobrego mentora?</h2><h3 id="1-ma-duze-doswiadczenie"><a href="#1-ma-duze-doswiadczenie" class="headerlink" title="1. ma duże doświadczenie"></a>1. ma duże doświadczenie</h3><p>Mentor w świecie IT, to osoba, od której oczekujemy, że pomoże nam z zagadnieniami technicznymi i liczymy na jego/jej duże doświadczenie na tym polu. Jak możemy ocenić to doświadczenie? Według mnie nie jest to kwestia ilości przepracowanych lat, a bardziej ilości projektów, ich skomplikowania i zróżnicowania. Nie możemy też zapomnieć o doświadczeniach w pracy z różnymi zespołami czy w różnych typach firm (korporacjach, startupach itp.).</p>
+<h4 id="2-umie-sluchac"><a href="#2-umie-sluchac" class="headerlink" title="2. umie słuchać"></a>2. umie słuchać</h4><p>Od mentora należy oczekiwać szacunku i tego, że potrafi dobrze słuchać. Z jednej strony, nie będzie bagatelizował twoich problemów, ale także pokaże Ci drugą stronę medalu i uświadomi twoje błędy. Dodatkowo, dobry mentor będzie potrafił nakierować Cię na potencjalne luki w Twoim rozumowaniu, nie brzmiąc przy okazji jakby pozjadał wszystkie rozumy. </p>
+<h4 id="3-jest-zaangazowany-i-umie-budowac-relacje"><a href="#3-jest-zaangazowany-i-umie-budowac-relacje" class="headerlink" title="3. jest zaangażowany i umie budować relacje"></a>3. jest zaangażowany i umie budować relacje</h4><p>Niezaangażowany mentor jest gorszy niż brak mentora. Uczucie, że ktoś pojawia się na spotkaniach z Tobą “za karę” straszliwie demotywuje. Dobrzy mentorzy to tacy, którzy umieją budować fajne relacje z innymi ludźmi. Relacje, w których jest miejsce na zaufanie, bez którego człowiek nie ma się jak rozwijać. By zrobić coś lepiej, trzeba zaryzykować, czasem odsłonić swój czuły punkt - do tego konieczne jest zaufanie.</p>
+<h4 id="4-umiejetnie-przekazuje-wiedze"><a href="#4-umiejetnie-przekazuje-wiedze" class="headerlink" title="4. umiejętnie przekazuje wiedzę"></a>4. umiejętnie przekazuje wiedzę</h4><p>Ile razy spotkaliście w świecie IT osobę, która znała się na danym temacie jak nikt inny, lecz niestety nie umiała przekazać swojej wiedzy w bezbolesny sposób? No właśnie. Trudno współpracuje się z takimi osobami w roli mentorów, ponieważ brakuje im, bardzo potrzebnej w tym wypadku, umiejętności efektywnej komunikacji.</p>
+<h4 id="5-nie-wystawia-kategorycznych-osadow"><a href="#5-nie-wystawia-kategorycznych-osadow" class="headerlink" title="5. nie wystawia kategorycznych osądów"></a>5. nie wystawia kategorycznych osądów</h4><p>Tak się jakoś składa, że mam pewien dystans do osób, które mają kategoryczne poglądy, w szczególności w sprawach technologii. Gdy ktoś Tobie mówi, że narzędzie X jest “zawsze i wszędzie, bezwględnie lepsze” to coś tutaj śmierdzi. Z mojego doświadczenia, im ktoś więcej rzeczy widział i robił, tym mniej wygłasza takich dogmatycznych stwierdzeń. Ważne, by mentor pomagał Tobie znaleźć plusy i minusy różnych rozwiązań. </p>
+<h2 id="Jak-znalezc-taka-osobe"><a href="#Jak-znalezc-taka-osobe" class="headerlink" title="Jak znaleźć taką osobę?"></a>Jak znaleźć taką osobę?</h2><p>Hmmm… Różnie z tym bywa. Niektórym dopisze szczęście, inni muszą się trochę postarać. Moja rada numer&nbsp;1: szukaj. Wiele firm deweloperskich prowadzi takie programy mentoringowe w ramach własnej organizacji. Jeśli tak jest w twoim wypadku, pewnie takiego mentora masz już przydzielonego. Jeśli jednak nie możesz się z nim dogadać, nie widzisz korzyści z tej relacji, to czas na zmianę. Z pewnością Twoja organizacja takie przypadki również przewiduje. A może w twojej firmie jest jakaś osoba, od której wiesz, że możesz się wiele nauczyć? Nie pozwól, by taka dobra okazja na mentorską relację przeszła Ci koło nosa!</p>
+<p>Jeśli jednak Twoja firma takiego programu nie ma lub czujesz, że nie jest to dla Ciebie wystarczające to warto swojego mentora poszukać na zewnątrz. Możecie to zrobić w ramach darmowych programów mentorskich, takich jak np. <a href="https://techleaders.eu/poland" target="_blank" rel="noopener">Tech Leaders Poland</a> lub umówić się na mentoring z konkretną osobą. </p>
+<p>Bardzo mnie ciekawi jak to wygląda w waszych firmach? Macie mentorów? Jesteście zadowoleni ze swoich mentorskich relacji? Czy może nie widzicie wartości w tego typu działaniach? Nie mogę się doczekać Waszych opinii na ten temat!</p>
+<p>Do następnego!<br>Ania</p>
+<p>1) Gordon Shea, Can a supervisor mentor?, „Supervision”, 56 (11), 1995, s. 3.</p>
+<p><em>Photo by Clark Tibbs on Unsplash</em></p>
+
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGI</span><br>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Frontend/">Frontend</a> <a class="tag tag--primary tag--small t-link" href="/tags/Leadership/">Leadership</a> <a class="tag tag--primary tag--small t-link" href="/tags/Mentor/">Mentor</a> <a class="tag tag--primary tag--small t-link" href="/tags/Programowanie/">Programowanie</a> <a class="tag tag--primary tag--small t-link" href="/tags/Rozwoj/">Rozwój</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">POPRZEDNI</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2019/01/03/cele-na-2019-troche-inaczej/" data-tooltip="Cele na 2019 - trochę inaczej ⚽">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NASTĘPNY</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2019 Anna Konopka. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">POPRZEDNI</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2019/01/03/cele-na-2019-troche-inaczej/" data-tooltip="Cele na 2019 - trochę inaczej ⚽">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NASTĘPNY</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/">
+                <i class="fa fa-google-plus"></i><span>Udostępnij na Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/">
+                <i class="fa fa-facebook-official"></i><span>Udostępnij na Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/">
+                <i class="fa fa-twitter"></i><span>Udostępnij na Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/zdjecie.jpg" alt="global.author_picture">
+        
+            <h4 id="about-card-name">Anna Konopka</h4>
+        
+            <div id="about-card-bio"><p>Geek girl. Enthusiastic coder. Frontend developer. Blog author. Speaker.</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br>
+                <p>Senior Frontend Developer</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br>
+                Wrocław, Polska
+            </div>
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search" class="form-control input--large search-input" placeholder="Search " autofocus="autofocus">
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">Jeszcze nie napisałam posta, którego szukasz.</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/03/10/zwinny-samuraj/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/03/10/zwinny-samuraj/samuraj.JPG" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/03/10/zwinny-samuraj/">
+                            <h3 class="media-heading">Zwinny samuraj. Jak programują mistrzowie zwinności</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    10 mar 2015
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Tak jak zapowiadałam, dziś rozpoczynamy na blogu nową serię  - <strong>“Rozwojowe poniedziałki”</strong>. Pierwsza recenzja z tego cyklu dotyczyć będzie książki <strong>Jonathana Rasmussona “Zwinny samuraj. Jak programują mistrzowie zwinności”</strong>. Absolutny must-have dla każdego nowoczesnego programisty czy kierownika zwinnego projektu IT :)<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/04/02/scrum-o-zwinnym-zarzadzaniu-projektami-chrapko/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/04/02/scrum-o-zwinnym-zarzadzaniu-projektami-chrapko/scrum_dodatk.JPG" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/04/02/scrum-o-zwinnym-zarzadzaniu-projektami-chrapko/">
+                            <h3 class="media-heading">Scrum. O zwinnym zarządzaniu projektami.</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2 kwi 2015
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>“Scrum. O zwinnym zarządzaniu projektami” Mariusza Chrapko pojawia się dziś na blogu wraz z kolejnym, już trzecim, “Rozwojowym poniedziałkiem”.<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/04/10/wlacz-sie-do-gry/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/04/10/wlacz-sie-do-gry/wlacz_sie_profil.png" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/04/10/wlacz-sie-do-gry/">
+                            <h3 class="media-heading">Włącz się do gry</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    10 kwi 2015
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Dziś Rozwojowy Poniedziałek powraca w trochę innym kontekście. Bloga przejmuje Sheryl Sandberg wraz ze swoją książką <strong>“Włącz się do gry. Kobiety, praca i chęć przywództwa”</strong>.<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/07/16/BiznesDoGoryNogami/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/07/16/BiznesDoGoryNogami/biznes_profilowe2.JPG" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/07/16/BiznesDoGoryNogami/">
+                            <h3 class="media-heading">Biznes do góry nogami wywrócony - Richard Branson</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    16 lip 2015
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Podsumowanie <strong>Bookathonu</strong> już za mną, ale ostatnie bookathonowe dziecko jeszcze czeka na recenzję :) Chodzi mi o książkę, którą wybrał dla mnie mój brat, czyli o <strong>“Biznes do góry nogami wywrócony” Richarda Bransona</strong>.<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/07/26/SmashingMagazine/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/07/26/SmashingMagazine/smashing.JPG" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/07/26/SmashingMagazine/">
+                            <h3 class="media-heading">Smashing magazine</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    26 lip 2015
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Wszyscy zainteresowani technologiami webowymi i tworzeniem stron internetowych z pewnością słyszeli o <a href="http://www.smashingmagazine.com/" target="_blank" rel="noopener">The Smashing Magazine</a>. Tym, którzy jeszcze go nie odkryli, szczerze polecam pobuszowanie w czeluściach jego artykułów czy polubienie na fb, bo warto :) Mimo że idea tego portalu bardzo mi się podoba, jakoś rzadko tam zaglądam. Dlatego, gdy w bibliotece natrafiłam na ich książkę, bardzo się ucieszyłam i postanowiłam nadrobić zaległości.<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/code2.jpg" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2015/09/11/5NajlepszychPlatformDoNaukiProgramowania/">
+                            <h3 class="media-heading">5 najlepszych platform do nauki programowania</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    11 wrz 2015
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Od jakiego tematu można by zacząć cykl dotyczący programowania? No właśnie od tego! Dziś chciałabym się z Wami podzielić platformami, dzięki którym można zarazić się “koderskim” bakcylem i wiele się nauczyć. Zaczęłam z nich korzystać, gdy byłam totalnie zielona w tym temacie, no i co tu dużo mówić - “wpadłam po uszy” :)<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/stars5_small.jpg" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/01/03/Postanowienia-noworoczne/">
+                            <h3 class="media-heading">Jak nie dać się zwariować postanowieniom noworocznym?</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    3 sty 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Nie da rady wejść w Nowy Rok, omijając sezon na postanowienia noworoczne. Dla niektórych osób są one bezsensowne, bo uważają oni, że cyferki w kalendarzu nic nie zmieniają. Inni śmieją się z tabunów odwiedzających siłownie w styczniu. Dla mnie z kolei każdy moment jest dobry na zmiany, wyjście ze strefy komfortu, zrobienie czegoś fajnego, kreatywnego i rozwijającego czy zaprzestanie czegoś, co nas niszczy.<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/02/06/Trzy-litery-i-kropka/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/02/06/Trzy-litery-i-kropka/man.jpg" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/02/06/Trzy-litery-i-kropka/">
+                            <h3 class="media-heading">Trzy litery i kropka - czy studia mają sens?</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    6 lut 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p><strong>Inż.</strong> - trzy magiczne literki i kropka. Gdy stawiałeś swoje pierwsze kroki na uczelni, cztery lata temu, były one odległym i upragnionym celem. Miały sprawić, że narody przed Tobą klękną, a pracodawcy będą ustawiać się do Ciebie w kolejce. Wyszarpane, opłacone potem i krwią, wreszcie przywędrowały i dumnie zasiadły przed twoim nazwiskiem. Tylko jedna rzecz zaczęła Cię nurtować: “Czemu nic się nie zmieniło?”.<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/05/03/Rozwojowy-poniedzialek5/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/05/03/Rozwojowy-poniedzialek5/rozwojowy-poniedzialek5.jpg" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/05/03/Rozwojowy-poniedzialek5/">
+                            <h3 class="media-heading">Rozwojowy poniedziałek</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    3 maj 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Dziś porządka dawka tego co uwielbiam. W ramach <strong>Rozwojowego poniedziałku #5</strong> zapraszam na apetyczny mix programowania i rozwoju osobistego. Opowiem dziś kilka słów o “Today I learned” -<br>projekcie, który bardzo przypadł mi do gustu. Już tłumaczę o co chodzi ;)<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/08/08/NieTlumaczSieDzialaj/">
+                            <img class="media-image" src="https://kernelgonnapanic.pl/2016/08/08/NieTlumaczSieDzialaj/tytulowe.JPG" width="90" height="90">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://kernelgonnapanic.pl/2016/08/08/NieTlumaczSieDzialaj/">
+                            <h3 class="media-heading">Nie tłumacz się, działaj!</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    8 sie 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Dziś wracam do Was z recenzją książki Briana Tracy’ego “Nie tłumacz się, działaj! Odkryj moc samodyscypliny”. Pewnie dla tej części z Was, którzy kiedykolwiek zabłądzili w księgarni lub bibliotece do działu z książkami dotyczącymi rozwoju osobistego, nazwisko autora nie jest obce. Mając na uwadze jednak tych, którzy jeszcze o nim nie słyszeli, naskrobię kilka dodatkowych słów.<br></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium" data-message-zero="Jeszcze nie napisałam posta, którego szukasz." data-message-one="Jesteś szczęściarzem! Znaleziono jednego posta." data-message-other="Znaleziono {n} postów :)">
+                Znaleziono 40 postów :)
+            </p>
+        </div>
+    </div>
+</div>
+        
+<div id="cover" style="background-image:url('/assets/images/sky.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-oxm9fqwkgxfzzzzjcjnkdmnvqtvwc8dnjrchixde9lpdl7nglh3zckx6opbd.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'https://kernelgonnapanic.pl/2019/01/09/mentor-w-IT/';
+                 
+                    this.page.identifier = '2019/01/09/mentor-w-IT/';
+                 
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'bookieandcookie';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+
+
+
+    </body>
+</html>
