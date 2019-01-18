@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="pl">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,7 +49,10 @@
     
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-5vep6rqjmqro1n7d9e29h9buiwwykxbgqomapbiwl0urtijpxktfe9mduoje.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="/assets/css/jquery.fancybox-thumbs.css">
+    <link rel="stylesheet" href="/assets/css/tranquilpeak.css">
     <!--STYLES END-->
     
     <script type="text/javascript">
@@ -66,9 +69,10 @@
     
 </head>
 
-    <body>
-        <div id="blog">
-            <!-- Define author's picture -->
+
+<body>
+    <div id="blog">
+        <!-- Define author's picture -->
 
 
     
@@ -93,7 +97,7 @@
     
 </header>
 
-            <!-- Define author's picture -->
+        <!-- Define author's picture -->
 
 
 
@@ -207,18 +211,17 @@
     </div>
 </nav>
 
-            
+        
         <div class="post-header-cover
                     text-left
                     post-header-cover--partial" style="background-image:url('/2019/01/03/cele-na-2019-troche-inaczej/cele.jpg');" data-behavior="4">
             
         </div>
 
-            <div id="main" data-behavior="4"
-                 class="hasCover
+        <div id="main" data-behavior="4" class="hasCover
                         hasCoverMetaOut
                         ">
-                
+            
 <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
     
     
@@ -341,16 +344,16 @@
 
 
 
-                <footer id="footer" class="main-content-wrap">
+            <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
         Copyrights &copy; 2019 Anna Konopka. All Rights Reserved.
     </span>
 </footer>
 
-            </div>
-            
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-                    <div class="post-actions-wrap">
+        </div>
+        
+        <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+            <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
@@ -410,8 +413,8 @@
 </div>
 
 
-                </div>
-                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+        </div>
+        <div id="share-options-bar" class="share-options-bar" data-behavior="4">
     <ul class="share-options">
         <li class="share-option">
             <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://kernelgonnapanic.pl/2019/01/03/cele-na-2019-troche-inaczej/">
@@ -432,9 +435,9 @@
 </div>
 <div id="share-options-mask" class="share-options-mask"></div>
 
-            
-        </div>
         
+    </div>
+    
 
 
     
@@ -472,7 +475,7 @@
     </div>
 </div>
 
-        <div id="algolia-search-modal" class="modal-container">
+    <!-- <div id="algolia-search-modal" class="modal-container">
     <div class="modal">
         <div class="modal-header">
             <span class="close-button"><i class="fa fa-close"></i></span>
@@ -747,33 +750,72 @@
             </p>
         </div>
     </div>
-</div>
-        
+</div> -->
+    
 <div id="cover" style="background-image:url('/assets/images/sky.jpg');"></div>
-        <!--SCRIPTS-->
-<script src="/assets/js/script-oxm9fqwkgxfzzzzjcjnkdmnvqtvwc8dnjrchixde9lpdl7nglh3zckx6opbd.min.js"></script>
+    <div id="overlay"></div>
+<div id="fb-modal" class="fb-modal">
+  <div id="closeBtn" class="fb-modal__close">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </div>
+  <div id="fb-modal-text" class="fb-modal__text">
+    <div class="fb-modal__intro">Cześć!</div>
+    Dołącz do mnie na Facebooku, bym mogła dać Ci znać o każdym najnowszym poście i
+    byśmy wspólnie rozwijali się jako programiści :)
+    <br>
+    Miłego czytania!
+  </div>
+  <div class="fb-page fb-modal__widget" data-href="https://www.facebook.com/kernelgonnapanic/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+    <blockquote cite="https://www.facebook.com/kernelgonnapanic/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/kernelgonnapanic/">kernelgonnapanic.pl</a></blockquote>
+  </div>
+</div>
+    <div class="cookie-popup" id="cookie-popup">
+  <div class="cookie-popup__container">
+    <div class="cookie-popup__text">
+      Na stronie używane są pliki cookies, dzięki którym blog może działać lepiej. Możesz je wyłączyć w swojej
+      przeglądarce.
+      <a href="https://kernelgonnapanic.pl/polityka-cookies.html">Więcej&nbsp;informacji</a>
+    </div>
+    <div id="cookie-accept-btn" class="cookie-popup__button">
+      Akceptuję
+    </div>
+  </div>
+</div>
+    <!--SCRIPTS-->
+<script src="/assets/js/jquery.js"></script>
+<script src="/assets/js/jquery.fancybox.js"></script>
+<script src="/assets/js/jquery.fancybox-thumbs.js"></script>
+<script src="/assets/js/tranquilpeak.js"></script>
 <!--SCRIPTS END-->
 
-    
-        <script>
-             var disqus_config = function () {
-                 this.page.url = 'https://kernelgonnapanic.pl/2019/01/03/cele-na-2019-troche-inaczej/';
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://kernelgonnapanic.pl/2019/01/03/cele-na-2019-troche-inaczej/';
                  
-                    this.page.identifier = '2019/01/03/cele-na-2019-troche-inaczej/';
+            this.page.identifier = '2019/01/03/cele-na-2019-troche-inaczej/';
                  
              };
-            (function() {
-                var d = document, s = d.createElement('script');
-                var disqus_shortname = 'bookieandcookie';
-                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (function () {
+        var d = document, s = d.createElement('script');
+        var disqus_shortname = 'bookieandcookie';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-    
-
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
 
 
-    </body>
+
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.2';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+</body>
+
 </html>
