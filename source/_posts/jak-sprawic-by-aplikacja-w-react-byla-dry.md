@@ -27,7 +27,7 @@ Wyobraźmy sobie klasyczną aplikację React'ową. Składa się ona z wielu komp
 
 Pierwszym naszym rozwiązaniem jest umieszczenie kodu odpowiedzialnego za tę funkcjonalność w komponencie, który wyświetla header i listę.
 
-{% codeblock DummyPage.js lang:js https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/pages/DummyPage.js DummyPage.js %}
+{% codeblock DummyPage.js lang:jsx https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/pages/DummyPage.js DummyPage.js %}
 class DummyPage extends Component {
   constructor() {
     super();
@@ -74,7 +74,7 @@ Zacznijmy od krótkiego wstępu i powiedzenia kilku słów wyjaśnienia czym są
 
 Zobaczmy jak wygląda to w przypadku naszej mini-aplikacji. Spróbujmy zaimplementować tę samą funkcjonalność, lecz oddzielić logikę odpowiedzialną za animowanie headera do naszego HOCa.
 
-  {% codeblock PageWithHoc.js lang:js https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/pages/PageWithHoc.js PageWithHoc.js %}
+  {% codeblock PageWithHoc.js lang:jsx https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/pages/PageWithHoc.js PageWithHoc.js %}
 import withAnimatedHeader from '../enhancers/withAnimatedHeader';
 
 const PageWithHoc = ({ opacity }) => (
@@ -94,7 +94,7 @@ export default withAnimatedHeader(PageWithHoc);
 Widzimy, że komponent zawierający header i listę znacząco się odchudził. Ale możemy też zauważyć, że nie jest on już eksportowany. Eksportujemy rezultat wywyołania funkcji `withAnimatedHeader`, do której przekazaliśmy nasz komponent. Czym jest ta funkcja? Dobrze myślicie, to jest właśnie Higher Order Component.
 
 Teraz sprawdźmy jak wygląda funkcja `withAnimatedHeader` czyli komponent wyższego rzędu.
-  {% codeblock withAnimatedHeader.js lang:js https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/enhancers/withAnimatedHeader.js withAnimatedHeader.js %}
+  {% codeblock withAnimatedHeader.js lang:jsx https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/enhancers/withAnimatedHeader.js withAnimatedHeader.js %}
 const withAnimatedHeader = (WrappedComponent) => {
   return class extends Component {
     constructor() {
@@ -145,7 +145,7 @@ Kolejnym wzorcem, który pozwala na oddzielenie i reużywanie części logiki je
 
 Spójrzmy na przykład :)
 
-  {% codeblock PageWithRenderCallback.js lang:js https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/pages/PageWithRenderCallback.js PageWithRenderCallback.js %}
+  {% codeblock PageWithRenderCallback.js lang:jsx https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/pages/PageWithRenderCallback.js PageWithRenderCallback.js %}
 import ScrollViewWithAnimatedHeader from '../enhancers/ScrollViewWithAnimatedHeader';
 
 const PageWithRenderCallback = ({ opacity }) => (
@@ -172,7 +172,7 @@ Znów widzimy, że nasz komponent zawierający Header i Listę jest malutki, ale
 
 Z czego składa się `ScrollViewWithAnimatedHeader`?
 
-  {% codeblock ScrollViewWithAnimatedHeader.js lang:js https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/enhancers/ScrollViewWithAnimatedHeader.js ScrollViewWithAnimatedHeader.js %}
+  {% codeblock ScrollViewWithAnimatedHeader.js lang:jsx https://github.com/kernelgonnapanic/hoc-render-callback-example/blob/master/src/enhancers/ScrollViewWithAnimatedHeader.js ScrollViewWithAnimatedHeader.js %}
 
 class ScrollViewWithAnimatedHeader extends Component {
   constructor() {

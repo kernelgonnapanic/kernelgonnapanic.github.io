@@ -5,7 +5,7 @@ tags:
   - Programowanie
   - Rozwój
   - Sukces
-  - Rozwojowy Poniedziałek
+  - Rozwojowy poniedziałek
 coverMeta: out
 coverSize: partial
 thumbnailImage: softwarecraftsman.JPG

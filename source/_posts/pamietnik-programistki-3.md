@@ -1,5 +1,5 @@
 ---
-title: Pamiętnik programistki 3 - GDG DevFest, CyberSecurity i wakacje 🏖️🌴
+title: Pamiętnik programistki 3 - GDG DevFest, Cybersecurity i wakacje 🏖️🌴
 tags:
   - Konferencje
   - Z Pamiętnika Programistki
@@ -16,7 +16,7 @@ Dziś czas na lżejszego posta i na powrót do serii, którą zawsze bardzo lubi
 
 ## GDG DevFest in Wrocław
 
-<div class="figure fig-50" style="margin-right:20px"><img class="fig-img" src="gdg.jpg" alt="Ed Medvedev w trakcie prezentacji How to teach (almost) anything"><span class="caption">Ed Medvedev w trakcie prezentacji How to teach (almost) anything</span></div>
+<div class="figure fig-50" style="margin-right:20px"><img class="fig-img" src="gdg.jpg" alt="Ed Medvedev w trakcie prezentacji How to teach (almost) anything"><span class="caption">Ed Medvedev w trakcie prezentacji "How to teach (almost) anything"</span></div>
 
 26-27 października uczestniczyłam w konferencji GDG DevFest we Wrocławiu. Jest ona wspierana przez firmę Google, co możemy również zauważyć spoglądając na jej tematykę. Główny trzon stanowiły prezentacje związane z Androidem, pojawiły się również tematy PWA, Machine learningu, Fluttera, UXa, assystentów głosowych i inne. 
 
@@ -35,3 +35,5 @@ Ostatnią rzeczą, o której chciałabym Wam dziś opowiedzieć są moje wakacje
 Tyle dziś ode mnie! A na koniec prośba do Was: czy ktoś z Was również interesuje się cybersecurity i znałby jakieś fajnie materiały do pouczenia się? Jeśli tak, dajcie proszę znać :)
 
 Ania
+
+*Photo by Liam Tucker on Unsplash*

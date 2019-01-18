@@ -2,7 +2,7 @@
 title: Rozwojowy poniedziałek #5
 tags:
   - IT
-  - RozwojowyPoniedziałek
+  - Rozwojowy poniedziałek
   - Rozwój
 	- Sukces
 thumbnailImage: rozwojowy-poniedzialek5.jpg

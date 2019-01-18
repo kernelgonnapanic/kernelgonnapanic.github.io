@@ -8,7 +8,7 @@ tags:
   - Agile
   - Scrum
   - Recenzje
-  - Rozwoj
+  - Rozwój
 category: Recenzje
 thumbnailImage: scrum_main.jpg
 coverImage: scrum_post.jpg

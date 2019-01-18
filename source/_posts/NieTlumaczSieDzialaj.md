@@ -2,7 +2,7 @@
 title: 'Nie tłumacz się, działaj!'
 tags:
   - Recenzje
-  - RozwojowyPoniedziałek
+  - Rozwojowy poniedziałek
   - Rozwój
   - Samodyscyplina
   - Sukces
