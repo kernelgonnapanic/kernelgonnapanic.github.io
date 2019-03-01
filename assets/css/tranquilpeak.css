@@ -457,12 +457,10 @@ blockquote {
     top: 12.5px;
     right: 20px;
     display: block;
-    width: 30px;
     height: 30px;
     color: #88909a; }
     #header .header-right-picture .header-picture {
       display: block;
-      width: 30px;
       height: 30px;
       border-radius: 15px; }
   #header .header-right-icon {
@@ -635,7 +633,7 @@ blockquote {
   #sidebar .sidebar-container {
     overflow: auto; }
   #sidebar .sidebar-profile {
-    color: #ebebeb;
+    color: #222;
     text-align: center;
     padding-top: 18px;
     margin-bottom: 15px; }
@@ -644,7 +642,7 @@ blockquote {
       margin: 0 auto; }
     #sidebar .sidebar-profile .sidebar-profile-name {
       font-size: 1.1em;
-      color: #ebebeb; }
+      color: #222; }
   #sidebar ul.sidebar-buttons {
     padding: 0;
     margin: 0 0 20px 0; }
@@ -654,12 +652,12 @@ blockquote {
       height: 45px;
       line-height: 45px; }
       #sidebar ul.sidebar-buttons li.sidebar-button .sidebar-button-link {
-        color: #ebebeb;
+        color: #222;
         display: block;
         height: 100%; }
         #sidebar ul.sidebar-buttons li.sidebar-button .sidebar-button-link:hover, #sidebar ul.sidebar-buttons li.sidebar-button .sidebar-button-link:active {
           text-decoration: none;
-          color: white; }
+          color: #7b7b7b; }
     #sidebar ul.sidebar-buttons:first-child {
       margin-top: 5px; }
 
@@ -672,9 +670,7 @@ blockquote {
       padding-top: 40px;
       padding-bottom: 7.5px; }
       #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-picture, #sidebar[data-behavior="2"] .sidebar-profile .sidebar-profile-picture, #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-picture, #sidebar[data-behavior="5"] .sidebar-profile .sidebar-profile-picture {
-        width: 90px;
-        height: 90px;
-        border-radius: 90px;
+        height: 120px;
         margin-bottom: 5px; }
       #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-name, #sidebar[data-behavior="2"] .sidebar-profile .sidebar-profile-name, #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-name, #sidebar[data-behavior="5"] .sidebar-profile .sidebar-profile-name {
         font-size: 1.6rem; }
@@ -711,7 +707,6 @@ blockquote {
     left: -75px;
     width: 75px; }
     #sidebar[data-behavior="3"] .sidebar-profile .sidebar-profile-picture, #sidebar[data-behavior="6"] .sidebar-profile .sidebar-profile-picture {
-      width: 30px;
       height: 30px;
       line-height: 30px;
       vertical-align: middle;
@@ -743,7 +738,6 @@ blockquote {
   #sidebar[data-behavior="1"], #sidebar[data-behavior="2"], #sidebar[data-behavior="3"] {
     width: 75px; }
     #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-picture, #sidebar[data-behavior="2"] .sidebar-profile .sidebar-profile-picture, #sidebar[data-behavior="3"] .sidebar-profile .sidebar-profile-picture {
-      width: 30px;
       height: 30px;
       line-height: 30px;
       vertical-align: middle;
@@ -778,9 +772,7 @@ blockquote {
       padding-top: 40px;
       padding-bottom: 7.5px; }
       #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-picture, #sidebar[data-behavior="5"] .sidebar-profile .sidebar-profile-picture {
-        width: 90px;
-        height: 90px;
-        border-radius: 90px;
+        height: 120px;
         margin-bottom: 5px; }
       #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-name, #sidebar[data-behavior="5"] .sidebar-profile .sidebar-profile-name {
         font-size: 1.6rem; }
@@ -817,7 +809,6 @@ blockquote {
     left: -75px;
     width: 75px; }
     #sidebar[data-behavior="6"] .sidebar-profile .sidebar-profile-picture {
-      width: 30px;
       height: 30px;
       line-height: 30px;
       vertical-align: middle;
@@ -853,9 +844,7 @@ blockquote {
       padding-top: 40px;
       padding-bottom: 7.5px; }
       #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-picture, #sidebar[data-behavior="2"] .sidebar-profile .sidebar-profile-picture {
-        width: 90px;
-        height: 90px;
-        border-radius: 90px;
+        height: 120px;
         margin-bottom: 5px; }
       #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-name, #sidebar[data-behavior="2"] .sidebar-profile .sidebar-profile-name {
         font-size: 1.6rem; }
@@ -891,7 +880,6 @@ blockquote {
   #sidebar[data-behavior="3"] {
     width: 75px; }
     #sidebar[data-behavior="3"] .sidebar-profile .sidebar-profile-picture {
-      width: 30px;
       height: 30px;
       line-height: 30px;
       vertical-align: middle;
@@ -926,9 +914,7 @@ blockquote {
       padding-top: 40px;
       padding-bottom: 7.5px; }
       #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-picture, #sidebar[data-behavior="5"] .sidebar-profile .sidebar-profile-picture {
-        width: 90px;
-        height: 90px;
-        border-radius: 90px;
+        height: 120px;
         margin-bottom: 5px; }
       #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-name, #sidebar[data-behavior="5"] .sidebar-profile .sidebar-profile-name {
         font-size: 1.6rem; }
@@ -965,7 +951,6 @@ blockquote {
     left: -75px;
     width: 75px; }
     #sidebar[data-behavior="6"] .sidebar-profile .sidebar-profile-picture {
-      width: 30px;
       height: 30px;
       line-height: 30px;
       vertical-align: middle;
@@ -1008,16 +993,14 @@ blockquote {
       padding-top: 0;
       padding-bottom: 7.5px; }
       #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-picture {
-        width: 90px;
-        height: 90px;
-        border-radius: 90px;
+        height: 120px;
         margin-bottom: 5px; }
       #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-bio,
       #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-job,
       #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-location {
         font-weight: 400;
         font-size: 1.6rem;
-        color: #ebebeb; }
+        color: #222; }
       #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-job,
       #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-location {
         margin-top: 0;
@@ -1069,9 +1052,7 @@ blockquote {
       padding-top: 40px;
       padding-bottom: 7.5px; }
       #sidebar[data-behavior="2"] .sidebar-profile .sidebar-profile-picture {
-        width: 90px;
-        height: 90px;
-        border-radius: 90px;
+        height: 120px;
         margin-bottom: 5px; }
       #sidebar[data-behavior="2"] .sidebar-profile .sidebar-profile-name {
         font-size: 1.6rem; }
@@ -1107,7 +1088,6 @@ blockquote {
   #sidebar[data-behavior="3"] {
     width: 75px; }
     #sidebar[data-behavior="3"] .sidebar-profile .sidebar-profile-picture {
-      width: 30px;
       height: 30px;
       line-height: 30px;
       vertical-align: middle;
@@ -1149,16 +1129,14 @@ blockquote {
       padding-top: 0;
       padding-bottom: 7.5px; }
       #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-picture {
-        width: 90px;
-        height: 90px;
-        border-radius: 90px;
+        height: 120px;
         margin-bottom: 5px; }
       #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-bio,
       #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-job,
       #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-location {
         font-weight: 400;
         font-size: 1.6rem;
-        color: #ebebeb; }
+        color: #222; }
       #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-job,
       #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-location {
         margin-top: 0;
@@ -1211,9 +1189,7 @@ blockquote {
       padding-top: 40px;
       padding-bottom: 7.5px; }
       #sidebar[data-behavior="5"] .sidebar-profile .sidebar-profile-picture {
-        width: 90px;
-        height: 90px;
-        border-radius: 90px;
+        height: 120px;
         margin-bottom: 5px; }
       #sidebar[data-behavior="5"] .sidebar-profile .sidebar-profile-name {
         font-size: 1.6rem; }
@@ -1250,7 +1226,6 @@ blockquote {
     left: -75px;
     width: 75px; }
     #sidebar[data-behavior="6"] .sidebar-profile .sidebar-profile-picture {
-      width: 30px;
       height: 30px;
       line-height: 30px;
       vertical-align: middle;
