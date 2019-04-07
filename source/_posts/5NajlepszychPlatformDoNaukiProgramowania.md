@@ -1,11 +1,10 @@
 ---
 title: 5 najlepszych platform do nauki programowania
 tags:
-  - Rozwój
-  - Programowanie
-  - Podstawy programowania
-  - Darmowe kursy
+  - Nauka programowania
   - 5 rzeczy
+categories:
+  - Techniczne
 coverMeta: out
 coverSize: partial
 thumbnailImage: code2.jpg

@@ -2,8 +2,9 @@
 title: "Identity & Data Security for Web Development"
 tags:
   - Recenzje
-  - Dobre praktyki
-  - Web
+  - Security
+categories:
+  - Techniczne
 thumbnailImagePosition: right
 thumbnailImage: security.jpg
 coverMeta: out

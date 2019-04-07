@@ -8,7 +8,6 @@ coverImage: forest.jpg
 date: 2017-03-08 22:39:00
 tags:
 	- Elm
-	- Podstawy
 	- Daj się poznać 2017
 	- Frontend
 ---

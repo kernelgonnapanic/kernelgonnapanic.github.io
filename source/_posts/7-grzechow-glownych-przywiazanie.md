@@ -2,9 +2,10 @@
 title: "Siedem grzechów głównych programistów - przywiązanie"
 tags:
   - 7 grzechów głównych
-  - Jak być lepszym programistą?
-  - Programowanie
-  - Rozwój
+  - Umiejętności miękkie
+  - Błędy programistów
+categories:
+  - Miękkie
 thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial

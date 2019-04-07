@@ -3,10 +3,9 @@ title: 'Nie tłumacz się, działaj!'
 tags:
   - Recenzje
   - Rozwojowy poniedziałek
-  - Rozwój
-  - Samodyscyplina
-  - Sukces
   - Nawyki
+categories:
+  - Miękkie
 coverMeta: out
 coverSize: partial
 coverImage: tytulowe.JPG

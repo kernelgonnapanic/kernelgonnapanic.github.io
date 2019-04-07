@@ -7,10 +7,10 @@ date: 2017-01-26 19:46:42
 thumbnailImage: hexo_thumb.png
 coverImage: hexo.png
 tags:
-  - Programowanie
   - Blogowanie
-  - Hexo
-  - Github
+  - Narzędzia
+categories:
+  - Techniczne
 ---
 
 Dawno się nie słyszeliśmy, prawda? W międzyczasie przez bloga przeszła burza, a jej rezultatem jest to, co właśnie widzicie. I nie jest to tylko nowy szablon. Przez ostatnie kilka miesięcy budowałam tego bloga od zera na nowej platformie. Dlatego też, **na dobry nowy początek**, nie może zabraknąć wpisu na temat narzędzi, które na to pozwalają.

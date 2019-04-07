@@ -8,8 +8,8 @@ tags:
   - Agile
   - Scrum
   - Recenzje
-  - Rozwój
-category: Recenzje
+categories:
+  - Miękkie
 thumbnailImage: scrum_main.jpg
 coverImage: scrum_post.jpg
 ---

@@ -3,8 +3,8 @@ title: Nawyki mistrzów
 tags:
   - Nawyki
   - Rozwojowy poniedziałek
-  - Rozwój
-  - Sukces
+categories:
+  - Miękkie
 coverMeta: out
 coverSize: partial
 thumbnailImage: jesien.jpg

@@ -2,8 +2,10 @@
 title: "Frontendowe podsumowanie 2018 - co interesującego pojawiło się w tym roku na konferencjach branżowych? ✨✨✨"
 tags:
   - Frontend
-  - Javascript
+  - JavaScript
   - 5 rzeczy
+categories:
+  - Techniczne
 thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial

@@ -2,11 +2,11 @@
 title: Mentoring w IT
 tags:
   - Frontend
-  - Programowanie
-  - Rozwój
   - Leadership
-  - Mentor
-thumbnailImagePosition: top
+  - Mentoring
+categories:
+  - Miękkie
+thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial
 thumbnailImage: great.jpg

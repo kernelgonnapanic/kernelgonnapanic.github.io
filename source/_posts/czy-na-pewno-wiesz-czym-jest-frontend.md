@@ -2,7 +2,10 @@
 title: "Czy na pewno wiesz czym jest frontend?"
 tags:
   - Kopendium Frontendu
-  - Podstawy
+  - Frontend
+  - Nauka programowania
+categories:
+  - Techniczne
 thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial

@@ -2,9 +2,10 @@
 title: "Jak sprawić, by Twoja aplikacja w React była DRY?"
 tags:
   - React
-  - Javascript
-  - Dobre praktyki
+  - JavaScript
   - Frontend
+categories:
+  - Techniczne
 keywords:
   - React
   - Higher Order Components

@@ -1,8 +1,10 @@
 ---
 title: Jak nie dać się zwariować postanowieniom noworocznym?
 tags:
-  - Rozwój
-  - Sukces
+  - Cele
+  - Osobiste
+categories:
+  - Miękkie
 thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial

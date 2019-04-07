@@ -1,10 +1,9 @@
 ---
 title: Akcja Subskrypcja
 tags:
-  - AkcjaSubskrypcja
-  - Internet
-  - Rozwój
-	- Sukces
+  - Akcja subskrypcja
+categories:
+  - Osobiste
 thumbnailImage: akcja_subskrybcja.jpg
 coverMeta: out
 coverSize: partial

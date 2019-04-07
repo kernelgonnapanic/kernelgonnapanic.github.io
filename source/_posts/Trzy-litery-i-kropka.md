@@ -1,9 +1,9 @@
 ---
 title: Trzy litery i kropka - czy studia mają sens?
 tags:
-  - O szczęściu
-  - Rozwój
-	- Studia
+  - Przemyślenia
+categories:
+  - Osobiste
 thumbnailImage: man.jpg
 coverMeta: out
 coverSize: partial

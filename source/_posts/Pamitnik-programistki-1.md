@@ -1,9 +1,9 @@
 ---
 title: Pamiętnik programistki #1
 tags:
-  - Nowe
-  - Programowanie
   - Z Pamiętnika Programistki
+categories:
+  - Osobiste
 thumbnailImage: pamprogrm.JPG
 coverMeta: out
 coverSize: partial

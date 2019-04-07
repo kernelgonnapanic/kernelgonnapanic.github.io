@@ -2,9 +2,10 @@
 title: Scrum. O zwinnym zarządzaniu projektami.
 tags:
   - Recenzje
-  - Rozwój
   - Scrum
   - Agile
+categories:
+  - Miękkie
 thumbnailImage: scrum_dodatk.JPG
 coverMeta: out
 coverSize: partial

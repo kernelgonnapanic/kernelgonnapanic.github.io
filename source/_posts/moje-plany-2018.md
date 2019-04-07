@@ -1,7 +1,10 @@
 ---
 title: Moje plany na 2018
 tags:
-keywords:
+  - Cele
+  - Osobiste
+categories:
+  - Osobiste
 thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial

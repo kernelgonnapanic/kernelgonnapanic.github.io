@@ -1,9 +1,7 @@
 ---
 title: "Trudne pytania odnośnie snapshot testowania? [Frontend testing #3]"
 tags:
-  - Testowanie
-  - Javascript
-  - Tutoriale
+  - JavaScript
   - Frontend
 thumbnailImagePosition: top
 coverMeta: out

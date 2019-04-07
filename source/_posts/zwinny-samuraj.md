@@ -1,10 +1,11 @@
 ---
 title: Zwinny samuraj. Jak programują mistrzowie zwinności
 tags:
-  - Rozwój
   - Agile
   - Scrum
   - Recenzje
+categories:
+  - Miękkie
 thumbnailImage: samuraj.JPG
 coverMeta: out
 coverSize: partial

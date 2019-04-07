@@ -2,9 +2,10 @@
 title: Elm - początki.
 tags:
   - Elm
-  - Podstawy
   - Daj się poznać 2017
   - Frontend
+categories:
+- Techniczne
 thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial

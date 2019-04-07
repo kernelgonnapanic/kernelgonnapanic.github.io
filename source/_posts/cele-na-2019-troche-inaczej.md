@@ -2,8 +2,9 @@
 title: Cele na 2019 - trochę inaczej ⚽
 tags:
   - Osobiste
-  - Rozwój
   - Cele
+categories:
+  - Osobiste
 thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial

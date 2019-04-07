@@ -1,9 +1,9 @@
 ---
 title: Exercism.io - rozwiń skrzydła jako programista
 tags:
-  - Programowanie
-  - Rozwój
-  - Web
+  - Nauka programowania
+categories:
+  - Techniczne
 thumbnailImage: ekran2.jpg
 coverMeta: out
 coverSize: partial

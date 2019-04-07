@@ -3,9 +3,9 @@ title: Pamiętnik programistki 2 - Girls in IT, Code Europe, Front Trends.
 tags:
   - Konferencje
   - Z Pamiętnika Programistki
-  - Girls in IT
   - Code Europe
-  - Front Trends
+categories:
+  - Osobiste
 thumbnailImagePosition: right
 thumbnailImage: pamietnik-programistki-2.jpg
 coverMeta: out

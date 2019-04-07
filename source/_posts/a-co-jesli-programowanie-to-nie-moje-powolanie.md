@@ -1,8 +1,10 @@
 ---
 title: A co jeśli programowanie to nie moje powołanie?
 tags:
-  - Rozwój
   - Osobiste
+  - Przemyślenia
+categories:
+  - Miękkie
 thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial

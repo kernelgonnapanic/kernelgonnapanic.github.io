@@ -1,10 +1,11 @@
 ---
 title: 5 rzeczy których nie wiecie o JavaScript
 tags:
-  - Śmieszne
   - Frontend
-  - Javascript
+  - JavaScript
   - 5 rzeczy
+categories:
+  - Techniczne
 thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial

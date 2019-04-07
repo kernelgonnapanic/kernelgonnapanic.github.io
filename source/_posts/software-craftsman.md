@@ -1,11 +1,10 @@
 ---
 title: 'Software Craftsman. Profesjonalizm, czysty kod i techniczna perfekcja.'
 tags:
-  - IT
-  - Programowanie
-  - Rozwój
-  - Sukces
   - Rozwojowy poniedziałek
+  - Recenzje
+categories:
+  - Miękkie
 coverMeta: out
 coverSize: partial
 thumbnailImage: softwarecraftsman.JPG

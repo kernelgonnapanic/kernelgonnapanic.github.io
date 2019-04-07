@@ -7,11 +7,11 @@ coverImage: dsp.jpg
 thumbnailImage: dsp.jpg
 date: 2017-03-07 20:52:45
 tags:
-	- Timer
 	- Daj się poznać 2017
 	- Elm
 	- Frontend
-	- Web
+categories:
+	- Techniczne
 ---
 
 Minął już prawie tydzień od startu **Daj się poznać**, a ja jeszcze nie napisałam słowa o projekcie, który w nadchodzących tygodniach chiałabym realizować. Pora więc nadrobić opóźnienie i przedstawić Wam moje plany na najbliższy czas.

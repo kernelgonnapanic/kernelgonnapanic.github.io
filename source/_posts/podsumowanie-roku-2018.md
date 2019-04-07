@@ -1,8 +1,10 @@
 ---
 title: Podsumowanie roku 2018
 tags:
-  - Rozwój
-  - Podsumowania
+  - Cele
+  - Osobiste
+categories:
+  - Osobiste
 keywords:
   - plany na 2018
   - nowy rok

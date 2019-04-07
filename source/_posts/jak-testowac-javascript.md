@@ -1,11 +1,11 @@
 ---
 title: "Javascript - to test or not to test? [Frontend testing #1]"
 tags:
-  - Testowanie
-  - Javascript
-  - Tutoriale
+  - JavaScript
   - Frontend
-  - FrontendTesting
+  - Frontend testing
+categories:
+  - Techniczne
 thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial

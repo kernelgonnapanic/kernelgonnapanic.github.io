@@ -5,9 +5,11 @@ coverMeta: out
 coverSize: partial
 date: 2017-03-25 15:49:33
 tags:
-  - Programowanie
-  - Dobre praktyki
   - Daj się poznać 2017
+  - Codzienność programisty
+  - Przemyślenia
+categories:
+  - Miękkie
 thumbnailImage: taxi.jpg
 coverImage: taxi.jpg
 ---

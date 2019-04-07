@@ -1,11 +1,11 @@
 ---
 title: "Snapshot testing - co to takiego? [Frontend testing #2]"
 tags:
-  - Testowanie
-  - Javascript
-  - Tutoriale
+  - JavaScript
   - Frontend
-  - FrontendTesting
+  - Frontend testing
+categories:
+  - Techniczne
 thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial

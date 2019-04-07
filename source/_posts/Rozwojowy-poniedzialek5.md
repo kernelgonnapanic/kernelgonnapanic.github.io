@@ -1,10 +1,9 @@
 ---
 title: Rozwojowy poniedziałek #5
 tags:
-  - IT
   - Rozwojowy poniedziałek
-  - Rozwój
-	- Sukces
+categories:
+  - Miękkie
 thumbnailImage: rozwojowy-poniedzialek5.jpg
 coverMeta: out
 coverSize: partial

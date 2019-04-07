@@ -5,9 +5,9 @@ coverMeta: out
 coverSize: partial
 date: 2017-08-26 15:49:33
 tags:
-  - Programowanie
-  - Dobre praktyki
   - Code Europe
+categories:
+  - Techniczne
 thumbnailImage: starwars.jpg
 coverImage: starwars.jpg
 ---

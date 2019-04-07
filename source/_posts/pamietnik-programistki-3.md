@@ -1,8 +1,11 @@
 ---
 title: Pamiętnik programistki 3 - GDG DevFest, Cybersecurity i wakacje 🏖️🌴
 tags:
+  - Security
   - Konferencje
   - Z Pamiętnika Programistki
+categories:
+  - Osobiste
 thumbnailImagePosition: right
 thumbnailImage: pamietnik-programistki-3.jpg
 coverMeta: out

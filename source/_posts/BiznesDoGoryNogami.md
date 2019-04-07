@@ -2,9 +2,9 @@
 title: Biznes do góry nogami wywrócony - Richard Branson
 tags:
   - Biznes
-  - Rozwój
   - Recenzje
-  - Biografie
+categories:
+  - Miękkie
 coverMeta: out
 coverSize: partial
 thumbnailImage: biznes_profilowe2.JPG

@@ -1,9 +1,10 @@
 ---
 title: Frontend - a co powiecie na mikroserwisy?
 tags:
-  - Programowanie
   - Frontend
   - Microservices
+categories:
+  - Techniczne
 thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial

@@ -1,13 +1,11 @@
 ---
 title: Smashing magazine
 tags:
-  - IT
   - Recenzje
   - Rozwojowy poniedziałek
-  - Rozwój
-  - Web
   - UX
-  - Grafika
+categories:
+  - Miękkie
 coverMeta: out
 coverSize: partial
 thumbnailImage: smashing.JPG

@@ -3,6 +3,8 @@ title: "Jak być speakerem i nie zwariować?"
 tags:
   - Prezentacje
   - Konferencje
+categories:
+  - Miękkie
 thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial

@@ -1,9 +1,11 @@
 ---
 title: Włącz się do gry
 tags:
-  - Kobieta
+  - Feminizm
   - Recenzje
   - Leadership
+categories:
+  - Miękkie
 thumbnailImage: wlacz_sie_profil.png
 coverMeta: out
 coverSize: partial
