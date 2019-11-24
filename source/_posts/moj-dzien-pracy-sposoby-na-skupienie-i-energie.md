@@ -5,7 +5,7 @@ tags:
   - Nawyki
 categories:
   - Osobiste
-thumbnailImagePosition: top
+thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial
 thumbnailImage: moj-dzien.jpg

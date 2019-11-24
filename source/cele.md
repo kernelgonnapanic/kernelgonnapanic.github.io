@@ -20,13 +20,9 @@ Zainspirowana [Trzema Poziomami](https://trzypoziomy.pl/zadania/) Mirka Burnejki
 3. 3 języki na poziomie B2 (oprócz angielskiego) **2024**
 
 ## BiegAnia
-1. Przebiec półmaraton **2019**
-2. Przebiec maraton **2020**
-3. Przebiec maraton w NYC **2021**
-
-## Górska Ania:
-1. Pobiec w biegu górskim **2021**
-2. Dolomiti Extreme Trail 53k **2022**
+1. Przebiec 5k poniżej 30 min **2019**
+2. Pobiec w biegu górskim **2021**
+3. Dolomiti Extreme Trail 53k **2023**
 
 ## Czytanie:
 1. Przeczytać 40 książek w roku **2019**
@@ -34,8 +30,7 @@ Zainspirowana [Trzema Poziomami](https://trzypoziomy.pl/zadania/) Mirka Burnejki
 3. Przeczytać 100 książek w roku **2021**
 
 ## Programowanie:
-1. Skończyć kurs Android i zrobić apkę na Androida **2019**
-2. Zrobić 1 aplikację testującą nowe technologie **2019**
+1. Zrobić aplikację backendową (Django) **2019**
 
 ## Własne produkty:
 1. Sprzedaż 100 sztuk **2019**
