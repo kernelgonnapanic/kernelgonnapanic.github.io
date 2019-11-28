@@ -6,7 +6,7 @@ coverSize: partial
 date: 2017-03-25 15:49:33
 tags:
   - Daj się poznać 2017
-  - Codzienność programisty
+  - Codzienność Programisty
   - Przemyślenia
 categories:
   - Miękkie

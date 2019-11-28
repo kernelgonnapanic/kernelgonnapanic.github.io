@@ -5,7 +5,7 @@ tags:
   - Cele
 categories:
   - Osobiste
-thumbnailImagePosition: top
+thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial
 thumbnailImage: review.jpg
