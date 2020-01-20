@@ -10,7 +10,7 @@ coverMeta: out
 coverSize: partial
 thumbnailImage: clock.jpg
 coverImage: clock.jpg
-date: 2019-11-25 21:00:00
+date: 2019-11-28 21:00:00
 ---
 Grudzień tuż za rogiem, to ostatnia szansa, by pchnąć moje cele naprzód w tym roku. Ba! Nawet w tym dziesięcioleciu :) Lecz zanim zacznę, muszę uporządkować to, co udało mi się osiągnąć do tej pory. Zobaczmy...
 <!-- more -->

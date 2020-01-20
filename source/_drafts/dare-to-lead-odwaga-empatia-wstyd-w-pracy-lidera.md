@@ -14,9 +14,9 @@ coverImage: puppies.jpg
 date: 2019-07-06 10:30:00
 ---
 
-Szczerze mówiąc, bałam się napisać ten artykuł. W swojej głowie widziałam już negatywne komentarze, wytykające oderwanie od rzeczywistości i bycie naiwnym. Już przez to przechodziłam. 
+Szczerze mówiąc, miałam opory przed napisaniem tego artykuł. W swojej głowie widziałam już negatywne komentarze, wytykające oderwanie od rzeczywistości i bycie naiwnym. Już przez to przechodziłam. 
 <!--more-->
-Zdecydowałam się jednak, że go napiszę. Mimo tego, że niektórzy uznają to co powiem za niepotrzebne lub niedające się do zaaplikowania w ich miejscu pracy. Napiszę go, bo to co mam do przekazania uważam za ważne i potrzebne nam, osobom pracującym w branży IT.
+Zdecydowałam się jednak, że go napiszę. Mimo tego, że niektórzy uznają to co powiem za niepotrzebne lub niedające się do zaaplikowania w ich miejscu pracy. Napiszę go, bo to co mam do przekazania uważam za ważne i potrzebne nam, osobom pracującym w naszej branży.
 
 W ostatnim czasie słuchałam książki Brene Brown "Dare to lead". Brene została mi polecona przez moją menadżer. Gdy poprosiłam ją o książkowe rekomendacje, dzięki którym mogłabym się rozwinąć, jej pierwszymi słowami były: "Brene Brown - koniecznie musisz ją poznać". 
 
@@ -31,7 +31,13 @@ Mówi o tym, że na arenie nie jest się samemu. Na widowni otacza Cię grono kr
 
 Musisz wychodzić na arenę, jeśli chcesz być dobrym liderem. Powinieneś się tam nawet zadomowić (jeśli to jest w ogóle możliwe). Odsłonięcie się i zaryzykowanie porażki to sposób na budowanie zaufania między ludźmi. Te niewygodne pytania czy działania nosące ze sobą ryzyko to zazwyczaj te elementy naszej pracy, które posuwają sprawy do przodu.
 
+## Empatia 
+Muszę przyznać, ze po raz pierwszy z tematem empatii w miejscu pracy spotkałam się całkiem niedawno. Moją pierwszą reakcją było coś w stylu: "Eeee... empatia w pracy? Ale jak? Co to realnie znaczy?".
+Będąc "wychowywana" w polskich software house'ach, nikt nie zwrócił do tej pory mojej uwagi na ten aspekt. Okazuje się jednak, ze jest to istotny element bycia liderem i osobą, która "pomnaza" pracę innych.
+Empatia to pozwolenie komuś na mienie gorszego dnia, na przyniesienie całego siebie do pracy
 
+## 
+wyśmiewanie 
 
 W polskim IT brakuje nam dobrych liderów. Osób, które będą w stanie uruchomić (często ukryty) potencjał innych. Które z grupy programistów przeciągających zadania z jednej kolumny do drugiej zbudują zespół osiągający świetne wyniki. Czemu?
 Bo w software house'ach inwestycja w ludzi się nie opłaca? Bo rozmowy o odwadze czy empatii to psychologiczne dyrdymały i nie ma na nie czasu między jednym zadaniem a drugim? Bo wystarczy programistom podsunąć PlayStation i batony i będą zadowoleni ze swojego miejsca pracy?
