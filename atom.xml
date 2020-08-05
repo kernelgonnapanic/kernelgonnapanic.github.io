@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2020-08-05T10:56:15.682Z</updated>
+  <updated>2020-08-05T12:59:37.895Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://kernelgonnapanic.pl/2020/08/05/recenzja-ksiazki-brotopia/"/>
     <id>https://kernelgonnapanic.pl/2020/08/05/recenzja-ksiazki-brotopia/</id>
     <published>2020-08-05T10:35:00.000Z</published>
-    <updated>2020-08-05T10:56:15.682Z</updated>
+    <updated>2020-08-05T12:59:37.895Z</updated>
     
     <content type="html"><![CDATA[<!--excerpt --><br>Hejka!<br>Dziś zapraszam Was do obejrzenia mojego pierwszego filmu na YouTube. Zrecenzowałam książkę “Brotopia. Kobiety a Dolina Krzemowa” autorstwa Emily Chang, a także podzieliłam się własnymi przemyśleniami na temat sytuacji kobiet w IT i moimi osobistymi doświadczeniami.</p><p>Zapraszam do oglądania! Jeśli film Wam się spodobał, dajcie kciuka w górę ;)</p><p><br></p><div style="display: flex; justify-content: center"><br><iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/Yh6CqDbxVwc?rel=0&widget_referrer=Blog" frameborder="0"></iframe><br></div><p><em>Zdjęcie tytułowe wykonane przez Om Malik dostępne na Unsplash</em></p>]]></content>
     
@@ -34,11 +34,11 @@
       <category term="Miękkie" scheme="https://kernelgonnapanic.pl/categories/Miekkie/"/>
     
     
-      <category term="Umiejętności miękkie" scheme="https://kernelgonnapanic.pl/tags/Umiejetnosci-miekkie/"/>
+      <category term="Recenzje" scheme="https://kernelgonnapanic.pl/tags/Recenzje/"/>
     
       <category term="Przemyślenia" scheme="https://kernelgonnapanic.pl/tags/Przemyslenia/"/>
     
-      <category term="Leadership" scheme="https://kernelgonnapanic.pl/tags/Leadership/"/>
+      <category term="Feminizm" scheme="https://kernelgonnapanic.pl/tags/Feminizm/"/>
     
   </entry>
   
@@ -306,9 +306,9 @@
       <category term="Techniczne" scheme="https://kernelgonnapanic.pl/categories/Techniczne/"/>
     
     
-      <category term="JavaScript" scheme="https://kernelgonnapanic.pl/tags/JavaScript/"/>
-    
       <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
+      <category term="JavaScript" scheme="https://kernelgonnapanic.pl/tags/JavaScript/"/>
     
       <category term="5 rzeczy" scheme="https://kernelgonnapanic.pl/tags/5-rzeczy/"/>
     
@@ -356,9 +356,9 @@
       <category term="Techniczne" scheme="https://kernelgonnapanic.pl/categories/Techniczne/"/>
     
     
-      <category term="JavaScript" scheme="https://kernelgonnapanic.pl/tags/JavaScript/"/>
-    
       <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
+      <category term="JavaScript" scheme="https://kernelgonnapanic.pl/tags/JavaScript/"/>
     
       <category term="5 rzeczy" scheme="https://kernelgonnapanic.pl/tags/5-rzeczy/"/>
     
@@ -382,9 +382,9 @@
       <category term="Techniczne" scheme="https://kernelgonnapanic.pl/categories/Techniczne/"/>
     
     
-      <category term="JavaScript" scheme="https://kernelgonnapanic.pl/tags/JavaScript/"/>
-    
       <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
+      <category term="JavaScript" scheme="https://kernelgonnapanic.pl/tags/JavaScript/"/>
     
       <category term="React" scheme="https://kernelgonnapanic.pl/tags/React/"/>
     
@@ -510,9 +510,9 @@
       <category term="Techniczne" scheme="https://kernelgonnapanic.pl/categories/Techniczne/"/>
     
     
-      <category term="JavaScript" scheme="https://kernelgonnapanic.pl/tags/JavaScript/"/>
-    
       <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
+    
+      <category term="JavaScript" scheme="https://kernelgonnapanic.pl/tags/JavaScript/"/>
     
       <category term="Frontend testing" scheme="https://kernelgonnapanic.pl/tags/Frontend-testing/"/>
     
