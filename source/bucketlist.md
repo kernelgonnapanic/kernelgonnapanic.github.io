@@ -13,7 +13,7 @@ date: 2020-01-20 20:45
 8. Nauczyć się grać na pianinie
 9. Nauczyć się stania na rękach
 10. Pomieszkać poza Polską
-11. Zobaczyć wodospany na Islandii
+11. Zobaczyć wodospady na Islandii
 12. Zobaczyć Szkocję
 13. Nauczyć się grać na basie
 14. Zwiedzić Japonię
