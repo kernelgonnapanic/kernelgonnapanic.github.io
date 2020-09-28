@@ -1,8 +1,10 @@
+Hejka! Oferuję pomoc i mentoring w zakresie programowania frontendu. Umów się na bezpłatną 30-minutową konsultację, poznajmy się i porozmawiajmy o Twoich celach.
+<!--excerpt-->
 <div class="hero">
     {% image hero.jpg %}
 </div>
 
-<div class="about"><div class="aboutText"><div class="aboutHeader">Dla kogo?</div><div class="aboutDesc"><ul><li>junior/mid frontend developerzy, którzy chcą wejść na wyższy poziom</li><li>programiści i programistki, którzy potrzebują wsparcia w wyznaczeniu kierunku swojego technicznego rozwoju</li><li>szukający swojej pierwszej pracy w IT</li><li>absolwenci bootcampów, którzy chcą kontynuować swój frontendowy rozwój</li></ul></div></div><div class="aboutPhoto">{% image fig-height osoba.jpg %}</div></div>
+<div class="about"><div class="aboutText"><div class="aboutHeader">Dla kogo?</div><div class="aboutDesc"><ul><li>junior/mid frontend developerzy, którzy chcą wejść na wyższy poziom</li><li>programiści i programistki, którzy potrzebują wsparcia w wyznaczeniu kierunku swojego technicznego rozwoju</li><li>szukający swojej pierwszej pracy w IT</li><li>absolwenci bootcampów, którzy chcą kontynuować swój frontendowy rozwój</li></ul></div></div><div class="aboutPhoto">{% image fig-height osoba2.jpg %}</div></div>
 
 <div class="sections">
 <div class="sectionsTitle">Co możesz osiągnąć?</div>
@@ -13,7 +15,7 @@
 <div class="about"><div class="aboutPhoto">{% image fig-height ja.jpg %}</div><div class="aboutText"><div class="aboutHeader">O mnie</div><div class="aboutDesc">Nazywam się Anna Konopka, choć możecie mnie również znać z internetu jako <strong>kernelgonnapanic</strong>. Jestem Frontend Developerem z 5-letnim doświadczeniem. W trakcie tego czasu pracowałam z różnymi technologiami, zaczynając od jQuery i Angular.js, aż po React, Vue, React Native, TypeScript czy GraphQL. Miałam okazję zbierać doświadczenie w software house’ach, a także firmach tworzących własne produkty. Pracowałam stacjonarnie, a także w całkowicie zdalnym zespole.  Kierowałam zespołem jako Team Lead, a także byłam mentorem dla młodszych programistów. Moim doświadczeniem dzielę się z innymi pisząc bloga, prowadząc kanał na YouTube oraz prowadząc konsultacje.</div></div></div>
 
 <div class="cta">
-    <a href="mailto:kernelgonnapanic+blog@gmail.com"><div class="ctaLink">Umów się na bezpłatną konsultację</div></a>
+    <a href="https://calendly.com/kernelgonnapanic/darmowa-30-minutowa-konsultacja"><div class="ctaLink">Umów się na bezpłatną pierwszą konsultację</div></a>
 </div>
 
 <div class="about"><div class="aboutText"><div class="aboutHeader pinkText">Moja filozofia</div><div class="aboutDesc">Podstawą tego, jak pracuję z moimi podopiecznymi, jest koncepcja radykalnej szczerości pochodząca z książki “Radical Candor” Kim Scott. W skrócie, sprowadza się to do tego, że jestem wymagającym, ale też empatycznym i cierpliwym mentorem.  Zobowiązuje się towarzyszyć Ci w Twoim technicznym rozwoju, tłumaczyć, zadawać pytania, kwestionować, dopytywać, zwracać uwagę na szczegóły i stawiać przed Tobą wyzwania. Ale również sprawić, że nasze zajęcia będą ciekawe, pełne śmiechu i w luźnej atmosferze. <br><br>Twoje postępy są dla mnie bardzo ważne, ale to Ty jesteś odpowiedzialny/a za swój rozwój. Jeśli zdecydujesz się ze mną współpracować, będziesz musiał/musiała włożyć pracę, by pojawiły się efekty. Niestety nie mam (jeszcze 😉) czarodziejskiej różdżki.</div></div><div class="aboutPhoto">{% image fig-height whiteComputer.jpg %}</div></div>
@@ -30,8 +32,8 @@ Jedyne, co musisz zrobić by zacząć, to kliknąć na przycisk poniżej i dać 
     <div class="dealBox pinkBorder"><div class="boxHeader pinkBackground">Pakiet konsultacji <br>(4 x 55min)</div><div class="boxPrice pinkText">439 zł<span class="oldPrice">480 zł</span><div class="bestDeal">BEST DEAL</div></div></div>
 </div>
 
-<div class="cta">
-    <a href="mailto:kernelgonnapanic+blog@gmail.com"><div class="ctaLink">Umów się na bezpłatną konsultację</div></a>
+<div class="cta bottom-cta">
+    <a href="https://calendly.com/kernelgonnapanic/darmowa-30-minutowa-konsultacja"><div class="ctaLink">Umów się na bezpłatną pierwszą konsultację</div></a>
 </div>
 
 
@@ -89,6 +91,7 @@ Jedyne, co musisz zrobić by zacząć, to kliknąć na przycisk poniżej i dać 
         font-size: 32px;
         flex: 1;
         line-height: 40px;
+        font-family: "Open Sans";
     }
 
     .sectionList {
@@ -107,6 +110,10 @@ Jedyne, co musisz zrobić by zacząć, to kliknąć na przycisk poniżej i dać 
         margin: 120px 0;
     }
 
+    .bottom-cta {
+        margin: 0px 0 80px;
+    }
+
     .cta a {
         text-decoration: none;
     }
@@ -116,6 +123,7 @@ Jedyne, co musisz zrobić by zacząć, to kliknąć na przycisk poniżej i dać 
         color: white; 
         border-radius: 6px; 
         padding: 15px 25px; 
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     }
 
     .about {
@@ -180,15 +188,15 @@ Jedyne, co musisz zrobić by zacząć, to kliknąć na przycisk poniżej i dać 
         max-width: 630px;
         display: flex;
         justify-self: center;
-        padding: 20px;
+        padding: 25px 30px;
         flex-direction: column;
     }
 
     .dealsContainer {
         display: flex; 
-        justify-content: space-around; 
+        justify-content: center; 
         align-items: center;
-        margin: 80px 0 120px;
+        margin: 80px 0;
     }
 
     .dealBox {
@@ -200,6 +208,11 @@ Jedyne, co musisz zrobić by zacząć, to kliknąć na przycisk poniżej i dać 
         flex-direction: column;
         overflow: hidden;
         position: relative;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+
+    .dealBox:first-child {
+        margin-right: 100px;
     }
 
     .pinkBorder {
@@ -212,7 +225,7 @@ Jedyne, co musisz zrobić by zacząć, to kliknąć na przycisk poniżej i dać 
         display: flex; 
         justify-content: center; 
         align-items: center; 
-        flex: 1; 
+        flex: 3; 
         text-align: center;
     }
 
@@ -227,7 +240,7 @@ Jedyne, co musisz zrobić by zacząć, to kliknąć na przycisk poniżej i dać 
         font-size: 32px; 
         font-weight: 700; 
         color: #291C6E; 
-        flex: 1;
+        flex: 5;
     }
 
     .pinkText {
@@ -246,8 +259,8 @@ Jedyne, co musisz zrobić by zacząć, to kliknąć na przycisk poniżej i dać 
         color: white; 
         font-size: 16px; 
         position: absolute;
-        bottom: 19px;
-        right: -68px;
+        bottom: 15px;
+        right: -73px;
         transform: rotate(-30deg);
         padding: 0 76px;
         font-family: "Open Sans";
@@ -289,6 +302,10 @@ Jedyne, co musisz zrobić by zacząć, to kliknąć na przycisk poniżej i dać 
 
         .dealBox {
             margin-bottom: 20px;
+        }
+
+        .dealBox:first-child {
+            margin-right: 0;
         }
     }
 </style>

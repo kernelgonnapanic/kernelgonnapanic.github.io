@@ -5,16 +5,19 @@ tags:
   - Feminizm
   - Przemyślenia
 categories:
-- Miękkie
-thumbnailImagePosition: top
+  - Miękkie
+thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial
 thumbnailImage: brotopia.jpg
 coverImage: brotopia-hero.jpg
 date: 2020-08-05 12:35
 ---
+
 Dziś zapraszam Was do obejrzenia mojego pierwszego filmu na YouTube. Zrecenzowałam książkę "Brotopia. Kobiety a Dolina Krzemowa" autorstwa Emily Chang, a także podzieliłam się własnymi przemyśleniami na temat sytuacji kobiet w IT i moimi osobistymi doświadczeniami.
+
 <!--excerpt -->
+
 Hejka!
 Dziś zapraszam Was do obejrzenia mojego pierwszego filmu na YouTube. Zrecenzowałam książkę "Brotopia. Kobiety a Dolina Krzemowa" autorstwa Emily Chang, a także podzieliłam się własnymi przemyśleniami na temat sytuacji kobiet w IT i moimi osobistymi doświadczeniami.
 
@@ -28,6 +31,4 @@ Zapraszam do oglądania! Jeśli film Wam się spodobał, dajcie kciuka w górę 
   frameborder="0"></iframe>
 </div>
 
-
-
-*Zdjęcie tytułowe wykonane przez Om Malik dostępne na Unsplash*
+_Zdjęcie tytułowe wykonane przez Om Malik dostępne na Unsplash_
