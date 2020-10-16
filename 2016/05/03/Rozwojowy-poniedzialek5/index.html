@@ -792,6 +792,7 @@
 
 <script>
     var disqus_config = function () {
+        console.log('posts', 'undefined');
         this.page.url = 'https://kernelgonnapanic.pl/2016/05/03/Rozwojowy-poniedzialek5/';
                  
             this.page.identifier = '2016/05/03/Rozwojowy-poniedzialek5/';
@@ -799,6 +800,9 @@
              };
     (function () {
         var d = document, s = d.createElement('script');
+        if (d.getElementById('nodisqus') !== null) {
+            return;
+        }
         var disqus_shortname = 'bookieandcookie';
         s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 

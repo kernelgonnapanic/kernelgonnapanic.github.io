@@ -17,18 +17,18 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="Jesienna promocja na ebooki w Helionie                                       Helion: codziennie inna książka 30% taniej                                       Konsultacje">
+    <meta name="description" content="Jesienna promocja na ebooki w Helionie                                       Helion: seria Head first - Rusz głową                                       Konsultacje">
 <meta name="keywords" content="frontend,javascript,kernelgonnapanic">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="kernelgonnapanic.pl">
 <meta property="og:url" content="https://kernelgonnapanic.pl/linki.html">
 <meta property="og:site_name" content="kernelgonnapanic.pl">
-<meta property="og:description" content="Jesienna promocja na ebooki w Helionie                                       Helion: codziennie inna książka 30% taniej                                       Konsultacje">
+<meta property="og:description" content="Jesienna promocja na ebooki w Helionie                                       Helion: seria Head first - Rusz głową                                       Konsultacje">
 <meta property="og:locale" content="pl">
-<meta property="og:updated_time" content="2020-10-12T21:33:08.621Z">
+<meta property="og:updated_time" content="2020-10-16T12:06:47.089Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="kernelgonnapanic.pl">
-<meta name="twitter:description" content="Jesienna promocja na ebooki w Helionie                                       Helion: codziennie inna książka 30% taniej                                       Konsultacje">
+<meta name="twitter:description" content="Jesienna promocja na ebooki w Helionie                                       Helion: seria Head first - Rusz głową                                       Konsultacje">
 <meta name="twitter:creator" content="@konopka_ania">
     
         <link rel="publisher" href="https://plus.google.com/116973627351289720000"/>
@@ -224,7 +224,7 @@
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" datetime="2020-10-12T23:33:08+02:00">
+    <time itemprop="datePublished" datetime="2020-10-16T14:06:47+02:00">
     
     </time>
     
@@ -240,7 +240,7 @@
     align-items: center;
     flex-direction: column;
   ">
-  <a href="https://helion.pl/page/90202/promocja/9546" target="_blank" rel="noopener noreferrer">
+  <a href="https://helion.pl/page/90202/promocja/9546" rel="noopener" target="_blank">
     <div style="
         height: 210px;
         width: 340px;
@@ -269,7 +269,7 @@
       </div>
     </div>
   </a>
-  <a href="https://helion.pl/page/90202/promocja-dnia" target="_blank" rel="noopener">
+  <a href="https://helion.pl/page/90202/serie/head-first-rusz-glowa" rel="noopener" target="_blank">
     <div style="
         height: 210px;
         width: 340px;
@@ -294,11 +294,11 @@
           border-bottom-left-radius: 4px;
           border-bottom-right-radius: 4px;
         ">
-        Helion: codziennie inna książka 30% taniej
+        Helion: seria Head first - Rusz głową
       </div>
     </div>
   </a>
-  <a target="_blank" href="https://kernelgonnapanic.pl/konsultacje" rel="noopener">
+  <a href="https://kernelgonnapanic.pl/konsultacje" rel="noopener">
     <div style="
         height: 210px;
         width: 340px;
@@ -327,7 +327,7 @@
       </div>
     </div>
   </a>
-  <a href="https://kernelgonnapanic.pl" target="_blank" rel="noopener">
+  <a href="https://kernelgonnapanic.pl" rel="noopener">
     <div style="
         height: 210px;
         width: 340px;
@@ -356,7 +356,7 @@
       </div>
     </div>
   </a>
-  <a target="_blank" href="https://www.instagram.com/kernelgonnapanic" rel="noopener">
+  <a href="https://www.instagram.com/kernelgonnapanic" rel="noopener" target="_blank">
     <div style="
         height: 210px;
         width: 340px;
@@ -385,7 +385,7 @@
       </div>
     </div>
   </a>
-  <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCHmN5z-4fkfqYlwF9NCNyxQ">
+  <a rel="noopener" href="https://www.youtube.com/channel/UCHmN5z-4fkfqYlwF9NCNyxQ" target="_blank">
     <div style="
         height: 210px;
         width: 340px;
@@ -414,7 +414,7 @@
       </div>
     </div>
   </a>
-  <a href="https://www.facebook.com/groups/386388111920900" target="_blank" rel="noopener">
+  <a href="https://www.facebook.com/groups/386388111920900" rel="noopener" target="_blank">
     <div style="
         height: 210px;
         width: 340px;
@@ -444,6 +444,7 @@
     </div>
   </a>
 </div>
+<div id="nodisqus"></div>
             
         </div>
     </div>
@@ -881,6 +882,7 @@
 
 <script>
     var disqus_config = function () {
+        console.log('posts', 'undefined');
         this.page.url = 'https://kernelgonnapanic.pl/linki.html';
                  
             this.page.identifier = 'linki.html';
@@ -888,6 +890,9 @@
              };
     (function () {
         var d = document, s = d.createElement('script');
+        if (d.getElementById('nodisqus') !== null) {
+            return;
+        }
         var disqus_shortname = 'bookieandcookie';
         s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 
