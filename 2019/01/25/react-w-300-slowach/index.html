@@ -22,14 +22,14 @@
                                 href="/atom.xml">
                             
                                 <meta name="description" content="Jestem właśnie na etapie poszukiwania pracy. I jak się okazuje rozmowy, które prowadzę, mogą być świetną inspiracją dla moich blogowych poczynań. Jedno z pytań, które zostały mi zadane w trakcie rekru">
-<meta name="keywords" content="Frontend,React,Rekrutacja">
+<meta name="keywords" content="Frontend,Rekrutacja,React,Pierwsza praca w IT">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="React w 300 słowach">
 <meta property="og:url" content="https://kernelgonnapanic.pl/2019/01/25/react-w-300-slowach/index.html">
 <meta property="og:site_name" content="kernelgonnapanic.pl">
 <meta property="og:description" content="Jestem właśnie na etapie poszukiwania pracy. I jak się okazuje rozmowy, które prowadzę, mogą być świetną inspiracją dla moich blogowych poczynań. Jedno z pytań, które zostały mi zadane w trakcie rekru">
 <meta property="og:locale" content="pl">
-<meta property="og:updated_time" content="2020-08-02T19:09:16.597Z">
+<meta property="og:updated_time" content="2021-01-18T09:03:48.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React w 300 słowach">
 <meta name="twitter:description" content="Jestem właśnie na etapie poszukiwania pracy. I jak się okazuje rozmowy, które prowadzę, mogą być świetną inspiracją dla moich blogowych poczynań. Jedno z pytań, które zostały mi zadane w trakcie rekru">
@@ -279,18 +279,19 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>Jestem właśnie na etapie poszukiwania pracy. I jak się okazuje rozmowy, które prowadzę, mogą być świetną inspiracją dla moich blogowych poczynań. Jedno z pytań, które zostały mi zadane w trakcie rekrutacji, brzmiało: “Czy mogłabyś w kilku zdaniach opowiedzieć czym jest React, do czego służy i jak działa?<br><a id="more"></a></p>
+            <p>Jestem właśnie na etapie poszukiwania pracy. I jak się okazuje rozmowy, które prowadzę, mogą być świetną inspiracją dla moich blogowych poczynań. Jedno z pytań, które zostały mi zadane w trakcie rekrutacji, brzmiało: “Czy mogłabyś w kilku zdaniach opowiedzieć czym jest React, do czego służy i jak działa?</p>
+<a id="more"></a>
 <p>Pierwsza myśl: whoa… jak tu teraz zebrać wszystko co wiem o tym frameworku, wyciągnąć z tego to, co najistotniejsze i przedstawić tak, by miało to ręce i nogi?</p>
 <p>Druga myśl: “Dawaj Andzia” 💪</p>
-<p>Myśl trzecia i ostateczna, która przyszła mi do głowy już po zakończeniu rozmowy kwalifikacyjnej: “Kurczę, to jest całkiem fajne pytanie rekrutacyjne”. Aby móc w zwięzły sposób przedstawić ideę, trzeba ją dobrze rozumieć, wiedzieć co jest najistotniejsze, a bez czego można się obyć. Zadając takie pytanie możemy, oprócz zrozumienia tematu, sprawdzić w jaki sposób dana osoba mówi o technikaliach, czy umie sformułować i przekazać swoją wiedzę komuś innemu w przejrzysty sposób 💡. </p>
+<p>Myśl trzecia i ostateczna, która przyszła mi do głowy już po zakończeniu rozmowy kwalifikacyjnej: “Kurczę, to jest całkiem fajne pytanie rekrutacyjne”. Aby móc w zwięzły sposób przedstawić ideę, trzeba ją dobrze rozumieć, wiedzieć co jest najistotniejsze, a bez czego można się obyć. Zadając takie pytanie możemy, oprócz zrozumienia tematu, sprawdzić w jaki sposób dana osoba mówi o technikaliach, czy umie sformułować i przekazać swoją wiedzę komuś innemu w przejrzysty sposób 💡.</p>
 <p>Dlatego dziś, po raz drugi, podejmę się tego niełatwego zadania i postaram się upchnąć najważniejsze informacje o React w 300 słów. 300 słów to nie za mało, nie za dużo - tak w sam raz. Ocenę tego, jak mi poszło, pozostawiam Wam.</p>
 <p>To jak? Lecimy?</p>
 <h2 id="300-slow-i-…-start"><a href="#300-slow-i-…-start" class="headerlink" title="300 słów i … start!"></a>300 słów i … start!</h2><p><strong>React</strong> jest biblioteką pozwalającą na zarządzanie interfejsem użytkownika (UI) w aplikacji frontendowej. Jego cechą charakterystyczną jest to, że robi to w sposób deklaratywny (czyli poprzez zdefiniowanie efektu końcowego, a nie serii akcji np. dodaj/usuń element DOM).</p>
 <h3 id="Komponenty"><a href="#Komponenty" class="headerlink" title="Komponenty"></a>Komponenty</h3><p>Głównym budulcem aplikacji w React są <strong>komponenty</strong>, dzięki którym możemy podzielić aplikację na małe, reużywalne części. Elementy te tworzymy przy użyciu klas zawierających metodę <code>render</code> lub zwykłych funkcji. Każdy z nich zawiera definicję części widoku, która jest najcześciej opisana przy użyciu JSX - rozszerzenia składni JS przypominającego HTMLa. W ramach JSX możemy korzystać z innych istniejących komponentów, tworząc w ten sposób strukturę drzewa.</p>
 <p>Tworząc komponenty możemy również chcieć wykonać pewne operacje w konkretnych momentach ich “życia”, np.&nbsp;po tym gdy zostały umieszczone w drzewie DOM lub gdy zostały uaktualnione po zmianie danych itp.</p>
-<h3 id="State-i-props"><a href="#State-i-props" class="headerlink" title="State i props"></a>State i props</h3><p>Komponenty mogą również przechowywać i zarządzać stanem (state) oraz otrzymywać informacje od innych komponentów, przez które są używane (props). Zmiana stanu lub props uruchamia ponowne wyrenderowanie się komponentu tak, by odzwierciedlić zaistniałe zmiany na ekranie użytkownika. Eventy np.&nbsp;kliknięcie na element, obsługiwane są podobnie jak zdarzenia pochodzące z elementów DOM, z tą różnicą, że jako event handler zgłaszamy funkcję lub metodę naszej klasy, a nie stringa. </p>
+<h3 id="State-i-props"><a href="#State-i-props" class="headerlink" title="State i props"></a>State i props</h3><p>Komponenty mogą również przechowywać i zarządzać stanem (state) oraz otrzymywać informacje od innych komponentów, przez które są używane (props). Zmiana stanu lub props uruchamia ponowne wyrenderowanie się komponentu tak, by odzwierciedlić zaistniałe zmiany na ekranie użytkownika. Eventy np.&nbsp;kliknięcie na element, obsługiwane są podobnie jak zdarzenia pochodzące z elementów DOM, z tą różnicą, że jako event handler zgłaszamy funkcję lub metodę naszej klasy, a nie stringa.</p>
 <h3 id="VirtualDOM"><a href="#VirtualDOM" class="headerlink" title="VirtualDOM"></a>VirtualDOM</h3><p>React korzysta z mechanizmu VirtualDOM, dzięki któremu tylko niezbędne zmiany są nakładane na DOM (jest to ważne z&nbsp;punktu widzenia wydajności aplikacji, ponieważ wiele modyfikacji drzewa DOM może spowodować jej znaczący spadek). By to osiągnąć, framework utrzymuje pośrednią reprezentację drzewa, w&nbsp;postaci JavaScriptowych obiektów. Gdy następuje jakaś zmiana (stanu lub propsów), tworzy on nową reprezentację, a następnie porównuje ją ze starą. Identyfikowane są konieczne zmiany i tylko one są aplikowane na drzewo DOM.</p>
-<p>Uff… Jest ciężko. Zostało tylko 30 słów. Zamiast jednak wykorzystać je sama, postanowiałm zostawić je Wam.<br>Co ważnego dodalibyście do tego opisu? </p>
+<p>Uff… Jest ciężko. Zostało tylko 30 słów. Zamiast jednak wykorzystać je sama, postanowiałm zostawić je Wam.<br>Co ważnego dodalibyście do tego opisu?</p>
 <p>Do następnego!<br>Ania</p>
 <p><em>Photo by Pop &amp; Zebra on Unsplash</em></p>
 
@@ -302,7 +303,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGI</span><br>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/Frontend/">Frontend</a> <a class="tag tag--primary tag--small t-link" href="/tags/React/">React</a> <a class="tag tag--primary tag--small t-link" href="/tags/Rekrutacja/">Rekrutacja</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/Frontend/">Frontend</a> <a class="tag tag--primary tag--small t-link" href="/tags/Pierwsza-praca-w-IT/">Pierwsza praca w IT</a> <a class="tag tag--primary tag--small t-link" href="/tags/React/">React</a> <a class="tag tag--primary tag--small t-link" href="/tags/Rekrutacja/">Rekrutacja</a>
 
             </div>
         
