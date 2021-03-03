@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2021-02-22T11:06:15.412Z</updated>
+  <updated>2021-03-03T13:48:42.599Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Pół roku na swoim - jak mi idzie?</title>
+    <link href="https://kernelgonnapanic.pl/2021/03/03/pol-roku-na-swoim-jak-mi-idzie/"/>
+    <id>https://kernelgonnapanic.pl/2021/03/03/pol-roku-na-swoim-jak-mi-idzie/</id>
+    <published>2021-03-03T14:00:00.000Z</published>
+    <updated>2021-03-03T13:48:42.599Z</updated>
+    
+    <content type="html"><![CDATA[<p>Na koniec stycznia stuknęło mi pół roku budowania mojego biznesu. Dziś chcę podsumować ten czas, opowiedzieć o tym, co się wydarzyło, o planach na przyszłość i kierunkach, w których chcę się rozwijać. Dostałam sygnały, że takie posty są przydatne, ale ja też chętnie do nich wracam po czasie i patrzę na swoją drogę. <a id="more"></a>A więc, do dzieła!</p><h2 id="Zajecia-front-end"><a href="#Zajecia-front-end" class="headerlink" title="Zajęcia front-end"></a>Zajęcia front-end</h2><p>Przez ostatnie pół roku skupiłam się głównie na rozwoju mojej oferty zajęć z front-endu. W tym czasie przeprowadziłam ponad 110 zajęć i współpracowałam z 20 osobami. Uczyliśmy się wspólnie JavaScriptu, TypeScriptu czy testów, rozmawialiśmy o najróżniejszych frontendowych tematach (protokole HTTP, uwierzytelnieniu i autoryzacji, websocketach, mikrofrontendach itp.). Pracowaliśmy także nad różnymi projektami, zarówno nad przeglądarką pokemonów, jak i sklepem internetowym 😉. Pomagałam w przygotowaniach do zgarnięcia pierwszego, jak i kolejnych front-endowych stanowisk (w ten sposób 4 osoby, z którymi pracowałam zmieniły pracę). Powoli rośnie również mój serwer na Discord, który jest przestrzenią dla moich mentee. Cieszę się też bardzo z pozytywnych opinii o zajęciach. Uczestnicy podkreślają to, co jest dla mnie bardzo ważne - skupienie na praktycznej nauce oraz budowanie programistycznej pewności siebie. W trakcie pracy nad ofertą konsultacji pracowałam również na dwumiesięcznym kontrakcie, by podreperować trochę swój budżet i pocieszyć się pisaniem większej ilości kodu niż na co dzień.</p><h2 id="Tresci"><a href="#Tresci" class="headerlink" title="Treści"></a>Treści</h2><p>Dodatkowo stworzyłam w tym czasie trochę frontendowych treści. Na blogu najchętniej czytaliście <a href="https://kernelgonnapanic.pl/2021/02/09/ABC-Scruma-dla-szukajacych-pierwszej-pracy-w-it/">artykuł wprowadzający do Scruma</a> oraz <a href="https://kernelgonnapanic.pl/2021/01/11/jak-przygotowac-sie-do-rekrutacji/">moje wskazówki odnośnie przygotowania do live codingu na rozmowie kwalifikacyjnej</a>. Przeprowadziłam również <a href="https://youtu.be/pz4sHQJkDJk" target="_blank" rel="noopener">pierwszy</a>, a potem <a href="https://youtu.be/Y44020hhaNc" target="_blank" rel="noopener">kolejny live</a> o testach na YouTube. Obawiałam się formy na żywo, a okazało się, że bardzo mi się podoba. Dodatkowo, skoro już zaczęłam ogarniać OBSa to zrodził się w mojej głowie pomysł na streamowanie programowania na Twitchu 🙀 (co myślicie? oglądacie może programistycznych streamerów na Twitchu?).</p><h2 id="Statystyki"><a href="#Statystyki" class="headerlink" title="Statystyki"></a>Statystyki</h2><p>Jeśli chodzi o mój biznes w liczbach, to prezentuje się to tak:</p><ul><li>kanał YouTube urósł od 0 (gdy ruszałam to go nie było) do 220 subskrybentów</li><li>Instagram zaczął mi sprawiać mnóstwo frajdy, często tam bywam, co zaskutkowało wzrostem z 576 obserwujących do 739</li><li>Facebook nie jest moim ulubionym medium, ale fanpage kernelgonnapanic również trochę urósł (z 342 obserwujących do 394)</li><li>a statystyki bloga to: lipiec 2020 - 223 unikalnych użytkowników, luty 2021 - 724 unikalnych użytkowników (zobaczymy czy zmiana platformy blogowej i szaty graficznej na to wpłynie, ale o tym za moment).</li></ul><p>Jak sobie podumam nad tym, że za każdą z tych liczb stoi grupa osób, które poświęcają swój czas na czytanie i obserwowanie tego co robię to mega się cieszę i czuję wdzięczność 💜</p><h2 id="Wyzwania"><a href="#Wyzwania" class="headerlink" title="Wyzwania"></a>Wyzwania</h2><p>Zaczynam stopniowo wychodzić z etapu bootstrapowania i walidowania moich pierwotnych pomysłów. W ramach działalności sporo się nauczyłam o tym, co się sprawdza, co jest potrzebne moim klientom i obserwującym, ale wiem też, że ogrom takiej nauki dalej przede mną. Ale nie mam nic przeciwko temu, bardzo lubię to analizować.<br>Wyzwania, które widzę przed sobą na najbliższy czas to:</p><ul><li>automatyzacja kwestii organizacyjnych związanych z konsultacjami (wcześniej nie było potrzeby tego robić, ale myślę, że to już ten moment)</li><li>skalowanie - czyli jak pomóc większej ilości osób i niezaharować się na śmierć :D Mam już sporo pomysłów, jak mogę to osiągnąć.</li><li>tworzenie większej ilości fajnych treści (a także ponowne ich użycie w innych kanałach)</li><li>praca nad poprawą mojego zdrowia i poziomu energii (bo czasem trochę niedomagam).</li></ul><h2 id="A-co-szykuje-sie-w-najblizszej-przyszlosci"><a href="#A-co-szykuje-sie-w-najblizszej-przyszlosci" class="headerlink" title="A co szykuje się w najbliższej przyszłości?"></a>A co szykuje się w najbliższej przyszłości?</h2><p>Skorzystam z okazji i opowiem jeszcze trochę o tym, co u mnie będzie się działo w najbliższym czasie. Już za niedługo pojawi się:</p><ul><li>blog w nowej odsłonie graficznej (tej zmiany już bardzo, bardzo nie mogę się doczekać; pojawi się nowa strona konsultacji i przesiadam się na nową platformę)</li><li>newsletter kernelgonnapanic - jeszcze dopinam ostatnie szczegóły, ale już wkrótce będzie pojawiał się w waszych skrytkach co tydzień list ode mnie</li><li><a href="https://szkolatestow.online/#frontend" target="_blank" rel="noopener">Testy na frontendzie</a> - projekt, który tworzymy wspólnie z Olą Kunysz ze <a href="http://szkolatestow.online/" target="_blank" rel="noopener">Szkoły Testów</a> i <a href="https://piotrprogramista.pl/" target="_blank" rel="noopener">Piotrem Siemieniukiem</a>. Jeśli interesuje Was temat testowania i chcecie poprawić swoje umiejętności w tym temacie to polecam zapisać się na listę obserwujących i tym samym na newsletter, który razem tworzymy <a href="https://szkolatestow.online/#frontend" target="_blank" rel="noopener">tutaj</a>.</li><li>oraz ebook, który planuję wydać jeszcze przed wakacjami.</li></ul><p>Podsumowując, to było całkiem dobre pół roku, sporo się nauczyłam i wiem, co robić, by kolejne pół roku było jeszcze lepsze.</p><p>Do następnego!<br>Ania</p><p><span>Photo by <a href="https://unsplash.com/@brookelark?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Brooke Lark</a> on <a href="https://unsplash.com/s/photos/business-woman?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></span></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Na koniec stycznia stuknęło mi pół roku budowania mojego biznesu. Dziś chcę podsumować ten czas, opowiedzieć o tym, co się wydarzyło, o planach na przyszłość i kierunkach, w których chcę się rozwijać. Dostałam sygnały, że takie posty są przydatne, ale ja też chętnie do nich wracam po czasie i patrzę na swoją drogę.
+    
+    </summary>
+    
+      <category term="Osobiste" scheme="https://kernelgonnapanic.pl/categories/Osobiste/"/>
+    
+    
+      <category term="biznes" scheme="https://kernelgonnapanic.pl/tags/biznes/"/>
+    
+      <category term="tworzenie kernelgonnapanic" scheme="https://kernelgonnapanic.pl/tags/tworzenie-kernelgonnapanic/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Napisz swój pierwszy test jednostkowy dla aplikacji w React [Frontend testing #3]</title>
     <link href="https://kernelgonnapanic.pl/2021/02/15/napisz-swoj-pierwszy-test-jednostkowy/"/>
     <id>https://kernelgonnapanic.pl/2021/02/15/napisz-swoj-pierwszy-test-jednostkowy/</id>
     <published>2021-02-15T15:00:00.000Z</published>
-    <updated>2021-02-22T11:06:15.412Z</updated>
+    <updated>2021-02-24T14:04:45.179Z</updated>
     
     <content type="html"><![CDATA[<p>Za mną już pierwszy live kernelgonnapanic na YouTube. Na pierwszy ogień poszedł temat testów jednostkowych. Napisaliśmy wspólnie kilka pierwszych testów do reactowej aplikacji używając Jest i react-testing-library. Super było pokodować wspólnie na żywo i już przygotowuję się do kolejnego live’a. <a id="more"></a>Zachęcam Was do obejrzenia nagrania, subskrybowania kanału i kliknięcia dzwoneczka, by dostawać powiadomienia o nowych filmach i kolejnych live’ach - <a href="https://www.youtube.com/channel/UCHmN5z-4fkfqYlwF9NCNyxQ" target="_blank" rel="noopener">tutaj</a>👩‍💻</p><p><br></p><div style="display: flex; justify-content: center"><br><iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/pz4sHQJkDJk?rel=0&widget_referrer=Blog" frameborder="0"></iframe><br></div><p>Jeżeli interesuje Cię testowanie frontendu to zachęcam do zapisania się na newsletter Szkoły Testów poświęcony temu tematowi. Znajdziesz tam wiele materiałów o testowaniu, różnych narzędziach i technikach, a także dowiesz się w pierwszej kolejności o współtworzonych przeze mnie produktach związanych z testowaniem (coś fajnego się szykuje 😉). Zapisać można się <a href="https://szkolatestow.online/#frontend" target="_blank" rel="noopener">tutaj</a>.</p><p><span>Photo by <a href="https://unsplash.com/@surface?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Surface</a> on <a href="https://unsplash.com/s/photos/quality?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></span></p>]]></content>
     
@@ -155,7 +179,7 @@
     <link href="https://kernelgonnapanic.pl/2020/08/30/pierwszy-miesiac-na-swoim/"/>
     <id>https://kernelgonnapanic.pl/2020/08/30/pierwszy-miesiac-na-swoim/</id>
     <published>2020-08-30T10:35:00.000Z</published>
-    <updated>2020-09-07T10:26:59.846Z</updated>
+    <updated>2021-02-24T13:58:51.834Z</updated>
     
     <content type="html"><![CDATA[<p>Sierpień dobiega końca i jest to odpowiednia pora, by dać Wam znać o tym, co ostatnio zmieniło się u mnie. Ten miesiąc był szczególny, ponieważ był to pierwszy miesiąc pracy w pełni na swoim, skupiając się na rozwoju własnej marki, mojego biznesu i produktów.</p><a id="more"></a><p>Pewnie zauważyliście, że ostatnio więcej można mnie spotkać w internetach. To właśnie za sprawą tej zmiany. Chciałam napisać tego posta, by oficjalnie to ogłosić, opowiedzieć więcej o powodach, o tym, co udało mi się stworzyć w tym miesiącu oraz planach na przyszłość.</p><p>Zacznijmy od dlaczego. Chęć skupienia się w większym stopniu nad kernelgonnapanic chodziła mi po głowie od dłuższego czasu. W mojej wyobraźni istniał idealny obrazek: 8h pracuję nad aplikacjami dla moich klientów, a wieczory spędzam rozwijając moją markę. Ale w praktyce to się nie udawało. Brakowało mi energii i kreatywności, by tak działać. Długo łudziłam się, że to możliwe, że po prostu nie daje z siebie wszystkiego, co powinnam. Z tych dwóch zajęć któreś zawsze było zaniedbywane i w 95% przypadków był to mój blog i plany z nim związane.</p><p>I wtedy wydarzyła się pandemia. To ona sprawiła, że na serio zaczęłam się zastanawiać nad tym kiedy w końcu znajdzie się czas na rozwój kernelgonnapanic. Wiecie, było sporo czasu na przemyślenia i zadawanie sobie pytań odnośnie tego, czy podoba mi się to gdzie jestem. Przeanalizowałam za i przeciw, porobiłam plany i postanowiłam dać sobie szansę. Wypowiedziałam umowę z moim głównym klientem i dostałam wolną rękę. Teraz pora, by zaprząc moją kreatywność do działania i stworzyć coś wartościowego dla innych.<br><br></p><div class="figure fig-100" style="width:;"><img class="fig-img" src="instagram.jpg" alt=""></div><div style="clear:both;"></div><p>A jakie cele stawiam przed sobą i kernelgonnapanic? Chcę pokazywać jak, będąc frontendowcem, wejść “na wyższy poziom”, zarówno pod względem technicznym, jak i kompetencji miękkich. Uczyć umiejętności potrzebnych do tego, by z sukcesem dowozić projekty, umieć dostarczać wartość - być profesjonalistami w naszym zawodzie. Organizować warsztaty, prowadzić zajęcia, dostarczać materiały, wydawać kursy - edukować i tworzyć społeczność profesjonalistów.</p><p>Pierwszy miesiąc daje mi poczucie, że jestem na dobrym szlaku. Bardzo dobrze się czuję pracując w ten sposób. Kontakt z Wami, moimi podopiecznymi, czytelnikami i obserwatorami, daje mi dużo energii i szczęścia. Mam okazję nawiązywać relacje z osobami, które śledzą moje profile w internecie i słyszeć, że to co robię ma sens i jest dla innych wartościowe. Przede mną jeszcze tona pracy, muszę lepiej zorganizować swój dzień i lepiej zarządzać zadaniami. Uczę się nowych umiejętności związanych ze sprzedażą, biznesem, tworzeniem własnych produktów i prowadzeniem kanału na YT. Ale przede wszystkim jestem ogromnie wdzięczna Wam za to, że mnie czytacie i oglądacie &lt;3</p><p>Jeśli spojrzeć na to, czym zajmowałam się w trakcie tego miesiąca to:</p><ul><li>wystartował <a href="https://www.youtube.com/channel/UCHmN5z-4fkfqYlwF9NCNyxQ" target="_blank" rel="noopener">mój kanał na YT</a></li><li>otworzyłam możliwość współpracy ze mną w postaci konsultacji/mentoringu (jeżeli chcielibyście dołączyć do niego we wrześniu to dajcie znać, zbiera nam się bardzo fajna drużyna, a z każdym współpracuję indywidualnie - więcej informacji <a href="https://kernelgonnapanic.pl/konsultacje">tutaj</a>)</li><li>wzięłam udział w Festiwalu React i GraphQL</li><li>rozpoczęłam przebudowę i pracę nad nową szatą graficzną dla mojego bloga</li><li>odpoczęłam i dużo, dużo myślałam o tym, co mogę jeszcze stworzyć</li></ul><p>Pomysły na kolejne miesiące już mi się klarują w głowie. Będzie ciekawie, będzie dużo mięska, będzie dużo pracy i mam nadzieję dużo satysfakcji. Będę informować o wszystkim co się dzieje na bieżąco, a najwięcej jest mnie ostatnio na Instagramie, więc <a href="https://www.instagram.com/kernelgonnapanic/" target="_blank" rel="noopener">wpadajcie i obserwujcie</a> :)</p><p><em>Zdjęcie tytułowe wykonane przez Danielle MacInnes dostępne na Unsplash</em></p>]]></content>
     
@@ -167,6 +191,10 @@
     
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/categories/Osobiste/"/>
     
+    
+      <category term="biznes" scheme="https://kernelgonnapanic.pl/tags/biznes/"/>
+    
+      <category term="tworzenie kernelgonnapanic" scheme="https://kernelgonnapanic.pl/tags/tworzenie-kernelgonnapanic/"/>
     
   </entry>
   
@@ -240,9 +268,9 @@
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/categories/Osobiste/"/>
     
     
-      <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
-    
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
+    
+      <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
     
   </entry>
   
@@ -264,9 +292,9 @@
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/categories/Osobiste/"/>
     
     
-      <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
-    
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
+    
+      <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
     
   </entry>
   
@@ -338,9 +366,9 @@
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/categories/Osobiste/"/>
     
     
-      <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
-    
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
+    
+      <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
     
   </entry>
   
@@ -362,9 +390,9 @@
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/categories/Osobiste/"/>
     
     
-      <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
-    
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
+    
+      <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
     
   </entry>
   
@@ -438,9 +466,9 @@
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/categories/Osobiste/"/>
     
     
-      <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
-    
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
+    
+      <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
     
   </entry>
   
@@ -488,35 +516,9 @@
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/categories/Osobiste/"/>
     
     
-      <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
-    
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
     
-  </entry>
-  
-  <entry>
-    <title>5 rzeczy których nie wiecie o JavaScript</title>
-    <link href="https://kernelgonnapanic.pl/2018/12/18/5-rzeczy-ktorych-nie-wiecie-o-JS/"/>
-    <id>https://kernelgonnapanic.pl/2018/12/18/5-rzeczy-ktorych-nie-wiecie-o-JS/</id>
-    <published>2018-12-18T10:53:00.000Z</published>
-    <updated>2020-08-02T19:09:16.408Z</updated>
-    
-    <content type="html"><![CDATA[<p>Wspomnienie o JavaScript w mieszanym (pod względem używanego języka) środowisku programistycznym zazwyczaj powoduje duże poruszenie. Wielu programistów nienawidzi lub śmieje się z JSa, lecz część go uwielbia. Mi bliżej do drugiej kategorii. Podejrzewam, że gdyby nie JS, to pewnie nie zostałabym programistką. Używam go do tworzenia aplikacji webowych i mobilnych, od dawna planuje również pobawić się więcej Node.js. Dziś chciałabym Wam przedstawić kilka ciekawostek na temat tego języka, o których mogliście jeszcze nie słyszeć.<br><a id="more"></a></p><p>Starałam się zebrać ciekawe informacje, dziwności oraz fakty, które mnie zaskoczyły. Parzcie kawę i zaczynamy!</p><h2 id="1-6-znakow"><a href="#1-6-znakow" class="headerlink" title="1. 6 znaków"></a>1. 6 znaków</h2><p>Okazuje się, że używając JavaScriptu jesteśmy w stanie zapisać dowolny fragment kodu używając tylko 6 (sic!) znaków. Wyobraź sobie, że każdy z twoich produkcyjnych skryptów można przekształcić w dużą, naprawdę ogromną, ilość nawiasów, wykrzykników i plusów, a jego działanie pozostanie takie samo.<br>Narzędziem, które konwertuje dowolny kod do 6 znaków i które nosi adekwatną, bądź co bądź, nazwę możecie się pobawić tutaj -&gt; <a href="http://www.jsfuck.com/" target="_blank" rel="noopener">JSFuck</a>.</p><div class="figure center fig-100" style="width:;"><img class="fig-img" src="numbers.png" alt=""></div><div style="clear:both;"></div><p>Przekształcenia, które są przez tę stronę wykonywane bazują na różnych dziwactwach JSa (możecie je znaleźć w <a href="https://github.com/aemkei/jsfuck/blob/master/jsfuck.js" target="_blank" rel="noopener">tym</a> miejscu). Czy wiedzieliście na przykład, że dodanie do siebie dwóch pustych tablic daje w rezultacie stringa?<br>PS Nie dziwię się czemu ludzie żartują z JSa.</p><h2 id="2-Zbudujmy-lepszy-JavaScript"><a href="#2-Zbudujmy-lepszy-JavaScript" class="headerlink" title="2. Zbudujmy lepszy JavaScript"></a>2. Zbudujmy lepszy JavaScript</h2><p>Pewnie często słyszycie, że jakaś nowa funkcjonalność JavaScriptu jest w “stage 2” czy “stage 3”. Poszczególne poziomy mówią o tym, jak bardzo zaawansowane są prace nad nią i jak bardzo jesteśmy pewni, że wejdzie ona do języka właśnie w takiej formie. Ale czy wiedzieliście, że na Githubie istnieje <a href="https://github.com/tc39/proposals" target="_blank" rel="noopener">repozytorium</a>, gdzie możemy przeglądać wszystkie propozycje, począwszy od stage 1? Oprócz przejrzenia samych proposali zachęcam do głębszego pogrzebania w tym repo. Można tam znaleźć np. <a href="http://tc39.github.io/tc39-notes/" target="_blank" rel="noopener">minutki</a> ze spotkań komitetu TC39, który zajmuje się standardem języka JavaScript.<br><div class="figure center fig-100" style="width:;"><img class="fig-img" src="proposals.png" alt=""></div><div style="clear:both;"></div></p><h2 id="3-Pobawmy-sie-nazwami-zmiennych"><a href="#3-Pobawmy-sie-nazwami-zmiennych" class="headerlink" title="3. Pobawmy się nazwami zmiennych!"></a>3. Pobawmy się nazwami zmiennych!</h2><p>Specyfikacja języka JavaScript nakłada pewne zasady dotyczące tego, jak możemy nazywać zmienne. I pewnie większość z Was wie o tym, że muszą się one zaczynać od litery, mogą zawierać liczby, podkreślnik czy znak dolara i że nie możemy używać słów kluczowych języka jako identyfikatorów. Ale czy na pewno jest to takie proste? Mieliście kiedyś szansę przyjrzeć się bliżej tym regułom? Rezultatem moich wczorajszych poszukiwań i prób jest poniższa lista. Okazuje się, że tak naprawdę mamy do wyboru wiele znaków pochodzących z różnych języków (hebrajski, arabski, tamilski, greka).<br>W ten sposób nasze zmienne nigdy już nie będą nudne (oczywiście nie polecam tego typu działań na kodzie produkcyjnym 😉).<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const நன்றி = &quot;thank you&quot;;</span><br><span class="line">const ꜛꜛꜛꜛ = -42;</span><br><span class="line">const ꜜꜜꜜꜜ = 42;</span><br><span class="line">const π = 3.14;</span><br><span class="line">const a𝟘𝟙𝟚𝟛 = &quot;a0123&quot;;</span><br><span class="line">const a𝟬𝟭𝟮𝟯 = &quot;a0123&quot;;</span><br><span class="line">const &lt;﹏ಠ﹏ಠ﹏&gt; = &quot;nah&quot;;</span><br></pre></td></tr></table></figure></p><p>Na <a href="https://mothereff.in/js-variables" target="_blank" rel="noopener">tej</a> stronie możecie poeksperymentować samemu, a znajdująca się w <a href="https://stackoverflow.com/questions/1661197/what-characters-are-valid-for-javascript-variable-names" target="_blank" rel="noopener">tym</a> wątku lista może Wam pomóc w odnalezieniu ciekawych znaków.</p><h2 id="4-A-co-z-nazwami-wlasciwosci-obiektow"><a href="#4-A-co-z-nazwami-wlasciwosci-obiektow" class="headerlink" title="4. A co z nazwami właściwości obiektów?"></a>4. A co z nazwami właściwości obiektów?</h2><p>Bawiliśmy się już nazywaniem zmiennych, teraz zobaczmy co będzie się działo przy nazywaniu właściwości obiektu. Z pomocą przychodzi nam kolejna <a href="https://mothereff.in/js-properties" target="_blank" rel="noopener">strona</a>. </p><p>Załóżmy, że tworzymy obiekt o takiej strukturze:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = &#123;</span><br><span class="line">  <span class="number">123e123</span>: <span class="number">42</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p><p>Jak myślicie, jak możemy się odwołać do właściwości, która przechowuje liczbę 42?<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="string">'1.23e+125'</span>] <span class="comment">// 42</span></span><br></pre></td></tr></table></figure></p><p>Okazuje się, że chcąc lub niekoniecznie, utworzyliśmy nazwę właściwości, która jest liczbą zapisaną w notacji wykładniczej. I teraz żeby ją odczytać również musimy zastosować notację wykładniczą, lecz w ustandaryzowanej wersji <code>1.23e+125</code>, z przecinkiem po pierwszej cyfrze znaczącej.</p><p>Ciekawiej robi się, gdy nasza liczba przestaje się mieścić w zakresie. Dla przykładu, do takiej własności musimy się odwołać przez:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> b = &#123;</span><br><span class="line">  <span class="number">123e9999999</span>: <span class="number">42</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">b[<span class="string">'Infinity'</span>] <span class="comment">// 42</span></span><br></pre></td></tr></table></figure></p><p>Oczywiście wszystko jest spowodowane faktem, że dla JSa nazwy tych właściwości są liczbami. Jeśli chcemy, żeby te ciągi zostały potraktowane jako stringi, wystarczy dodać apostrofy. </p><h2 id="5-Node-i-Deno"><a href="#5-Node-i-Deno" class="headerlink" title="5. Node i Deno"></a>5. Node i Deno</h2><p>Czy wiedzieliście, że twórca Node’a - Ryan Dahl - tworzy nowe środowisko uruchomieniowe dla JavaScriptu? Mimo tego, że Node jest obecnie bardzo popularny i często używany, Ryan zauważa w jego architekturze skutki wielu źle podjętych decyzji. Nauczony doświadczeniami tworzy nową platformę - Deno, która ma inaczej rozwiązywać zależności, uruchamiać kod w sandbox z ograniczonymi prawami dostępu do dysku i sieci, no i zawierać wsparcie dla TypeScripta out-of-the-box. Jeśli chcecie posłuchać więcej o tym, co konretnie Ryan Dahl uważa za swoje błędy przy projektowaniu Node’a i jak Deno wychodzi im na przeciw, gorąco zachęcam do obejrzenia!<br><br><br><div class="video-container"><iframe src="//www.youtube.com/embed/M3BM9TB-8yA" frameborder="0" allowfullscreen></iframe></div></p><p>Jeśli miałabym powiedzieć, który punkt mnie najbardziej zaskoczył to chyba czwóreczka. O wielu quirkach JSa wiedziałam, ale o tym nie miałam pojęcia. Jednak po przemyśleniu, jest to całkiem logiczne zachowanie. </p><p>A co dla Was jest najbardziej zaskakujące/ciekawe?</p><p>Ania</p><p><em>Photo by Toa Heftiba on Unsplash</em></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Wspomnienie o JavaScript w mieszanym (pod względem używanego języka) środowisku programistycznym zazwyczaj powoduje duże poruszenie. Wielu programistów nienawidzi lub śmieje się z JSa, lecz część go uwielbia. Mi bliżej do drugiej kategorii. Podejrzewam, że gdyby nie JS, to pewnie nie zostałabym programistką. Używam go do tworzenia aplikacji webowych i mobilnych, od dawna planuje również pobawić się więcej Node.js. Dziś chciałabym Wam przedstawić kilka ciekawostek na temat tego języka, o których mogliście jeszcze nie słyszeć.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Techniczne" scheme="https://kernelgonnapanic.pl/categories/Techniczne/"/>
-    
-    
-      <category term="5 rzeczy" scheme="https://kernelgonnapanic.pl/tags/5-rzeczy/"/>
-    
-      <category term="Frontend" scheme="https://kernelgonnapanic.pl/tags/Frontend/"/>
-    
-      <category term="JavaScript" scheme="https://kernelgonnapanic.pl/tags/JavaScript/"/>
+      <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
     
   </entry>
   
