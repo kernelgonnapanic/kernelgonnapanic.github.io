@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kernelgonnapanic.pl/"/>
-  <updated>2021-03-03T13:48:42.599Z</updated>
+  <updated>2021-03-03T13:55:06.613Z</updated>
   <id>https://kernelgonnapanic.pl/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://kernelgonnapanic.pl/2021/03/03/pol-roku-na-swoim-jak-mi-idzie/"/>
     <id>https://kernelgonnapanic.pl/2021/03/03/pol-roku-na-swoim-jak-mi-idzie/</id>
     <published>2021-03-03T14:00:00.000Z</published>
-    <updated>2021-03-03T13:48:42.599Z</updated>
+    <updated>2021-03-03T13:55:06.613Z</updated>
     
     <content type="html"><![CDATA[<p>Na koniec stycznia stuknęło mi pół roku budowania mojego biznesu. Dziś chcę podsumować ten czas, opowiedzieć o tym, co się wydarzyło, o planach na przyszłość i kierunkach, w których chcę się rozwijać. Dostałam sygnały, że takie posty są przydatne, ale ja też chętnie do nich wracam po czasie i patrzę na swoją drogę. <a id="more"></a>A więc, do dzieła!</p><h2 id="Zajecia-front-end"><a href="#Zajecia-front-end" class="headerlink" title="Zajęcia front-end"></a>Zajęcia front-end</h2><p>Przez ostatnie pół roku skupiłam się głównie na rozwoju mojej oferty zajęć z front-endu. W tym czasie przeprowadziłam ponad 110 zajęć i współpracowałam z 20 osobami. Uczyliśmy się wspólnie JavaScriptu, TypeScriptu czy testów, rozmawialiśmy o najróżniejszych frontendowych tematach (protokole HTTP, uwierzytelnieniu i autoryzacji, websocketach, mikrofrontendach itp.). Pracowaliśmy także nad różnymi projektami, zarówno nad przeglądarką pokemonów, jak i sklepem internetowym 😉. Pomagałam w przygotowaniach do zgarnięcia pierwszego, jak i kolejnych front-endowych stanowisk (w ten sposób 4 osoby, z którymi pracowałam zmieniły pracę). Powoli rośnie również mój serwer na Discord, który jest przestrzenią dla moich mentee. Cieszę się też bardzo z pozytywnych opinii o zajęciach. Uczestnicy podkreślają to, co jest dla mnie bardzo ważne - skupienie na praktycznej nauce oraz budowanie programistycznej pewności siebie. W trakcie pracy nad ofertą konsultacji pracowałam również na dwumiesięcznym kontrakcie, by podreperować trochę swój budżet i pocieszyć się pisaniem większej ilości kodu niż na co dzień.</p><h2 id="Tresci"><a href="#Tresci" class="headerlink" title="Treści"></a>Treści</h2><p>Dodatkowo stworzyłam w tym czasie trochę frontendowych treści. Na blogu najchętniej czytaliście <a href="https://kernelgonnapanic.pl/2021/02/09/ABC-Scruma-dla-szukajacych-pierwszej-pracy-w-it/">artykuł wprowadzający do Scruma</a> oraz <a href="https://kernelgonnapanic.pl/2021/01/11/jak-przygotowac-sie-do-rekrutacji/">moje wskazówki odnośnie przygotowania do live codingu na rozmowie kwalifikacyjnej</a>. Przeprowadziłam również <a href="https://youtu.be/pz4sHQJkDJk" target="_blank" rel="noopener">pierwszy</a>, a potem <a href="https://youtu.be/Y44020hhaNc" target="_blank" rel="noopener">kolejny live</a> o testach na YouTube. Obawiałam się formy na żywo, a okazało się, że bardzo mi się podoba. Dodatkowo, skoro już zaczęłam ogarniać OBSa to zrodził się w mojej głowie pomysł na streamowanie programowania na Twitchu 🙀 (co myślicie? oglądacie może programistycznych streamerów na Twitchu?).</p><h2 id="Statystyki"><a href="#Statystyki" class="headerlink" title="Statystyki"></a>Statystyki</h2><p>Jeśli chodzi o mój biznes w liczbach, to prezentuje się to tak:</p><ul><li>kanał YouTube urósł od 0 (gdy ruszałam to go nie było) do 220 subskrybentów</li><li>Instagram zaczął mi sprawiać mnóstwo frajdy, często tam bywam, co zaskutkowało wzrostem z 576 obserwujących do 739</li><li>Facebook nie jest moim ulubionym medium, ale fanpage kernelgonnapanic również trochę urósł (z 342 obserwujących do 394)</li><li>a statystyki bloga to: lipiec 2020 - 223 unikalnych użytkowników, luty 2021 - 724 unikalnych użytkowników (zobaczymy czy zmiana platformy blogowej i szaty graficznej na to wpłynie, ale o tym za moment).</li></ul><p>Jak sobie podumam nad tym, że za każdą z tych liczb stoi grupa osób, które poświęcają swój czas na czytanie i obserwowanie tego co robię to mega się cieszę i czuję wdzięczność 💜</p><h2 id="Wyzwania"><a href="#Wyzwania" class="headerlink" title="Wyzwania"></a>Wyzwania</h2><p>Zaczynam stopniowo wychodzić z etapu bootstrapowania i walidowania moich pierwotnych pomysłów. W ramach działalności sporo się nauczyłam o tym, co się sprawdza, co jest potrzebne moim klientom i obserwującym, ale wiem też, że ogrom takiej nauki dalej przede mną. Ale nie mam nic przeciwko temu, bardzo lubię to analizować.<br>Wyzwania, które widzę przed sobą na najbliższy czas to:</p><ul><li>automatyzacja kwestii organizacyjnych związanych z konsultacjami (wcześniej nie było potrzeby tego robić, ale myślę, że to już ten moment)</li><li>skalowanie - czyli jak pomóc większej ilości osób i niezaharować się na śmierć :D Mam już sporo pomysłów, jak mogę to osiągnąć.</li><li>tworzenie większej ilości fajnych treści (a także ponowne ich użycie w innych kanałach)</li><li>praca nad poprawą mojego zdrowia i poziomu energii (bo czasem trochę niedomagam).</li></ul><h2 id="A-co-szykuje-sie-w-najblizszej-przyszlosci"><a href="#A-co-szykuje-sie-w-najblizszej-przyszlosci" class="headerlink" title="A co szykuje się w najbliższej przyszłości?"></a>A co szykuje się w najbliższej przyszłości?</h2><p>Skorzystam z okazji i opowiem jeszcze trochę o tym, co u mnie będzie się działo w najbliższym czasie. Już za niedługo pojawi się:</p><ul><li>blog w nowej odsłonie graficznej (tej zmiany już bardzo, bardzo nie mogę się doczekać; pojawi się nowa strona konsultacji i przesiadam się na nową platformę)</li><li>newsletter kernelgonnapanic - jeszcze dopinam ostatnie szczegóły, ale już wkrótce będzie pojawiał się w waszych skrytkach co tydzień list ode mnie</li><li><a href="https://szkolatestow.online/#frontend" target="_blank" rel="noopener">Testy na frontendzie</a> - projekt, który tworzymy wspólnie z Olą Kunysz ze <a href="http://szkolatestow.online/" target="_blank" rel="noopener">Szkoły Testów</a> i <a href="https://piotrprogramista.pl/" target="_blank" rel="noopener">Piotrem Siemieniukiem</a>. Jeśli interesuje Was temat testowania i chcecie poprawić swoje umiejętności w tym temacie to polecam zapisać się na listę obserwujących i tym samym na newsletter, który razem tworzymy <a href="https://szkolatestow.online/#frontend" target="_blank" rel="noopener">tutaj</a>.</li><li>oraz ebook, który planuję wydać jeszcze przed wakacjami.</li></ul><p>Podsumowując, to było całkiem dobre pół roku, sporo się nauczyłam i wiem, co robić, by kolejne pół roku było jeszcze lepsze.</p><p>Do następnego!<br>Ania</p><p><span>Photo by <a href="https://unsplash.com/@brookelark?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Brooke Lark</a> on <a href="https://unsplash.com/s/photos/business-woman?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></span></p>]]></content>
     
@@ -268,9 +268,9 @@
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/categories/Osobiste/"/>
     
     
-      <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
-    
       <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
+    
+      <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
     
   </entry>
   
@@ -292,9 +292,9 @@
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/categories/Osobiste/"/>
     
     
-      <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
-    
       <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
+    
+      <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
     
   </entry>
   
@@ -366,9 +366,9 @@
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/categories/Osobiste/"/>
     
     
-      <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
-    
       <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
+    
+      <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
     
   </entry>
   
@@ -390,9 +390,9 @@
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/categories/Osobiste/"/>
     
     
-      <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
-    
       <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
+    
+      <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
     
   </entry>
   
@@ -466,9 +466,9 @@
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/categories/Osobiste/"/>
     
     
-      <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
-    
       <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
+    
+      <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
     
   </entry>
   
@@ -516,9 +516,9 @@
       <category term="Osobiste" scheme="https://kernelgonnapanic.pl/categories/Osobiste/"/>
     
     
-      <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
-    
       <category term="Cele" scheme="https://kernelgonnapanic.pl/tags/Cele/"/>
+    
+      <category term="Osobiste" scheme="https://kernelgonnapanic.pl/tags/Osobiste/"/>
     
   </entry>
   
