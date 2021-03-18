@@ -2,54 +2,63 @@
 <!DOCTYPE html>
 <html lang="pl">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="kernelgonnapanic.pl">
-    <title>Snapshot testing - co to takiego? [Frontend testing #2] - kernelgonnapanic.pl</title>
-    <meta name="author" content="Anna Konopka">
-    
-        <meta name="keywords" content="frontend,javascript,kernelgonnapanic,">
-    
-    
-        <link rel="icon" href="https://kernelgonnapanic.pl/assets/images/favicon.ico">
-    
-    
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
-    
-    <meta name="description" content="Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Dziś porozmawiamy o Jest oraz snapshot testingu">
-<meta name="keywords" content="Frontend,JavaScript,Frontend testing">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="kernelgonnapanic.pl">
+        <title>
+            Snapshot testing - co to takiego? [Frontend testing #2] - kernelgonnapanic.pl
+        </title>
+        <meta name="author" content="Anna Konopka">
+        
+            <meta name="keywords" content="frontend,javascript,kernelgonnapanic,">
+            
+                
+                    <link rel="icon" href="https://kernelgonnapanic.pl/assets/images/favicon.ico">
+                    
+                        
+                            <link rel="alternate" type="application/atom+xml" title="RSS"
+                                href="/atom.xml">
+                            
+                                <meta name="description" content="Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Dziś porozmawiamy o Jest oraz snapshot testingu">
+<meta name="keywords" content="Frontend,Frontend testing,JavaScript">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Snapshot testing - co to takiego? [Frontend testing #2]">
 <meta property="og:url" content="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/index.html">
 <meta property="og:site_name" content="kernelgonnapanic.pl">
 <meta property="og:description" content="Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Dziś porozmawiamy o Jest oraz snapshot testingu">
 <meta property="og:locale" content="pl">
-<meta property="og:updated_time" content="2020-08-02T19:09:16.575Z">
+<meta property="og:updated_time" content="2021-02-22T11:06:10.543Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Snapshot testing - co to takiego? [Frontend testing #2]">
 <meta name="twitter:description" content="Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Dziś porozmawiamy o Jest oraz snapshot testingu">
 <meta name="twitter:creator" content="@konopka_ania">
-    
-        <link rel="publisher" href="https://plus.google.com/116973627351289720000"/>
-    
-    
-        
-    
-    
-        <meta property="og:image" content="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/camera.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/camera.jpg" />
-    
-    
-        <meta property="og:image" content="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/camera.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/camera.jpg" />
-    
-    
-    
-    <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-z734qr79cz2gsf7mhckhi5xy2miythhgvyzpwcy9xud8aczdykdidpt3ji6x.min.css">
-    <!--STYLES END-->
-    
+                                    
+                                        <link rel="publisher" href="https://plus.google.com/116973627351289720000" />
+                                        
+                                            
+                                                
+                                                        
+                                                            
+                                                                <meta property="og:image"
+                                                                    content="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/camera.jpg" />
+                                                                <meta class="swiftype" name="image" data-type="enum"
+                                                                    content="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/camera.jpg" />
+                                                                
+                                                                    
+                                                                        <meta property="og:image"
+                                                                            content="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/camera.jpg" />
+                                                                        <meta class="swiftype" name="image"
+                                                                            data-type="enum"
+                                                                            content="https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/camera.jpg" />
+                                                                        
+                                                                            
+                                                                                            
+                                                                                                    <!--STYLES-->
+                                                                                                    <link rel="stylesheet" href="/assets/css/style-z734qr79cz2gsf7mhckhi5xy2miythhgvyzpwcy9xud8aczdykdidpt3ji6x.min.css">
+                                                                                                        <!--STYLES END-->
+                                                                                                        
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-91276922-1']);
@@ -61,9 +70,29 @@
         })();
     </script>
 
-    
-</head>
-
+                                                                                                            <!-- Facebook Pixel Code -->
+                                                                                                            <script>
+                                                                                                                !function (f, b, e, v, n, t, s) {
+                                                                                                                    if (f.fbq) return; n = f.fbq = function () {
+                                                                                                                        n.callMethod ?
+                                                                                                                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                                                                                                                    };
+                                                                                                                    if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                                                                                                                    n.queue = []; t = b.createElement(e); t.async = !0;
+                                                                                                                    t.src = v; s = b.getElementsByTagName(e)[0];
+                                                                                                                    s.parentNode.insertBefore(t, s)
+                                                                                                                }(window, document, 'script',
+                                                                                                                    'https://connect.facebook.net/en_US/fbevents.js');
+                                                                                                                fbq('init', '317251022947300');
+                                                                                                                fbq('track', 'PageView');
+                                                                                                            </script>
+                                                                                                            <noscript><img
+                                                                                                                    height="1"
+                                                                                                                    width="1"
+                                                                                                                    style="display:none"
+                                                                                                                    src="https://www.facebook.com/tr?id=317251022947300&ev=PageView&noscript=1" /></noscript>
+                                                                                                            <!-- End Facebook Pixel Code -->
+    </head>
 
 <body>
     <div id="blog">
@@ -145,10 +174,10 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="/bucketlist">
+                        <a class="sidebar-button-link " href="/newsletter">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-list"></i>
-                        <span class="sidebar-button-desc">Bucket list</span>
+                        <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+                        <span class="sidebar-button-desc">Newsletter</span>
                     </a>
             </li>
             
@@ -256,7 +285,7 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <!-- excerpt --><p></p>
+            <!-- excerpt -->
 <p>Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Obiecałam wtedy kilka fajnych wpisów dotyczących narzędzi, jakie mamy do dyspozycji pisząc testy w JSie. Mam nadzieję, że nie zapomnieliście o temacie!</p>
 <p>A w dzisiejszym odcinku zobaczymy czym jest <strong>Jest</strong>. Dokładniej przyjrzymy się jednej z jego funkcjonalności, jaką jest snapshot testing. Czytajcie do końca, żeby dowiedzieć się, co tam jeszcze knuję w temacie wpisów o testowaniu. Enjoy!</p>
 <h2 id="Jest-co-to-jest"><a href="#Jest-co-to-jest" class="headerlink" title="Jest - co to jest ?"></a>Jest - co to jest ?</h2><p>Zacznijmy od tego co to jest ten Jest i co może nam zaoferować. Żeby móc wygodnie pisać frontowe testy jednostkowe potrzebujemy narzędzi, które pomagają w uruchomieniu tych testów oraz usprawniają walidowanie wyników poszczególnych operacji. Gdy chcemy do tego podejść bardziej szczegółowo, jest to kilka poziomów, o które musimy się zatroszczyć. Jest środowisko uruchomieniowe (test runner), mamy również test framework, który definuje jak od strony kodu będą wyglądać nasze testy oraz potrzebujemy narzędzia, które ułatwia pisanie asercji, czyli walidowanie efektów np. wywołania funkcji (assertion library).</p>
@@ -265,20 +294,22 @@
 <h2 id="Co-fajnego-Jest-nam-oferuje"><a href="#Co-fajnego-Jest-nam-oferuje" class="headerlink" title="Co fajnego Jest nam oferuje?"></a>Co fajnego Jest nam oferuje?</h2><ol>
 <li><p>Dla mnie najistotniejszy jest fakt, że Jest jest ewidentnie rezultatem ewolucji narzędzi do testowania. Mamy tu do dyspozycji wbudowany mechanizm do mockowania na poziomie rozwiązywania zależności (importów), ale też możemy ręcznie podmienić implementację danej funkcji na czas testów. Zgrabnie też jesteśmy w stanie testować kod asynchroniczny, używając np. konstrukcji async/await. Dodatkowo mamy również wbudowane mierzenie pokrycia kodu, co czasem przydaje się w celach informacyjnych, jednak z wielu powodów nie powinno być traktowane jako wyznacznik jakości otestowania kodu.</p>
 <p><em>Przykład tworzenia mocków.</em></p>
+</li>
+</ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mock = jest.fn();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> betterMock = jest.fn(<span class="function"><span class="params">()</span> =&gt;</span> (&#123;</span><br><span class="line">  answerToLife: <span class="number">42</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p><em>Przykład testowania wyniku asynchronicznej operacji</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">'the data is peanut butter'</span>, <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  expect.assertions(<span class="number">1</span>);</span><br><span class="line">  <span class="keyword">const</span> data = <span class="keyword">await</span> fetchData();</span><br><span class="line">  expect(data).toBe(<span class="string">'peanut butter'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Zespoły, które wcześniej korzystały z innego setupu dla testów jednostkowych względnie łatwo mogą się przesiąść na Jest’a, ponieważ wspiera on składnie Jasmine’a. Dla tych, którzy korzystali z mniej popularnych opcji, istnieją rozwiązania takie jak <code>jest-codemods</code>, które jednorazowo zmieniają składnię testów i wykonują większość brudnej roboty za nas.</p>
-</li>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">"the data is peanut butter"</span>, <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  expect.assertions(<span class="number">1</span>);</span><br><span class="line">  <span class="keyword">const</span> data = <span class="keyword">await</span> fetchData();</span><br><span class="line">  expect(data).toBe(<span class="string">"peanut butter"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>Zespoły, które wcześniej korzystały z innego setupu dla testów jednostkowych względnie łatwo mogą się przesiąść na Jest’a, ponieważ wspiera on składnie Jasmine’a. Dla tych, którzy korzystali z mniej popularnych opcji, istnieją rozwiązania takie jak <code>jest-codemods</code>, które jednorazowo zmieniają składnię testów i wykonują większość brudnej roboty za nas.</li>
 <li>Jest’a z podstawowymi ustawieniami, gotowego do działania otrzymujemy “za darmo”, gdy tworzymy nową aplikację używając <code>create-react-app</code> lub <code>react-native init</code>.</li>
 <li>No i oczywiście oferuje mechanizm do testowania za pomocą snapshotów, którym za raz się zajmiejmy w szczegółach.</li>
 </ol>
 <h2 id="Co-to-jest-snapshot-testing"><a href="#Co-to-jest-snapshot-testing" class="headerlink" title="Co to jest snapshot testing?"></a>Co to jest snapshot testing?</h2><p>Testowanie przy użyciu snapshotów jest jednym z rodzajów testów, które możemy tworzyć dla kodu frontendowego. Przydaje się w szczególności do testowania komponentów (np. w React czy Vue), ale możemy bazując na tym podejściu pisać też testy logiki biznesowej.</p>
 <p>Głównym jego założeniem jest porównywanie wyniku uruchomienia funkcji z jakimś oczekiwanym efektem, który w postaci pliku przechowujemy w repozytorium. W rezultacie uruchomienia testu otrzymujemy diffa między aktualnym, a oczekiwanym rezultatem. Podejrzewam, że nadal nie jest to wystarczająco jasne, dlatego rzućmy okiem na przykład.</p>
-<p>Załóżmy, że chcemy przetestować wynik renderowania komponentu <code>Article</code> w React:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Article</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div className=<span class="string">"article"</span>&gt;</span><br><span class="line">        &lt;header className=<span class="string">"article-header"</span>&gt;</span><br><span class="line">          &#123;<span class="keyword">this</span>.props.title&#125;</span><br><span class="line">        &lt;<span class="regexp">/header&gt;</span></span><br><span class="line"><span class="regexp">        &#123;this.props.children&#125;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Article;</span><br></pre></td></tr></table></figure></p>
+<p>Załóżmy, że chcemy przetestować wynik renderowania komponentu <code>Article</code> w React:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Article</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div className=<span class="string">"article"</span>&gt;</span><br><span class="line">        &lt;header className=<span class="string">"article-header"</span>&gt;&#123;<span class="keyword">this</span>.props.title&#125;&lt;<span class="regexp">/header&gt;</span></span><br><span class="line"><span class="regexp">        &#123;this.props.children&#125;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Article;</span><br></pre></td></tr></table></figure>
 <p>Tworzymy do niego nasz pierwszy snapshot test.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> Article <span class="keyword">from</span> <span class="string">'./Article.js'</span>;</span><br><span class="line"><span class="keyword">import</span> renderer <span class="keyword">from</span> <span class="string">'react-test-renderer'</span>;</span><br><span class="line"></span><br><span class="line">it(<span class="string">'renders correctly'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> tree = renderer</span><br><span class="line">    .create(&lt;Article title="Title"&gt;The contents&lt;/Article&gt;)</span><br><span class="line">    .toJSON();</span><br><span class="line">  expect(tree).toMatchSnapshot();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"><span class="keyword">import</span> Article <span class="keyword">from</span> <span class="string">"./Article.js"</span>;</span><br><span class="line"><span class="keyword">import</span> renderer <span class="keyword">from</span> <span class="string">"react-test-renderer"</span>;</span><br><span class="line"></span><br><span class="line">it(<span class="string">"renders correctly"</span>, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> tree = renderer</span><br><span class="line">    .create(&lt;Article title="Title"&gt;The contents&lt;/Article&gt;)</span><br><span class="line">    .toJSON();</span><br><span class="line">  expect(tree).toMatchSnapshot();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>Zauważmy, że używamy <code>react-test-renderer</code>, by stworzyć instancję komponentu, a następnie wywołujemy metodę <code>toJSON</code>. Mówi to nam o tym, że efekt renderowania tego komponentu będzie serializowany do stringa. W asercji oczekujemy, że rezultat będzie odpowiadał snapshotowi.</p>
 <p><strong>Ale co to ten snapshot i gdzie on się znajduje?</strong></p>
 <p>Gdy pierwszy raz uruchomimy ten test zauważymy, że obok komponentu pojawił się katalog <code>__snapshots__</code> z plikiem o takiej zawartości:</p>
@@ -295,7 +326,7 @@
 <h2 id="Ale-po-co"><a href="#Ale-po-co" class="headerlink" title="Ale po co?"></a>Ale po co?</h2><p>Snapshot testy komponentów sprawdzają czy będą one wyglądać tak, jak tego oczekujemy. W szczególności pozwalają na zobaczenie, jak wygląd tego komponentu będzie się zmieniał pod wpływem różnego rodzaju propsów do niego przekazywanych. Dodatkowo, jeśli używamy jakiegoś z narzędzi, które bazuje na ustawianiu styli inline, możemy również walidować ich poprawność (skąd już bardzo blisku do visual regression testing). Nie testują one jednak zachowania komponentu, np. wykonania odpowiednej akcji po kliknięciu. Tym tematem zajmiemy się już niedługo.</p>
 <p>Na dziś już wystarczy :) Czuję jednak, że temat nie jest wyczerpany, dlatego chciałabym poświęcić mu kolejny artykuł. Jeśli masz jakieś pytanie związane z testowaniem z użyciem snapshotów, zadaj je proszę w komentarzu, a ja postaram się na nie odpowiedzieć w kolejnym wpisie.</p>
 <p>Oprócz testowania fukcjonalności komponentów czy kolejnego wpisu odnośnie pracy z snapshotami, w ramach naszej serii planuję również poruszyć temat testów e2e, testów dla React Native (Detox, Appium) czy visual regression testing. Na pewno znajdziecie wśród nich czegoś dla siebie, czegoś, co pozwoli Wam pisać lepsze aplikacje frontendowe 💻</p>
-<p>Jeżeli nie chcecie przegapić żadnego wpisu w tym temacie, zapraszam do polubienia fanpage’a bloga <a href="https://www.facebook.com/kernelgonnapanic/" target="_blank" rel="noopener">[TUTAJ]</a>.</p>
+<p>Jeżeli interesuje Cię testowanie frontendu to zachęcam do zapisania się na newsletter Szkoły Testów poświęcony temu tematowi. Znajdziesz tam wiele materiałów o testowaniu, różnych narzędziach i technikach, a także dowiesz się w pierwszej kolejności o współtworzonych przeze mnie produktach związanych z testowaniem (coś fajnego się szykuje 😉). Zapisać można się <a href="https://szkolatestow.online/#frontend" target="_blank" rel="noopener">tutaj</a>.</p>
             
         </div>
     </div>
@@ -382,7 +413,7 @@
 
             <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
-        Copyrights &copy; 2020 Anna Konopka. All Rights Reserved.
+        Copyrights &copy; 2021 Anna Konopka. All Rights Reserved.
     </span>
 </footer>
 
@@ -782,7 +813,7 @@
         </div>
         <div class="modal-footer">
             <p class="results-count text-medium" data-message-zero="Jeszcze nie napisałam posta, którego szukasz." data-message-one="Jesteś szczęściarzem! Znaleziono jednego posta." data-message-other="Znaleziono {n} postów :)">
-                Znaleziono 51 postów :)
+                Znaleziono 57 postów :)
             </p>
         </div>
     </div>
@@ -824,6 +855,7 @@
 
 <script>
     var disqus_config = function () {
+        console.log('posts', 'undefined');
         this.page.url = 'https://kernelgonnapanic.pl/2018/02/15/jest-snapshot-testing/';
                  
             this.page.identifier = '2018/02/15/jest-snapshot-testing/';
@@ -831,6 +863,9 @@
              };
     (function () {
         var d = document, s = d.createElement('script');
+        if (d.getElementById('nodisqus') !== null) {
+            return;
+        }
         var disqus_shortname = 'bookieandcookie';
         s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 

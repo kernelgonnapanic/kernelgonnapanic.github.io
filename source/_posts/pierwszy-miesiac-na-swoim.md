@@ -1,7 +1,8 @@
 ---
 title: Pierwszy miesiąc na "swoim"
 tags:
-
+  - biznes
+  - tworzenie kernelgonnapanic
 categories:
   - Osobiste
 thumbnailImagePosition: right

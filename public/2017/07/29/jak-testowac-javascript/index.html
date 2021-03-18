@@ -2,54 +2,63 @@
 <!DOCTYPE html>
 <html lang="pl">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="kernelgonnapanic.pl">
-    <title>Javascript - to test or not to test? [Frontend testing #1] - kernelgonnapanic.pl</title>
-    <meta name="author" content="Anna Konopka">
-    
-        <meta name="keywords" content="frontend,javascript,kernelgonnapanic,">
-    
-    
-        <link rel="icon" href="https://kernelgonnapanic.pl/assets/images/favicon.ico">
-    
-    
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
-    
-    <meta name="description" content="“Testy, hmmm… testy… Ja przepraszam bardzo, ale czy ktoś je kiedykolwiek widział we frontendowym repozytorium? Ja rozumiem że na backendzie, ale żeby na frontendzie? No chyba się tym programistom w gł">
-<meta name="keywords" content="Frontend,JavaScript,Frontend testing">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="kernelgonnapanic.pl">
+        <title>
+            Javascript - to test or not to test? [Frontend testing #1] - kernelgonnapanic.pl
+        </title>
+        <meta name="author" content="Anna Konopka">
+        
+            <meta name="keywords" content="frontend,javascript,kernelgonnapanic,">
+            
+                
+                    <link rel="icon" href="https://kernelgonnapanic.pl/assets/images/favicon.ico">
+                    
+                        
+                            <link rel="alternate" type="application/atom+xml" title="RSS"
+                                href="/atom.xml">
+                            
+                                <meta name="description" content="“Testy, hmmm… testy… Ja przepraszam bardzo, ale czy ktoś je kiedykolwiek widział we frontendowym repozytorium? Ja rozumiem że na backendzie, ale żeby na frontendzie? No chyba się tym programistom w gł">
+<meta name="keywords" content="Frontend,Frontend testing,JavaScript">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Javascript - to test or not to test? [Frontend testing #1]">
 <meta property="og:url" content="https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/index.html">
 <meta property="og:site_name" content="kernelgonnapanic.pl">
 <meta property="og:description" content="“Testy, hmmm… testy… Ja przepraszam bardzo, ale czy ktoś je kiedykolwiek widział we frontendowym repozytorium? Ja rozumiem że na backendzie, ale żeby na frontendzie? No chyba się tym programistom w gł">
 <meta property="og:locale" content="pl">
-<meta property="og:updated_time" content="2020-08-02T19:09:16.572Z">
+<meta property="og:updated_time" content="2021-02-22T11:06:04.482Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript - to test or not to test? [Frontend testing #1]">
 <meta name="twitter:description" content="“Testy, hmmm… testy… Ja przepraszam bardzo, ale czy ktoś je kiedykolwiek widział we frontendowym repozytorium? Ja rozumiem że na backendzie, ale żeby na frontendzie? No chyba się tym programistom w gł">
 <meta name="twitter:creator" content="@konopka_ania">
-    
-        <link rel="publisher" href="https://plus.google.com/116973627351289720000"/>
-    
-    
-        
-    
-    
-        <meta property="og:image" content="https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/jak-testowac.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/jak-testowac.jpg" />
-    
-    
-        <meta property="og:image" content="https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/jak-testowac.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/jak-testowac.jpg" />
-    
-    
-    
-    <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-z734qr79cz2gsf7mhckhi5xy2miythhgvyzpwcy9xud8aczdykdidpt3ji6x.min.css">
-    <!--STYLES END-->
-    
+                                    
+                                        <link rel="publisher" href="https://plus.google.com/116973627351289720000" />
+                                        
+                                            
+                                                
+                                                        
+                                                            
+                                                                <meta property="og:image"
+                                                                    content="https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/jak-testowac.jpg" />
+                                                                <meta class="swiftype" name="image" data-type="enum"
+                                                                    content="https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/jak-testowac.jpg" />
+                                                                
+                                                                    
+                                                                        <meta property="og:image"
+                                                                            content="https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/jak-testowac.jpg" />
+                                                                        <meta class="swiftype" name="image"
+                                                                            data-type="enum"
+                                                                            content="https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/jak-testowac.jpg" />
+                                                                        
+                                                                            
+                                                                                            
+                                                                                                    <!--STYLES-->
+                                                                                                    <link rel="stylesheet" href="/assets/css/style-z734qr79cz2gsf7mhckhi5xy2miythhgvyzpwcy9xud8aczdykdidpt3ji6x.min.css">
+                                                                                                        <!--STYLES END-->
+                                                                                                        
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-91276922-1']);
@@ -61,9 +70,29 @@
         })();
     </script>
 
-    
-</head>
-
+                                                                                                            <!-- Facebook Pixel Code -->
+                                                                                                            <script>
+                                                                                                                !function (f, b, e, v, n, t, s) {
+                                                                                                                    if (f.fbq) return; n = f.fbq = function () {
+                                                                                                                        n.callMethod ?
+                                                                                                                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                                                                                                                    };
+                                                                                                                    if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                                                                                                                    n.queue = []; t = b.createElement(e); t.async = !0;
+                                                                                                                    t.src = v; s = b.getElementsByTagName(e)[0];
+                                                                                                                    s.parentNode.insertBefore(t, s)
+                                                                                                                }(window, document, 'script',
+                                                                                                                    'https://connect.facebook.net/en_US/fbevents.js');
+                                                                                                                fbq('init', '317251022947300');
+                                                                                                                fbq('track', 'PageView');
+                                                                                                            </script>
+                                                                                                            <noscript><img
+                                                                                                                    height="1"
+                                                                                                                    width="1"
+                                                                                                                    style="display:none"
+                                                                                                                    src="https://www.facebook.com/tr?id=317251022947300&ev=PageView&noscript=1" /></noscript>
+                                                                                                            <!-- End Facebook Pixel Code -->
+    </head>
 
 <body>
     <div id="blog">
@@ -145,10 +174,10 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="/bucketlist">
+                        <a class="sidebar-button-link " href="/newsletter">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-list"></i>
-                        <span class="sidebar-button-desc">Bucket list</span>
+                        <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+                        <span class="sidebar-button-desc">Newsletter</span>
                     </a>
             </li>
             
@@ -257,7 +286,8 @@
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
             <p>“Testy, hmmm… testy… Ja przepraszam bardzo, ale czy ktoś je kiedykolwiek widział we frontendowym repozytorium? Ja rozumiem że na backendzie, ale żeby na frontendzie? No chyba się tym programistom w głowach poprzewracało i za dużo czasu mają”</p>
-<p>Czyżby?<br><a id="more"></a></p>
+<p>Czyżby?</p>
+<a id="more"></a>
 <p>Hej wszystkim!<br>Tematem mojej dzisiejszej pogawędki będzie testowanie. A właściwie będzie to wstęp do dłuższej dyskusji, która (mam nadzieję) będzie się toczyć na blogu, w postaci serii postów. (Trzymajcie kciuki za mój zapał).</p>
 <p>Zanim jednak zaczniemy rozważać konkretne narzędzia, techniki, ich plusy i minusy, zacznijmy od zadania sobie ważnego pytania - po co to komu?<br>Sceptyków (jak ten ze wstępu) znajdziemy w najszej branży trochę. “Nie mam czasu na pisanie testów”, “To za dużo wysiłku”, “Jaki ja mam z tego zysk?”. Spróbujmy dziś rozprawić się z choć częścią tych wymówek.</p>
 <h1 id="Frontend-nie-potrzebuje-testow"><a href="#Frontend-nie-potrzebuje-testow" class="headerlink" title="Frontend nie potrzebuje testów"></a>Frontend nie potrzebuje testów</h1><p>Ja wiem, wiem. My, frontendowcy, nie powinniśmy się nawet nazywać programistami, skoro robimy sobie stronki w htmlu. A tak na poważnie, zdajemy sobie sprawę z tego, że frontend to obecnie zazwyczaj pokaźnych rozmiarów i całkiem skomplikowana aplikacja. I w kontekście testów nie różni się w żaden sposób od backendu. Mamy kod, chcemy się upewnić czy działa on poprawnie, czyli tak, jak tego oczekujemy. I nie ma tu znaczenia, czy jest uruchamiany na serwerze, w przeglądarce czy na urządzeniu mobilnym jako natywna aplikacja.</p>
@@ -267,6 +297,7 @@
 <p>Mam nawet wrażenie, że kod, który programista pisze, mając z tyłu głowy konieczność napisania do niego testów, jest bardziej uporządkowany, mniej “związany ze sobą”, bardziej modułowy, a co za tym idzie łatwiejszy do testowania. Skutkuje to tym, że taki kod jest później również łatwiejszy do utrzymywania i mniej oporny na rozszerzanie.</p>
 <p>A skoro już wiemy po co, teraz warto dowiedzieć się jak. Szykujcie się na porządną dawkę informacji o dostępnych narzędziach w kolejnych artykułach.</p>
 <p>Ania</p>
+<p>Jeżeli interesuje Cię testowanie frontendu to zachęcam do zapisania się na newsletter Szkoły Testów poświęcony temu tematowi. Znajdziesz tam wiele materiałów o testowaniu, różnych narzędziach i technikach, a także dowiesz się w pierwszej kolejności o współtworzonych przeze mnie produktach związanych z testowaniem (coś fajnego się szykuje 😉). Zapisać można się <a href="https://szkolatestow.online/#frontend" target="_blank" rel="noopener">tutaj</a>.</p>
 <p>PS<br>Jakimi narzędziami w szczególności jesteście zainteresowani? Uchylając rąbka tajemnicy powiem, że na pewno pojawi się Jest, Enzyme, może również Detox jako narzędzie do e2e dla aplikacji natywnych. Chciałabym też powiedzieć kilka słów na temat visual regression testing. Będzie się działo!</p>
 
             
@@ -355,7 +386,7 @@
 
             <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
-        Copyrights &copy; 2020 Anna Konopka. All Rights Reserved.
+        Copyrights &copy; 2021 Anna Konopka. All Rights Reserved.
     </span>
 </footer>
 
@@ -755,7 +786,7 @@
         </div>
         <div class="modal-footer">
             <p class="results-count text-medium" data-message-zero="Jeszcze nie napisałam posta, którego szukasz." data-message-one="Jesteś szczęściarzem! Znaleziono jednego posta." data-message-other="Znaleziono {n} postów :)">
-                Znaleziono 51 postów :)
+                Znaleziono 57 postów :)
             </p>
         </div>
     </div>
@@ -797,6 +828,7 @@
 
 <script>
     var disqus_config = function () {
+        console.log('posts', 'undefined');
         this.page.url = 'https://kernelgonnapanic.pl/2017/07/29/jak-testowac-javascript/';
                  
             this.page.identifier = '2017/07/29/jak-testowac-javascript/';
@@ -804,6 +836,9 @@
              };
     (function () {
         var d = document, s = d.createElement('script');
+        if (d.getElementById('nodisqus') !== null) {
+            return;
+        }
         var disqus_shortname = 'bookieandcookie';
         s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 

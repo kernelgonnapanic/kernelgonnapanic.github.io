@@ -13,7 +13,9 @@ thumbnailImage: camera.jpg
 coverImage: camera.jpg
 date: 2018-02-15 21:56:00
 ---
+
 Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Dziś porozmawiamy o Jest oraz snapshot testingu - jednej z jego funkcjonalności.
+
 <!-- excerpt -->
 
 Po całkiem długim okresie przerwy (pierwszy wpis z cyklu powstał w lipcu ubiegłego roku), zapraszam znów do przyjrzenia się bliżej frontendowym testom. Obiecałam wtedy kilka fajnych wpisów dotyczących narzędzi, jakie mamy do dyspozycji pisząc testy w JSie. Mam nadzieję, że nie zapomnieliście o temacie!
@@ -30,46 +32,49 @@ Jeśli ktoś chciałby się dowiedzieć trochę więcej o tym, z jakich element�
 Ustaliliśmy już, że Jest oferuje nam wszystko co jest potrzebne do wystartowania z pisaniem testów. Co więcej twórcy chwalą się, że jest to narzędzie typu zero-configuration. Z moich doświadczeń wynika jednak, że nie zawsze obędziemy się bez dodatkowej konfiguracji i jeśli twój projekt korzysta z preprocesorów czy np. jakichś specyficznych loaderów do webpacka to zazwyczaj trzeba coś więcej poustawiać.
 
 ## Co fajnego Jest nam oferuje?
+
 1. Dla mnie najistotniejszy jest fakt, że Jest jest ewidentnie rezultatem ewolucji narzędzi do testowania. Mamy tu do dyspozycji wbudowany mechanizm do mockowania na poziomie rozwiązywania zależności (importów), ale też możemy ręcznie podmienić implementację danej funkcji na czas testów. Zgrabnie też jesteśmy w stanie testować kod asynchroniczny, używając np. konstrukcji async/await. Dodatkowo mamy również wbudowane mierzenie pokrycia kodu, co czasem przydaje się w celach informacyjnych, jednak z wielu powodów nie powinno być traktowane jako wyznacznik jakości otestowania kodu.
 
-  *Przykład tworzenia mocków.*
-  ```js
-  const mock = jest.fn();
+   _Przykład tworzenia mocków._
 
-  const betterMock = jest.fn(() => ({
-    answerToLife: 42
-  });
-  ```
+```js
+const mock = jest.fn();
 
-  *Przykład testowania wyniku asynchronicznej operacji*
-  ```js
-  test('the data is peanut butter', async () => {
-    expect.assertions(1);
-    const data = await fetchData();
-    expect(data).toBe('peanut butter');
-  });
-  ```
+const betterMock = jest.fn(() => ({
+  answerToLife: 42
+});
+```
+
+_Przykład testowania wyniku asynchronicznej operacji_
+
+```js
+test("the data is peanut butter", async () => {
+  expect.assertions(1);
+  const data = await fetchData();
+  expect(data).toBe("peanut butter");
+});
+```
 
 2. Zespoły, które wcześniej korzystały z innego setupu dla testów jednostkowych względnie łatwo mogą się przesiąść na Jest'a, ponieważ wspiera on składnie Jasmine'a. Dla tych, którzy korzystali z mniej popularnych opcji, istnieją rozwiązania takie jak `jest-codemods`, które jednorazowo zmieniają składnię testów i wykonują większość brudnej roboty za nas.
 3. Jest'a z podstawowymi ustawieniami, gotowego do działania otrzymujemy "za darmo", gdy tworzymy nową aplikację używając `create-react-app` lub `react-native init`.
 4. No i oczywiście oferuje mechanizm do testowania za pomocą snapshotów, którym za raz się zajmiejmy w szczegółach.
 
 ## Co to jest snapshot testing?
+
 Testowanie przy użyciu snapshotów jest jednym z rodzajów testów, które możemy tworzyć dla kodu frontendowego. Przydaje się w szczególności do testowania komponentów (np. w React czy Vue), ale możemy bazując na tym podejściu pisać też testy logiki biznesowej.
 
 Głównym jego założeniem jest porównywanie wyniku uruchomienia funkcji z jakimś oczekiwanym efektem, który w postaci pliku przechowujemy w repozytorium. W rezultacie uruchomienia testu otrzymujemy diffa między aktualnym, a oczekiwanym rezultatem. Podejrzewam, że nadal nie jest to wystarczająco jasne, dlatego rzućmy okiem na przykład.
 
 Załóżmy, że chcemy przetestować wynik renderowania komponentu `Article` w React:
+
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Article extends Component {
   render() {
     return (
       <div className="article">
-        <header className="article-header">
-          {this.props.title}
-        </header>
+        <header className="article-header">{this.props.title}</header>
         {this.props.children}
       </div>
     );
@@ -82,11 +87,11 @@ export default Article;
 Tworzymy do niego nasz pierwszy snapshot test.
 
 ```js
-import React from 'react';
-import Article from './Article.js';
-import renderer from 'react-test-renderer';
+import React from "react";
+import Article from "./Article.js";
+import renderer from "react-test-renderer";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderer
     .create(<Article title="Title">The contents</Article>)
     .toJSON();
@@ -120,6 +125,7 @@ To jest właśnie snapshot, stworzony przy pierwszym uruchomieniu testu, do któ
 ## Praca ze snapshotami
 
 Przejdźmy teraz może przez cały proces pracy z snapshotami, żeby sobie go utrwalić.
+
 1. Pierwsze uruchomienie testu, generuje nam bazowy snapshot.
 2. Snapshot jest przechowywany w repozytorium jako wzorzec prawidłowego rezultatu testu.
 3. Za każdym razem, gdy wprowadzamy jakieś zmiany w aplikacji, uruchamiamy testy i sprawdzamy czy ich wyniki są nadal prawidłowe.
@@ -135,4 +141,4 @@ Na dziś już wystarczy :) Czuję jednak, że temat nie jest wyczerpany, dlatego
 
 Oprócz testowania fukcjonalności komponentów czy kolejnego wpisu odnośnie pracy z snapshotami, w ramach naszej serii planuję również poruszyć temat testów e2e, testów dla React Native (Detox, Appium) czy visual regression testing. Na pewno znajdziecie wśród nich czegoś dla siebie, czegoś, co pozwoli Wam pisać lepsze aplikacje frontendowe 💻
 
-Jeżeli nie chcecie przegapić żadnego wpisu w tym temacie, zapraszam do polubienia fanpage'a bloga [[TUTAJ]](https://www.facebook.com/kernelgonnapanic/).
+Jeżeli interesuje Cię testowanie frontendu to zachęcam do zapisania się na newsletter Szkoły Testów poświęcony temu tematowi. Znajdziesz tam wiele materiałów o testowaniu, różnych narzędziach i technikach, a także dowiesz się w pierwszej kolejności o współtworzonych przeze mnie produktach związanych z testowaniem (coś fajnego się szykuje 😉). Zapisać można się [tutaj](https://szkolatestow.online/#frontend).

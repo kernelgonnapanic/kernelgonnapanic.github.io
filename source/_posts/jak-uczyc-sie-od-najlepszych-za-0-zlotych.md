@@ -5,7 +5,7 @@ tags:
   - Rozwój programisty
 categories:
   - Techniczne
-thumbnailImagePosition: top
+thumbnailImagePosition: right
 coverMeta: out
 coverSize: partial
 thumbnailImage: hero.jpg
